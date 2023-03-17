@@ -1,0 +1,506 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	66969	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-100-c/testcases/000/240/206/CWE415_Double_Free__malloc_free_struct_08.c								
+ANR	66970	Function	staticReturnsTrue	25:0:775:825							
+ANR	66971	FunctionDef	staticReturnsTrue ()		66970	0					
+ANR	66972	CompoundStatement		26:0:807:825	66970	0					
+ANR	66973	ReturnStatement	return 1 ;	27:4:814:822	66970	0	True				
+ANR	66974	PrimaryExpression	1		66970	0					
+ANR	66975	ReturnType	static int		66970	1					
+ANR	66976	Identifier	staticReturnsTrue		66970	2					
+ANR	66977	ParameterList			66970	3					
+ANR	66978	CFGEntryNode	ENTRY		66970		True				
+ANR	66979	CFGExitNode	EXIT		66970		True				
+ANR	66980	Function	staticReturnsFalse	30:0:830:881							
+ANR	66981	FunctionDef	staticReturnsFalse ()		66980	0					
+ANR	66982	CompoundStatement		31:0:863:881	66980	0					
+ANR	66983	ReturnStatement	return 0 ;	32:4:870:878	66980	0	True				
+ANR	66984	PrimaryExpression	0		66980	0					
+ANR	66985	ReturnType	static int		66980	1					
+ANR	66986	Identifier	staticReturnsFalse		66980	2					
+ANR	66987	ParameterList			66980	3					
+ANR	66988	CFGEntryNode	ENTRY		66980		True				
+ANR	66989	CFGExitNode	EXIT		66980		True				
+ANR	66990	Function	CWE415_Double_Free__malloc_free_struct_08_bad	37:0:905:1418							
+ANR	66991	FunctionDef	CWE415_Double_Free__malloc_free_struct_08_bad ()		66990	0					
+ANR	66992	CompoundStatement		38:0:959:1418	66990	0					
+ANR	66993	IdentifierDeclStatement	twoIntsStruct * data ;	39:4:966:986	66990	0	True				
+ANR	66994	IdentifierDecl	* data		66990	0					
+ANR	66995	IdentifierDeclType	twoIntsStruct *		66990	0					
+ANR	66996	Identifier	data		66990	1					
+ANR	66997	ExpressionStatement	data = NULL	41:4:1020:1031	66990	1	True				
+ANR	66998	AssignmentExpression	data = NULL		66990	0		=			
+ANR	66999	Identifier	data		66990	0					
+ANR	67000	Identifier	NULL		66990	1					
+ANR	67001	IfStatement	if ( staticReturnsTrue ( ) )		66990	2					
+ANR	67002	Condition	staticReturnsTrue ( )	42:7:1041:1059	66990	0	True				
+ANR	67003	CallExpression	staticReturnsTrue ( )		66990	0					
+ANR	67004	Callee	staticReturnsTrue		66990	0					
+ANR	67005	Identifier	staticReturnsTrue		66990	0					
+ANR	67006	ArgumentList			66990	1					
+ANR	67007	CompoundStatement		6:4:107:107	66990	1					
+ANR	67008	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	44:8:1078:1135	66990	0	True				
+ANR	67009	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		66990	0		=			
+ANR	67010	Identifier	data		66990	0					
+ANR	67011	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		66990	1					
+ANR	67012	CastTarget	twoIntsStruct *		66990	0					
+ANR	67013	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		66990	1					
+ANR	67014	Callee	malloc		66990	0					
+ANR	67015	Identifier	malloc		66990	0					
+ANR	67016	ArgumentList	100 * sizeof ( twoIntsStruct )		66990	1					
+ANR	67017	Argument	100 * sizeof ( twoIntsStruct )		66990	0					
+ANR	67018	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		66990	0		*			
+ANR	67019	PrimaryExpression	100		66990	0					
+ANR	67020	SizeofExpression	sizeof ( twoIntsStruct )		66990	1					
+ANR	67021	Sizeof	sizeof		66990	0					
+ANR	67022	SizeofOperand	twoIntsStruct		66990	1					
+ANR	67023	IfStatement	if ( data == NULL )		66990	1					
+ANR	67024	Condition	data == NULL	45:12:1150:1161	66990	0	True				
+ANR	67025	EqualityExpression	data == NULL		66990	0		==			
+ANR	67026	Identifier	data		66990	0					
+ANR	67027	Identifier	NULL		66990	1					
+ANR	67028	CompoundStatement		8:26:204:204	66990	1					
+ANR	67029	ExpressionStatement	exit ( - 1 )	45:27:1165:1173	66990	0	True				
+ANR	67030	CallExpression	exit ( - 1 )		66990	0					
+ANR	67031	Callee	exit		66990	0					
+ANR	67032	Identifier	exit		66990	0					
+ANR	67033	ArgumentList	- 1		66990	1					
+ANR	67034	Argument	- 1		66990	0					
+ANR	67035	UnaryOperationExpression	- 1		66990	0					
+ANR	67036	UnaryOperator	-		66990	0					
+ANR	67037	PrimaryExpression	1		66990	1					
+ANR	67038	ExpressionStatement	free ( data )	47:8:1273:1283	66990	2	True				
+ANR	67039	CallExpression	free ( data )		66990	0					
+ANR	67040	Callee	free		66990	0					
+ANR	67041	Identifier	free		66990	0					
+ANR	67042	ArgumentList	data		66990	1					
+ANR	67043	Argument	data		66990	0					
+ANR	67044	Identifier	data		66990	0					
+ANR	67045	IfStatement	if ( staticReturnsTrue ( ) )		66990	3					
+ANR	67046	Condition	staticReturnsTrue ( )	49:7:1300:1318	66990	0	True				
+ANR	67047	CallExpression	staticReturnsTrue ( )		66990	0					
+ANR	67048	Callee	staticReturnsTrue		66990	0					
+ANR	67049	Identifier	staticReturnsTrue		66990	0					
+ANR	67050	ArgumentList			66990	1					
+ANR	67051	CompoundStatement		13:4:366:366	66990	1					
+ANR	67052	ExpressionStatement	free ( data )	52:8:1398:1408	66990	0	True				
+ANR	67053	CallExpression	free ( data )		66990	0					
+ANR	67054	Callee	free		66990	0					
+ANR	67055	Identifier	free		66990	0					
+ANR	67056	ArgumentList	data		66990	1					
+ANR	67057	Argument	data		66990	0					
+ANR	67058	Identifier	data		66990	0					
+ANR	67059	ReturnType	void		66990	1					
+ANR	67060	Identifier	CWE415_Double_Free__malloc_free_struct_08_bad		66990	2					
+ANR	67061	ParameterList			66990	3					
+ANR	67062	CFGEntryNode	ENTRY		66990		True				
+ANR	67063	CFGExitNode	EXIT		66990		True				
+ANR	67064	Symbol	malloc		66990						
+ANR	67065	Symbol	NULL		66990						
+ANR	67066	Symbol	data		66990						
+ANR	67067	Symbol	staticReturnsTrue		66990						
+ANR	67068	Function	goodB2G1	61:0:1581:2269							
+ANR	67069	FunctionDef	goodB2G1 ()		67068	0					
+ANR	67070	CompoundStatement		62:0:1605:2269	67068	0					
+ANR	67071	IdentifierDeclStatement	twoIntsStruct * data ;	63:4:1612:1632	67068	0	True				
+ANR	67072	IdentifierDecl	* data		67068	0					
+ANR	67073	IdentifierDeclType	twoIntsStruct *		67068	0					
+ANR	67074	Identifier	data		67068	1					
+ANR	67075	ExpressionStatement	data = NULL	65:4:1666:1677	67068	1	True				
+ANR	67076	AssignmentExpression	data = NULL		67068	0		=			
+ANR	67077	Identifier	data		67068	0					
+ANR	67078	Identifier	NULL		67068	1					
+ANR	67079	IfStatement	if ( staticReturnsTrue ( ) )		67068	2					
+ANR	67080	Condition	staticReturnsTrue ( )	66:7:1687:1705	67068	0	True				
+ANR	67081	CallExpression	staticReturnsTrue ( )		67068	0					
+ANR	67082	Callee	staticReturnsTrue		67068	0					
+ANR	67083	Identifier	staticReturnsTrue		67068	0					
+ANR	67084	ArgumentList			67068	1					
+ANR	67085	CompoundStatement		6:4:107:107	67068	1					
+ANR	67086	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	68:8:1724:1781	67068	0	True				
+ANR	67087	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67068	0		=			
+ANR	67088	Identifier	data		67068	0					
+ANR	67089	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67068	1					
+ANR	67090	CastTarget	twoIntsStruct *		67068	0					
+ANR	67091	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		67068	1					
+ANR	67092	Callee	malloc		67068	0					
+ANR	67093	Identifier	malloc		67068	0					
+ANR	67094	ArgumentList	100 * sizeof ( twoIntsStruct )		67068	1					
+ANR	67095	Argument	100 * sizeof ( twoIntsStruct )		67068	0					
+ANR	67096	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		67068	0		*			
+ANR	67097	PrimaryExpression	100		67068	0					
+ANR	67098	SizeofExpression	sizeof ( twoIntsStruct )		67068	1					
+ANR	67099	Sizeof	sizeof		67068	0					
+ANR	67100	SizeofOperand	twoIntsStruct		67068	1					
+ANR	67101	IfStatement	if ( data == NULL )		67068	1					
+ANR	67102	Condition	data == NULL	69:12:1796:1807	67068	0	True				
+ANR	67103	EqualityExpression	data == NULL		67068	0		==			
+ANR	67104	Identifier	data		67068	0					
+ANR	67105	Identifier	NULL		67068	1					
+ANR	67106	CompoundStatement		8:26:204:204	67068	1					
+ANR	67107	ExpressionStatement	exit ( - 1 )	69:27:1811:1819	67068	0	True				
+ANR	67108	CallExpression	exit ( - 1 )		67068	0					
+ANR	67109	Callee	exit		67068	0					
+ANR	67110	Identifier	exit		67068	0					
+ANR	67111	ArgumentList	- 1		67068	1					
+ANR	67112	Argument	- 1		67068	0					
+ANR	67113	UnaryOperationExpression	- 1		67068	0					
+ANR	67114	UnaryOperator	-		67068	0					
+ANR	67115	PrimaryExpression	1		67068	1					
+ANR	67116	ExpressionStatement	free ( data )	71:8:1919:1929	67068	2	True				
+ANR	67117	CallExpression	free ( data )		67068	0					
+ANR	67118	Callee	free		67068	0					
+ANR	67119	Identifier	free		67068	0					
+ANR	67120	ArgumentList	data		67068	1					
+ANR	67121	Argument	data		67068	0					
+ANR	67122	Identifier	data		67068	0					
+ANR	67123	IfStatement	if ( staticReturnsFalse ( ) )		67068	3					
+ANR	67124	Condition	staticReturnsFalse ( )	73:7:1946:1965	67068	0	True				
+ANR	67125	CallExpression	staticReturnsFalse ( )		67068	0					
+ANR	67126	Callee	staticReturnsFalse		67068	0					
+ANR	67127	Identifier	staticReturnsFalse		67068	0					
+ANR	67128	ArgumentList			67068	1					
+ANR	67129	CompoundStatement		13:4:367:367	67068	1					
+ANR	67130	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	76:8:2060:2093	67068	0	True				
+ANR	67131	CallExpression	"printLine ( ""Benign, fixed string"" )"		67068	0					
+ANR	67132	Callee	printLine		67068	0					
+ANR	67133	Identifier	printLine		67068	0					
+ANR	67134	ArgumentList	"""Benign, fixed string"""		67068	1					
+ANR	67135	Argument	"""Benign, fixed string"""		67068	0					
+ANR	67136	PrimaryExpression	"""Benign, fixed string"""		67068	0					
+ANR	67137	ElseStatement	else		67068	0					
+ANR	67138	CompoundStatement		18:4:511:511	67068	0					
+ANR	67139	ExpressionStatement		82:8:2207:2207	67068	0	True				
+ANR	67140	ReturnType	static void		67068	1					
+ANR	67141	Identifier	goodB2G1		67068	2					
+ANR	67142	ParameterList			67068	3					
+ANR	67143	CFGEntryNode	ENTRY		67068		True				
+ANR	67144	CFGExitNode	EXIT		67068		True				
+ANR	67145	Symbol	malloc		67068						
+ANR	67146	Symbol	NULL		67068						
+ANR	67147	Symbol	staticReturnsFalse		67068						
+ANR	67148	Symbol	data		67068						
+ANR	67149	Symbol	staticReturnsTrue		67068						
+ANR	67150	Function	goodB2G2	87:0:2362:2905							
+ANR	67151	FunctionDef	goodB2G2 ()		67150	0					
+ANR	67152	CompoundStatement		88:0:2386:2905	67150	0					
+ANR	67153	IdentifierDeclStatement	twoIntsStruct * data ;	89:4:2393:2413	67150	0	True				
+ANR	67154	IdentifierDecl	* data		67150	0					
+ANR	67155	IdentifierDeclType	twoIntsStruct *		67150	0					
+ANR	67156	Identifier	data		67150	1					
+ANR	67157	ExpressionStatement	data = NULL	91:4:2447:2458	67150	1	True				
+ANR	67158	AssignmentExpression	data = NULL		67150	0		=			
+ANR	67159	Identifier	data		67150	0					
+ANR	67160	Identifier	NULL		67150	1					
+ANR	67161	IfStatement	if ( staticReturnsTrue ( ) )		67150	2					
+ANR	67162	Condition	staticReturnsTrue ( )	92:7:2468:2486	67150	0	True				
+ANR	67163	CallExpression	staticReturnsTrue ( )		67150	0					
+ANR	67164	Callee	staticReturnsTrue		67150	0					
+ANR	67165	Identifier	staticReturnsTrue		67150	0					
+ANR	67166	ArgumentList			67150	1					
+ANR	67167	CompoundStatement		6:4:107:107	67150	1					
+ANR	67168	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	94:8:2505:2562	67150	0	True				
+ANR	67169	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67150	0		=			
+ANR	67170	Identifier	data		67150	0					
+ANR	67171	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67150	1					
+ANR	67172	CastTarget	twoIntsStruct *		67150	0					
+ANR	67173	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		67150	1					
+ANR	67174	Callee	malloc		67150	0					
+ANR	67175	Identifier	malloc		67150	0					
+ANR	67176	ArgumentList	100 * sizeof ( twoIntsStruct )		67150	1					
+ANR	67177	Argument	100 * sizeof ( twoIntsStruct )		67150	0					
+ANR	67178	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		67150	0		*			
+ANR	67179	PrimaryExpression	100		67150	0					
+ANR	67180	SizeofExpression	sizeof ( twoIntsStruct )		67150	1					
+ANR	67181	Sizeof	sizeof		67150	0					
+ANR	67182	SizeofOperand	twoIntsStruct		67150	1					
+ANR	67183	IfStatement	if ( data == NULL )		67150	1					
+ANR	67184	Condition	data == NULL	95:12:2577:2588	67150	0	True				
+ANR	67185	EqualityExpression	data == NULL		67150	0		==			
+ANR	67186	Identifier	data		67150	0					
+ANR	67187	Identifier	NULL		67150	1					
+ANR	67188	CompoundStatement		8:26:204:204	67150	1					
+ANR	67189	ExpressionStatement	exit ( - 1 )	95:27:2592:2600	67150	0	True				
+ANR	67190	CallExpression	exit ( - 1 )		67150	0					
+ANR	67191	Callee	exit		67150	0					
+ANR	67192	Identifier	exit		67150	0					
+ANR	67193	ArgumentList	- 1		67150	1					
+ANR	67194	Argument	- 1		67150	0					
+ANR	67195	UnaryOperationExpression	- 1		67150	0					
+ANR	67196	UnaryOperator	-		67150	0					
+ANR	67197	PrimaryExpression	1		67150	1					
+ANR	67198	ExpressionStatement	free ( data )	97:8:2700:2710	67150	2	True				
+ANR	67199	CallExpression	free ( data )		67150	0					
+ANR	67200	Callee	free		67150	0					
+ANR	67201	Identifier	free		67150	0					
+ANR	67202	ArgumentList	data		67150	1					
+ANR	67203	Argument	data		67150	0					
+ANR	67204	Identifier	data		67150	0					
+ANR	67205	IfStatement	if ( staticReturnsTrue ( ) )		67150	3					
+ANR	67206	Condition	staticReturnsTrue ( )	99:7:2727:2745	67150	0	True				
+ANR	67207	CallExpression	staticReturnsTrue ( )		67150	0					
+ANR	67208	Callee	staticReturnsTrue		67150	0					
+ANR	67209	Identifier	staticReturnsTrue		67150	0					
+ANR	67210	ArgumentList			67150	1					
+ANR	67211	CompoundStatement		13:4:366:366	67150	1					
+ANR	67212	ExpressionStatement		103:8:2843:2843	67150	0	True				
+ANR	67213	ReturnType	static void		67150	1					
+ANR	67214	Identifier	goodB2G2		67150	2					
+ANR	67215	ParameterList			67150	3					
+ANR	67216	CFGEntryNode	ENTRY		67150		True				
+ANR	67217	CFGExitNode	EXIT		67150		True				
+ANR	67218	Symbol	malloc		67150						
+ANR	67219	Symbol	NULL		67150						
+ANR	67220	Symbol	data		67150						
+ANR	67221	Symbol	staticReturnsTrue		67150						
+ANR	67222	Function	goodG2B1	108:0:3023:3618							
+ANR	67223	FunctionDef	goodG2B1 ()		67222	0					
+ANR	67224	CompoundStatement		109:0:3047:3618	67222	0					
+ANR	67225	IdentifierDeclStatement	twoIntsStruct * data ;	110:4:3054:3074	67222	0	True				
+ANR	67226	IdentifierDecl	* data		67222	0					
+ANR	67227	IdentifierDeclType	twoIntsStruct *		67222	0					
+ANR	67228	Identifier	data		67222	1					
+ANR	67229	ExpressionStatement	data = NULL	112:4:3108:3119	67222	1	True				
+ANR	67230	AssignmentExpression	data = NULL		67222	0		=			
+ANR	67231	Identifier	data		67222	0					
+ANR	67232	Identifier	NULL		67222	1					
+ANR	67233	IfStatement	if ( staticReturnsFalse ( ) )		67222	2					
+ANR	67234	Condition	staticReturnsFalse ( )	113:7:3129:3148	67222	0	True				
+ANR	67235	CallExpression	staticReturnsFalse ( )		67222	0					
+ANR	67236	Callee	staticReturnsFalse		67222	0					
+ANR	67237	Identifier	staticReturnsFalse		67222	0					
+ANR	67238	ArgumentList			67222	1					
+ANR	67239	CompoundStatement		6:4:108:108	67222	1					
+ANR	67240	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	116:8:3243:3276	67222	0	True				
+ANR	67241	CallExpression	"printLine ( ""Benign, fixed string"" )"		67222	0					
+ANR	67242	Callee	printLine		67222	0					
+ANR	67243	Identifier	printLine		67222	0					
+ANR	67244	ArgumentList	"""Benign, fixed string"""		67222	1					
+ANR	67245	Argument	"""Benign, fixed string"""		67222	0					
+ANR	67246	PrimaryExpression	"""Benign, fixed string"""		67222	0					
+ANR	67247	ElseStatement	else		67222	0					
+ANR	67248	CompoundStatement		11:4:252:252	67222	0					
+ANR	67249	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	120:8:3311:3368	67222	0	True				
+ANR	67250	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67222	0		=			
+ANR	67251	Identifier	data		67222	0					
+ANR	67252	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67222	1					
+ANR	67253	CastTarget	twoIntsStruct *		67222	0					
+ANR	67254	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		67222	1					
+ANR	67255	Callee	malloc		67222	0					
+ANR	67256	Identifier	malloc		67222	0					
+ANR	67257	ArgumentList	100 * sizeof ( twoIntsStruct )		67222	1					
+ANR	67258	Argument	100 * sizeof ( twoIntsStruct )		67222	0					
+ANR	67259	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		67222	0		*			
+ANR	67260	PrimaryExpression	100		67222	0					
+ANR	67261	SizeofExpression	sizeof ( twoIntsStruct )		67222	1					
+ANR	67262	Sizeof	sizeof		67222	0					
+ANR	67263	SizeofOperand	twoIntsStruct		67222	1					
+ANR	67264	IfStatement	if ( data == NULL )		67222	1					
+ANR	67265	Condition	data == NULL	121:12:3383:3394	67222	0	True				
+ANR	67266	EqualityExpression	data == NULL		67222	0		==			
+ANR	67267	Identifier	data		67222	0					
+ANR	67268	Identifier	NULL		67222	1					
+ANR	67269	CompoundStatement		13:26:349:349	67222	1					
+ANR	67270	ExpressionStatement	exit ( - 1 )	121:27:3398:3406	67222	0	True				
+ANR	67271	CallExpression	exit ( - 1 )		67222	0					
+ANR	67272	Callee	exit		67222	0					
+ANR	67273	Identifier	exit		67222	0					
+ANR	67274	ArgumentList	- 1		67222	1					
+ANR	67275	Argument	- 1		67222	0					
+ANR	67276	UnaryOperationExpression	- 1		67222	0					
+ANR	67277	UnaryOperator	-		67222	0					
+ANR	67278	PrimaryExpression	1		67222	1					
+ANR	67279	IfStatement	if ( staticReturnsTrue ( ) )		67222	3					
+ANR	67280	Condition	staticReturnsTrue ( )	124:7:3500:3518	67222	0	True				
+ANR	67281	CallExpression	staticReturnsTrue ( )		67222	0					
+ANR	67282	Callee	staticReturnsTrue		67222	0					
+ANR	67283	Identifier	staticReturnsTrue		67222	0					
+ANR	67284	ArgumentList			67222	1					
+ANR	67285	CompoundStatement		17:4:478:478	67222	1					
+ANR	67286	ExpressionStatement	free ( data )	127:8:3598:3608	67222	0	True				
+ANR	67287	CallExpression	free ( data )		67222	0					
+ANR	67288	Callee	free		67222	0					
+ANR	67289	Identifier	free		67222	0					
+ANR	67290	ArgumentList	data		67222	1					
+ANR	67291	Argument	data		67222	0					
+ANR	67292	Identifier	data		67222	0					
+ANR	67293	ReturnType	static void		67222	1					
+ANR	67294	Identifier	goodG2B1		67222	2					
+ANR	67295	ParameterList			67222	3					
+ANR	67296	CFGEntryNode	ENTRY		67222		True				
+ANR	67297	CFGExitNode	EXIT		67222		True				
+ANR	67298	Symbol	malloc		67222						
+ANR	67299	Symbol	NULL		67222						
+ANR	67300	Symbol	staticReturnsFalse		67222						
+ANR	67301	Symbol	data		67222						
+ANR	67302	Symbol	staticReturnsTrue		67222						
+ANR	67303	Function	goodG2B2	132:0:3710:4160							
+ANR	67304	FunctionDef	goodG2B2 ()		67303	0					
+ANR	67305	CompoundStatement		133:0:3734:4160	67303	0					
+ANR	67306	IdentifierDeclStatement	twoIntsStruct * data ;	134:4:3741:3761	67303	0	True				
+ANR	67307	IdentifierDecl	* data		67303	0					
+ANR	67308	IdentifierDeclType	twoIntsStruct *		67303	0					
+ANR	67309	Identifier	data		67303	1					
+ANR	67310	ExpressionStatement	data = NULL	136:4:3795:3806	67303	1	True				
+ANR	67311	AssignmentExpression	data = NULL		67303	0		=			
+ANR	67312	Identifier	data		67303	0					
+ANR	67313	Identifier	NULL		67303	1					
+ANR	67314	IfStatement	if ( staticReturnsTrue ( ) )		67303	2					
+ANR	67315	Condition	staticReturnsTrue ( )	137:7:3816:3834	67303	0	True				
+ANR	67316	CallExpression	staticReturnsTrue ( )		67303	0					
+ANR	67317	Callee	staticReturnsTrue		67303	0					
+ANR	67318	Identifier	staticReturnsTrue		67303	0					
+ANR	67319	ArgumentList			67303	1					
+ANR	67320	CompoundStatement		6:4:107:107	67303	1					
+ANR	67321	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	139:8:3853:3910	67303	0	True				
+ANR	67322	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67303	0		=			
+ANR	67323	Identifier	data		67303	0					
+ANR	67324	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		67303	1					
+ANR	67325	CastTarget	twoIntsStruct *		67303	0					
+ANR	67326	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		67303	1					
+ANR	67327	Callee	malloc		67303	0					
+ANR	67328	Identifier	malloc		67303	0					
+ANR	67329	ArgumentList	100 * sizeof ( twoIntsStruct )		67303	1					
+ANR	67330	Argument	100 * sizeof ( twoIntsStruct )		67303	0					
+ANR	67331	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		67303	0		*			
+ANR	67332	PrimaryExpression	100		67303	0					
+ANR	67333	SizeofExpression	sizeof ( twoIntsStruct )		67303	1					
+ANR	67334	Sizeof	sizeof		67303	0					
+ANR	67335	SizeofOperand	twoIntsStruct		67303	1					
+ANR	67336	IfStatement	if ( data == NULL )		67303	1					
+ANR	67337	Condition	data == NULL	140:12:3925:3936	67303	0	True				
+ANR	67338	EqualityExpression	data == NULL		67303	0		==			
+ANR	67339	Identifier	data		67303	0					
+ANR	67340	Identifier	NULL		67303	1					
+ANR	67341	CompoundStatement		8:26:204:204	67303	1					
+ANR	67342	ExpressionStatement	exit ( - 1 )	140:27:3940:3948	67303	0	True				
+ANR	67343	CallExpression	exit ( - 1 )		67303	0					
+ANR	67344	Callee	exit		67303	0					
+ANR	67345	Identifier	exit		67303	0					
+ANR	67346	ArgumentList	- 1		67303	1					
+ANR	67347	Argument	- 1		67303	0					
+ANR	67348	UnaryOperationExpression	- 1		67303	0					
+ANR	67349	UnaryOperator	-		67303	0					
+ANR	67350	PrimaryExpression	1		67303	1					
+ANR	67351	IfStatement	if ( staticReturnsTrue ( ) )		67303	3					
+ANR	67352	Condition	staticReturnsTrue ( )	143:7:4042:4060	67303	0	True				
+ANR	67353	CallExpression	staticReturnsTrue ( )		67303	0					
+ANR	67354	Callee	staticReturnsTrue		67303	0					
+ANR	67355	Identifier	staticReturnsTrue		67303	0					
+ANR	67356	ArgumentList			67303	1					
+ANR	67357	CompoundStatement		12:4:333:333	67303	1					
+ANR	67358	ExpressionStatement	free ( data )	146:8:4140:4150	67303	0	True				
+ANR	67359	CallExpression	free ( data )		67303	0					
+ANR	67360	Callee	free		67303	0					
+ANR	67361	Identifier	free		67303	0					
+ANR	67362	ArgumentList	data		67303	1					
+ANR	67363	Argument	data		67303	0					
+ANR	67364	Identifier	data		67303	0					
+ANR	67365	ReturnType	static void		67303	1					
+ANR	67366	Identifier	goodG2B2		67303	2					
+ANR	67367	ParameterList			67303	3					
+ANR	67368	CFGEntryNode	ENTRY		67303		True				
+ANR	67369	CFGExitNode	EXIT		67303		True				
+ANR	67370	Symbol	malloc		67303						
+ANR	67371	Symbol	NULL		67303						
+ANR	67372	Symbol	data		67303						
+ANR	67373	Symbol	staticReturnsTrue		67303						
+ANR	67374	Function	CWE415_Double_Free__malloc_free_struct_08_good	150:0:4165:4291							
+ANR	67375	FunctionDef	CWE415_Double_Free__malloc_free_struct_08_good ()		67374	0					
+ANR	67376	CompoundStatement		151:0:4220:4291	67374	0					
+ANR	67377	ExpressionStatement	goodB2G1 ( )	152:4:4227:4237	67374	0	True				
+ANR	67378	CallExpression	goodB2G1 ( )		67374	0					
+ANR	67379	Callee	goodB2G1		67374	0					
+ANR	67380	Identifier	goodB2G1		67374	0					
+ANR	67381	ArgumentList			67374	1					
+ANR	67382	ExpressionStatement	goodB2G2 ( )	153:4:4244:4254	67374	1	True				
+ANR	67383	CallExpression	goodB2G2 ( )		67374	0					
+ANR	67384	Callee	goodB2G2		67374	0					
+ANR	67385	Identifier	goodB2G2		67374	0					
+ANR	67386	ArgumentList			67374	1					
+ANR	67387	ExpressionStatement	goodG2B1 ( )	154:4:4261:4271	67374	2	True				
+ANR	67388	CallExpression	goodG2B1 ( )		67374	0					
+ANR	67389	Callee	goodG2B1		67374	0					
+ANR	67390	Identifier	goodG2B1		67374	0					
+ANR	67391	ArgumentList			67374	1					
+ANR	67392	ExpressionStatement	goodG2B2 ( )	155:4:4278:4288	67374	3	True				
+ANR	67393	CallExpression	goodG2B2 ( )		67374	0					
+ANR	67394	Callee	goodG2B2		67374	0					
+ANR	67395	Identifier	goodG2B2		67374	0					
+ANR	67396	ArgumentList			67374	1					
+ANR	67397	ReturnType	void		67374	1					
+ANR	67398	Identifier	CWE415_Double_Free__malloc_free_struct_08_good		67374	2					
+ANR	67399	ParameterList			67374	3					
+ANR	67400	CFGEntryNode	ENTRY		67374		True				
+ANR	67401	CFGExitNode	EXIT		67374		True				
+ANR	67402	Function	main	167:0:4638:5085							
+ANR	67403	FunctionDef	"main (int argc , char * argv [ ])"		67402	0					
+ANR	67404	CompoundStatement		168:0:4673:5085	67402	0					
+ANR	67405	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	170:4:4707:4736	67402	0	True				
+ANR	67406	CallExpression	srand ( ( unsigned ) time ( NULL ) )		67402	0					
+ANR	67407	Callee	srand		67402	0					
+ANR	67408	Identifier	srand		67402	0					
+ANR	67409	ArgumentList	( unsigned ) time ( NULL )		67402	1					
+ANR	67410	Argument	( unsigned ) time ( NULL )		67402	0					
+ANR	67411	CastExpression	( unsigned ) time ( NULL )		67402	0					
+ANR	67412	CastTarget	unsigned		67402	0					
+ANR	67413	CallExpression	time ( NULL )		67402	1					
+ANR	67414	Callee	time		67402	0					
+ANR	67415	Identifier	time		67402	0					
+ANR	67416	ArgumentList	NULL		67402	1					
+ANR	67417	Argument	NULL		67402	0					
+ANR	67418	Identifier	NULL		67402	0					
+ANR	67419	ExpressionStatement	"printLine ( ""Calling good()..."" )"	172:4:4761:4791	67402	1	True				
+ANR	67420	CallExpression	"printLine ( ""Calling good()..."" )"		67402	0					
+ANR	67421	Callee	printLine		67402	0					
+ANR	67422	Identifier	printLine		67402	0					
+ANR	67423	ArgumentList	"""Calling good()..."""		67402	1					
+ANR	67424	Argument	"""Calling good()..."""		67402	0					
+ANR	67425	PrimaryExpression	"""Calling good()..."""		67402	0					
+ANR	67426	ExpressionStatement	CWE415_Double_Free__malloc_free_struct_08_good ( )	173:4:4798:4846	67402	2	True				
+ANR	67427	CallExpression	CWE415_Double_Free__malloc_free_struct_08_good ( )		67402	0					
+ANR	67428	Callee	CWE415_Double_Free__malloc_free_struct_08_good		67402	0					
+ANR	67429	Identifier	CWE415_Double_Free__malloc_free_struct_08_good		67402	0					
+ANR	67430	ArgumentList			67402	1					
+ANR	67431	ExpressionStatement	"printLine ( ""Finished good()"" )"	174:4:4853:4881	67402	3	True				
+ANR	67432	CallExpression	"printLine ( ""Finished good()"" )"		67402	0					
+ANR	67433	Callee	printLine		67402	0					
+ANR	67434	Identifier	printLine		67402	0					
+ANR	67435	ArgumentList	"""Finished good()"""		67402	1					
+ANR	67436	Argument	"""Finished good()"""		67402	0					
+ANR	67437	PrimaryExpression	"""Finished good()"""		67402	0					
+ANR	67438	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	177:4:4928:4957	67402	4	True				
+ANR	67439	CallExpression	"printLine ( ""Calling bad()..."" )"		67402	0					
+ANR	67440	Callee	printLine		67402	0					
+ANR	67441	Identifier	printLine		67402	0					
+ANR	67442	ArgumentList	"""Calling bad()..."""		67402	1					
+ANR	67443	Argument	"""Calling bad()..."""		67402	0					
+ANR	67444	PrimaryExpression	"""Calling bad()..."""		67402	0					
+ANR	67445	ExpressionStatement	CWE415_Double_Free__malloc_free_struct_08_bad ( )	178:4:4964:5011	67402	5	True				
+ANR	67446	CallExpression	CWE415_Double_Free__malloc_free_struct_08_bad ( )		67402	0					
+ANR	67447	Callee	CWE415_Double_Free__malloc_free_struct_08_bad		67402	0					
+ANR	67448	Identifier	CWE415_Double_Free__malloc_free_struct_08_bad		67402	0					
+ANR	67449	ArgumentList			67402	1					
+ANR	67450	ExpressionStatement	"printLine ( ""Finished bad()"" )"	179:4:5018:5045	67402	6	True				
+ANR	67451	CallExpression	"printLine ( ""Finished bad()"" )"		67402	0					
+ANR	67452	Callee	printLine		67402	0					
+ANR	67453	Identifier	printLine		67402	0					
+ANR	67454	ArgumentList	"""Finished bad()"""		67402	1					
+ANR	67455	Argument	"""Finished bad()"""		67402	0					
+ANR	67456	PrimaryExpression	"""Finished bad()"""		67402	0					
+ANR	67457	ReturnStatement	return 0 ;	181:4:5074:5082	67402	7	True				
+ANR	67458	PrimaryExpression	0		67402	0					
+ANR	67459	ReturnType	int		67402	1					
+ANR	67460	Identifier	main		67402	2					
+ANR	67461	ParameterList	"int argc , char * argv [ ]"		67402	3					
+ANR	67462	Parameter	int argc	167:9:4647:4654	67402	0	True				
+ANR	67463	ParameterType	int		67402	0					
+ANR	67464	Identifier	argc		67402	1					
+ANR	67465	Parameter	char * argv [ ]	167:19:4657:4669	67402	1	True				
+ANR	67466	ParameterType	char * [ ]		67402	0					
+ANR	67467	Identifier	argv		67402	1					
+ANR	67468	CFGEntryNode	ENTRY		67402		True				
+ANR	67469	CFGExitNode	EXIT		67402		True				
+ANR	67470	Symbol	argc		67402						
+ANR	67471	Symbol	NULL		67402						
+ANR	67472	Symbol	time		67402						
+ANR	67473	Symbol	argv		67402						

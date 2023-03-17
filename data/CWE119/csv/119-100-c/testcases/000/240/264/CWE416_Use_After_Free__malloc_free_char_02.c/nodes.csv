@@ -1,0 +1,559 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	86481	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-100-c/testcases/000/240/264/CWE416_Use_After_Free__malloc_free_char_02.c								
+ANR	86482	Function	CWE416_Use_After_Free__malloc_free_char_02_bad	24:0:631:1246							
+ANR	86483	FunctionDef	CWE416_Use_After_Free__malloc_free_char_02_bad ()		86482	0					
+ANR	86484	CompoundStatement		25:0:686:1246	86482	0					
+ANR	86485	IdentifierDeclStatement	char * data ;	26:4:693:704	86482	0	True				
+ANR	86486	IdentifierDecl	* data		86482	0					
+ANR	86487	IdentifierDeclType	char *		86482	0					
+ANR	86488	Identifier	data		86482	1					
+ANR	86489	ExpressionStatement	data = NULL	28:4:738:749	86482	1	True				
+ANR	86490	AssignmentExpression	data = NULL		86482	0		=			
+ANR	86491	Identifier	data		86482	0					
+ANR	86492	Identifier	NULL		86482	1					
+ANR	86493	IfStatement	if ( 1 )		86482	2					
+ANR	86494	Condition	1	29:7:759:759	86482	0	True				
+ANR	86495	PrimaryExpression	1		86482	0					
+ANR	86496	CompoundStatement		6:4:80:80	86482	1					
+ANR	86497	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	31:8:778:817	86482	0	True				
+ANR	86498	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		86482	0		=			
+ANR	86499	Identifier	data		86482	0					
+ANR	86500	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		86482	1					
+ANR	86501	CastTarget	char *		86482	0					
+ANR	86502	CallExpression	malloc ( 100 * sizeof ( char ) )		86482	1					
+ANR	86503	Callee	malloc		86482	0					
+ANR	86504	Identifier	malloc		86482	0					
+ANR	86505	ArgumentList	100 * sizeof ( char )		86482	1					
+ANR	86506	Argument	100 * sizeof ( char )		86482	0					
+ANR	86507	MultiplicativeExpression	100 * sizeof ( char )		86482	0		*			
+ANR	86508	PrimaryExpression	100		86482	0					
+ANR	86509	SizeofExpression	sizeof ( char )		86482	1					
+ANR	86510	Sizeof	sizeof		86482	0					
+ANR	86511	SizeofOperand	char		86482	1					
+ANR	86512	IfStatement	if ( data == NULL )		86482	1					
+ANR	86513	Condition	data == NULL	32:12:832:843	86482	0	True				
+ANR	86514	EqualityExpression	data == NULL		86482	0		==			
+ANR	86515	Identifier	data		86482	0					
+ANR	86516	Identifier	NULL		86482	1					
+ANR	86517	CompoundStatement		8:26:159:159	86482	1					
+ANR	86518	ExpressionStatement	exit ( - 1 )	32:27:847:855	86482	0	True				
+ANR	86519	CallExpression	exit ( - 1 )		86482	0					
+ANR	86520	Callee	exit		86482	0					
+ANR	86521	Identifier	exit		86482	0					
+ANR	86522	ArgumentList	- 1		86482	1					
+ANR	86523	Argument	- 1		86482	0					
+ANR	86524	UnaryOperationExpression	- 1		86482	0					
+ANR	86525	UnaryOperator	-		86482	0					
+ANR	86526	PrimaryExpression	1		86482	1					
+ANR	86527	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	33:8:866:890	86482	2	True				
+ANR	86528	CallExpression	"memset ( data , 'A' , 100 - 1 )"		86482	0					
+ANR	86529	Callee	memset		86482	0					
+ANR	86530	Identifier	memset		86482	0					
+ANR	86531	ArgumentList	data		86482	1					
+ANR	86532	Argument	data		86482	0					
+ANR	86533	Identifier	data		86482	0					
+ANR	86534	Argument	'A'		86482	1					
+ANR	86535	PrimaryExpression	'A'		86482	0					
+ANR	86536	Argument	100 - 1		86482	2					
+ANR	86537	AdditiveExpression	100 - 1		86482	0		-			
+ANR	86538	PrimaryExpression	100		86482	0					
+ANR	86539	PrimaryExpression	1		86482	1					
+ANR	86540	ExpressionStatement	data [ 100 - 1 ] = '\\0'	34:8:901:919	86482	3	True				
+ANR	86541	AssignmentExpression	data [ 100 - 1 ] = '\\0'		86482	0		=			
+ANR	86542	ArrayIndexing	data [ 100 - 1 ]		86482	0					
+ANR	86543	Identifier	data		86482	0					
+ANR	86544	AdditiveExpression	100 - 1		86482	1		-			
+ANR	86545	PrimaryExpression	100		86482	0					
+ANR	86546	PrimaryExpression	1		86482	1					
+ANR	86547	PrimaryExpression	'\\0'		86482	1					
+ANR	86548	ExpressionStatement	free ( data )	36:8:1021:1031	86482	4	True				
+ANR	86549	CallExpression	free ( data )		86482	0					
+ANR	86550	Callee	free		86482	0					
+ANR	86551	Identifier	free		86482	0					
+ANR	86552	ArgumentList	data		86482	1					
+ANR	86553	Argument	data		86482	0					
+ANR	86554	Identifier	data		86482	0					
+ANR	86555	IfStatement	if ( 1 )		86482	3					
+ANR	86556	Condition	1	38:7:1048:1048	86482	0	True				
+ANR	86557	PrimaryExpression	1		86482	0					
+ANR	86558	CompoundStatement		15:4:369:369	86482	1					
+ANR	86559	ExpressionStatement	printLine ( data )	41:8:1135:1150	86482	0	True				
+ANR	86560	CallExpression	printLine ( data )		86482	0					
+ANR	86561	Callee	printLine		86482	0					
+ANR	86562	Identifier	printLine		86482	0					
+ANR	86563	ArgumentList	data		86482	1					
+ANR	86564	Argument	data		86482	0					
+ANR	86565	Identifier	data		86482	0					
+ANR	86566	ReturnType	void		86482	1					
+ANR	86567	Identifier	CWE416_Use_After_Free__malloc_free_char_02_bad		86482	2					
+ANR	86568	ParameterList			86482	3					
+ANR	86569	CFGEntryNode	ENTRY		86482		True				
+ANR	86570	CFGExitNode	EXIT		86482		True				
+ANR	86571	Symbol	malloc		86482						
+ANR	86572	Symbol	NULL		86482						
+ANR	86573	Symbol	data		86482						
+ANR	86574	Symbol	* data		86482						
+ANR	86575	Function	goodB2G1	51:0:1372:2163							
+ANR	86576	FunctionDef	goodB2G1 ()		86575	0					
+ANR	86577	CompoundStatement		52:0:1396:2163	86575	0					
+ANR	86578	IdentifierDeclStatement	char * data ;	53:4:1403:1414	86575	0	True				
+ANR	86579	IdentifierDecl	* data		86575	0					
+ANR	86580	IdentifierDeclType	char *		86575	0					
+ANR	86581	Identifier	data		86575	1					
+ANR	86582	ExpressionStatement	data = NULL	55:4:1448:1459	86575	1	True				
+ANR	86583	AssignmentExpression	data = NULL		86575	0		=			
+ANR	86584	Identifier	data		86575	0					
+ANR	86585	Identifier	NULL		86575	1					
+ANR	86586	IfStatement	if ( 1 )		86575	2					
+ANR	86587	Condition	1	56:7:1469:1469	86575	0	True				
+ANR	86588	PrimaryExpression	1		86575	0					
+ANR	86589	CompoundStatement		6:4:80:80	86575	1					
+ANR	86590	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	58:8:1488:1527	86575	0	True				
+ANR	86591	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		86575	0		=			
+ANR	86592	Identifier	data		86575	0					
+ANR	86593	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		86575	1					
+ANR	86594	CastTarget	char *		86575	0					
+ANR	86595	CallExpression	malloc ( 100 * sizeof ( char ) )		86575	1					
+ANR	86596	Callee	malloc		86575	0					
+ANR	86597	Identifier	malloc		86575	0					
+ANR	86598	ArgumentList	100 * sizeof ( char )		86575	1					
+ANR	86599	Argument	100 * sizeof ( char )		86575	0					
+ANR	86600	MultiplicativeExpression	100 * sizeof ( char )		86575	0		*			
+ANR	86601	PrimaryExpression	100		86575	0					
+ANR	86602	SizeofExpression	sizeof ( char )		86575	1					
+ANR	86603	Sizeof	sizeof		86575	0					
+ANR	86604	SizeofOperand	char		86575	1					
+ANR	86605	IfStatement	if ( data == NULL )		86575	1					
+ANR	86606	Condition	data == NULL	59:12:1542:1553	86575	0	True				
+ANR	86607	EqualityExpression	data == NULL		86575	0		==			
+ANR	86608	Identifier	data		86575	0					
+ANR	86609	Identifier	NULL		86575	1					
+ANR	86610	CompoundStatement		8:26:159:159	86575	1					
+ANR	86611	ExpressionStatement	exit ( - 1 )	59:27:1557:1565	86575	0	True				
+ANR	86612	CallExpression	exit ( - 1 )		86575	0					
+ANR	86613	Callee	exit		86575	0					
+ANR	86614	Identifier	exit		86575	0					
+ANR	86615	ArgumentList	- 1		86575	1					
+ANR	86616	Argument	- 1		86575	0					
+ANR	86617	UnaryOperationExpression	- 1		86575	0					
+ANR	86618	UnaryOperator	-		86575	0					
+ANR	86619	PrimaryExpression	1		86575	1					
+ANR	86620	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	60:8:1576:1600	86575	2	True				
+ANR	86621	CallExpression	"memset ( data , 'A' , 100 - 1 )"		86575	0					
+ANR	86622	Callee	memset		86575	0					
+ANR	86623	Identifier	memset		86575	0					
+ANR	86624	ArgumentList	data		86575	1					
+ANR	86625	Argument	data		86575	0					
+ANR	86626	Identifier	data		86575	0					
+ANR	86627	Argument	'A'		86575	1					
+ANR	86628	PrimaryExpression	'A'		86575	0					
+ANR	86629	Argument	100 - 1		86575	2					
+ANR	86630	AdditiveExpression	100 - 1		86575	0		-			
+ANR	86631	PrimaryExpression	100		86575	0					
+ANR	86632	PrimaryExpression	1		86575	1					
+ANR	86633	ExpressionStatement	data [ 100 - 1 ] = '\\0'	61:8:1611:1629	86575	3	True				
+ANR	86634	AssignmentExpression	data [ 100 - 1 ] = '\\0'		86575	0		=			
+ANR	86635	ArrayIndexing	data [ 100 - 1 ]		86575	0					
+ANR	86636	Identifier	data		86575	0					
+ANR	86637	AdditiveExpression	100 - 1		86575	1		-			
+ANR	86638	PrimaryExpression	100		86575	0					
+ANR	86639	PrimaryExpression	1		86575	1					
+ANR	86640	PrimaryExpression	'\\0'		86575	1					
+ANR	86641	ExpressionStatement	free ( data )	63:8:1731:1741	86575	4	True				
+ANR	86642	CallExpression	free ( data )		86575	0					
+ANR	86643	Callee	free		86575	0					
+ANR	86644	Identifier	free		86575	0					
+ANR	86645	ArgumentList	data		86575	1					
+ANR	86646	Argument	data		86575	0					
+ANR	86647	Identifier	data		86575	0					
+ANR	86648	IfStatement	if ( 0 )		86575	3					
+ANR	86649	Condition	0	65:7:1758:1758	86575	0	True				
+ANR	86650	PrimaryExpression	0		86575	0					
+ANR	86651	CompoundStatement		15:4:369:369	86575	1					
+ANR	86652	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	68:8:1853:1886	86575	0	True				
+ANR	86653	CallExpression	"printLine ( ""Benign, fixed string"" )"		86575	0					
+ANR	86654	Callee	printLine		86575	0					
+ANR	86655	Identifier	printLine		86575	0					
+ANR	86656	ArgumentList	"""Benign, fixed string"""		86575	1					
+ANR	86657	Argument	"""Benign, fixed string"""		86575	0					
+ANR	86658	PrimaryExpression	"""Benign, fixed string"""		86575	0					
+ANR	86659	ElseStatement	else		86575	0					
+ANR	86660	CompoundStatement		20:4:513:513	86575	0					
+ANR	86661	ExpressionStatement		75:8:2101:2101	86575	0	True				
+ANR	86662	ReturnType	static void		86575	1					
+ANR	86663	Identifier	goodB2G1		86575	2					
+ANR	86664	ParameterList			86575	3					
+ANR	86665	CFGEntryNode	ENTRY		86575		True				
+ANR	86666	CFGExitNode	EXIT		86575		True				
+ANR	86667	Symbol	malloc		86575						
+ANR	86668	Symbol	NULL		86575						
+ANR	86669	Symbol	data		86575						
+ANR	86670	Symbol	* data		86575						
+ANR	86671	Function	goodB2G2	80:0:2256:2903							
+ANR	86672	FunctionDef	goodB2G2 ()		86671	0					
+ANR	86673	CompoundStatement		81:0:2280:2903	86671	0					
+ANR	86674	IdentifierDeclStatement	char * data ;	82:4:2287:2298	86671	0	True				
+ANR	86675	IdentifierDecl	* data		86671	0					
+ANR	86676	IdentifierDeclType	char *		86671	0					
+ANR	86677	Identifier	data		86671	1					
+ANR	86678	ExpressionStatement	data = NULL	84:4:2332:2343	86671	1	True				
+ANR	86679	AssignmentExpression	data = NULL		86671	0		=			
+ANR	86680	Identifier	data		86671	0					
+ANR	86681	Identifier	NULL		86671	1					
+ANR	86682	IfStatement	if ( 1 )		86671	2					
+ANR	86683	Condition	1	85:7:2353:2353	86671	0	True				
+ANR	86684	PrimaryExpression	1		86671	0					
+ANR	86685	CompoundStatement		6:4:80:80	86671	1					
+ANR	86686	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	87:8:2372:2411	86671	0	True				
+ANR	86687	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		86671	0		=			
+ANR	86688	Identifier	data		86671	0					
+ANR	86689	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		86671	1					
+ANR	86690	CastTarget	char *		86671	0					
+ANR	86691	CallExpression	malloc ( 100 * sizeof ( char ) )		86671	1					
+ANR	86692	Callee	malloc		86671	0					
+ANR	86693	Identifier	malloc		86671	0					
+ANR	86694	ArgumentList	100 * sizeof ( char )		86671	1					
+ANR	86695	Argument	100 * sizeof ( char )		86671	0					
+ANR	86696	MultiplicativeExpression	100 * sizeof ( char )		86671	0		*			
+ANR	86697	PrimaryExpression	100		86671	0					
+ANR	86698	SizeofExpression	sizeof ( char )		86671	1					
+ANR	86699	Sizeof	sizeof		86671	0					
+ANR	86700	SizeofOperand	char		86671	1					
+ANR	86701	IfStatement	if ( data == NULL )		86671	1					
+ANR	86702	Condition	data == NULL	88:12:2426:2437	86671	0	True				
+ANR	86703	EqualityExpression	data == NULL		86671	0		==			
+ANR	86704	Identifier	data		86671	0					
+ANR	86705	Identifier	NULL		86671	1					
+ANR	86706	CompoundStatement		8:26:159:159	86671	1					
+ANR	86707	ExpressionStatement	exit ( - 1 )	88:27:2441:2449	86671	0	True				
+ANR	86708	CallExpression	exit ( - 1 )		86671	0					
+ANR	86709	Callee	exit		86671	0					
+ANR	86710	Identifier	exit		86671	0					
+ANR	86711	ArgumentList	- 1		86671	1					
+ANR	86712	Argument	- 1		86671	0					
+ANR	86713	UnaryOperationExpression	- 1		86671	0					
+ANR	86714	UnaryOperator	-		86671	0					
+ANR	86715	PrimaryExpression	1		86671	1					
+ANR	86716	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	89:8:2460:2484	86671	2	True				
+ANR	86717	CallExpression	"memset ( data , 'A' , 100 - 1 )"		86671	0					
+ANR	86718	Callee	memset		86671	0					
+ANR	86719	Identifier	memset		86671	0					
+ANR	86720	ArgumentList	data		86671	1					
+ANR	86721	Argument	data		86671	0					
+ANR	86722	Identifier	data		86671	0					
+ANR	86723	Argument	'A'		86671	1					
+ANR	86724	PrimaryExpression	'A'		86671	0					
+ANR	86725	Argument	100 - 1		86671	2					
+ANR	86726	AdditiveExpression	100 - 1		86671	0		-			
+ANR	86727	PrimaryExpression	100		86671	0					
+ANR	86728	PrimaryExpression	1		86671	1					
+ANR	86729	ExpressionStatement	data [ 100 - 1 ] = '\\0'	90:8:2495:2513	86671	3	True				
+ANR	86730	AssignmentExpression	data [ 100 - 1 ] = '\\0'		86671	0		=			
+ANR	86731	ArrayIndexing	data [ 100 - 1 ]		86671	0					
+ANR	86732	Identifier	data		86671	0					
+ANR	86733	AdditiveExpression	100 - 1		86671	1		-			
+ANR	86734	PrimaryExpression	100		86671	0					
+ANR	86735	PrimaryExpression	1		86671	1					
+ANR	86736	PrimaryExpression	'\\0'		86671	1					
+ANR	86737	ExpressionStatement	free ( data )	92:8:2615:2625	86671	4	True				
+ANR	86738	CallExpression	free ( data )		86671	0					
+ANR	86739	Callee	free		86671	0					
+ANR	86740	Identifier	free		86671	0					
+ANR	86741	ArgumentList	data		86671	1					
+ANR	86742	Argument	data		86671	0					
+ANR	86743	Identifier	data		86671	0					
+ANR	86744	IfStatement	if ( 1 )		86671	3					
+ANR	86745	Condition	1	94:7:2642:2642	86671	0	True				
+ANR	86746	PrimaryExpression	1		86671	0					
+ANR	86747	CompoundStatement		15:4:369:369	86671	1					
+ANR	86748	ExpressionStatement		99:8:2841:2841	86671	0	True				
+ANR	86749	ReturnType	static void		86671	1					
+ANR	86750	Identifier	goodB2G2		86671	2					
+ANR	86751	ParameterList			86671	3					
+ANR	86752	CFGEntryNode	ENTRY		86671		True				
+ANR	86753	CFGExitNode	EXIT		86671		True				
+ANR	86754	Symbol	malloc		86671						
+ANR	86755	Symbol	NULL		86671						
+ANR	86756	Symbol	data		86671						
+ANR	86757	Symbol	* data		86671						
+ANR	86758	Function	goodG2B1	104:0:2984:3651							
+ANR	86759	FunctionDef	goodG2B1 ()		86758	0					
+ANR	86760	CompoundStatement		105:0:3008:3651	86758	0					
+ANR	86761	IdentifierDeclStatement	char * data ;	106:4:3015:3026	86758	0	True				
+ANR	86762	IdentifierDecl	* data		86758	0					
+ANR	86763	IdentifierDeclType	char *		86758	0					
+ANR	86764	Identifier	data		86758	1					
+ANR	86765	ExpressionStatement	data = NULL	108:4:3060:3071	86758	1	True				
+ANR	86766	AssignmentExpression	data = NULL		86758	0		=			
+ANR	86767	Identifier	data		86758	0					
+ANR	86768	Identifier	NULL		86758	1					
+ANR	86769	IfStatement	if ( 0 )		86758	2					
+ANR	86770	Condition	0	109:7:3081:3081	86758	0	True				
+ANR	86771	PrimaryExpression	0		86758	0					
+ANR	86772	CompoundStatement		6:4:80:80	86758	1					
+ANR	86773	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	112:8:3176:3209	86758	0	True				
+ANR	86774	CallExpression	"printLine ( ""Benign, fixed string"" )"		86758	0					
+ANR	86775	Callee	printLine		86758	0					
+ANR	86776	Identifier	printLine		86758	0					
+ANR	86777	ArgumentList	"""Benign, fixed string"""		86758	1					
+ANR	86778	Argument	"""Benign, fixed string"""		86758	0					
+ANR	86779	PrimaryExpression	"""Benign, fixed string"""		86758	0					
+ANR	86780	ElseStatement	else		86758	0					
+ANR	86781	CompoundStatement		11:4:224:224	86758	0					
+ANR	86782	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	116:8:3244:3283	86758	0	True				
+ANR	86783	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		86758	0		=			
+ANR	86784	Identifier	data		86758	0					
+ANR	86785	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		86758	1					
+ANR	86786	CastTarget	char *		86758	0					
+ANR	86787	CallExpression	malloc ( 100 * sizeof ( char ) )		86758	1					
+ANR	86788	Callee	malloc		86758	0					
+ANR	86789	Identifier	malloc		86758	0					
+ANR	86790	ArgumentList	100 * sizeof ( char )		86758	1					
+ANR	86791	Argument	100 * sizeof ( char )		86758	0					
+ANR	86792	MultiplicativeExpression	100 * sizeof ( char )		86758	0		*			
+ANR	86793	PrimaryExpression	100		86758	0					
+ANR	86794	SizeofExpression	sizeof ( char )		86758	1					
+ANR	86795	Sizeof	sizeof		86758	0					
+ANR	86796	SizeofOperand	char		86758	1					
+ANR	86797	IfStatement	if ( data == NULL )		86758	1					
+ANR	86798	Condition	data == NULL	117:12:3298:3309	86758	0	True				
+ANR	86799	EqualityExpression	data == NULL		86758	0		==			
+ANR	86800	Identifier	data		86758	0					
+ANR	86801	Identifier	NULL		86758	1					
+ANR	86802	CompoundStatement		13:26:303:303	86758	1					
+ANR	86803	ExpressionStatement	exit ( - 1 )	117:27:3313:3321	86758	0	True				
+ANR	86804	CallExpression	exit ( - 1 )		86758	0					
+ANR	86805	Callee	exit		86758	0					
+ANR	86806	Identifier	exit		86758	0					
+ANR	86807	ArgumentList	- 1		86758	1					
+ANR	86808	Argument	- 1		86758	0					
+ANR	86809	UnaryOperationExpression	- 1		86758	0					
+ANR	86810	UnaryOperator	-		86758	0					
+ANR	86811	PrimaryExpression	1		86758	1					
+ANR	86812	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	118:8:3332:3356	86758	2	True				
+ANR	86813	CallExpression	"memset ( data , 'A' , 100 - 1 )"		86758	0					
+ANR	86814	Callee	memset		86758	0					
+ANR	86815	Identifier	memset		86758	0					
+ANR	86816	ArgumentList	data		86758	1					
+ANR	86817	Argument	data		86758	0					
+ANR	86818	Identifier	data		86758	0					
+ANR	86819	Argument	'A'		86758	1					
+ANR	86820	PrimaryExpression	'A'		86758	0					
+ANR	86821	Argument	100 - 1		86758	2					
+ANR	86822	AdditiveExpression	100 - 1		86758	0		-			
+ANR	86823	PrimaryExpression	100		86758	0					
+ANR	86824	PrimaryExpression	1		86758	1					
+ANR	86825	ExpressionStatement	data [ 100 - 1 ] = '\\0'	119:8:3367:3385	86758	3	True				
+ANR	86826	AssignmentExpression	data [ 100 - 1 ] = '\\0'		86758	0		=			
+ANR	86827	ArrayIndexing	data [ 100 - 1 ]		86758	0					
+ANR	86828	Identifier	data		86758	0					
+ANR	86829	AdditiveExpression	100 - 1		86758	1		-			
+ANR	86830	PrimaryExpression	100		86758	0					
+ANR	86831	PrimaryExpression	1		86758	1					
+ANR	86832	PrimaryExpression	'\\0'		86758	1					
+ANR	86833	IfStatement	if ( 1 )		86758	3					
+ANR	86834	Condition	1	122:7:3453:3453	86758	0	True				
+ANR	86835	PrimaryExpression	1		86758	0					
+ANR	86836	CompoundStatement		19:4:452:452	86758	1					
+ANR	86837	ExpressionStatement	printLine ( data )	125:8:3540:3555	86758	0	True				
+ANR	86838	CallExpression	printLine ( data )		86758	0					
+ANR	86839	Callee	printLine		86758	0					
+ANR	86840	Identifier	printLine		86758	0					
+ANR	86841	ArgumentList	data		86758	1					
+ANR	86842	Argument	data		86758	0					
+ANR	86843	Identifier	data		86758	0					
+ANR	86844	ReturnType	static void		86758	1					
+ANR	86845	Identifier	goodG2B1		86758	2					
+ANR	86846	ParameterList			86758	3					
+ANR	86847	CFGEntryNode	ENTRY		86758		True				
+ANR	86848	CFGExitNode	EXIT		86758		True				
+ANR	86849	Symbol	malloc		86758						
+ANR	86850	Symbol	NULL		86758						
+ANR	86851	Symbol	data		86758						
+ANR	86852	Symbol	* data		86758						
+ANR	86853	Function	goodG2B2	131:0:3743:4266							
+ANR	86854	FunctionDef	goodG2B2 ()		86853	0					
+ANR	86855	CompoundStatement		132:0:3767:4266	86853	0					
+ANR	86856	IdentifierDeclStatement	char * data ;	133:4:3774:3785	86853	0	True				
+ANR	86857	IdentifierDecl	* data		86853	0					
+ANR	86858	IdentifierDeclType	char *		86853	0					
+ANR	86859	Identifier	data		86853	1					
+ANR	86860	ExpressionStatement	data = NULL	135:4:3819:3830	86853	1	True				
+ANR	86861	AssignmentExpression	data = NULL		86853	0		=			
+ANR	86862	Identifier	data		86853	0					
+ANR	86863	Identifier	NULL		86853	1					
+ANR	86864	IfStatement	if ( 1 )		86853	2					
+ANR	86865	Condition	1	136:7:3840:3840	86853	0	True				
+ANR	86866	PrimaryExpression	1		86853	0					
+ANR	86867	CompoundStatement		6:4:80:80	86853	1					
+ANR	86868	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	138:8:3859:3898	86853	0	True				
+ANR	86869	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		86853	0		=			
+ANR	86870	Identifier	data		86853	0					
+ANR	86871	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		86853	1					
+ANR	86872	CastTarget	char *		86853	0					
+ANR	86873	CallExpression	malloc ( 100 * sizeof ( char ) )		86853	1					
+ANR	86874	Callee	malloc		86853	0					
+ANR	86875	Identifier	malloc		86853	0					
+ANR	86876	ArgumentList	100 * sizeof ( char )		86853	1					
+ANR	86877	Argument	100 * sizeof ( char )		86853	0					
+ANR	86878	MultiplicativeExpression	100 * sizeof ( char )		86853	0		*			
+ANR	86879	PrimaryExpression	100		86853	0					
+ANR	86880	SizeofExpression	sizeof ( char )		86853	1					
+ANR	86881	Sizeof	sizeof		86853	0					
+ANR	86882	SizeofOperand	char		86853	1					
+ANR	86883	IfStatement	if ( data == NULL )		86853	1					
+ANR	86884	Condition	data == NULL	139:12:3913:3924	86853	0	True				
+ANR	86885	EqualityExpression	data == NULL		86853	0		==			
+ANR	86886	Identifier	data		86853	0					
+ANR	86887	Identifier	NULL		86853	1					
+ANR	86888	CompoundStatement		8:26:159:159	86853	1					
+ANR	86889	ExpressionStatement	exit ( - 1 )	139:27:3928:3936	86853	0	True				
+ANR	86890	CallExpression	exit ( - 1 )		86853	0					
+ANR	86891	Callee	exit		86853	0					
+ANR	86892	Identifier	exit		86853	0					
+ANR	86893	ArgumentList	- 1		86853	1					
+ANR	86894	Argument	- 1		86853	0					
+ANR	86895	UnaryOperationExpression	- 1		86853	0					
+ANR	86896	UnaryOperator	-		86853	0					
+ANR	86897	PrimaryExpression	1		86853	1					
+ANR	86898	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	140:8:3947:3971	86853	2	True				
+ANR	86899	CallExpression	"memset ( data , 'A' , 100 - 1 )"		86853	0					
+ANR	86900	Callee	memset		86853	0					
+ANR	86901	Identifier	memset		86853	0					
+ANR	86902	ArgumentList	data		86853	1					
+ANR	86903	Argument	data		86853	0					
+ANR	86904	Identifier	data		86853	0					
+ANR	86905	Argument	'A'		86853	1					
+ANR	86906	PrimaryExpression	'A'		86853	0					
+ANR	86907	Argument	100 - 1		86853	2					
+ANR	86908	AdditiveExpression	100 - 1		86853	0		-			
+ANR	86909	PrimaryExpression	100		86853	0					
+ANR	86910	PrimaryExpression	1		86853	1					
+ANR	86911	ExpressionStatement	data [ 100 - 1 ] = '\\0'	141:8:3982:4000	86853	3	True				
+ANR	86912	AssignmentExpression	data [ 100 - 1 ] = '\\0'		86853	0		=			
+ANR	86913	ArrayIndexing	data [ 100 - 1 ]		86853	0					
+ANR	86914	Identifier	data		86853	0					
+ANR	86915	AdditiveExpression	100 - 1		86853	1		-			
+ANR	86916	PrimaryExpression	100		86853	0					
+ANR	86917	PrimaryExpression	1		86853	1					
+ANR	86918	PrimaryExpression	'\\0'		86853	1					
+ANR	86919	IfStatement	if ( 1 )		86853	3					
+ANR	86920	Condition	1	144:7:4068:4068	86853	0	True				
+ANR	86921	PrimaryExpression	1		86853	0					
+ANR	86922	CompoundStatement		14:4:308:308	86853	1					
+ANR	86923	ExpressionStatement	printLine ( data )	147:8:4155:4170	86853	0	True				
+ANR	86924	CallExpression	printLine ( data )		86853	0					
+ANR	86925	Callee	printLine		86853	0					
+ANR	86926	Identifier	printLine		86853	0					
+ANR	86927	ArgumentList	data		86853	1					
+ANR	86928	Argument	data		86853	0					
+ANR	86929	Identifier	data		86853	0					
+ANR	86930	ReturnType	static void		86853	1					
+ANR	86931	Identifier	goodG2B2		86853	2					
+ANR	86932	ParameterList			86853	3					
+ANR	86933	CFGEntryNode	ENTRY		86853		True				
+ANR	86934	CFGExitNode	EXIT		86853		True				
+ANR	86935	Symbol	malloc		86853						
+ANR	86936	Symbol	NULL		86853						
+ANR	86937	Symbol	data		86853						
+ANR	86938	Symbol	* data		86853						
+ANR	86939	Function	CWE416_Use_After_Free__malloc_free_char_02_good	152:0:4271:4398							
+ANR	86940	FunctionDef	CWE416_Use_After_Free__malloc_free_char_02_good ()		86939	0					
+ANR	86941	CompoundStatement		153:0:4327:4398	86939	0					
+ANR	86942	ExpressionStatement	goodB2G1 ( )	154:4:4334:4344	86939	0	True				
+ANR	86943	CallExpression	goodB2G1 ( )		86939	0					
+ANR	86944	Callee	goodB2G1		86939	0					
+ANR	86945	Identifier	goodB2G1		86939	0					
+ANR	86946	ArgumentList			86939	1					
+ANR	86947	ExpressionStatement	goodB2G2 ( )	155:4:4351:4361	86939	1	True				
+ANR	86948	CallExpression	goodB2G2 ( )		86939	0					
+ANR	86949	Callee	goodB2G2		86939	0					
+ANR	86950	Identifier	goodB2G2		86939	0					
+ANR	86951	ArgumentList			86939	1					
+ANR	86952	ExpressionStatement	goodG2B1 ( )	156:4:4368:4378	86939	2	True				
+ANR	86953	CallExpression	goodG2B1 ( )		86939	0					
+ANR	86954	Callee	goodG2B1		86939	0					
+ANR	86955	Identifier	goodG2B1		86939	0					
+ANR	86956	ArgumentList			86939	1					
+ANR	86957	ExpressionStatement	goodG2B2 ( )	157:4:4385:4395	86939	3	True				
+ANR	86958	CallExpression	goodG2B2 ( )		86939	0					
+ANR	86959	Callee	goodG2B2		86939	0					
+ANR	86960	Identifier	goodG2B2		86939	0					
+ANR	86961	ArgumentList			86939	1					
+ANR	86962	ReturnType	void		86939	1					
+ANR	86963	Identifier	CWE416_Use_After_Free__malloc_free_char_02_good		86939	2					
+ANR	86964	ParameterList			86939	3					
+ANR	86965	CFGEntryNode	ENTRY		86939		True				
+ANR	86966	CFGExitNode	EXIT		86939		True				
+ANR	86967	Function	main	169:0:4745:5194							
+ANR	86968	FunctionDef	"main (int argc , char * argv [ ])"		86967	0					
+ANR	86969	CompoundStatement		170:0:4780:5194	86967	0					
+ANR	86970	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	172:4:4814:4843	86967	0	True				
+ANR	86971	CallExpression	srand ( ( unsigned ) time ( NULL ) )		86967	0					
+ANR	86972	Callee	srand		86967	0					
+ANR	86973	Identifier	srand		86967	0					
+ANR	86974	ArgumentList	( unsigned ) time ( NULL )		86967	1					
+ANR	86975	Argument	( unsigned ) time ( NULL )		86967	0					
+ANR	86976	CastExpression	( unsigned ) time ( NULL )		86967	0					
+ANR	86977	CastTarget	unsigned		86967	0					
+ANR	86978	CallExpression	time ( NULL )		86967	1					
+ANR	86979	Callee	time		86967	0					
+ANR	86980	Identifier	time		86967	0					
+ANR	86981	ArgumentList	NULL		86967	1					
+ANR	86982	Argument	NULL		86967	0					
+ANR	86983	Identifier	NULL		86967	0					
+ANR	86984	ExpressionStatement	"printLine ( ""Calling good()..."" )"	174:4:4868:4898	86967	1	True				
+ANR	86985	CallExpression	"printLine ( ""Calling good()..."" )"		86967	0					
+ANR	86986	Callee	printLine		86967	0					
+ANR	86987	Identifier	printLine		86967	0					
+ANR	86988	ArgumentList	"""Calling good()..."""		86967	1					
+ANR	86989	Argument	"""Calling good()..."""		86967	0					
+ANR	86990	PrimaryExpression	"""Calling good()..."""		86967	0					
+ANR	86991	ExpressionStatement	CWE416_Use_After_Free__malloc_free_char_02_good ( )	175:4:4905:4954	86967	2	True				
+ANR	86992	CallExpression	CWE416_Use_After_Free__malloc_free_char_02_good ( )		86967	0					
+ANR	86993	Callee	CWE416_Use_After_Free__malloc_free_char_02_good		86967	0					
+ANR	86994	Identifier	CWE416_Use_After_Free__malloc_free_char_02_good		86967	0					
+ANR	86995	ArgumentList			86967	1					
+ANR	86996	ExpressionStatement	"printLine ( ""Finished good()"" )"	176:4:4961:4989	86967	3	True				
+ANR	86997	CallExpression	"printLine ( ""Finished good()"" )"		86967	0					
+ANR	86998	Callee	printLine		86967	0					
+ANR	86999	Identifier	printLine		86967	0					
+ANR	87000	ArgumentList	"""Finished good()"""		86967	1					
+ANR	87001	Argument	"""Finished good()"""		86967	0					
+ANR	87002	PrimaryExpression	"""Finished good()"""		86967	0					
+ANR	87003	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	179:4:5036:5065	86967	4	True				
+ANR	87004	CallExpression	"printLine ( ""Calling bad()..."" )"		86967	0					
+ANR	87005	Callee	printLine		86967	0					
+ANR	87006	Identifier	printLine		86967	0					
+ANR	87007	ArgumentList	"""Calling bad()..."""		86967	1					
+ANR	87008	Argument	"""Calling bad()..."""		86967	0					
+ANR	87009	PrimaryExpression	"""Calling bad()..."""		86967	0					
+ANR	87010	ExpressionStatement	CWE416_Use_After_Free__malloc_free_char_02_bad ( )	180:4:5072:5120	86967	5	True				
+ANR	87011	CallExpression	CWE416_Use_After_Free__malloc_free_char_02_bad ( )		86967	0					
+ANR	87012	Callee	CWE416_Use_After_Free__malloc_free_char_02_bad		86967	0					
+ANR	87013	Identifier	CWE416_Use_After_Free__malloc_free_char_02_bad		86967	0					
+ANR	87014	ArgumentList			86967	1					
+ANR	87015	ExpressionStatement	"printLine ( ""Finished bad()"" )"	181:4:5127:5154	86967	6	True				
+ANR	87016	CallExpression	"printLine ( ""Finished bad()"" )"		86967	0					
+ANR	87017	Callee	printLine		86967	0					
+ANR	87018	Identifier	printLine		86967	0					
+ANR	87019	ArgumentList	"""Finished bad()"""		86967	1					
+ANR	87020	Argument	"""Finished bad()"""		86967	0					
+ANR	87021	PrimaryExpression	"""Finished bad()"""		86967	0					
+ANR	87022	ReturnStatement	return 0 ;	183:4:5183:5191	86967	7	True				
+ANR	87023	PrimaryExpression	0		86967	0					
+ANR	87024	ReturnType	int		86967	1					
+ANR	87025	Identifier	main		86967	2					
+ANR	87026	ParameterList	"int argc , char * argv [ ]"		86967	3					
+ANR	87027	Parameter	int argc	169:9:4754:4761	86967	0	True				
+ANR	87028	ParameterType	int		86967	0					
+ANR	87029	Identifier	argc		86967	1					
+ANR	87030	Parameter	char * argv [ ]	169:19:4764:4776	86967	1	True				
+ANR	87031	ParameterType	char * [ ]		86967	0					
+ANR	87032	Identifier	argv		86967	1					
+ANR	87033	CFGEntryNode	ENTRY		86967		True				
+ANR	87034	CFGExitNode	EXIT		86967		True				
+ANR	87035	Symbol	argc		86967						
+ANR	87036	Symbol	NULL		86967						
+ANR	87037	Symbol	time		86967						
+ANR	87038	Symbol	argv		86967						

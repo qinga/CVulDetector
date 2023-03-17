@@ -1,0 +1,291 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	115654	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-1000-c/testcases/000/234/229/CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42.c								
+ANR	115655	Function	badSource	21:0:646:997							
+ANR	115656	FunctionDef	badSource (twoIntsStruct * data)		115655	0					
+ANR	115657	CompoundStatement		22:0:702:997	115655	0					
+ANR	115658	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( sizeof ( data ) )	25:4:852:896	115655	0	True				
+ANR	115659	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( sizeof ( data ) )		115655	0		=			
+ANR	115660	Identifier	data		115655	0					
+ANR	115661	CastExpression	( twoIntsStruct * ) malloc ( sizeof ( data ) )		115655	1					
+ANR	115662	CastTarget	twoIntsStruct *		115655	0					
+ANR	115663	CallExpression	malloc ( sizeof ( data ) )		115655	1					
+ANR	115664	Callee	malloc		115655	0					
+ANR	115665	Identifier	malloc		115655	0					
+ANR	115666	ArgumentList	sizeof ( data )		115655	1					
+ANR	115667	Argument	sizeof ( data )		115655	0					
+ANR	115668	SizeofExpression	sizeof ( data )		115655	0					
+ANR	115669	Sizeof	sizeof		115655	0					
+ANR	115670	SizeofOperand	data		115655	1					
+ANR	115671	IfStatement	if ( data == NULL )		115655	1					
+ANR	115672	Condition	data == NULL	26:8:907:918	115655	0	True				
+ANR	115673	EqualityExpression	data == NULL		115655	0		==			
+ANR	115674	Identifier	data		115655	0					
+ANR	115675	Identifier	NULL		115655	1					
+ANR	115676	CompoundStatement		5:22:218:218	115655	1					
+ANR	115677	ExpressionStatement	exit ( - 1 )	26:23:922:930	115655	0	True				
+ANR	115678	CallExpression	exit ( - 1 )		115655	0					
+ANR	115679	Callee	exit		115655	0					
+ANR	115680	Identifier	exit		115655	0					
+ANR	115681	ArgumentList	- 1		115655	1					
+ANR	115682	Argument	- 1		115655	0					
+ANR	115683	UnaryOperationExpression	- 1		115655	0					
+ANR	115684	UnaryOperator	-		115655	0					
+ANR	115685	PrimaryExpression	1		115655	1					
+ANR	115686	ExpressionStatement	data -> intOne = 1	27:4:937:953	115655	2	True				
+ANR	115687	AssignmentExpression	data -> intOne = 1		115655	0		=			
+ANR	115688	PtrMemberAccess	data -> intOne		115655	0					
+ANR	115689	Identifier	data		115655	0					
+ANR	115690	Identifier	intOne		115655	1					
+ANR	115691	PrimaryExpression	1		115655	1					
+ANR	115692	ExpressionStatement	data -> intTwo = 2	28:4:960:976	115655	3	True				
+ANR	115693	AssignmentExpression	data -> intTwo = 2		115655	0		=			
+ANR	115694	PtrMemberAccess	data -> intTwo		115655	0					
+ANR	115695	Identifier	data		115655	0					
+ANR	115696	Identifier	intTwo		115655	1					
+ANR	115697	PrimaryExpression	2		115655	1					
+ANR	115698	ReturnStatement	return data ;	29:4:983:994	115655	4	True				
+ANR	115699	Identifier	data		115655	0					
+ANR	115700	ReturnType	static twoIntsStruct *		115655	1					
+ANR	115701	Identifier	badSource		115655	2					
+ANR	115702	ParameterList	twoIntsStruct * data		115655	3					
+ANR	115703	Parameter	twoIntsStruct * data	21:33:679:698	115655	0	True				
+ANR	115704	ParameterType	twoIntsStruct *		115655	0					
+ANR	115705	Identifier	data		115655	1					
+ANR	115706	CFGEntryNode	ENTRY		115655		True				
+ANR	115707	CFGExitNode	EXIT		115655		True				
+ANR	115708	Symbol	malloc		115655						
+ANR	115709	Symbol	NULL		115655						
+ANR	115710	Symbol	data -> intTwo		115655						
+ANR	115711	Symbol	data		115655						
+ANR	115712	Symbol	data -> intOne		115655						
+ANR	115713	Symbol	* data		115655						
+ANR	115714	Function	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad	32:0:1002:1306							
+ANR	115715	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad ()		115714	0					
+ANR	115716	CompoundStatement		33:0:1066:1306	115714	0					
+ANR	115717	IdentifierDeclStatement	twoIntsStruct * data ;	34:4:1073:1093	115714	0	True				
+ANR	115718	IdentifierDecl	* data		115714	0					
+ANR	115719	IdentifierDeclType	twoIntsStruct *		115714	0					
+ANR	115720	Identifier	data		115714	1					
+ANR	115721	ExpressionStatement	data = NULL	36:4:1127:1138	115714	1	True				
+ANR	115722	AssignmentExpression	data = NULL		115714	0		=			
+ANR	115723	Identifier	data		115714	0					
+ANR	115724	Identifier	NULL		115714	1					
+ANR	115725	ExpressionStatement	data = badSource ( data )	37:4:1145:1167	115714	2	True				
+ANR	115726	AssignmentExpression	data = badSource ( data )		115714	0		=			
+ANR	115727	Identifier	data		115714	0					
+ANR	115728	CallExpression	badSource ( data )		115714	1					
+ANR	115729	Callee	badSource		115714	0					
+ANR	115730	Identifier	badSource		115714	0					
+ANR	115731	ArgumentList	data		115714	1					
+ANR	115732	Argument	data		115714	0					
+ANR	115733	Identifier	data		115714	0					
+ANR	115734	ExpressionStatement	printStructLine ( data )	39:4:1265:1286	115714	3	True				
+ANR	115735	CallExpression	printStructLine ( data )		115714	0					
+ANR	115736	Callee	printStructLine		115714	0					
+ANR	115737	Identifier	printStructLine		115714	0					
+ANR	115738	ArgumentList	data		115714	1					
+ANR	115739	Argument	data		115714	0					
+ANR	115740	Identifier	data		115714	0					
+ANR	115741	ExpressionStatement	free ( data )	40:4:1293:1303	115714	4	True				
+ANR	115742	CallExpression	free ( data )		115714	0					
+ANR	115743	Callee	free		115714	0					
+ANR	115744	Identifier	free		115714	0					
+ANR	115745	ArgumentList	data		115714	1					
+ANR	115746	Argument	data		115714	0					
+ANR	115747	Identifier	data		115714	0					
+ANR	115748	ReturnType	void		115714	1					
+ANR	115749	Identifier	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad		115714	2					
+ANR	115750	ParameterList			115714	3					
+ANR	115751	CFGEntryNode	ENTRY		115714		True				
+ANR	115752	CFGExitNode	EXIT		115714		True				
+ANR	115753	Symbol	NULL		115714						
+ANR	115754	Symbol	data		115714						
+ANR	115755	Symbol	badSource		115714						
+ANR	115756	Function	goodG2BSource	47:0:1355:1623							
+ANR	115757	FunctionDef	goodG2BSource (twoIntsStruct * data)		115756	0					
+ANR	115758	CompoundStatement		48:0:1415:1623	115756	0					
+ANR	115759	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( sizeof ( * data ) )	50:4:1477:1522	115756	0	True				
+ANR	115760	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( sizeof ( * data ) )		115756	0		=			
+ANR	115761	Identifier	data		115756	0					
+ANR	115762	CastExpression	( twoIntsStruct * ) malloc ( sizeof ( * data ) )		115756	1					
+ANR	115763	CastTarget	twoIntsStruct *		115756	0					
+ANR	115764	CallExpression	malloc ( sizeof ( * data ) )		115756	1					
+ANR	115765	Callee	malloc		115756	0					
+ANR	115766	Identifier	malloc		115756	0					
+ANR	115767	ArgumentList	sizeof ( * data )		115756	1					
+ANR	115768	Argument	sizeof ( * data )		115756	0					
+ANR	115769	SizeofExpression	sizeof ( * data )		115756	0					
+ANR	115770	Sizeof	sizeof		115756	0					
+ANR	115771	UnaryOperationExpression	* data		115756	1					
+ANR	115772	UnaryOperator	*		115756	0					
+ANR	115773	Identifier	data		115756	1					
+ANR	115774	IfStatement	if ( data == NULL )		115756	1					
+ANR	115775	Condition	data == NULL	51:8:1533:1544	115756	0	True				
+ANR	115776	EqualityExpression	data == NULL		115756	0		==			
+ANR	115777	Identifier	data		115756	0					
+ANR	115778	Identifier	NULL		115756	1					
+ANR	115779	CompoundStatement		4:22:131:131	115756	1					
+ANR	115780	ExpressionStatement	exit ( - 1 )	51:23:1548:1556	115756	0	True				
+ANR	115781	CallExpression	exit ( - 1 )		115756	0					
+ANR	115782	Callee	exit		115756	0					
+ANR	115783	Identifier	exit		115756	0					
+ANR	115784	ArgumentList	- 1		115756	1					
+ANR	115785	Argument	- 1		115756	0					
+ANR	115786	UnaryOperationExpression	- 1		115756	0					
+ANR	115787	UnaryOperator	-		115756	0					
+ANR	115788	PrimaryExpression	1		115756	1					
+ANR	115789	ExpressionStatement	data -> intOne = 1	52:4:1563:1579	115756	2	True				
+ANR	115790	AssignmentExpression	data -> intOne = 1		115756	0		=			
+ANR	115791	PtrMemberAccess	data -> intOne		115756	0					
+ANR	115792	Identifier	data		115756	0					
+ANR	115793	Identifier	intOne		115756	1					
+ANR	115794	PrimaryExpression	1		115756	1					
+ANR	115795	ExpressionStatement	data -> intTwo = 2	53:4:1586:1602	115756	3	True				
+ANR	115796	AssignmentExpression	data -> intTwo = 2		115756	0		=			
+ANR	115797	PtrMemberAccess	data -> intTwo		115756	0					
+ANR	115798	Identifier	data		115756	0					
+ANR	115799	Identifier	intTwo		115756	1					
+ANR	115800	PrimaryExpression	2		115756	1					
+ANR	115801	ReturnStatement	return data ;	54:4:1609:1620	115756	4	True				
+ANR	115802	Identifier	data		115756	0					
+ANR	115803	ReturnType	static twoIntsStruct *		115756	1					
+ANR	115804	Identifier	goodG2BSource		115756	2					
+ANR	115805	ParameterList	twoIntsStruct * data		115756	3					
+ANR	115806	Parameter	twoIntsStruct * data	47:37:1392:1411	115756	0	True				
+ANR	115807	ParameterType	twoIntsStruct *		115756	0					
+ANR	115808	Identifier	data		115756	1					
+ANR	115809	CFGEntryNode	ENTRY		115756		True				
+ANR	115810	CFGExitNode	EXIT		115756		True				
+ANR	115811	Symbol	malloc		115756						
+ANR	115812	Symbol	NULL		115756						
+ANR	115813	Symbol	data -> intTwo		115756						
+ANR	115814	Symbol	data		115756						
+ANR	115815	Symbol	data -> intOne		115756						
+ANR	115816	Symbol	* data		115756						
+ANR	115817	Function	goodG2B	58:0:1680:1947							
+ANR	115818	FunctionDef	goodG2B ()		115817	0					
+ANR	115819	CompoundStatement		59:0:1703:1947	115817	0					
+ANR	115820	IdentifierDeclStatement	twoIntsStruct * data ;	60:4:1710:1730	115817	0	True				
+ANR	115821	IdentifierDecl	* data		115817	0					
+ANR	115822	IdentifierDeclType	twoIntsStruct *		115817	0					
+ANR	115823	Identifier	data		115817	1					
+ANR	115824	ExpressionStatement	data = NULL	62:4:1764:1775	115817	1	True				
+ANR	115825	AssignmentExpression	data = NULL		115817	0		=			
+ANR	115826	Identifier	data		115817	0					
+ANR	115827	Identifier	NULL		115817	1					
+ANR	115828	ExpressionStatement	data = goodG2BSource ( data )	63:4:1782:1808	115817	2	True				
+ANR	115829	AssignmentExpression	data = goodG2BSource ( data )		115817	0		=			
+ANR	115830	Identifier	data		115817	0					
+ANR	115831	CallExpression	goodG2BSource ( data )		115817	1					
+ANR	115832	Callee	goodG2BSource		115817	0					
+ANR	115833	Identifier	goodG2BSource		115817	0					
+ANR	115834	ArgumentList	data		115817	1					
+ANR	115835	Argument	data		115817	0					
+ANR	115836	Identifier	data		115817	0					
+ANR	115837	ExpressionStatement	printStructLine ( data )	65:4:1906:1927	115817	3	True				
+ANR	115838	CallExpression	printStructLine ( data )		115817	0					
+ANR	115839	Callee	printStructLine		115817	0					
+ANR	115840	Identifier	printStructLine		115817	0					
+ANR	115841	ArgumentList	data		115817	1					
+ANR	115842	Argument	data		115817	0					
+ANR	115843	Identifier	data		115817	0					
+ANR	115844	ExpressionStatement	free ( data )	66:4:1934:1944	115817	4	True				
+ANR	115845	CallExpression	free ( data )		115817	0					
+ANR	115846	Callee	free		115817	0					
+ANR	115847	Identifier	free		115817	0					
+ANR	115848	ArgumentList	data		115817	1					
+ANR	115849	Argument	data		115817	0					
+ANR	115850	Identifier	data		115817	0					
+ANR	115851	ReturnType	static void		115817	1					
+ANR	115852	Identifier	goodG2B		115817	2					
+ANR	115853	ParameterList			115817	3					
+ANR	115854	CFGEntryNode	ENTRY		115817		True				
+ANR	115855	CFGExitNode	EXIT		115817		True				
+ANR	115856	Symbol	NULL		115817						
+ANR	115857	Symbol	data		115817						
+ANR	115858	Symbol	goodG2BSource		115817						
+ANR	115859	Function	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good	69:0:1952:2036							
+ANR	115860	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good ()		115859	0					
+ANR	115861	CompoundStatement		70:0:2017:2036	115859	0					
+ANR	115862	ExpressionStatement	goodG2B ( )	71:4:2024:2033	115859	0	True				
+ANR	115863	CallExpression	goodG2B ( )		115859	0					
+ANR	115864	Callee	goodG2B		115859	0					
+ANR	115865	Identifier	goodG2B		115859	0					
+ANR	115866	ArgumentList			115859	1					
+ANR	115867	ReturnType	void		115859	1					
+ANR	115868	Identifier	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good		115859	2					
+ANR	115869	ParameterList			115859	3					
+ANR	115870	CFGEntryNode	ENTRY		115859		True				
+ANR	115871	CFGExitNode	EXIT		115859		True				
+ANR	115872	Function	main	84:0:2385:2852							
+ANR	115873	FunctionDef	"main (int argc , char * argv [ ])"		115872	0					
+ANR	115874	CompoundStatement		85:0:2420:2852	115872	0					
+ANR	115875	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	87:4:2454:2483	115872	0	True				
+ANR	115876	CallExpression	srand ( ( unsigned ) time ( NULL ) )		115872	0					
+ANR	115877	Callee	srand		115872	0					
+ANR	115878	Identifier	srand		115872	0					
+ANR	115879	ArgumentList	( unsigned ) time ( NULL )		115872	1					
+ANR	115880	Argument	( unsigned ) time ( NULL )		115872	0					
+ANR	115881	CastExpression	( unsigned ) time ( NULL )		115872	0					
+ANR	115882	CastTarget	unsigned		115872	0					
+ANR	115883	CallExpression	time ( NULL )		115872	1					
+ANR	115884	Callee	time		115872	0					
+ANR	115885	Identifier	time		115872	0					
+ANR	115886	ArgumentList	NULL		115872	1					
+ANR	115887	Argument	NULL		115872	0					
+ANR	115888	Identifier	NULL		115872	0					
+ANR	115889	ExpressionStatement	"printLine ( ""Calling good()..."" )"	89:4:2508:2538	115872	1	True				
+ANR	115890	CallExpression	"printLine ( ""Calling good()..."" )"		115872	0					
+ANR	115891	Callee	printLine		115872	0					
+ANR	115892	Identifier	printLine		115872	0					
+ANR	115893	ArgumentList	"""Calling good()..."""		115872	1					
+ANR	115894	Argument	"""Calling good()..."""		115872	0					
+ANR	115895	PrimaryExpression	"""Calling good()..."""		115872	0					
+ANR	115896	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good ( )	90:4:2545:2603	115872	2	True				
+ANR	115897	CallExpression	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good ( )		115872	0					
+ANR	115898	Callee	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good		115872	0					
+ANR	115899	Identifier	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_good		115872	0					
+ANR	115900	ArgumentList			115872	1					
+ANR	115901	ExpressionStatement	"printLine ( ""Finished good()"" )"	91:4:2610:2638	115872	3	True				
+ANR	115902	CallExpression	"printLine ( ""Finished good()"" )"		115872	0					
+ANR	115903	Callee	printLine		115872	0					
+ANR	115904	Identifier	printLine		115872	0					
+ANR	115905	ArgumentList	"""Finished good()"""		115872	1					
+ANR	115906	Argument	"""Finished good()"""		115872	0					
+ANR	115907	PrimaryExpression	"""Finished good()"""		115872	0					
+ANR	115908	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	94:4:2685:2714	115872	4	True				
+ANR	115909	CallExpression	"printLine ( ""Calling bad()..."" )"		115872	0					
+ANR	115910	Callee	printLine		115872	0					
+ANR	115911	Identifier	printLine		115872	0					
+ANR	115912	ArgumentList	"""Calling bad()..."""		115872	1					
+ANR	115913	Argument	"""Calling bad()..."""		115872	0					
+ANR	115914	PrimaryExpression	"""Calling bad()..."""		115872	0					
+ANR	115915	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad ( )	95:4:2721:2778	115872	5	True				
+ANR	115916	CallExpression	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad ( )		115872	0					
+ANR	115917	Callee	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad		115872	0					
+ANR	115918	Identifier	CWE122_Heap_Based_Buffer_Overflow__sizeof_struct_42_bad		115872	0					
+ANR	115919	ArgumentList			115872	1					
+ANR	115920	ExpressionStatement	"printLine ( ""Finished bad()"" )"	96:4:2785:2812	115872	6	True				
+ANR	115921	CallExpression	"printLine ( ""Finished bad()"" )"		115872	0					
+ANR	115922	Callee	printLine		115872	0					
+ANR	115923	Identifier	printLine		115872	0					
+ANR	115924	ArgumentList	"""Finished bad()"""		115872	1					
+ANR	115925	Argument	"""Finished bad()"""		115872	0					
+ANR	115926	PrimaryExpression	"""Finished bad()"""		115872	0					
+ANR	115927	ReturnStatement	return 0 ;	98:4:2841:2849	115872	7	True				
+ANR	115928	PrimaryExpression	0		115872	0					
+ANR	115929	ReturnType	int		115872	1					
+ANR	115930	Identifier	main		115872	2					
+ANR	115931	ParameterList	"int argc , char * argv [ ]"		115872	3					
+ANR	115932	Parameter	int argc	84:9:2394:2401	115872	0	True				
+ANR	115933	ParameterType	int		115872	0					
+ANR	115934	Identifier	argc		115872	1					
+ANR	115935	Parameter	char * argv [ ]	84:19:2404:2416	115872	1	True				
+ANR	115936	ParameterType	char * [ ]		115872	0					
+ANR	115937	Identifier	argv		115872	1					
+ANR	115938	CFGEntryNode	ENTRY		115872		True				
+ANR	115939	CFGExitNode	EXIT		115872		True				
+ANR	115940	Symbol	argc		115872						
+ANR	115941	Symbol	NULL		115872						
+ANR	115942	Symbol	time		115872						
+ANR	115943	Symbol	argv		115872						

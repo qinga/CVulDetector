@@ -1,0 +1,426 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	641512	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-600-c/testcases/000/234/659/CWE126_Buffer_Overread__malloc_char_memcpy_34.c								
+ANR	641513	ClassDef	<unnamed>	21:8:589:705							
+ANR	641514	DeclStmt									
+ANR	641515	Decl							char	char *	unionFirst
+ANR	641516	DeclStmt									
+ANR	641517	Decl							char	char *	unionSecond
+ANR	641518	DeclStmt									
+ANR	641519	Decl									CWE126_Buffer_Overread__malloc_char_memcpy_34_unionType
+ANR	641520	Function	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad	29:0:729:1643							
+ANR	641521	FunctionDef	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad ()		641520	0					
+ANR	641522	CompoundStatement		30:0:787:1643	641520	0					
+ANR	641523	IdentifierDeclStatement	char * data ;	31:4:794:805	641520	0	True				
+ANR	641524	IdentifierDecl	* data		641520	0					
+ANR	641525	IdentifierDeclType	char *		641520	0					
+ANR	641526	Identifier	data		641520	1					
+ANR	641527	IdentifierDeclStatement	CWE126_Buffer_Overread__malloc_char_memcpy_34_unionType myUnion ;	32:4:812:875	641520	1	True				
+ANR	641528	IdentifierDecl	myUnion		641520	0					
+ANR	641529	IdentifierDeclType	CWE126_Buffer_Overread__malloc_char_memcpy_34_unionType		641520	0					
+ANR	641530	Identifier	myUnion		641520	1					
+ANR	641531	ExpressionStatement	data = NULL	33:4:882:893	641520	2	True				
+ANR	641532	AssignmentExpression	data = NULL		641520	0		=			
+ANR	641533	Identifier	data		641520	0					
+ANR	641534	Identifier	NULL		641520	1					
+ANR	641535	ExpressionStatement	data = ( char * ) malloc ( 50 * sizeof ( char ) )	35:4:936:974	641520	3	True				
+ANR	641536	AssignmentExpression	data = ( char * ) malloc ( 50 * sizeof ( char ) )		641520	0		=			
+ANR	641537	Identifier	data		641520	0					
+ANR	641538	CastExpression	( char * ) malloc ( 50 * sizeof ( char ) )		641520	1					
+ANR	641539	CastTarget	char *		641520	0					
+ANR	641540	CallExpression	malloc ( 50 * sizeof ( char ) )		641520	1					
+ANR	641541	Callee	malloc		641520	0					
+ANR	641542	Identifier	malloc		641520	0					
+ANR	641543	ArgumentList	50 * sizeof ( char )		641520	1					
+ANR	641544	Argument	50 * sizeof ( char )		641520	0					
+ANR	641545	MultiplicativeExpression	50 * sizeof ( char )		641520	0		*			
+ANR	641546	PrimaryExpression	50		641520	0					
+ANR	641547	SizeofExpression	sizeof ( char )		641520	1					
+ANR	641548	Sizeof	sizeof		641520	0					
+ANR	641549	SizeofOperand	char		641520	1					
+ANR	641550	IfStatement	if ( data == NULL )		641520	4					
+ANR	641551	Condition	data == NULL	36:8:985:996	641520	0	True				
+ANR	641552	EqualityExpression	data == NULL		641520	0		==			
+ANR	641553	Identifier	data		641520	0					
+ANR	641554	Identifier	NULL		641520	1					
+ANR	641555	CompoundStatement		7:22:211:211	641520	1					
+ANR	641556	ExpressionStatement	exit ( - 1 )	36:23:1000:1008	641520	0	True				
+ANR	641557	CallExpression	exit ( - 1 )		641520	0					
+ANR	641558	Callee	exit		641520	0					
+ANR	641559	Identifier	exit		641520	0					
+ANR	641560	ArgumentList	- 1		641520	1					
+ANR	641561	Argument	- 1		641520	0					
+ANR	641562	UnaryOperationExpression	- 1		641520	0					
+ANR	641563	UnaryOperator	-		641520	0					
+ANR	641564	PrimaryExpression	1		641520	1					
+ANR	641565	ExpressionStatement	"memset ( data , 'A' , 50 - 1 )"	37:4:1015:1038	641520	5	True				
+ANR	641566	CallExpression	"memset ( data , 'A' , 50 - 1 )"		641520	0					
+ANR	641567	Callee	memset		641520	0					
+ANR	641568	Identifier	memset		641520	0					
+ANR	641569	ArgumentList	data		641520	1					
+ANR	641570	Argument	data		641520	0					
+ANR	641571	Identifier	data		641520	0					
+ANR	641572	Argument	'A'		641520	1					
+ANR	641573	PrimaryExpression	'A'		641520	0					
+ANR	641574	Argument	50 - 1		641520	2					
+ANR	641575	AdditiveExpression	50 - 1		641520	0		-			
+ANR	641576	PrimaryExpression	50		641520	0					
+ANR	641577	PrimaryExpression	1		641520	1					
+ANR	641578	ExpressionStatement	data [ 50 - 1 ] = '\\0'	38:4:1066:1083	641520	6	True				
+ANR	641579	AssignmentExpression	data [ 50 - 1 ] = '\\0'		641520	0		=			
+ANR	641580	ArrayIndexing	data [ 50 - 1 ]		641520	0					
+ANR	641581	Identifier	data		641520	0					
+ANR	641582	AdditiveExpression	50 - 1		641520	1		-			
+ANR	641583	PrimaryExpression	50		641520	0					
+ANR	641584	PrimaryExpression	1		641520	1					
+ANR	641585	PrimaryExpression	'\\0'		641520	1					
+ANR	641586	ExpressionStatement	myUnion . unionFirst = data	39:4:1111:1136	641520	7	True				
+ANR	641587	AssignmentExpression	myUnion . unionFirst = data		641520	0		=			
+ANR	641588	MemberAccess	myUnion . unionFirst		641520	0					
+ANR	641589	Identifier	myUnion		641520	0					
+ANR	641590	Identifier	unionFirst		641520	1					
+ANR	641591	Identifier	data		641520	1					
+ANR	641592	CompoundStatement		12:8:366:399	641520	8					
+ANR	641593	IdentifierDeclStatement	char * data = myUnion . unionSecond ;	41:8:1154:1187	641520	0	True				
+ANR	641594	IdentifierDecl	* data = myUnion . unionSecond		641520	0					
+ANR	641595	IdentifierDeclType	char *		641520	0					
+ANR	641596	Identifier	data		641520	1					
+ANR	641597	AssignmentExpression	* data = myUnion . unionSecond		641520	2		=			
+ANR	641598	Identifier	data		641520	0					
+ANR	641599	MemberAccess	myUnion . unionSecond		641520	1					
+ANR	641600	Identifier	myUnion		641520	0					
+ANR	641601	Identifier	unionSecond		641520	1					
+ANR	641602	CompoundStatement		14:12:425:439	641520	1					
+ANR	641603	IdentifierDeclStatement	char dest [ 100 ] ;	43:12:1213:1227	641520	0	True				
+ANR	641604	IdentifierDecl	dest [ 100 ]		641520	0					
+ANR	641605	IdentifierDeclType	char [ 100 ]		641520	0					
+ANR	641606	Identifier	dest		641520	1					
+ANR	641607	PrimaryExpression	100		641520	2					
+ANR	641608	ExpressionStatement	"memset ( dest , 'C' , 100 - 1 )"	44:12:1242:1266	641520	1	True				
+ANR	641609	CallExpression	"memset ( dest , 'C' , 100 - 1 )"		641520	0					
+ANR	641610	Callee	memset		641520	0					
+ANR	641611	Identifier	memset		641520	0					
+ANR	641612	ArgumentList	dest		641520	1					
+ANR	641613	Argument	dest		641520	0					
+ANR	641614	Identifier	dest		641520	0					
+ANR	641615	Argument	'C'		641520	1					
+ANR	641616	PrimaryExpression	'C'		641520	0					
+ANR	641617	Argument	100 - 1		641520	2					
+ANR	641618	AdditiveExpression	100 - 1		641520	0		-			
+ANR	641619	PrimaryExpression	100		641520	0					
+ANR	641620	PrimaryExpression	1		641520	1					
+ANR	641621	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	45:12:1281:1299	641520	2	True				
+ANR	641622	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		641520	0		=			
+ANR	641623	ArrayIndexing	dest [ 100 - 1 ]		641520	0					
+ANR	641624	Identifier	dest		641520	0					
+ANR	641625	AdditiveExpression	100 - 1		641520	1		-			
+ANR	641626	PrimaryExpression	100		641520	0					
+ANR	641627	PrimaryExpression	1		641520	1					
+ANR	641628	PrimaryExpression	'\\0'		641520	1					
+ANR	641629	ExpressionStatement	"memcpy ( dest , data , strlen ( dest ) * sizeof ( char ) )"	48:12:1489:1534	641520	3	True				
+ANR	641630	CallExpression	"memcpy ( dest , data , strlen ( dest ) * sizeof ( char ) )"		641520	0					
+ANR	641631	Callee	memcpy		641520	0					
+ANR	641632	Identifier	memcpy		641520	0					
+ANR	641633	ArgumentList	dest		641520	1					
+ANR	641634	Argument	dest		641520	0					
+ANR	641635	Identifier	dest		641520	0					
+ANR	641636	Argument	data		641520	1					
+ANR	641637	Identifier	data		641520	0					
+ANR	641638	Argument	strlen ( dest ) * sizeof ( char )		641520	2					
+ANR	641639	MultiplicativeExpression	strlen ( dest ) * sizeof ( char )		641520	0		*			
+ANR	641640	CallExpression	strlen ( dest )		641520	0					
+ANR	641641	Callee	strlen		641520	0					
+ANR	641642	Identifier	strlen		641520	0					
+ANR	641643	ArgumentList	dest		641520	1					
+ANR	641644	Argument	dest		641520	0					
+ANR	641645	Identifier	dest		641520	0					
+ANR	641646	SizeofExpression	sizeof ( char )		641520	1					
+ANR	641647	Sizeof	sizeof		641520	0					
+ANR	641648	SizeofOperand	char		641520	1					
+ANR	641649	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	49:12:1549:1567	641520	4	True				
+ANR	641650	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		641520	0		=			
+ANR	641651	ArrayIndexing	dest [ 100 - 1 ]		641520	0					
+ANR	641652	Identifier	dest		641520	0					
+ANR	641653	AdditiveExpression	100 - 1		641520	1		-			
+ANR	641654	PrimaryExpression	100		641520	0					
+ANR	641655	PrimaryExpression	1		641520	1					
+ANR	641656	PrimaryExpression	'\\0'		641520	1					
+ANR	641657	ExpressionStatement	printLine ( dest )	50:12:1582:1597	641520	5	True				
+ANR	641658	CallExpression	printLine ( dest )		641520	0					
+ANR	641659	Callee	printLine		641520	0					
+ANR	641660	Identifier	printLine		641520	0					
+ANR	641661	ArgumentList	dest		641520	1					
+ANR	641662	Argument	dest		641520	0					
+ANR	641663	Identifier	dest		641520	0					
+ANR	641664	ExpressionStatement	free ( data )	51:12:1612:1622	641520	6	True				
+ANR	641665	CallExpression	free ( data )		641520	0					
+ANR	641666	Callee	free		641520	0					
+ANR	641667	Identifier	free		641520	0					
+ANR	641668	ArgumentList	data		641520	1					
+ANR	641669	Argument	data		641520	0					
+ANR	641670	Identifier	data		641520	0					
+ANR	641671	ReturnType	void		641520	1					
+ANR	641672	Identifier	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad		641520	2					
+ANR	641673	ParameterList			641520	3					
+ANR	641674	CFGEntryNode	ENTRY		641520		True				
+ANR	641675	CFGExitNode	EXIT		641520		True				
+ANR	641676	Symbol	myUnion		641520						
+ANR	641677	Symbol	malloc		641520						
+ANR	641678	Symbol	strlen		641520						
+ANR	641679	Symbol	NULL		641520						
+ANR	641680	Symbol	data		641520						
+ANR	641681	Symbol	* dest		641520						
+ANR	641682	Symbol	myUnion . unionSecond		641520						
+ANR	641683	Symbol	myUnion . unionFirst		641520						
+ANR	641684	Symbol	dest		641520						
+ANR	641685	Symbol	* data		641520						
+ANR	641686	Function	goodG2B	61:0:1746:2627							
+ANR	641687	FunctionDef	goodG2B ()		641686	0					
+ANR	641688	CompoundStatement		62:0:1769:2627	641686	0					
+ANR	641689	IdentifierDeclStatement	char * data ;	63:4:1776:1787	641686	0	True				
+ANR	641690	IdentifierDecl	* data		641686	0					
+ANR	641691	IdentifierDeclType	char *		641686	0					
+ANR	641692	Identifier	data		641686	1					
+ANR	641693	IdentifierDeclStatement	CWE126_Buffer_Overread__malloc_char_memcpy_34_unionType myUnion ;	64:4:1794:1857	641686	1	True				
+ANR	641694	IdentifierDecl	myUnion		641686	0					
+ANR	641695	IdentifierDeclType	CWE126_Buffer_Overread__malloc_char_memcpy_34_unionType		641686	0					
+ANR	641696	Identifier	myUnion		641686	1					
+ANR	641697	ExpressionStatement	data = NULL	65:4:1864:1875	641686	2	True				
+ANR	641698	AssignmentExpression	data = NULL		641686	0		=			
+ANR	641699	Identifier	data		641686	0					
+ANR	641700	Identifier	NULL		641686	1					
+ANR	641701	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	67:4:1917:1956	641686	3	True				
+ANR	641702	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		641686	0		=			
+ANR	641703	Identifier	data		641686	0					
+ANR	641704	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		641686	1					
+ANR	641705	CastTarget	char *		641686	0					
+ANR	641706	CallExpression	malloc ( 100 * sizeof ( char ) )		641686	1					
+ANR	641707	Callee	malloc		641686	0					
+ANR	641708	Identifier	malloc		641686	0					
+ANR	641709	ArgumentList	100 * sizeof ( char )		641686	1					
+ANR	641710	Argument	100 * sizeof ( char )		641686	0					
+ANR	641711	MultiplicativeExpression	100 * sizeof ( char )		641686	0		*			
+ANR	641712	PrimaryExpression	100		641686	0					
+ANR	641713	SizeofExpression	sizeof ( char )		641686	1					
+ANR	641714	Sizeof	sizeof		641686	0					
+ANR	641715	SizeofOperand	char		641686	1					
+ANR	641716	IfStatement	if ( data == NULL )		641686	4					
+ANR	641717	Condition	data == NULL	68:8:1967:1978	641686	0	True				
+ANR	641718	EqualityExpression	data == NULL		641686	0		==			
+ANR	641719	Identifier	data		641686	0					
+ANR	641720	Identifier	NULL		641686	1					
+ANR	641721	CompoundStatement		7:22:211:211	641686	1					
+ANR	641722	ExpressionStatement	exit ( - 1 )	68:23:1982:1990	641686	0	True				
+ANR	641723	CallExpression	exit ( - 1 )		641686	0					
+ANR	641724	Callee	exit		641686	0					
+ANR	641725	Identifier	exit		641686	0					
+ANR	641726	ArgumentList	- 1		641686	1					
+ANR	641727	Argument	- 1		641686	0					
+ANR	641728	UnaryOperationExpression	- 1		641686	0					
+ANR	641729	UnaryOperator	-		641686	0					
+ANR	641730	PrimaryExpression	1		641686	1					
+ANR	641731	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	69:4:1997:2021	641686	5	True				
+ANR	641732	CallExpression	"memset ( data , 'A' , 100 - 1 )"		641686	0					
+ANR	641733	Callee	memset		641686	0					
+ANR	641734	Identifier	memset		641686	0					
+ANR	641735	ArgumentList	data		641686	1					
+ANR	641736	Argument	data		641686	0					
+ANR	641737	Identifier	data		641686	0					
+ANR	641738	Argument	'A'		641686	1					
+ANR	641739	PrimaryExpression	'A'		641686	0					
+ANR	641740	Argument	100 - 1		641686	2					
+ANR	641741	AdditiveExpression	100 - 1		641686	0		-			
+ANR	641742	PrimaryExpression	100		641686	0					
+ANR	641743	PrimaryExpression	1		641686	1					
+ANR	641744	ExpressionStatement	data [ 100 - 1 ] = '\\0'	70:4:2049:2067	641686	6	True				
+ANR	641745	AssignmentExpression	data [ 100 - 1 ] = '\\0'		641686	0		=			
+ANR	641746	ArrayIndexing	data [ 100 - 1 ]		641686	0					
+ANR	641747	Identifier	data		641686	0					
+ANR	641748	AdditiveExpression	100 - 1		641686	1		-			
+ANR	641749	PrimaryExpression	100		641686	0					
+ANR	641750	PrimaryExpression	1		641686	1					
+ANR	641751	PrimaryExpression	'\\0'		641686	1					
+ANR	641752	ExpressionStatement	myUnion . unionFirst = data	71:4:2095:2120	641686	7	True				
+ANR	641753	AssignmentExpression	myUnion . unionFirst = data		641686	0		=			
+ANR	641754	MemberAccess	myUnion . unionFirst		641686	0					
+ANR	641755	Identifier	myUnion		641686	0					
+ANR	641756	Identifier	unionFirst		641686	1					
+ANR	641757	Identifier	data		641686	1					
+ANR	641758	CompoundStatement		12:8:368:401	641686	8					
+ANR	641759	IdentifierDeclStatement	char * data = myUnion . unionSecond ;	73:8:2138:2171	641686	0	True				
+ANR	641760	IdentifierDecl	* data = myUnion . unionSecond		641686	0					
+ANR	641761	IdentifierDeclType	char *		641686	0					
+ANR	641762	Identifier	data		641686	1					
+ANR	641763	AssignmentExpression	* data = myUnion . unionSecond		641686	2		=			
+ANR	641764	Identifier	data		641686	0					
+ANR	641765	MemberAccess	myUnion . unionSecond		641686	1					
+ANR	641766	Identifier	myUnion		641686	0					
+ANR	641767	Identifier	unionSecond		641686	1					
+ANR	641768	CompoundStatement		14:12:427:441	641686	1					
+ANR	641769	IdentifierDeclStatement	char dest [ 100 ] ;	75:12:2197:2211	641686	0	True				
+ANR	641770	IdentifierDecl	dest [ 100 ]		641686	0					
+ANR	641771	IdentifierDeclType	char [ 100 ]		641686	0					
+ANR	641772	Identifier	dest		641686	1					
+ANR	641773	PrimaryExpression	100		641686	2					
+ANR	641774	ExpressionStatement	"memset ( dest , 'C' , 100 - 1 )"	76:12:2226:2250	641686	1	True				
+ANR	641775	CallExpression	"memset ( dest , 'C' , 100 - 1 )"		641686	0					
+ANR	641776	Callee	memset		641686	0					
+ANR	641777	Identifier	memset		641686	0					
+ANR	641778	ArgumentList	dest		641686	1					
+ANR	641779	Argument	dest		641686	0					
+ANR	641780	Identifier	dest		641686	0					
+ANR	641781	Argument	'C'		641686	1					
+ANR	641782	PrimaryExpression	'C'		641686	0					
+ANR	641783	Argument	100 - 1		641686	2					
+ANR	641784	AdditiveExpression	100 - 1		641686	0		-			
+ANR	641785	PrimaryExpression	100		641686	0					
+ANR	641786	PrimaryExpression	1		641686	1					
+ANR	641787	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	77:12:2265:2283	641686	2	True				
+ANR	641788	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		641686	0		=			
+ANR	641789	ArrayIndexing	dest [ 100 - 1 ]		641686	0					
+ANR	641790	Identifier	dest		641686	0					
+ANR	641791	AdditiveExpression	100 - 1		641686	1		-			
+ANR	641792	PrimaryExpression	100		641686	0					
+ANR	641793	PrimaryExpression	1		641686	1					
+ANR	641794	PrimaryExpression	'\\0'		641686	1					
+ANR	641795	ExpressionStatement	"memcpy ( dest , data , strlen ( dest ) * sizeof ( char ) )"	80:12:2473:2518	641686	3	True				
+ANR	641796	CallExpression	"memcpy ( dest , data , strlen ( dest ) * sizeof ( char ) )"		641686	0					
+ANR	641797	Callee	memcpy		641686	0					
+ANR	641798	Identifier	memcpy		641686	0					
+ANR	641799	ArgumentList	dest		641686	1					
+ANR	641800	Argument	dest		641686	0					
+ANR	641801	Identifier	dest		641686	0					
+ANR	641802	Argument	data		641686	1					
+ANR	641803	Identifier	data		641686	0					
+ANR	641804	Argument	strlen ( dest ) * sizeof ( char )		641686	2					
+ANR	641805	MultiplicativeExpression	strlen ( dest ) * sizeof ( char )		641686	0		*			
+ANR	641806	CallExpression	strlen ( dest )		641686	0					
+ANR	641807	Callee	strlen		641686	0					
+ANR	641808	Identifier	strlen		641686	0					
+ANR	641809	ArgumentList	dest		641686	1					
+ANR	641810	Argument	dest		641686	0					
+ANR	641811	Identifier	dest		641686	0					
+ANR	641812	SizeofExpression	sizeof ( char )		641686	1					
+ANR	641813	Sizeof	sizeof		641686	0					
+ANR	641814	SizeofOperand	char		641686	1					
+ANR	641815	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	81:12:2533:2551	641686	4	True				
+ANR	641816	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		641686	0		=			
+ANR	641817	ArrayIndexing	dest [ 100 - 1 ]		641686	0					
+ANR	641818	Identifier	dest		641686	0					
+ANR	641819	AdditiveExpression	100 - 1		641686	1		-			
+ANR	641820	PrimaryExpression	100		641686	0					
+ANR	641821	PrimaryExpression	1		641686	1					
+ANR	641822	PrimaryExpression	'\\0'		641686	1					
+ANR	641823	ExpressionStatement	printLine ( dest )	82:12:2566:2581	641686	5	True				
+ANR	641824	CallExpression	printLine ( dest )		641686	0					
+ANR	641825	Callee	printLine		641686	0					
+ANR	641826	Identifier	printLine		641686	0					
+ANR	641827	ArgumentList	dest		641686	1					
+ANR	641828	Argument	dest		641686	0					
+ANR	641829	Identifier	dest		641686	0					
+ANR	641830	ExpressionStatement	free ( data )	83:12:2596:2606	641686	6	True				
+ANR	641831	CallExpression	free ( data )		641686	0					
+ANR	641832	Callee	free		641686	0					
+ANR	641833	Identifier	free		641686	0					
+ANR	641834	ArgumentList	data		641686	1					
+ANR	641835	Argument	data		641686	0					
+ANR	641836	Identifier	data		641686	0					
+ANR	641837	ReturnType	static void		641686	1					
+ANR	641838	Identifier	goodG2B		641686	2					
+ANR	641839	ParameterList			641686	3					
+ANR	641840	CFGEntryNode	ENTRY		641686		True				
+ANR	641841	CFGExitNode	EXIT		641686		True				
+ANR	641842	Symbol	myUnion		641686						
+ANR	641843	Symbol	malloc		641686						
+ANR	641844	Symbol	strlen		641686						
+ANR	641845	Symbol	NULL		641686						
+ANR	641846	Symbol	data		641686						
+ANR	641847	Symbol	* dest		641686						
+ANR	641848	Symbol	myUnion . unionSecond		641686						
+ANR	641849	Symbol	myUnion . unionFirst		641686						
+ANR	641850	Symbol	dest		641686						
+ANR	641851	Symbol	* data		641686						
+ANR	641852	Function	CWE126_Buffer_Overread__malloc_char_memcpy_34_good	88:0:2632:2710							
+ANR	641853	FunctionDef	CWE126_Buffer_Overread__malloc_char_memcpy_34_good ()		641852	0					
+ANR	641854	CompoundStatement		89:0:2691:2710	641852	0					
+ANR	641855	ExpressionStatement	goodG2B ( )	90:4:2698:2707	641852	0	True				
+ANR	641856	CallExpression	goodG2B ( )		641852	0					
+ANR	641857	Callee	goodG2B		641852	0					
+ANR	641858	Identifier	goodG2B		641852	0					
+ANR	641859	ArgumentList			641852	1					
+ANR	641860	ReturnType	void		641852	1					
+ANR	641861	Identifier	CWE126_Buffer_Overread__malloc_char_memcpy_34_good		641852	2					
+ANR	641862	ParameterList			641852	3					
+ANR	641863	CFGEntryNode	ENTRY		641852		True				
+ANR	641864	CFGExitNode	EXIT		641852		True				
+ANR	641865	Function	main	102:0:3057:3512							
+ANR	641866	FunctionDef	"main (int argc , char * argv [ ])"		641865	0					
+ANR	641867	CompoundStatement		103:0:3092:3512	641865	0					
+ANR	641868	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	105:4:3126:3155	641865	0	True				
+ANR	641869	CallExpression	srand ( ( unsigned ) time ( NULL ) )		641865	0					
+ANR	641870	Callee	srand		641865	0					
+ANR	641871	Identifier	srand		641865	0					
+ANR	641872	ArgumentList	( unsigned ) time ( NULL )		641865	1					
+ANR	641873	Argument	( unsigned ) time ( NULL )		641865	0					
+ANR	641874	CastExpression	( unsigned ) time ( NULL )		641865	0					
+ANR	641875	CastTarget	unsigned		641865	0					
+ANR	641876	CallExpression	time ( NULL )		641865	1					
+ANR	641877	Callee	time		641865	0					
+ANR	641878	Identifier	time		641865	0					
+ANR	641879	ArgumentList	NULL		641865	1					
+ANR	641880	Argument	NULL		641865	0					
+ANR	641881	Identifier	NULL		641865	0					
+ANR	641882	ExpressionStatement	"printLine ( ""Calling good()..."" )"	107:4:3180:3210	641865	1	True				
+ANR	641883	CallExpression	"printLine ( ""Calling good()..."" )"		641865	0					
+ANR	641884	Callee	printLine		641865	0					
+ANR	641885	Identifier	printLine		641865	0					
+ANR	641886	ArgumentList	"""Calling good()..."""		641865	1					
+ANR	641887	Argument	"""Calling good()..."""		641865	0					
+ANR	641888	PrimaryExpression	"""Calling good()..."""		641865	0					
+ANR	641889	ExpressionStatement	CWE126_Buffer_Overread__malloc_char_memcpy_34_good ( )	108:4:3217:3269	641865	2	True				
+ANR	641890	CallExpression	CWE126_Buffer_Overread__malloc_char_memcpy_34_good ( )		641865	0					
+ANR	641891	Callee	CWE126_Buffer_Overread__malloc_char_memcpy_34_good		641865	0					
+ANR	641892	Identifier	CWE126_Buffer_Overread__malloc_char_memcpy_34_good		641865	0					
+ANR	641893	ArgumentList			641865	1					
+ANR	641894	ExpressionStatement	"printLine ( ""Finished good()"" )"	109:4:3276:3304	641865	3	True				
+ANR	641895	CallExpression	"printLine ( ""Finished good()"" )"		641865	0					
+ANR	641896	Callee	printLine		641865	0					
+ANR	641897	Identifier	printLine		641865	0					
+ANR	641898	ArgumentList	"""Finished good()"""		641865	1					
+ANR	641899	Argument	"""Finished good()"""		641865	0					
+ANR	641900	PrimaryExpression	"""Finished good()"""		641865	0					
+ANR	641901	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	112:4:3351:3380	641865	4	True				
+ANR	641902	CallExpression	"printLine ( ""Calling bad()..."" )"		641865	0					
+ANR	641903	Callee	printLine		641865	0					
+ANR	641904	Identifier	printLine		641865	0					
+ANR	641905	ArgumentList	"""Calling bad()..."""		641865	1					
+ANR	641906	Argument	"""Calling bad()..."""		641865	0					
+ANR	641907	PrimaryExpression	"""Calling bad()..."""		641865	0					
+ANR	641908	ExpressionStatement	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad ( )	113:4:3387:3438	641865	5	True				
+ANR	641909	CallExpression	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad ( )		641865	0					
+ANR	641910	Callee	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad		641865	0					
+ANR	641911	Identifier	CWE126_Buffer_Overread__malloc_char_memcpy_34_bad		641865	0					
+ANR	641912	ArgumentList			641865	1					
+ANR	641913	ExpressionStatement	"printLine ( ""Finished bad()"" )"	114:4:3445:3472	641865	6	True				
+ANR	641914	CallExpression	"printLine ( ""Finished bad()"" )"		641865	0					
+ANR	641915	Callee	printLine		641865	0					
+ANR	641916	Identifier	printLine		641865	0					
+ANR	641917	ArgumentList	"""Finished bad()"""		641865	1					
+ANR	641918	Argument	"""Finished bad()"""		641865	0					
+ANR	641919	PrimaryExpression	"""Finished bad()"""		641865	0					
+ANR	641920	ReturnStatement	return 0 ;	116:4:3501:3509	641865	7	True				
+ANR	641921	PrimaryExpression	0		641865	0					
+ANR	641922	ReturnType	int		641865	1					
+ANR	641923	Identifier	main		641865	2					
+ANR	641924	ParameterList	"int argc , char * argv [ ]"		641865	3					
+ANR	641925	Parameter	int argc	102:9:3066:3073	641865	0	True				
+ANR	641926	ParameterType	int		641865	0					
+ANR	641927	Identifier	argc		641865	1					
+ANR	641928	Parameter	char * argv [ ]	102:19:3076:3088	641865	1	True				
+ANR	641929	ParameterType	char * [ ]		641865	0					
+ANR	641930	Identifier	argv		641865	1					
+ANR	641931	CFGEntryNode	ENTRY		641865		True				
+ANR	641932	CFGExitNode	EXIT		641865		True				
+ANR	641933	Symbol	argc		641865						
+ANR	641934	Symbol	NULL		641865						
+ANR	641935	Symbol	time		641865						
+ANR	641936	Symbol	argv		641865						

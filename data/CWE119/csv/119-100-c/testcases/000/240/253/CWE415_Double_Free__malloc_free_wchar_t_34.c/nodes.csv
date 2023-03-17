@@ -1,0 +1,344 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	84078	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-100-c/testcases/000/240/253/CWE415_Double_Free__malloc_free_wchar_t_34.c								
+ANR	84079	ClassDef	<unnamed>	22:8:653:772							
+ANR	84080	DeclStmt									
+ANR	84081	Decl							wchar_t	wchar_t *	unionFirst
+ANR	84082	DeclStmt									
+ANR	84083	Decl							wchar_t	wchar_t *	unionSecond
+ANR	84084	DeclStmt									
+ANR	84085	Decl									CWE415_Double_Free__malloc_free_wchar_t_34_unionType
+ANR	84086	Function	CWE415_Double_Free__malloc_free_wchar_t_34_bad	30:0:796:1350							
+ANR	84087	FunctionDef	CWE415_Double_Free__malloc_free_wchar_t_34_bad ()		84086	0					
+ANR	84088	CompoundStatement		31:0:851:1350	84086	0					
+ANR	84089	IdentifierDeclStatement	wchar_t * data ;	32:4:858:872	84086	0	True				
+ANR	84090	IdentifierDecl	* data		84086	0					
+ANR	84091	IdentifierDeclType	wchar_t *		84086	0					
+ANR	84092	Identifier	data		84086	1					
+ANR	84093	IdentifierDeclStatement	CWE415_Double_Free__malloc_free_wchar_t_34_unionType myUnion ;	33:4:879:939	84086	1	True				
+ANR	84094	IdentifierDecl	myUnion		84086	0					
+ANR	84095	IdentifierDeclType	CWE415_Double_Free__malloc_free_wchar_t_34_unionType		84086	0					
+ANR	84096	Identifier	myUnion		84086	1					
+ANR	84097	ExpressionStatement	data = NULL	35:4:973:984	84086	2	True				
+ANR	84098	AssignmentExpression	data = NULL		84086	0		=			
+ANR	84099	Identifier	data		84086	0					
+ANR	84100	Identifier	NULL		84086	1					
+ANR	84101	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	36:4:991:1036	84086	3	True				
+ANR	84102	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		84086	0		=			
+ANR	84103	Identifier	data		84086	0					
+ANR	84104	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		84086	1					
+ANR	84105	CastTarget	wchar_t *		84086	0					
+ANR	84106	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		84086	1					
+ANR	84107	Callee	malloc		84086	0					
+ANR	84108	Identifier	malloc		84086	0					
+ANR	84109	ArgumentList	100 * sizeof ( wchar_t )		84086	1					
+ANR	84110	Argument	100 * sizeof ( wchar_t )		84086	0					
+ANR	84111	MultiplicativeExpression	100 * sizeof ( wchar_t )		84086	0		*			
+ANR	84112	PrimaryExpression	100		84086	0					
+ANR	84113	SizeofExpression	sizeof ( wchar_t )		84086	1					
+ANR	84114	Sizeof	sizeof		84086	0					
+ANR	84115	SizeofOperand	wchar_t		84086	1					
+ANR	84116	IfStatement	if ( data == NULL )		84086	4					
+ANR	84117	Condition	data == NULL	37:8:1047:1058	84086	0	True				
+ANR	84118	EqualityExpression	data == NULL		84086	0		==			
+ANR	84119	Identifier	data		84086	0					
+ANR	84120	Identifier	NULL		84086	1					
+ANR	84121	CompoundStatement		7:22:209:209	84086	1					
+ANR	84122	ExpressionStatement	exit ( - 1 )	37:23:1062:1070	84086	0	True				
+ANR	84123	CallExpression	exit ( - 1 )		84086	0					
+ANR	84124	Callee	exit		84086	0					
+ANR	84125	Identifier	exit		84086	0					
+ANR	84126	ArgumentList	- 1		84086	1					
+ANR	84127	Argument	- 1		84086	0					
+ANR	84128	UnaryOperationExpression	- 1		84086	0					
+ANR	84129	UnaryOperator	-		84086	0					
+ANR	84130	PrimaryExpression	1		84086	1					
+ANR	84131	ExpressionStatement	free ( data )	39:4:1162:1172	84086	5	True				
+ANR	84132	CallExpression	free ( data )		84086	0					
+ANR	84133	Callee	free		84086	0					
+ANR	84134	Identifier	free		84086	0					
+ANR	84135	ArgumentList	data		84086	1					
+ANR	84136	Argument	data		84086	0					
+ANR	84137	Identifier	data		84086	0					
+ANR	84138	ExpressionStatement	myUnion . unionFirst = data	40:4:1179:1204	84086	6	True				
+ANR	84139	AssignmentExpression	myUnion . unionFirst = data		84086	0		=			
+ANR	84140	MemberAccess	myUnion . unionFirst		84086	0					
+ANR	84141	Identifier	myUnion		84086	0					
+ANR	84142	Identifier	unionFirst		84086	1					
+ANR	84143	Identifier	data		84086	1					
+ANR	84144	CompoundStatement		12:8:370:406	84086	7					
+ANR	84145	IdentifierDeclStatement	wchar_t * data = myUnion . unionSecond ;	42:8:1222:1258	84086	0	True				
+ANR	84146	IdentifierDecl	* data = myUnion . unionSecond		84086	0					
+ANR	84147	IdentifierDeclType	wchar_t *		84086	0					
+ANR	84148	Identifier	data		84086	1					
+ANR	84149	AssignmentExpression	* data = myUnion . unionSecond		84086	2		=			
+ANR	84150	Identifier	data		84086	0					
+ANR	84151	MemberAccess	myUnion . unionSecond		84086	1					
+ANR	84152	Identifier	myUnion		84086	0					
+ANR	84153	Identifier	unionSecond		84086	1					
+ANR	84154	ExpressionStatement	free ( data )	44:8:1330:1340	84086	1	True				
+ANR	84155	CallExpression	free ( data )		84086	0					
+ANR	84156	Callee	free		84086	0					
+ANR	84157	Identifier	free		84086	0					
+ANR	84158	ArgumentList	data		84086	1					
+ANR	84159	Argument	data		84086	0					
+ANR	84160	Identifier	data		84086	0					
+ANR	84161	ReturnType	void		84086	1					
+ANR	84162	Identifier	CWE415_Double_Free__malloc_free_wchar_t_34_bad		84086	2					
+ANR	84163	ParameterList			84086	3					
+ANR	84164	CFGEntryNode	ENTRY		84086		True				
+ANR	84165	CFGExitNode	EXIT		84086		True				
+ANR	84166	Symbol	myUnion		84086						
+ANR	84167	Symbol	malloc		84086						
+ANR	84168	Symbol	NULL		84086						
+ANR	84169	Symbol	data		84086						
+ANR	84170	Symbol	myUnion . unionSecond		84086						
+ANR	84171	Symbol	myUnion . unionFirst		84086						
+ANR	84172	Function	goodG2B	53:0:1453:1946							
+ANR	84173	FunctionDef	goodG2B ()		84172	0					
+ANR	84174	CompoundStatement		54:0:1476:1946	84172	0					
+ANR	84175	IdentifierDeclStatement	wchar_t * data ;	55:4:1483:1497	84172	0	True				
+ANR	84176	IdentifierDecl	* data		84172	0					
+ANR	84177	IdentifierDeclType	wchar_t *		84172	0					
+ANR	84178	Identifier	data		84172	1					
+ANR	84179	IdentifierDeclStatement	CWE415_Double_Free__malloc_free_wchar_t_34_unionType myUnion ;	56:4:1504:1564	84172	1	True				
+ANR	84180	IdentifierDecl	myUnion		84172	0					
+ANR	84181	IdentifierDeclType	CWE415_Double_Free__malloc_free_wchar_t_34_unionType		84172	0					
+ANR	84182	Identifier	myUnion		84172	1					
+ANR	84183	ExpressionStatement	data = NULL	58:4:1598:1609	84172	2	True				
+ANR	84184	AssignmentExpression	data = NULL		84172	0		=			
+ANR	84185	Identifier	data		84172	0					
+ANR	84186	Identifier	NULL		84172	1					
+ANR	84187	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	59:4:1616:1661	84172	3	True				
+ANR	84188	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		84172	0		=			
+ANR	84189	Identifier	data		84172	0					
+ANR	84190	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		84172	1					
+ANR	84191	CastTarget	wchar_t *		84172	0					
+ANR	84192	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		84172	1					
+ANR	84193	Callee	malloc		84172	0					
+ANR	84194	Identifier	malloc		84172	0					
+ANR	84195	ArgumentList	100 * sizeof ( wchar_t )		84172	1					
+ANR	84196	Argument	100 * sizeof ( wchar_t )		84172	0					
+ANR	84197	MultiplicativeExpression	100 * sizeof ( wchar_t )		84172	0		*			
+ANR	84198	PrimaryExpression	100		84172	0					
+ANR	84199	SizeofExpression	sizeof ( wchar_t )		84172	1					
+ANR	84200	Sizeof	sizeof		84172	0					
+ANR	84201	SizeofOperand	wchar_t		84172	1					
+ANR	84202	IfStatement	if ( data == NULL )		84172	4					
+ANR	84203	Condition	data == NULL	60:8:1672:1683	84172	0	True				
+ANR	84204	EqualityExpression	data == NULL		84172	0		==			
+ANR	84205	Identifier	data		84172	0					
+ANR	84206	Identifier	NULL		84172	1					
+ANR	84207	CompoundStatement		7:22:209:209	84172	1					
+ANR	84208	ExpressionStatement	exit ( - 1 )	60:23:1687:1695	84172	0	True				
+ANR	84209	CallExpression	exit ( - 1 )		84172	0					
+ANR	84210	Callee	exit		84172	0					
+ANR	84211	Identifier	exit		84172	0					
+ANR	84212	ArgumentList	- 1		84172	1					
+ANR	84213	Argument	- 1		84172	0					
+ANR	84214	UnaryOperationExpression	- 1		84172	0					
+ANR	84215	UnaryOperator	-		84172	0					
+ANR	84216	PrimaryExpression	1		84172	1					
+ANR	84217	ExpressionStatement	myUnion . unionFirst = data	62:4:1775:1800	84172	5	True				
+ANR	84218	AssignmentExpression	myUnion . unionFirst = data		84172	0		=			
+ANR	84219	MemberAccess	myUnion . unionFirst		84172	0					
+ANR	84220	Identifier	myUnion		84172	0					
+ANR	84221	Identifier	unionFirst		84172	1					
+ANR	84222	Identifier	data		84172	1					
+ANR	84223	CompoundStatement		11:8:341:377	84172	6					
+ANR	84224	IdentifierDeclStatement	wchar_t * data = myUnion . unionSecond ;	64:8:1818:1854	84172	0	True				
+ANR	84225	IdentifierDecl	* data = myUnion . unionSecond		84172	0					
+ANR	84226	IdentifierDeclType	wchar_t *		84172	0					
+ANR	84227	Identifier	data		84172	1					
+ANR	84228	AssignmentExpression	* data = myUnion . unionSecond		84172	2		=			
+ANR	84229	Identifier	data		84172	0					
+ANR	84230	MemberAccess	myUnion . unionSecond		84172	1					
+ANR	84231	Identifier	myUnion		84172	0					
+ANR	84232	Identifier	unionSecond		84172	1					
+ANR	84233	ExpressionStatement	free ( data )	66:8:1926:1936	84172	1	True				
+ANR	84234	CallExpression	free ( data )		84172	0					
+ANR	84235	Callee	free		84172	0					
+ANR	84236	Identifier	free		84172	0					
+ANR	84237	ArgumentList	data		84172	1					
+ANR	84238	Argument	data		84172	0					
+ANR	84239	Identifier	data		84172	0					
+ANR	84240	ReturnType	static void		84172	1					
+ANR	84241	Identifier	goodG2B		84172	2					
+ANR	84242	ParameterList			84172	3					
+ANR	84243	CFGEntryNode	ENTRY		84172		True				
+ANR	84244	CFGExitNode	EXIT		84172		True				
+ANR	84245	Symbol	myUnion		84172						
+ANR	84246	Symbol	malloc		84172						
+ANR	84247	Symbol	NULL		84172						
+ANR	84248	Symbol	data		84172						
+ANR	84249	Symbol	myUnion . unionSecond		84172						
+ANR	84250	Symbol	myUnion . unionFirst		84172						
+ANR	84251	Function	goodB2G	71:0:2005:2587							
+ANR	84252	FunctionDef	goodB2G ()		84251	0					
+ANR	84253	CompoundStatement		72:0:2028:2587	84251	0					
+ANR	84254	IdentifierDeclStatement	wchar_t * data ;	73:4:2035:2049	84251	0	True				
+ANR	84255	IdentifierDecl	* data		84251	0					
+ANR	84256	IdentifierDeclType	wchar_t *		84251	0					
+ANR	84257	Identifier	data		84251	1					
+ANR	84258	IdentifierDeclStatement	CWE415_Double_Free__malloc_free_wchar_t_34_unionType myUnion ;	74:4:2056:2116	84251	1	True				
+ANR	84259	IdentifierDecl	myUnion		84251	0					
+ANR	84260	IdentifierDeclType	CWE415_Double_Free__malloc_free_wchar_t_34_unionType		84251	0					
+ANR	84261	Identifier	myUnion		84251	1					
+ANR	84262	ExpressionStatement	data = NULL	76:4:2150:2161	84251	2	True				
+ANR	84263	AssignmentExpression	data = NULL		84251	0		=			
+ANR	84264	Identifier	data		84251	0					
+ANR	84265	Identifier	NULL		84251	1					
+ANR	84266	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	77:4:2168:2213	84251	3	True				
+ANR	84267	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		84251	0		=			
+ANR	84268	Identifier	data		84251	0					
+ANR	84269	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		84251	1					
+ANR	84270	CastTarget	wchar_t *		84251	0					
+ANR	84271	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		84251	1					
+ANR	84272	Callee	malloc		84251	0					
+ANR	84273	Identifier	malloc		84251	0					
+ANR	84274	ArgumentList	100 * sizeof ( wchar_t )		84251	1					
+ANR	84275	Argument	100 * sizeof ( wchar_t )		84251	0					
+ANR	84276	MultiplicativeExpression	100 * sizeof ( wchar_t )		84251	0		*			
+ANR	84277	PrimaryExpression	100		84251	0					
+ANR	84278	SizeofExpression	sizeof ( wchar_t )		84251	1					
+ANR	84279	Sizeof	sizeof		84251	0					
+ANR	84280	SizeofOperand	wchar_t		84251	1					
+ANR	84281	IfStatement	if ( data == NULL )		84251	4					
+ANR	84282	Condition	data == NULL	78:8:2224:2235	84251	0	True				
+ANR	84283	EqualityExpression	data == NULL		84251	0		==			
+ANR	84284	Identifier	data		84251	0					
+ANR	84285	Identifier	NULL		84251	1					
+ANR	84286	CompoundStatement		7:22:209:209	84251	1					
+ANR	84287	ExpressionStatement	exit ( - 1 )	78:23:2239:2247	84251	0	True				
+ANR	84288	CallExpression	exit ( - 1 )		84251	0					
+ANR	84289	Callee	exit		84251	0					
+ANR	84290	Identifier	exit		84251	0					
+ANR	84291	ArgumentList	- 1		84251	1					
+ANR	84292	Argument	- 1		84251	0					
+ANR	84293	UnaryOperationExpression	- 1		84251	0					
+ANR	84294	UnaryOperator	-		84251	0					
+ANR	84295	PrimaryExpression	1		84251	1					
+ANR	84296	ExpressionStatement	free ( data )	80:4:2339:2349	84251	5	True				
+ANR	84297	CallExpression	free ( data )		84251	0					
+ANR	84298	Callee	free		84251	0					
+ANR	84299	Identifier	free		84251	0					
+ANR	84300	ArgumentList	data		84251	1					
+ANR	84301	Argument	data		84251	0					
+ANR	84302	Identifier	data		84251	0					
+ANR	84303	ExpressionStatement	myUnion . unionFirst = data	81:4:2356:2381	84251	6	True				
+ANR	84304	AssignmentExpression	myUnion . unionFirst = data		84251	0		=			
+ANR	84305	MemberAccess	myUnion . unionFirst		84251	0					
+ANR	84306	Identifier	myUnion		84251	0					
+ANR	84307	Identifier	unionFirst		84251	1					
+ANR	84308	Identifier	data		84251	1					
+ANR	84309	CompoundStatement		12:8:370:406	84251	7					
+ANR	84310	IdentifierDeclStatement	wchar_t * data = myUnion . unionSecond ;	83:8:2399:2435	84251	0	True				
+ANR	84311	IdentifierDecl	* data = myUnion . unionSecond		84251	0					
+ANR	84312	IdentifierDeclType	wchar_t *		84251	0					
+ANR	84313	Identifier	data		84251	1					
+ANR	84314	AssignmentExpression	* data = myUnion . unionSecond		84251	2		=			
+ANR	84315	Identifier	data		84251	0					
+ANR	84316	MemberAccess	myUnion . unionSecond		84251	1					
+ANR	84317	Identifier	myUnion		84251	0					
+ANR	84318	Identifier	unionSecond		84251	1					
+ANR	84319	ExpressionStatement		86:8:2525:2525	84251	1	True				
+ANR	84320	ReturnType	static void		84251	1					
+ANR	84321	Identifier	goodB2G		84251	2					
+ANR	84322	ParameterList			84251	3					
+ANR	84323	CFGEntryNode	ENTRY		84251		True				
+ANR	84324	CFGExitNode	EXIT		84251		True				
+ANR	84325	Symbol	myUnion		84251						
+ANR	84326	Symbol	malloc		84251						
+ANR	84327	Symbol	NULL		84251						
+ANR	84328	Symbol	data		84251						
+ANR	84329	Symbol	myUnion . unionSecond		84251						
+ANR	84330	Symbol	myUnion . unionFirst		84251						
+ANR	84331	Function	CWE415_Double_Free__malloc_free_wchar_t_34_good	90:0:2592:2683							
+ANR	84332	FunctionDef	CWE415_Double_Free__malloc_free_wchar_t_34_good ()		84331	0					
+ANR	84333	CompoundStatement		91:0:2648:2683	84331	0					
+ANR	84334	ExpressionStatement	goodG2B ( )	92:4:2655:2664	84331	0	True				
+ANR	84335	CallExpression	goodG2B ( )		84331	0					
+ANR	84336	Callee	goodG2B		84331	0					
+ANR	84337	Identifier	goodG2B		84331	0					
+ANR	84338	ArgumentList			84331	1					
+ANR	84339	ExpressionStatement	goodB2G ( )	93:4:2671:2680	84331	1	True				
+ANR	84340	CallExpression	goodB2G ( )		84331	0					
+ANR	84341	Callee	goodB2G		84331	0					
+ANR	84342	Identifier	goodB2G		84331	0					
+ANR	84343	ArgumentList			84331	1					
+ANR	84344	ReturnType	void		84331	1					
+ANR	84345	Identifier	CWE415_Double_Free__malloc_free_wchar_t_34_good		84331	2					
+ANR	84346	ParameterList			84331	3					
+ANR	84347	CFGEntryNode	ENTRY		84331		True				
+ANR	84348	CFGExitNode	EXIT		84331		True				
+ANR	84349	Function	main	104:0:3028:3477							
+ANR	84350	FunctionDef	"main (int argc , char * argv [ ])"		84349	0					
+ANR	84351	CompoundStatement		105:0:3063:3477	84349	0					
+ANR	84352	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	107:4:3097:3126	84349	0	True				
+ANR	84353	CallExpression	srand ( ( unsigned ) time ( NULL ) )		84349	0					
+ANR	84354	Callee	srand		84349	0					
+ANR	84355	Identifier	srand		84349	0					
+ANR	84356	ArgumentList	( unsigned ) time ( NULL )		84349	1					
+ANR	84357	Argument	( unsigned ) time ( NULL )		84349	0					
+ANR	84358	CastExpression	( unsigned ) time ( NULL )		84349	0					
+ANR	84359	CastTarget	unsigned		84349	0					
+ANR	84360	CallExpression	time ( NULL )		84349	1					
+ANR	84361	Callee	time		84349	0					
+ANR	84362	Identifier	time		84349	0					
+ANR	84363	ArgumentList	NULL		84349	1					
+ANR	84364	Argument	NULL		84349	0					
+ANR	84365	Identifier	NULL		84349	0					
+ANR	84366	ExpressionStatement	"printLine ( ""Calling good()..."" )"	109:4:3151:3181	84349	1	True				
+ANR	84367	CallExpression	"printLine ( ""Calling good()..."" )"		84349	0					
+ANR	84368	Callee	printLine		84349	0					
+ANR	84369	Identifier	printLine		84349	0					
+ANR	84370	ArgumentList	"""Calling good()..."""		84349	1					
+ANR	84371	Argument	"""Calling good()..."""		84349	0					
+ANR	84372	PrimaryExpression	"""Calling good()..."""		84349	0					
+ANR	84373	ExpressionStatement	CWE415_Double_Free__malloc_free_wchar_t_34_good ( )	110:4:3188:3237	84349	2	True				
+ANR	84374	CallExpression	CWE415_Double_Free__malloc_free_wchar_t_34_good ( )		84349	0					
+ANR	84375	Callee	CWE415_Double_Free__malloc_free_wchar_t_34_good		84349	0					
+ANR	84376	Identifier	CWE415_Double_Free__malloc_free_wchar_t_34_good		84349	0					
+ANR	84377	ArgumentList			84349	1					
+ANR	84378	ExpressionStatement	"printLine ( ""Finished good()"" )"	111:4:3244:3272	84349	3	True				
+ANR	84379	CallExpression	"printLine ( ""Finished good()"" )"		84349	0					
+ANR	84380	Callee	printLine		84349	0					
+ANR	84381	Identifier	printLine		84349	0					
+ANR	84382	ArgumentList	"""Finished good()"""		84349	1					
+ANR	84383	Argument	"""Finished good()"""		84349	0					
+ANR	84384	PrimaryExpression	"""Finished good()"""		84349	0					
+ANR	84385	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	114:4:3319:3348	84349	4	True				
+ANR	84386	CallExpression	"printLine ( ""Calling bad()..."" )"		84349	0					
+ANR	84387	Callee	printLine		84349	0					
+ANR	84388	Identifier	printLine		84349	0					
+ANR	84389	ArgumentList	"""Calling bad()..."""		84349	1					
+ANR	84390	Argument	"""Calling bad()..."""		84349	0					
+ANR	84391	PrimaryExpression	"""Calling bad()..."""		84349	0					
+ANR	84392	ExpressionStatement	CWE415_Double_Free__malloc_free_wchar_t_34_bad ( )	115:4:3355:3403	84349	5	True				
+ANR	84393	CallExpression	CWE415_Double_Free__malloc_free_wchar_t_34_bad ( )		84349	0					
+ANR	84394	Callee	CWE415_Double_Free__malloc_free_wchar_t_34_bad		84349	0					
+ANR	84395	Identifier	CWE415_Double_Free__malloc_free_wchar_t_34_bad		84349	0					
+ANR	84396	ArgumentList			84349	1					
+ANR	84397	ExpressionStatement	"printLine ( ""Finished bad()"" )"	116:4:3410:3437	84349	6	True				
+ANR	84398	CallExpression	"printLine ( ""Finished bad()"" )"		84349	0					
+ANR	84399	Callee	printLine		84349	0					
+ANR	84400	Identifier	printLine		84349	0					
+ANR	84401	ArgumentList	"""Finished bad()"""		84349	1					
+ANR	84402	Argument	"""Finished bad()"""		84349	0					
+ANR	84403	PrimaryExpression	"""Finished bad()"""		84349	0					
+ANR	84404	ReturnStatement	return 0 ;	118:4:3466:3474	84349	7	True				
+ANR	84405	PrimaryExpression	0		84349	0					
+ANR	84406	ReturnType	int		84349	1					
+ANR	84407	Identifier	main		84349	2					
+ANR	84408	ParameterList	"int argc , char * argv [ ]"		84349	3					
+ANR	84409	Parameter	int argc	104:9:3037:3044	84349	0	True				
+ANR	84410	ParameterType	int		84349	0					
+ANR	84411	Identifier	argc		84349	1					
+ANR	84412	Parameter	char * argv [ ]	104:19:3047:3059	84349	1	True				
+ANR	84413	ParameterType	char * [ ]		84349	0					
+ANR	84414	Identifier	argv		84349	1					
+ANR	84415	CFGEntryNode	ENTRY		84349		True				
+ANR	84416	CFGExitNode	EXIT		84349		True				
+ANR	84417	Symbol	argc		84349						
+ANR	84418	Symbol	NULL		84349						
+ANR	84419	Symbol	time		84349						
+ANR	84420	Symbol	argv		84349						

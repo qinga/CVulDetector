@@ -1,0 +1,266 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	570989	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-4900-c/testcases/000/077/921/CWE127_Buffer_Underread__malloc_char_memmove_67a.c								
+ANR	570990	ClassDef	_CWE127_Buffer_Underread__malloc_char_memmove_67_structType	21:8:649:805							
+ANR	570991	DeclStmt									
+ANR	570992	Decl							char	char *	structFirst
+ANR	570993	DeclStmt									
+ANR	570994	Decl							_CWE127_Buffer_Underread__malloc_char_memmove_67_structType	_CWE127_Buffer_Underread__malloc_char_memmove_67_structType	CWE127_Buffer_Underread__malloc_char_memmove_67_structType
+ANR	570995	DeclStmt									
+ANR	570996	Decl							void	void ( CWE127_Buffer_Underread__malloc_char_memmove_67_structType myStruct )	CWE127_Buffer_Underread__malloc_char_memmove_67b_badSink
+ANR	570997	Function	CWE127_Buffer_Underread__malloc_char_memmove_67_bad	31:0:996:1537							
+ANR	570998	FunctionDef	CWE127_Buffer_Underread__malloc_char_memmove_67_bad ()		570997	0					
+ANR	570999	CompoundStatement		32:0:1056:1537	570997	0					
+ANR	571000	IdentifierDeclStatement	char * data ;	33:4:1063:1074	570997	0	True				
+ANR	571001	IdentifierDecl	* data		570997	0					
+ANR	571002	IdentifierDeclType	char *		570997	0					
+ANR	571003	Identifier	data		570997	1					
+ANR	571004	IdentifierDeclStatement	CWE127_Buffer_Underread__malloc_char_memmove_67_structType myStruct ;	34:4:1081:1148	570997	1	True				
+ANR	571005	IdentifierDecl	myStruct		570997	0					
+ANR	571006	IdentifierDeclType	CWE127_Buffer_Underread__malloc_char_memmove_67_structType		570997	0					
+ANR	571007	Identifier	myStruct		570997	1					
+ANR	571008	ExpressionStatement	data = NULL	35:4:1155:1166	570997	2	True				
+ANR	571009	AssignmentExpression	data = NULL		570997	0		=			
+ANR	571010	Identifier	data		570997	0					
+ANR	571011	Identifier	NULL		570997	1					
+ANR	571012	CompoundStatement		6:8:127:179	570997	3					
+ANR	571013	IdentifierDeclStatement	char * dataBuffer = ( char * ) malloc ( 100 * sizeof ( char ) ) ;	37:8:1184:1236	570997	0	True				
+ANR	571014	IdentifierDecl	* dataBuffer = ( char * ) malloc ( 100 * sizeof ( char ) )		570997	0					
+ANR	571015	IdentifierDeclType	char *		570997	0					
+ANR	571016	Identifier	dataBuffer		570997	1					
+ANR	571017	AssignmentExpression	* dataBuffer = ( char * ) malloc ( 100 * sizeof ( char ) )		570997	2		=			
+ANR	571018	Identifier	dataBuffer		570997	0					
+ANR	571019	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		570997	1					
+ANR	571020	CastTarget	char *		570997	0					
+ANR	571021	CallExpression	malloc ( 100 * sizeof ( char ) )		570997	1					
+ANR	571022	Callee	malloc		570997	0					
+ANR	571023	Identifier	malloc		570997	0					
+ANR	571024	ArgumentList	100 * sizeof ( char )		570997	1					
+ANR	571025	Argument	100 * sizeof ( char )		570997	0					
+ANR	571026	MultiplicativeExpression	100 * sizeof ( char )		570997	0		*			
+ANR	571027	PrimaryExpression	100		570997	0					
+ANR	571028	SizeofExpression	sizeof ( char )		570997	1					
+ANR	571029	Sizeof	sizeof		570997	0					
+ANR	571030	SizeofOperand	char		570997	1					
+ANR	571031	ExpressionStatement	"memset ( dataBuffer , 'A' , 100 - 1 )"	38:8:1247:1277	570997	1	True				
+ANR	571032	CallExpression	"memset ( dataBuffer , 'A' , 100 - 1 )"		570997	0					
+ANR	571033	Callee	memset		570997	0					
+ANR	571034	Identifier	memset		570997	0					
+ANR	571035	ArgumentList	dataBuffer		570997	1					
+ANR	571036	Argument	dataBuffer		570997	0					
+ANR	571037	Identifier	dataBuffer		570997	0					
+ANR	571038	Argument	'A'		570997	1					
+ANR	571039	PrimaryExpression	'A'		570997	0					
+ANR	571040	Argument	100 - 1		570997	2					
+ANR	571041	AdditiveExpression	100 - 1		570997	0		-			
+ANR	571042	PrimaryExpression	100		570997	0					
+ANR	571043	PrimaryExpression	1		570997	1					
+ANR	571044	ExpressionStatement	dataBuffer [ 100 - 1 ] = '\\0'	39:8:1288:1312	570997	2	True				
+ANR	571045	AssignmentExpression	dataBuffer [ 100 - 1 ] = '\\0'		570997	0		=			
+ANR	571046	ArrayIndexing	dataBuffer [ 100 - 1 ]		570997	0					
+ANR	571047	Identifier	dataBuffer		570997	0					
+ANR	571048	AdditiveExpression	100 - 1		570997	1		-			
+ANR	571049	PrimaryExpression	100		570997	0					
+ANR	571050	PrimaryExpression	1		570997	1					
+ANR	571051	PrimaryExpression	'\\0'		570997	1					
+ANR	571052	ExpressionStatement	data = dataBuffer - 8	41:8:1399:1420	570997	3	True				
+ANR	571053	AssignmentExpression	data = dataBuffer - 8		570997	0		=			
+ANR	571054	Identifier	data		570997	0					
+ANR	571055	AdditiveExpression	dataBuffer - 8		570997	1		-			
+ANR	571056	Identifier	dataBuffer		570997	0					
+ANR	571057	PrimaryExpression	8		570997	1					
+ANR	571058	ExpressionStatement	myStruct . structFirst = data	43:4:1434:1461	570997	4	True				
+ANR	571059	AssignmentExpression	myStruct . structFirst = data		570997	0		=			
+ANR	571060	MemberAccess	myStruct . structFirst		570997	0					
+ANR	571061	Identifier	myStruct		570997	0					
+ANR	571062	Identifier	structFirst		570997	1					
+ANR	571063	Identifier	data		570997	1					
+ANR	571064	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_memmove_67b_badSink ( myStruct )	44:4:1468:1534	570997	5	True				
+ANR	571065	CallExpression	CWE127_Buffer_Underread__malloc_char_memmove_67b_badSink ( myStruct )		570997	0					
+ANR	571066	Callee	CWE127_Buffer_Underread__malloc_char_memmove_67b_badSink		570997	0					
+ANR	571067	Identifier	CWE127_Buffer_Underread__malloc_char_memmove_67b_badSink		570997	0					
+ANR	571068	ArgumentList	myStruct		570997	1					
+ANR	571069	Argument	myStruct		570997	0					
+ANR	571070	Identifier	myStruct		570997	0					
+ANR	571071	ReturnType	void		570997	1					
+ANR	571072	Identifier	CWE127_Buffer_Underread__malloc_char_memmove_67_bad		570997	2					
+ANR	571073	ParameterList			570997	3					
+ANR	571074	CFGEntryNode	ENTRY		570997		True				
+ANR	571075	CFGExitNode	EXIT		570997		True				
+ANR	571076	Symbol	malloc		570997						
+ANR	571077	Symbol	NULL		570997						
+ANR	571078	Symbol	data		570997						
+ANR	571079	Symbol	myStruct . structFirst		570997						
+ANR	571080	Symbol	dataBuffer		570997						
+ANR	571081	Symbol	myStruct		570997						
+ANR	571082	Symbol	* dataBuffer		570997						
+ANR	571083	DeclStmt									
+ANR	571084	Decl							void	void ( CWE127_Buffer_Underread__malloc_char_memmove_67_structType myStruct )	CWE127_Buffer_Underread__malloc_char_memmove_67b_goodG2BSink
+ANR	571085	Function	goodG2B	54:0:1777:2273							
+ANR	571086	FunctionDef	goodG2B ()		571085	0					
+ANR	571087	CompoundStatement		55:0:1800:2273	571085	0					
+ANR	571088	IdentifierDeclStatement	char * data ;	56:4:1807:1818	571085	0	True				
+ANR	571089	IdentifierDecl	* data		571085	0					
+ANR	571090	IdentifierDeclType	char *		571085	0					
+ANR	571091	Identifier	data		571085	1					
+ANR	571092	IdentifierDeclStatement	CWE127_Buffer_Underread__malloc_char_memmove_67_structType myStruct ;	57:4:1825:1892	571085	1	True				
+ANR	571093	IdentifierDecl	myStruct		571085	0					
+ANR	571094	IdentifierDeclType	CWE127_Buffer_Underread__malloc_char_memmove_67_structType		571085	0					
+ANR	571095	Identifier	myStruct		571085	1					
+ANR	571096	ExpressionStatement	data = NULL	58:4:1899:1910	571085	2	True				
+ANR	571097	AssignmentExpression	data = NULL		571085	0		=			
+ANR	571098	Identifier	data		571085	0					
+ANR	571099	Identifier	NULL		571085	1					
+ANR	571100	CompoundStatement		6:8:127:179	571085	3					
+ANR	571101	IdentifierDeclStatement	char * dataBuffer = ( char * ) malloc ( 100 * sizeof ( char ) ) ;	60:8:1928:1980	571085	0	True				
+ANR	571102	IdentifierDecl	* dataBuffer = ( char * ) malloc ( 100 * sizeof ( char ) )		571085	0					
+ANR	571103	IdentifierDeclType	char *		571085	0					
+ANR	571104	Identifier	dataBuffer		571085	1					
+ANR	571105	AssignmentExpression	* dataBuffer = ( char * ) malloc ( 100 * sizeof ( char ) )		571085	2		=			
+ANR	571106	Identifier	dataBuffer		571085	0					
+ANR	571107	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		571085	1					
+ANR	571108	CastTarget	char *		571085	0					
+ANR	571109	CallExpression	malloc ( 100 * sizeof ( char ) )		571085	1					
+ANR	571110	Callee	malloc		571085	0					
+ANR	571111	Identifier	malloc		571085	0					
+ANR	571112	ArgumentList	100 * sizeof ( char )		571085	1					
+ANR	571113	Argument	100 * sizeof ( char )		571085	0					
+ANR	571114	MultiplicativeExpression	100 * sizeof ( char )		571085	0		*			
+ANR	571115	PrimaryExpression	100		571085	0					
+ANR	571116	SizeofExpression	sizeof ( char )		571085	1					
+ANR	571117	Sizeof	sizeof		571085	0					
+ANR	571118	SizeofOperand	char		571085	1					
+ANR	571119	ExpressionStatement	"memset ( dataBuffer , 'A' , 100 - 1 )"	61:8:1991:2021	571085	1	True				
+ANR	571120	CallExpression	"memset ( dataBuffer , 'A' , 100 - 1 )"		571085	0					
+ANR	571121	Callee	memset		571085	0					
+ANR	571122	Identifier	memset		571085	0					
+ANR	571123	ArgumentList	dataBuffer		571085	1					
+ANR	571124	Argument	dataBuffer		571085	0					
+ANR	571125	Identifier	dataBuffer		571085	0					
+ANR	571126	Argument	'A'		571085	1					
+ANR	571127	PrimaryExpression	'A'		571085	0					
+ANR	571128	Argument	100 - 1		571085	2					
+ANR	571129	AdditiveExpression	100 - 1		571085	0		-			
+ANR	571130	PrimaryExpression	100		571085	0					
+ANR	571131	PrimaryExpression	1		571085	1					
+ANR	571132	ExpressionStatement	dataBuffer [ 100 - 1 ] = '\\0'	62:8:2032:2056	571085	2	True				
+ANR	571133	AssignmentExpression	dataBuffer [ 100 - 1 ] = '\\0'		571085	0		=			
+ANR	571134	ArrayIndexing	dataBuffer [ 100 - 1 ]		571085	0					
+ANR	571135	Identifier	dataBuffer		571085	0					
+ANR	571136	AdditiveExpression	100 - 1		571085	1		-			
+ANR	571137	PrimaryExpression	100		571085	0					
+ANR	571138	PrimaryExpression	1		571085	1					
+ANR	571139	PrimaryExpression	'\\0'		571085	1					
+ANR	571140	ExpressionStatement	data = dataBuffer	64:8:2135:2152	571085	3	True				
+ANR	571141	AssignmentExpression	data = dataBuffer		571085	0		=			
+ANR	571142	Identifier	data		571085	0					
+ANR	571143	Identifier	dataBuffer		571085	1					
+ANR	571144	ExpressionStatement	myStruct . structFirst = data	66:4:2166:2193	571085	4	True				
+ANR	571145	AssignmentExpression	myStruct . structFirst = data		571085	0		=			
+ANR	571146	MemberAccess	myStruct . structFirst		571085	0					
+ANR	571147	Identifier	myStruct		571085	0					
+ANR	571148	Identifier	structFirst		571085	1					
+ANR	571149	Identifier	data		571085	1					
+ANR	571150	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_memmove_67b_goodG2BSink ( myStruct )	67:4:2200:2270	571085	5	True				
+ANR	571151	CallExpression	CWE127_Buffer_Underread__malloc_char_memmove_67b_goodG2BSink ( myStruct )		571085	0					
+ANR	571152	Callee	CWE127_Buffer_Underread__malloc_char_memmove_67b_goodG2BSink		571085	0					
+ANR	571153	Identifier	CWE127_Buffer_Underread__malloc_char_memmove_67b_goodG2BSink		571085	0					
+ANR	571154	ArgumentList	myStruct		571085	1					
+ANR	571155	Argument	myStruct		571085	0					
+ANR	571156	Identifier	myStruct		571085	0					
+ANR	571157	ReturnType	static void		571085	1					
+ANR	571158	Identifier	goodG2B		571085	2					
+ANR	571159	ParameterList			571085	3					
+ANR	571160	CFGEntryNode	ENTRY		571085		True				
+ANR	571161	CFGExitNode	EXIT		571085		True				
+ANR	571162	Symbol	malloc		571085						
+ANR	571163	Symbol	NULL		571085						
+ANR	571164	Symbol	data		571085						
+ANR	571165	Symbol	myStruct . structFirst		571085						
+ANR	571166	Symbol	dataBuffer		571085						
+ANR	571167	Symbol	myStruct		571085						
+ANR	571168	Symbol	* dataBuffer		571085						
+ANR	571169	Function	CWE127_Buffer_Underread__malloc_char_memmove_67_good	70:0:2278:2358							
+ANR	571170	FunctionDef	CWE127_Buffer_Underread__malloc_char_memmove_67_good ()		571169	0					
+ANR	571171	CompoundStatement		71:0:2339:2358	571169	0					
+ANR	571172	ExpressionStatement	goodG2B ( )	72:4:2346:2355	571169	0	True				
+ANR	571173	CallExpression	goodG2B ( )		571169	0					
+ANR	571174	Callee	goodG2B		571169	0					
+ANR	571175	Identifier	goodG2B		571169	0					
+ANR	571176	ArgumentList			571169	1					
+ANR	571177	ReturnType	void		571169	1					
+ANR	571178	Identifier	CWE127_Buffer_Underread__malloc_char_memmove_67_good		571169	2					
+ANR	571179	ParameterList			571169	3					
+ANR	571180	CFGEntryNode	ENTRY		571169		True				
+ANR	571181	CFGExitNode	EXIT		571169		True				
+ANR	571182	Function	main	85:0:2707:3166							
+ANR	571183	FunctionDef	"main (int argc , char * argv [ ])"		571182	0					
+ANR	571184	CompoundStatement		86:0:2742:3166	571182	0					
+ANR	571185	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	88:4:2776:2805	571182	0	True				
+ANR	571186	CallExpression	srand ( ( unsigned ) time ( NULL ) )		571182	0					
+ANR	571187	Callee	srand		571182	0					
+ANR	571188	Identifier	srand		571182	0					
+ANR	571189	ArgumentList	( unsigned ) time ( NULL )		571182	1					
+ANR	571190	Argument	( unsigned ) time ( NULL )		571182	0					
+ANR	571191	CastExpression	( unsigned ) time ( NULL )		571182	0					
+ANR	571192	CastTarget	unsigned		571182	0					
+ANR	571193	CallExpression	time ( NULL )		571182	1					
+ANR	571194	Callee	time		571182	0					
+ANR	571195	Identifier	time		571182	0					
+ANR	571196	ArgumentList	NULL		571182	1					
+ANR	571197	Argument	NULL		571182	0					
+ANR	571198	Identifier	NULL		571182	0					
+ANR	571199	ExpressionStatement	"printLine ( ""Calling good()..."" )"	90:4:2830:2860	571182	1	True				
+ANR	571200	CallExpression	"printLine ( ""Calling good()..."" )"		571182	0					
+ANR	571201	Callee	printLine		571182	0					
+ANR	571202	Identifier	printLine		571182	0					
+ANR	571203	ArgumentList	"""Calling good()..."""		571182	1					
+ANR	571204	Argument	"""Calling good()..."""		571182	0					
+ANR	571205	PrimaryExpression	"""Calling good()..."""		571182	0					
+ANR	571206	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_memmove_67_good ( )	91:4:2867:2921	571182	2	True				
+ANR	571207	CallExpression	CWE127_Buffer_Underread__malloc_char_memmove_67_good ( )		571182	0					
+ANR	571208	Callee	CWE127_Buffer_Underread__malloc_char_memmove_67_good		571182	0					
+ANR	571209	Identifier	CWE127_Buffer_Underread__malloc_char_memmove_67_good		571182	0					
+ANR	571210	ArgumentList			571182	1					
+ANR	571211	ExpressionStatement	"printLine ( ""Finished good()"" )"	92:4:2928:2956	571182	3	True				
+ANR	571212	CallExpression	"printLine ( ""Finished good()"" )"		571182	0					
+ANR	571213	Callee	printLine		571182	0					
+ANR	571214	Identifier	printLine		571182	0					
+ANR	571215	ArgumentList	"""Finished good()"""		571182	1					
+ANR	571216	Argument	"""Finished good()"""		571182	0					
+ANR	571217	PrimaryExpression	"""Finished good()"""		571182	0					
+ANR	571218	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	95:4:3003:3032	571182	4	True				
+ANR	571219	CallExpression	"printLine ( ""Calling bad()..."" )"		571182	0					
+ANR	571220	Callee	printLine		571182	0					
+ANR	571221	Identifier	printLine		571182	0					
+ANR	571222	ArgumentList	"""Calling bad()..."""		571182	1					
+ANR	571223	Argument	"""Calling bad()..."""		571182	0					
+ANR	571224	PrimaryExpression	"""Calling bad()..."""		571182	0					
+ANR	571225	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_memmove_67_bad ( )	96:4:3039:3092	571182	5	True				
+ANR	571226	CallExpression	CWE127_Buffer_Underread__malloc_char_memmove_67_bad ( )		571182	0					
+ANR	571227	Callee	CWE127_Buffer_Underread__malloc_char_memmove_67_bad		571182	0					
+ANR	571228	Identifier	CWE127_Buffer_Underread__malloc_char_memmove_67_bad		571182	0					
+ANR	571229	ArgumentList			571182	1					
+ANR	571230	ExpressionStatement	"printLine ( ""Finished bad()"" )"	97:4:3099:3126	571182	6	True				
+ANR	571231	CallExpression	"printLine ( ""Finished bad()"" )"		571182	0					
+ANR	571232	Callee	printLine		571182	0					
+ANR	571233	Identifier	printLine		571182	0					
+ANR	571234	ArgumentList	"""Finished bad()"""		571182	1					
+ANR	571235	Argument	"""Finished bad()"""		571182	0					
+ANR	571236	PrimaryExpression	"""Finished bad()"""		571182	0					
+ANR	571237	ReturnStatement	return 0 ;	99:4:3155:3163	571182	7	True				
+ANR	571238	PrimaryExpression	0		571182	0					
+ANR	571239	ReturnType	int		571182	1					
+ANR	571240	Identifier	main		571182	2					
+ANR	571241	ParameterList	"int argc , char * argv [ ]"		571182	3					
+ANR	571242	Parameter	int argc	85:9:2716:2723	571182	0	True				
+ANR	571243	ParameterType	int		571182	0					
+ANR	571244	Identifier	argc		571182	1					
+ANR	571245	Parameter	char * argv [ ]	85:19:2726:2738	571182	1	True				
+ANR	571246	ParameterType	char * [ ]		571182	0					
+ANR	571247	Identifier	argv		571182	1					
+ANR	571248	CFGEntryNode	ENTRY		571182		True				
+ANR	571249	CFGExitNode	EXIT		571182		True				
+ANR	571250	Symbol	argc		571182						
+ANR	571251	Symbol	NULL		571182						
+ANR	571252	Symbol	time		571182						
+ANR	571253	Symbol	argv		571182						

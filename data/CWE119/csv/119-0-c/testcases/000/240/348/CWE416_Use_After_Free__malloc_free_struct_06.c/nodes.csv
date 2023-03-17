@@ -1,0 +1,683 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	29016	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-0-c/testcases/000/240/348/CWE416_Use_After_Free__malloc_free_struct_06.c								
+ANR	29017	DeclStmt									
+ANR	29018	Decl							const int	const int	STATIC_CONST_FIVE
+ANR	29019	Function	CWE416_Use_After_Free__malloc_free_struct_06_bad	29:0:865:1680							
+ANR	29020	FunctionDef	CWE416_Use_After_Free__malloc_free_struct_06_bad ()		29019	0					
+ANR	29021	CompoundStatement		30:0:922:1680	29019	0					
+ANR	29022	IdentifierDeclStatement	twoIntsStruct * data ;	31:4:929:949	29019	0	True				
+ANR	29023	IdentifierDecl	* data		29019	0					
+ANR	29024	IdentifierDeclType	twoIntsStruct *		29019	0					
+ANR	29025	Identifier	data		29019	1					
+ANR	29026	ExpressionStatement	data = NULL	33:4:983:994	29019	1	True				
+ANR	29027	AssignmentExpression	data = NULL		29019	0		=			
+ANR	29028	Identifier	data		29019	0					
+ANR	29029	Identifier	NULL		29019	1					
+ANR	29030	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29019	2					
+ANR	29031	Condition	STATIC_CONST_FIVE == 5	34:7:1004:1023	29019	0	True				
+ANR	29032	EqualityExpression	STATIC_CONST_FIVE == 5		29019	0		==			
+ANR	29033	Identifier	STATIC_CONST_FIVE		29019	0					
+ANR	29034	PrimaryExpression	5		29019	1					
+ANR	29035	CompoundStatement		6:4:108:108	29019	1					
+ANR	29036	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	36:8:1042:1099	29019	0	True				
+ANR	29037	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29019	0		=			
+ANR	29038	Identifier	data		29019	0					
+ANR	29039	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29019	1					
+ANR	29040	CastTarget	twoIntsStruct *		29019	0					
+ANR	29041	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		29019	1					
+ANR	29042	Callee	malloc		29019	0					
+ANR	29043	Identifier	malloc		29019	0					
+ANR	29044	ArgumentList	100 * sizeof ( twoIntsStruct )		29019	1					
+ANR	29045	Argument	100 * sizeof ( twoIntsStruct )		29019	0					
+ANR	29046	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		29019	0		*			
+ANR	29047	PrimaryExpression	100		29019	0					
+ANR	29048	SizeofExpression	sizeof ( twoIntsStruct )		29019	1					
+ANR	29049	Sizeof	sizeof		29019	0					
+ANR	29050	SizeofOperand	twoIntsStruct		29019	1					
+ANR	29051	IfStatement	if ( data == NULL )		29019	1					
+ANR	29052	Condition	data == NULL	37:12:1114:1125	29019	0	True				
+ANR	29053	EqualityExpression	data == NULL		29019	0		==			
+ANR	29054	Identifier	data		29019	0					
+ANR	29055	Identifier	NULL		29019	1					
+ANR	29056	CompoundStatement		8:26:205:205	29019	1					
+ANR	29057	ExpressionStatement	exit ( - 1 )	37:27:1129:1137	29019	0	True				
+ANR	29058	CallExpression	exit ( - 1 )		29019	0					
+ANR	29059	Callee	exit		29019	0					
+ANR	29060	Identifier	exit		29019	0					
+ANR	29061	ArgumentList	- 1		29019	1					
+ANR	29062	Argument	- 1		29019	0					
+ANR	29063	UnaryOperationExpression	- 1		29019	0					
+ANR	29064	UnaryOperator	-		29019	0					
+ANR	29065	PrimaryExpression	1		29019	1					
+ANR	29066	CompoundStatement		10:12:240:248	29019	2					
+ANR	29067	IdentifierDeclStatement	size_t i ;	39:12:1163:1171	29019	0	True				
+ANR	29068	IdentifierDecl	i		29019	0					
+ANR	29069	IdentifierDeclType	size_t		29019	0					
+ANR	29070	Identifier	i		29019	1					
+ANR	29071	ForStatement	for ( i = 0 ; i < 100 ; i ++ )		29019	1					
+ANR	29072	ForInit	i = 0 ;	40:16:1190:1195	29019	0	True				
+ANR	29073	AssignmentExpression	i = 0		29019	0		=			
+ANR	29074	Identifier	i		29019	0					
+ANR	29075	PrimaryExpression	0		29019	1					
+ANR	29076	Condition	i < 100	40:23:1197:1203	29019	1	True				
+ANR	29077	RelationalExpression	i < 100		29019	0		<			
+ANR	29078	Identifier	i		29019	0					
+ANR	29079	PrimaryExpression	100		29019	1					
+ANR	29080	PostIncDecOperationExpression	i ++	40:32:1206:1208	29019	2	True				
+ANR	29081	Identifier	i		29019	0					
+ANR	29082	IncDec	++		29019	1					
+ANR	29083	CompoundStatement		12:12:301:301	29019	3					
+ANR	29084	ExpressionStatement	data [ i ] . intOne = 1	42:16:1243:1261	29019	0	True				
+ANR	29085	AssignmentExpression	data [ i ] . intOne = 1		29019	0		=			
+ANR	29086	MemberAccess	data [ i ] . intOne		29019	0					
+ANR	29087	ArrayIndexing	data [ i ]		29019	0					
+ANR	29088	Identifier	data		29019	0					
+ANR	29089	Identifier	i		29019	1					
+ANR	29090	Identifier	intOne		29019	1					
+ANR	29091	PrimaryExpression	1		29019	1					
+ANR	29092	ExpressionStatement	data [ i ] . intTwo = 2	43:16:1280:1298	29019	1	True				
+ANR	29093	AssignmentExpression	data [ i ] . intTwo = 2		29019	0		=			
+ANR	29094	MemberAccess	data [ i ] . intTwo		29019	0					
+ANR	29095	ArrayIndexing	data [ i ]		29019	0					
+ANR	29096	Identifier	data		29019	0					
+ANR	29097	Identifier	i		29019	1					
+ANR	29098	Identifier	intTwo		29019	1					
+ANR	29099	PrimaryExpression	2		29019	1					
+ANR	29100	ExpressionStatement	free ( data )	47:8:1426:1436	29019	3	True				
+ANR	29101	CallExpression	free ( data )		29019	0					
+ANR	29102	Callee	free		29019	0					
+ANR	29103	Identifier	free		29019	0					
+ANR	29104	ArgumentList	data		29019	1					
+ANR	29105	Argument	data		29019	0					
+ANR	29106	Identifier	data		29019	0					
+ANR	29107	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29019	3					
+ANR	29108	Condition	STATIC_CONST_FIVE == 5	49:7:1453:1472	29019	0	True				
+ANR	29109	EqualityExpression	STATIC_CONST_FIVE == 5		29019	0		==			
+ANR	29110	Identifier	STATIC_CONST_FIVE		29019	0					
+ANR	29111	PrimaryExpression	5		29019	1					
+ANR	29112	CompoundStatement		21:4:557:557	29019	1					
+ANR	29113	ExpressionStatement	printStructLine ( & data [ 0 ] )	52:8:1559:1584	29019	0	True				
+ANR	29114	CallExpression	printStructLine ( & data [ 0 ] )		29019	0					
+ANR	29115	Callee	printStructLine		29019	0					
+ANR	29116	Identifier	printStructLine		29019	0					
+ANR	29117	ArgumentList	& data [ 0 ]		29019	1					
+ANR	29118	Argument	& data [ 0 ]		29019	0					
+ANR	29119	UnaryOperationExpression	& data [ 0 ]		29019	0					
+ANR	29120	UnaryOperator	&		29019	0					
+ANR	29121	ArrayIndexing	data [ 0 ]		29019	1					
+ANR	29122	Identifier	data		29019	0					
+ANR	29123	PrimaryExpression	0		29019	1					
+ANR	29124	ReturnType	void		29019	1					
+ANR	29125	Identifier	CWE416_Use_After_Free__malloc_free_struct_06_bad		29019	2					
+ANR	29126	ParameterList			29019	3					
+ANR	29127	CFGEntryNode	ENTRY		29019		True				
+ANR	29128	CFGExitNode	EXIT		29019		True				
+ANR	29129	Symbol	STATIC_CONST_FIVE		29019						
+ANR	29130	Symbol	data [ i ] . intTwo		29019						
+ANR	29131	Symbol	malloc		29019						
+ANR	29132	Symbol	NULL		29019						
+ANR	29133	Symbol	* i		29019						
+ANR	29134	Symbol	data		29019						
+ANR	29135	Symbol	i		29019						
+ANR	29136	Symbol	data [ i ] . intOne		29019						
+ANR	29137	Symbol	* data		29019						
+ANR	29138	Function	goodB2G1	62:0:1844:2823							
+ANR	29139	FunctionDef	goodB2G1 ()		29138	0					
+ANR	29140	CompoundStatement		63:0:1868:2823	29138	0					
+ANR	29141	IdentifierDeclStatement	twoIntsStruct * data ;	64:4:1875:1895	29138	0	True				
+ANR	29142	IdentifierDecl	* data		29138	0					
+ANR	29143	IdentifierDeclType	twoIntsStruct *		29138	0					
+ANR	29144	Identifier	data		29138	1					
+ANR	29145	ExpressionStatement	data = NULL	66:4:1929:1940	29138	1	True				
+ANR	29146	AssignmentExpression	data = NULL		29138	0		=			
+ANR	29147	Identifier	data		29138	0					
+ANR	29148	Identifier	NULL		29138	1					
+ANR	29149	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29138	2					
+ANR	29150	Condition	STATIC_CONST_FIVE == 5	67:7:1950:1969	29138	0	True				
+ANR	29151	EqualityExpression	STATIC_CONST_FIVE == 5		29138	0		==			
+ANR	29152	Identifier	STATIC_CONST_FIVE		29138	0					
+ANR	29153	PrimaryExpression	5		29138	1					
+ANR	29154	CompoundStatement		6:4:108:108	29138	1					
+ANR	29155	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	69:8:1988:2045	29138	0	True				
+ANR	29156	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29138	0		=			
+ANR	29157	Identifier	data		29138	0					
+ANR	29158	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29138	1					
+ANR	29159	CastTarget	twoIntsStruct *		29138	0					
+ANR	29160	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		29138	1					
+ANR	29161	Callee	malloc		29138	0					
+ANR	29162	Identifier	malloc		29138	0					
+ANR	29163	ArgumentList	100 * sizeof ( twoIntsStruct )		29138	1					
+ANR	29164	Argument	100 * sizeof ( twoIntsStruct )		29138	0					
+ANR	29165	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		29138	0		*			
+ANR	29166	PrimaryExpression	100		29138	0					
+ANR	29167	SizeofExpression	sizeof ( twoIntsStruct )		29138	1					
+ANR	29168	Sizeof	sizeof		29138	0					
+ANR	29169	SizeofOperand	twoIntsStruct		29138	1					
+ANR	29170	IfStatement	if ( data == NULL )		29138	1					
+ANR	29171	Condition	data == NULL	70:12:2060:2071	29138	0	True				
+ANR	29172	EqualityExpression	data == NULL		29138	0		==			
+ANR	29173	Identifier	data		29138	0					
+ANR	29174	Identifier	NULL		29138	1					
+ANR	29175	CompoundStatement		8:26:205:205	29138	1					
+ANR	29176	ExpressionStatement	exit ( - 1 )	70:27:2075:2083	29138	0	True				
+ANR	29177	CallExpression	exit ( - 1 )		29138	0					
+ANR	29178	Callee	exit		29138	0					
+ANR	29179	Identifier	exit		29138	0					
+ANR	29180	ArgumentList	- 1		29138	1					
+ANR	29181	Argument	- 1		29138	0					
+ANR	29182	UnaryOperationExpression	- 1		29138	0					
+ANR	29183	UnaryOperator	-		29138	0					
+ANR	29184	PrimaryExpression	1		29138	1					
+ANR	29185	CompoundStatement		10:12:240:248	29138	2					
+ANR	29186	IdentifierDeclStatement	size_t i ;	72:12:2109:2117	29138	0	True				
+ANR	29187	IdentifierDecl	i		29138	0					
+ANR	29188	IdentifierDeclType	size_t		29138	0					
+ANR	29189	Identifier	i		29138	1					
+ANR	29190	ForStatement	for ( i = 0 ; i < 100 ; i ++ )		29138	1					
+ANR	29191	ForInit	i = 0 ;	73:16:2136:2141	29138	0	True				
+ANR	29192	AssignmentExpression	i = 0		29138	0		=			
+ANR	29193	Identifier	i		29138	0					
+ANR	29194	PrimaryExpression	0		29138	1					
+ANR	29195	Condition	i < 100	73:23:2143:2149	29138	1	True				
+ANR	29196	RelationalExpression	i < 100		29138	0		<			
+ANR	29197	Identifier	i		29138	0					
+ANR	29198	PrimaryExpression	100		29138	1					
+ANR	29199	PostIncDecOperationExpression	i ++	73:32:2152:2154	29138	2	True				
+ANR	29200	Identifier	i		29138	0					
+ANR	29201	IncDec	++		29138	1					
+ANR	29202	CompoundStatement		12:12:301:301	29138	3					
+ANR	29203	ExpressionStatement	data [ i ] . intOne = 1	75:16:2189:2207	29138	0	True				
+ANR	29204	AssignmentExpression	data [ i ] . intOne = 1		29138	0		=			
+ANR	29205	MemberAccess	data [ i ] . intOne		29138	0					
+ANR	29206	ArrayIndexing	data [ i ]		29138	0					
+ANR	29207	Identifier	data		29138	0					
+ANR	29208	Identifier	i		29138	1					
+ANR	29209	Identifier	intOne		29138	1					
+ANR	29210	PrimaryExpression	1		29138	1					
+ANR	29211	ExpressionStatement	data [ i ] . intTwo = 2	76:16:2226:2244	29138	1	True				
+ANR	29212	AssignmentExpression	data [ i ] . intTwo = 2		29138	0		=			
+ANR	29213	MemberAccess	data [ i ] . intTwo		29138	0					
+ANR	29214	ArrayIndexing	data [ i ]		29138	0					
+ANR	29215	Identifier	data		29138	0					
+ANR	29216	Identifier	i		29138	1					
+ANR	29217	Identifier	intTwo		29138	1					
+ANR	29218	PrimaryExpression	2		29138	1					
+ANR	29219	ExpressionStatement	free ( data )	80:8:2372:2382	29138	3	True				
+ANR	29220	CallExpression	free ( data )		29138	0					
+ANR	29221	Callee	free		29138	0					
+ANR	29222	Identifier	free		29138	0					
+ANR	29223	ArgumentList	data		29138	1					
+ANR	29224	Argument	data		29138	0					
+ANR	29225	Identifier	data		29138	0					
+ANR	29226	IfStatement	if ( STATIC_CONST_FIVE != 5 )		29138	3					
+ANR	29227	Condition	STATIC_CONST_FIVE != 5	82:7:2399:2418	29138	0	True				
+ANR	29228	EqualityExpression	STATIC_CONST_FIVE != 5		29138	0		!=			
+ANR	29229	Identifier	STATIC_CONST_FIVE		29138	0					
+ANR	29230	PrimaryExpression	5		29138	1					
+ANR	29231	CompoundStatement		21:4:557:557	29138	1					
+ANR	29232	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	85:8:2513:2546	29138	0	True				
+ANR	29233	CallExpression	"printLine ( ""Benign, fixed string"" )"		29138	0					
+ANR	29234	Callee	printLine		29138	0					
+ANR	29235	Identifier	printLine		29138	0					
+ANR	29236	ArgumentList	"""Benign, fixed string"""		29138	1					
+ANR	29237	Argument	"""Benign, fixed string"""		29138	0					
+ANR	29238	PrimaryExpression	"""Benign, fixed string"""		29138	0					
+ANR	29239	ElseStatement	else		29138	0					
+ANR	29240	CompoundStatement		26:4:701:701	29138	0					
+ANR	29241	ExpressionStatement		92:8:2761:2761	29138	0	True				
+ANR	29242	ReturnType	static void		29138	1					
+ANR	29243	Identifier	goodB2G1		29138	2					
+ANR	29244	ParameterList			29138	3					
+ANR	29245	CFGEntryNode	ENTRY		29138		True				
+ANR	29246	CFGExitNode	EXIT		29138		True				
+ANR	29247	Symbol	STATIC_CONST_FIVE		29138						
+ANR	29248	Symbol	data [ i ] . intTwo		29138						
+ANR	29249	Symbol	malloc		29138						
+ANR	29250	Symbol	NULL		29138						
+ANR	29251	Symbol	* i		29138						
+ANR	29252	Symbol	data		29138						
+ANR	29253	Symbol	i		29138						
+ANR	29254	Symbol	data [ i ] . intOne		29138						
+ANR	29255	Symbol	* data		29138						
+ANR	29256	Function	goodB2G2	97:0:2916:3751							
+ANR	29257	FunctionDef	goodB2G2 ()		29256	0					
+ANR	29258	CompoundStatement		98:0:2940:3751	29256	0					
+ANR	29259	IdentifierDeclStatement	twoIntsStruct * data ;	99:4:2947:2967	29256	0	True				
+ANR	29260	IdentifierDecl	* data		29256	0					
+ANR	29261	IdentifierDeclType	twoIntsStruct *		29256	0					
+ANR	29262	Identifier	data		29256	1					
+ANR	29263	ExpressionStatement	data = NULL	101:4:3001:3012	29256	1	True				
+ANR	29264	AssignmentExpression	data = NULL		29256	0		=			
+ANR	29265	Identifier	data		29256	0					
+ANR	29266	Identifier	NULL		29256	1					
+ANR	29267	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29256	2					
+ANR	29268	Condition	STATIC_CONST_FIVE == 5	102:7:3022:3041	29256	0	True				
+ANR	29269	EqualityExpression	STATIC_CONST_FIVE == 5		29256	0		==			
+ANR	29270	Identifier	STATIC_CONST_FIVE		29256	0					
+ANR	29271	PrimaryExpression	5		29256	1					
+ANR	29272	CompoundStatement		6:4:108:108	29256	1					
+ANR	29273	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	104:8:3060:3117	29256	0	True				
+ANR	29274	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29256	0		=			
+ANR	29275	Identifier	data		29256	0					
+ANR	29276	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29256	1					
+ANR	29277	CastTarget	twoIntsStruct *		29256	0					
+ANR	29278	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		29256	1					
+ANR	29279	Callee	malloc		29256	0					
+ANR	29280	Identifier	malloc		29256	0					
+ANR	29281	ArgumentList	100 * sizeof ( twoIntsStruct )		29256	1					
+ANR	29282	Argument	100 * sizeof ( twoIntsStruct )		29256	0					
+ANR	29283	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		29256	0		*			
+ANR	29284	PrimaryExpression	100		29256	0					
+ANR	29285	SizeofExpression	sizeof ( twoIntsStruct )		29256	1					
+ANR	29286	Sizeof	sizeof		29256	0					
+ANR	29287	SizeofOperand	twoIntsStruct		29256	1					
+ANR	29288	IfStatement	if ( data == NULL )		29256	1					
+ANR	29289	Condition	data == NULL	105:12:3132:3143	29256	0	True				
+ANR	29290	EqualityExpression	data == NULL		29256	0		==			
+ANR	29291	Identifier	data		29256	0					
+ANR	29292	Identifier	NULL		29256	1					
+ANR	29293	CompoundStatement		8:26:205:205	29256	1					
+ANR	29294	ExpressionStatement	exit ( - 1 )	105:27:3147:3155	29256	0	True				
+ANR	29295	CallExpression	exit ( - 1 )		29256	0					
+ANR	29296	Callee	exit		29256	0					
+ANR	29297	Identifier	exit		29256	0					
+ANR	29298	ArgumentList	- 1		29256	1					
+ANR	29299	Argument	- 1		29256	0					
+ANR	29300	UnaryOperationExpression	- 1		29256	0					
+ANR	29301	UnaryOperator	-		29256	0					
+ANR	29302	PrimaryExpression	1		29256	1					
+ANR	29303	CompoundStatement		10:12:240:248	29256	2					
+ANR	29304	IdentifierDeclStatement	size_t i ;	107:12:3181:3189	29256	0	True				
+ANR	29305	IdentifierDecl	i		29256	0					
+ANR	29306	IdentifierDeclType	size_t		29256	0					
+ANR	29307	Identifier	i		29256	1					
+ANR	29308	ForStatement	for ( i = 0 ; i < 100 ; i ++ )		29256	1					
+ANR	29309	ForInit	i = 0 ;	108:16:3208:3213	29256	0	True				
+ANR	29310	AssignmentExpression	i = 0		29256	0		=			
+ANR	29311	Identifier	i		29256	0					
+ANR	29312	PrimaryExpression	0		29256	1					
+ANR	29313	Condition	i < 100	108:23:3215:3221	29256	1	True				
+ANR	29314	RelationalExpression	i < 100		29256	0		<			
+ANR	29315	Identifier	i		29256	0					
+ANR	29316	PrimaryExpression	100		29256	1					
+ANR	29317	PostIncDecOperationExpression	i ++	108:32:3224:3226	29256	2	True				
+ANR	29318	Identifier	i		29256	0					
+ANR	29319	IncDec	++		29256	1					
+ANR	29320	CompoundStatement		12:12:301:301	29256	3					
+ANR	29321	ExpressionStatement	data [ i ] . intOne = 1	110:16:3261:3279	29256	0	True				
+ANR	29322	AssignmentExpression	data [ i ] . intOne = 1		29256	0		=			
+ANR	29323	MemberAccess	data [ i ] . intOne		29256	0					
+ANR	29324	ArrayIndexing	data [ i ]		29256	0					
+ANR	29325	Identifier	data		29256	0					
+ANR	29326	Identifier	i		29256	1					
+ANR	29327	Identifier	intOne		29256	1					
+ANR	29328	PrimaryExpression	1		29256	1					
+ANR	29329	ExpressionStatement	data [ i ] . intTwo = 2	111:16:3298:3316	29256	1	True				
+ANR	29330	AssignmentExpression	data [ i ] . intTwo = 2		29256	0		=			
+ANR	29331	MemberAccess	data [ i ] . intTwo		29256	0					
+ANR	29332	ArrayIndexing	data [ i ]		29256	0					
+ANR	29333	Identifier	data		29256	0					
+ANR	29334	Identifier	i		29256	1					
+ANR	29335	Identifier	intTwo		29256	1					
+ANR	29336	PrimaryExpression	2		29256	1					
+ANR	29337	ExpressionStatement	free ( data )	115:8:3444:3454	29256	3	True				
+ANR	29338	CallExpression	free ( data )		29256	0					
+ANR	29339	Callee	free		29256	0					
+ANR	29340	Identifier	free		29256	0					
+ANR	29341	ArgumentList	data		29256	1					
+ANR	29342	Argument	data		29256	0					
+ANR	29343	Identifier	data		29256	0					
+ANR	29344	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29256	3					
+ANR	29345	Condition	STATIC_CONST_FIVE == 5	117:7:3471:3490	29256	0	True				
+ANR	29346	EqualityExpression	STATIC_CONST_FIVE == 5		29256	0		==			
+ANR	29347	Identifier	STATIC_CONST_FIVE		29256	0					
+ANR	29348	PrimaryExpression	5		29256	1					
+ANR	29349	CompoundStatement		21:4:557:557	29256	1					
+ANR	29350	ExpressionStatement		122:8:3689:3689	29256	0	True				
+ANR	29351	ReturnType	static void		29256	1					
+ANR	29352	Identifier	goodB2G2		29256	2					
+ANR	29353	ParameterList			29256	3					
+ANR	29354	CFGEntryNode	ENTRY		29256		True				
+ANR	29355	CFGExitNode	EXIT		29256		True				
+ANR	29356	Symbol	STATIC_CONST_FIVE		29256						
+ANR	29357	Symbol	data [ i ] . intTwo		29256						
+ANR	29358	Symbol	malloc		29256						
+ANR	29359	Symbol	NULL		29256						
+ANR	29360	Symbol	* i		29256						
+ANR	29361	Symbol	data		29256						
+ANR	29362	Symbol	i		29256						
+ANR	29363	Symbol	data [ i ] . intOne		29256						
+ANR	29364	Symbol	* data		29256						
+ANR	29365	Function	goodG2B1	127:0:3870:4735							
+ANR	29366	FunctionDef	goodG2B1 ()		29365	0					
+ANR	29367	CompoundStatement		128:0:3894:4735	29365	0					
+ANR	29368	IdentifierDeclStatement	twoIntsStruct * data ;	129:4:3901:3921	29365	0	True				
+ANR	29369	IdentifierDecl	* data		29365	0					
+ANR	29370	IdentifierDeclType	twoIntsStruct *		29365	0					
+ANR	29371	Identifier	data		29365	1					
+ANR	29372	ExpressionStatement	data = NULL	131:4:3955:3966	29365	1	True				
+ANR	29373	AssignmentExpression	data = NULL		29365	0		=			
+ANR	29374	Identifier	data		29365	0					
+ANR	29375	Identifier	NULL		29365	1					
+ANR	29376	IfStatement	if ( STATIC_CONST_FIVE != 5 )		29365	2					
+ANR	29377	Condition	STATIC_CONST_FIVE != 5	132:7:3976:3995	29365	0	True				
+ANR	29378	EqualityExpression	STATIC_CONST_FIVE != 5		29365	0		!=			
+ANR	29379	Identifier	STATIC_CONST_FIVE		29365	0					
+ANR	29380	PrimaryExpression	5		29365	1					
+ANR	29381	CompoundStatement		6:4:108:108	29365	1					
+ANR	29382	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	135:8:4090:4123	29365	0	True				
+ANR	29383	CallExpression	"printLine ( ""Benign, fixed string"" )"		29365	0					
+ANR	29384	Callee	printLine		29365	0					
+ANR	29385	Identifier	printLine		29365	0					
+ANR	29386	ArgumentList	"""Benign, fixed string"""		29365	1					
+ANR	29387	Argument	"""Benign, fixed string"""		29365	0					
+ANR	29388	PrimaryExpression	"""Benign, fixed string"""		29365	0					
+ANR	29389	ElseStatement	else		29365	0					
+ANR	29390	CompoundStatement		11:4:252:252	29365	0					
+ANR	29391	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	139:8:4158:4215	29365	0	True				
+ANR	29392	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29365	0		=			
+ANR	29393	Identifier	data		29365	0					
+ANR	29394	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29365	1					
+ANR	29395	CastTarget	twoIntsStruct *		29365	0					
+ANR	29396	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		29365	1					
+ANR	29397	Callee	malloc		29365	0					
+ANR	29398	Identifier	malloc		29365	0					
+ANR	29399	ArgumentList	100 * sizeof ( twoIntsStruct )		29365	1					
+ANR	29400	Argument	100 * sizeof ( twoIntsStruct )		29365	0					
+ANR	29401	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		29365	0		*			
+ANR	29402	PrimaryExpression	100		29365	0					
+ANR	29403	SizeofExpression	sizeof ( twoIntsStruct )		29365	1					
+ANR	29404	Sizeof	sizeof		29365	0					
+ANR	29405	SizeofOperand	twoIntsStruct		29365	1					
+ANR	29406	IfStatement	if ( data == NULL )		29365	1					
+ANR	29407	Condition	data == NULL	140:12:4230:4241	29365	0	True				
+ANR	29408	EqualityExpression	data == NULL		29365	0		==			
+ANR	29409	Identifier	data		29365	0					
+ANR	29410	Identifier	NULL		29365	1					
+ANR	29411	CompoundStatement		13:26:349:349	29365	1					
+ANR	29412	ExpressionStatement	exit ( - 1 )	140:27:4245:4253	29365	0	True				
+ANR	29413	CallExpression	exit ( - 1 )		29365	0					
+ANR	29414	Callee	exit		29365	0					
+ANR	29415	Identifier	exit		29365	0					
+ANR	29416	ArgumentList	- 1		29365	1					
+ANR	29417	Argument	- 1		29365	0					
+ANR	29418	UnaryOperationExpression	- 1		29365	0					
+ANR	29419	UnaryOperator	-		29365	0					
+ANR	29420	PrimaryExpression	1		29365	1					
+ANR	29421	CompoundStatement		15:12:384:392	29365	2					
+ANR	29422	IdentifierDeclStatement	size_t i ;	142:12:4279:4287	29365	0	True				
+ANR	29423	IdentifierDecl	i		29365	0					
+ANR	29424	IdentifierDeclType	size_t		29365	0					
+ANR	29425	Identifier	i		29365	1					
+ANR	29426	ForStatement	for ( i = 0 ; i < 100 ; i ++ )		29365	1					
+ANR	29427	ForInit	i = 0 ;	143:16:4306:4311	29365	0	True				
+ANR	29428	AssignmentExpression	i = 0		29365	0		=			
+ANR	29429	Identifier	i		29365	0					
+ANR	29430	PrimaryExpression	0		29365	1					
+ANR	29431	Condition	i < 100	143:23:4313:4319	29365	1	True				
+ANR	29432	RelationalExpression	i < 100		29365	0		<			
+ANR	29433	Identifier	i		29365	0					
+ANR	29434	PrimaryExpression	100		29365	1					
+ANR	29435	PostIncDecOperationExpression	i ++	143:32:4322:4324	29365	2	True				
+ANR	29436	Identifier	i		29365	0					
+ANR	29437	IncDec	++		29365	1					
+ANR	29438	CompoundStatement		17:12:445:445	29365	3					
+ANR	29439	ExpressionStatement	data [ i ] . intOne = 1	145:16:4359:4377	29365	0	True				
+ANR	29440	AssignmentExpression	data [ i ] . intOne = 1		29365	0		=			
+ANR	29441	MemberAccess	data [ i ] . intOne		29365	0					
+ANR	29442	ArrayIndexing	data [ i ]		29365	0					
+ANR	29443	Identifier	data		29365	0					
+ANR	29444	Identifier	i		29365	1					
+ANR	29445	Identifier	intOne		29365	1					
+ANR	29446	PrimaryExpression	1		29365	1					
+ANR	29447	ExpressionStatement	data [ i ] . intTwo = 2	146:16:4396:4414	29365	1	True				
+ANR	29448	AssignmentExpression	data [ i ] . intTwo = 2		29365	0		=			
+ANR	29449	MemberAccess	data [ i ] . intTwo		29365	0					
+ANR	29450	ArrayIndexing	data [ i ]		29365	0					
+ANR	29451	Identifier	data		29365	0					
+ANR	29452	Identifier	i		29365	1					
+ANR	29453	Identifier	intTwo		29365	1					
+ANR	29454	PrimaryExpression	2		29365	1					
+ANR	29455	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29365	3					
+ANR	29456	Condition	STATIC_CONST_FIVE == 5	151:7:4508:4527	29365	0	True				
+ANR	29457	EqualityExpression	STATIC_CONST_FIVE == 5		29365	0		==			
+ANR	29458	Identifier	STATIC_CONST_FIVE		29365	0					
+ANR	29459	PrimaryExpression	5		29365	1					
+ANR	29460	CompoundStatement		25:4:640:640	29365	1					
+ANR	29461	ExpressionStatement	printStructLine ( & data [ 0 ] )	154:8:4614:4639	29365	0	True				
+ANR	29462	CallExpression	printStructLine ( & data [ 0 ] )		29365	0					
+ANR	29463	Callee	printStructLine		29365	0					
+ANR	29464	Identifier	printStructLine		29365	0					
+ANR	29465	ArgumentList	& data [ 0 ]		29365	1					
+ANR	29466	Argument	& data [ 0 ]		29365	0					
+ANR	29467	UnaryOperationExpression	& data [ 0 ]		29365	0					
+ANR	29468	UnaryOperator	&		29365	0					
+ANR	29469	ArrayIndexing	data [ 0 ]		29365	1					
+ANR	29470	Identifier	data		29365	0					
+ANR	29471	PrimaryExpression	0		29365	1					
+ANR	29472	ReturnType	static void		29365	1					
+ANR	29473	Identifier	goodG2B1		29365	2					
+ANR	29474	ParameterList			29365	3					
+ANR	29475	CFGEntryNode	ENTRY		29365		True				
+ANR	29476	CFGExitNode	EXIT		29365		True				
+ANR	29477	Symbol	STATIC_CONST_FIVE		29365						
+ANR	29478	Symbol	data [ i ] . intTwo		29365						
+ANR	29479	Symbol	malloc		29365						
+ANR	29480	Symbol	NULL		29365						
+ANR	29481	Symbol	* i		29365						
+ANR	29482	Symbol	data		29365						
+ANR	29483	Symbol	i		29365						
+ANR	29484	Symbol	data [ i ] . intOne		29365						
+ANR	29485	Symbol	* data		29365						
+ANR	29486	Function	goodG2B2	160:0:4827:5548							
+ANR	29487	FunctionDef	goodG2B2 ()		29486	0					
+ANR	29488	CompoundStatement		161:0:4851:5548	29486	0					
+ANR	29489	IdentifierDeclStatement	twoIntsStruct * data ;	162:4:4858:4878	29486	0	True				
+ANR	29490	IdentifierDecl	* data		29486	0					
+ANR	29491	IdentifierDeclType	twoIntsStruct *		29486	0					
+ANR	29492	Identifier	data		29486	1					
+ANR	29493	ExpressionStatement	data = NULL	164:4:4912:4923	29486	1	True				
+ANR	29494	AssignmentExpression	data = NULL		29486	0		=			
+ANR	29495	Identifier	data		29486	0					
+ANR	29496	Identifier	NULL		29486	1					
+ANR	29497	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29486	2					
+ANR	29498	Condition	STATIC_CONST_FIVE == 5	165:7:4933:4952	29486	0	True				
+ANR	29499	EqualityExpression	STATIC_CONST_FIVE == 5		29486	0		==			
+ANR	29500	Identifier	STATIC_CONST_FIVE		29486	0					
+ANR	29501	PrimaryExpression	5		29486	1					
+ANR	29502	CompoundStatement		6:4:108:108	29486	1					
+ANR	29503	ExpressionStatement	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )	167:8:4971:5028	29486	0	True				
+ANR	29504	AssignmentExpression	data = ( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29486	0		=			
+ANR	29505	Identifier	data		29486	0					
+ANR	29506	CastExpression	( twoIntsStruct * ) malloc ( 100 * sizeof ( twoIntsStruct ) )		29486	1					
+ANR	29507	CastTarget	twoIntsStruct *		29486	0					
+ANR	29508	CallExpression	malloc ( 100 * sizeof ( twoIntsStruct ) )		29486	1					
+ANR	29509	Callee	malloc		29486	0					
+ANR	29510	Identifier	malloc		29486	0					
+ANR	29511	ArgumentList	100 * sizeof ( twoIntsStruct )		29486	1					
+ANR	29512	Argument	100 * sizeof ( twoIntsStruct )		29486	0					
+ANR	29513	MultiplicativeExpression	100 * sizeof ( twoIntsStruct )		29486	0		*			
+ANR	29514	PrimaryExpression	100		29486	0					
+ANR	29515	SizeofExpression	sizeof ( twoIntsStruct )		29486	1					
+ANR	29516	Sizeof	sizeof		29486	0					
+ANR	29517	SizeofOperand	twoIntsStruct		29486	1					
+ANR	29518	IfStatement	if ( data == NULL )		29486	1					
+ANR	29519	Condition	data == NULL	168:12:5043:5054	29486	0	True				
+ANR	29520	EqualityExpression	data == NULL		29486	0		==			
+ANR	29521	Identifier	data		29486	0					
+ANR	29522	Identifier	NULL		29486	1					
+ANR	29523	CompoundStatement		8:26:205:205	29486	1					
+ANR	29524	ExpressionStatement	exit ( - 1 )	168:27:5058:5066	29486	0	True				
+ANR	29525	CallExpression	exit ( - 1 )		29486	0					
+ANR	29526	Callee	exit		29486	0					
+ANR	29527	Identifier	exit		29486	0					
+ANR	29528	ArgumentList	- 1		29486	1					
+ANR	29529	Argument	- 1		29486	0					
+ANR	29530	UnaryOperationExpression	- 1		29486	0					
+ANR	29531	UnaryOperator	-		29486	0					
+ANR	29532	PrimaryExpression	1		29486	1					
+ANR	29533	CompoundStatement		10:12:240:248	29486	2					
+ANR	29534	IdentifierDeclStatement	size_t i ;	170:12:5092:5100	29486	0	True				
+ANR	29535	IdentifierDecl	i		29486	0					
+ANR	29536	IdentifierDeclType	size_t		29486	0					
+ANR	29537	Identifier	i		29486	1					
+ANR	29538	ForStatement	for ( i = 0 ; i < 100 ; i ++ )		29486	1					
+ANR	29539	ForInit	i = 0 ;	171:16:5119:5124	29486	0	True				
+ANR	29540	AssignmentExpression	i = 0		29486	0		=			
+ANR	29541	Identifier	i		29486	0					
+ANR	29542	PrimaryExpression	0		29486	1					
+ANR	29543	Condition	i < 100	171:23:5126:5132	29486	1	True				
+ANR	29544	RelationalExpression	i < 100		29486	0		<			
+ANR	29545	Identifier	i		29486	0					
+ANR	29546	PrimaryExpression	100		29486	1					
+ANR	29547	PostIncDecOperationExpression	i ++	171:32:5135:5137	29486	2	True				
+ANR	29548	Identifier	i		29486	0					
+ANR	29549	IncDec	++		29486	1					
+ANR	29550	CompoundStatement		12:12:301:301	29486	3					
+ANR	29551	ExpressionStatement	data [ i ] . intOne = 1	173:16:5172:5190	29486	0	True				
+ANR	29552	AssignmentExpression	data [ i ] . intOne = 1		29486	0		=			
+ANR	29553	MemberAccess	data [ i ] . intOne		29486	0					
+ANR	29554	ArrayIndexing	data [ i ]		29486	0					
+ANR	29555	Identifier	data		29486	0					
+ANR	29556	Identifier	i		29486	1					
+ANR	29557	Identifier	intOne		29486	1					
+ANR	29558	PrimaryExpression	1		29486	1					
+ANR	29559	ExpressionStatement	data [ i ] . intTwo = 2	174:16:5209:5227	29486	1	True				
+ANR	29560	AssignmentExpression	data [ i ] . intTwo = 2		29486	0		=			
+ANR	29561	MemberAccess	data [ i ] . intTwo		29486	0					
+ANR	29562	ArrayIndexing	data [ i ]		29486	0					
+ANR	29563	Identifier	data		29486	0					
+ANR	29564	Identifier	i		29486	1					
+ANR	29565	Identifier	intTwo		29486	1					
+ANR	29566	PrimaryExpression	2		29486	1					
+ANR	29567	IfStatement	if ( STATIC_CONST_FIVE == 5 )		29486	3					
+ANR	29568	Condition	STATIC_CONST_FIVE == 5	179:7:5321:5340	29486	0	True				
+ANR	29569	EqualityExpression	STATIC_CONST_FIVE == 5		29486	0		==			
+ANR	29570	Identifier	STATIC_CONST_FIVE		29486	0					
+ANR	29571	PrimaryExpression	5		29486	1					
+ANR	29572	CompoundStatement		20:4:496:496	29486	1					
+ANR	29573	ExpressionStatement	printStructLine ( & data [ 0 ] )	182:8:5427:5452	29486	0	True				
+ANR	29574	CallExpression	printStructLine ( & data [ 0 ] )		29486	0					
+ANR	29575	Callee	printStructLine		29486	0					
+ANR	29576	Identifier	printStructLine		29486	0					
+ANR	29577	ArgumentList	& data [ 0 ]		29486	1					
+ANR	29578	Argument	& data [ 0 ]		29486	0					
+ANR	29579	UnaryOperationExpression	& data [ 0 ]		29486	0					
+ANR	29580	UnaryOperator	&		29486	0					
+ANR	29581	ArrayIndexing	data [ 0 ]		29486	1					
+ANR	29582	Identifier	data		29486	0					
+ANR	29583	PrimaryExpression	0		29486	1					
+ANR	29584	ReturnType	static void		29486	1					
+ANR	29585	Identifier	goodG2B2		29486	2					
+ANR	29586	ParameterList			29486	3					
+ANR	29587	CFGEntryNode	ENTRY		29486		True				
+ANR	29588	CFGExitNode	EXIT		29486		True				
+ANR	29589	Symbol	STATIC_CONST_FIVE		29486						
+ANR	29590	Symbol	data [ i ] . intTwo		29486						
+ANR	29591	Symbol	malloc		29486						
+ANR	29592	Symbol	NULL		29486						
+ANR	29593	Symbol	* i		29486						
+ANR	29594	Symbol	data		29486						
+ANR	29595	Symbol	i		29486						
+ANR	29596	Symbol	data [ i ] . intOne		29486						
+ANR	29597	Symbol	* data		29486						
+ANR	29598	Function	CWE416_Use_After_Free__malloc_free_struct_06_good	187:0:5553:5682							
+ANR	29599	FunctionDef	CWE416_Use_After_Free__malloc_free_struct_06_good ()		29598	0					
+ANR	29600	CompoundStatement		188:0:5611:5682	29598	0					
+ANR	29601	ExpressionStatement	goodB2G1 ( )	189:4:5618:5628	29598	0	True				
+ANR	29602	CallExpression	goodB2G1 ( )		29598	0					
+ANR	29603	Callee	goodB2G1		29598	0					
+ANR	29604	Identifier	goodB2G1		29598	0					
+ANR	29605	ArgumentList			29598	1					
+ANR	29606	ExpressionStatement	goodB2G2 ( )	190:4:5635:5645	29598	1	True				
+ANR	29607	CallExpression	goodB2G2 ( )		29598	0					
+ANR	29608	Callee	goodB2G2		29598	0					
+ANR	29609	Identifier	goodB2G2		29598	0					
+ANR	29610	ArgumentList			29598	1					
+ANR	29611	ExpressionStatement	goodG2B1 ( )	191:4:5652:5662	29598	2	True				
+ANR	29612	CallExpression	goodG2B1 ( )		29598	0					
+ANR	29613	Callee	goodG2B1		29598	0					
+ANR	29614	Identifier	goodG2B1		29598	0					
+ANR	29615	ArgumentList			29598	1					
+ANR	29616	ExpressionStatement	goodG2B2 ( )	192:4:5669:5679	29598	3	True				
+ANR	29617	CallExpression	goodG2B2 ( )		29598	0					
+ANR	29618	Callee	goodG2B2		29598	0					
+ANR	29619	Identifier	goodG2B2		29598	0					
+ANR	29620	ArgumentList			29598	1					
+ANR	29621	ReturnType	void		29598	1					
+ANR	29622	Identifier	CWE416_Use_After_Free__malloc_free_struct_06_good		29598	2					
+ANR	29623	ParameterList			29598	3					
+ANR	29624	CFGEntryNode	ENTRY		29598		True				
+ANR	29625	CFGExitNode	EXIT		29598		True				
+ANR	29626	Function	main	204:0:6029:6482							
+ANR	29627	FunctionDef	"main (int argc , char * argv [ ])"		29626	0					
+ANR	29628	CompoundStatement		205:0:6064:6482	29626	0					
+ANR	29629	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	207:4:6098:6127	29626	0	True				
+ANR	29630	CallExpression	srand ( ( unsigned ) time ( NULL ) )		29626	0					
+ANR	29631	Callee	srand		29626	0					
+ANR	29632	Identifier	srand		29626	0					
+ANR	29633	ArgumentList	( unsigned ) time ( NULL )		29626	1					
+ANR	29634	Argument	( unsigned ) time ( NULL )		29626	0					
+ANR	29635	CastExpression	( unsigned ) time ( NULL )		29626	0					
+ANR	29636	CastTarget	unsigned		29626	0					
+ANR	29637	CallExpression	time ( NULL )		29626	1					
+ANR	29638	Callee	time		29626	0					
+ANR	29639	Identifier	time		29626	0					
+ANR	29640	ArgumentList	NULL		29626	1					
+ANR	29641	Argument	NULL		29626	0					
+ANR	29642	Identifier	NULL		29626	0					
+ANR	29643	ExpressionStatement	"printLine ( ""Calling good()..."" )"	209:4:6152:6182	29626	1	True				
+ANR	29644	CallExpression	"printLine ( ""Calling good()..."" )"		29626	0					
+ANR	29645	Callee	printLine		29626	0					
+ANR	29646	Identifier	printLine		29626	0					
+ANR	29647	ArgumentList	"""Calling good()..."""		29626	1					
+ANR	29648	Argument	"""Calling good()..."""		29626	0					
+ANR	29649	PrimaryExpression	"""Calling good()..."""		29626	0					
+ANR	29650	ExpressionStatement	CWE416_Use_After_Free__malloc_free_struct_06_good ( )	210:4:6189:6240	29626	2	True				
+ANR	29651	CallExpression	CWE416_Use_After_Free__malloc_free_struct_06_good ( )		29626	0					
+ANR	29652	Callee	CWE416_Use_After_Free__malloc_free_struct_06_good		29626	0					
+ANR	29653	Identifier	CWE416_Use_After_Free__malloc_free_struct_06_good		29626	0					
+ANR	29654	ArgumentList			29626	1					
+ANR	29655	ExpressionStatement	"printLine ( ""Finished good()"" )"	211:4:6247:6275	29626	3	True				
+ANR	29656	CallExpression	"printLine ( ""Finished good()"" )"		29626	0					
+ANR	29657	Callee	printLine		29626	0					
+ANR	29658	Identifier	printLine		29626	0					
+ANR	29659	ArgumentList	"""Finished good()"""		29626	1					
+ANR	29660	Argument	"""Finished good()"""		29626	0					
+ANR	29661	PrimaryExpression	"""Finished good()"""		29626	0					
+ANR	29662	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	214:4:6322:6351	29626	4	True				
+ANR	29663	CallExpression	"printLine ( ""Calling bad()..."" )"		29626	0					
+ANR	29664	Callee	printLine		29626	0					
+ANR	29665	Identifier	printLine		29626	0					
+ANR	29666	ArgumentList	"""Calling bad()..."""		29626	1					
+ANR	29667	Argument	"""Calling bad()..."""		29626	0					
+ANR	29668	PrimaryExpression	"""Calling bad()..."""		29626	0					
+ANR	29669	ExpressionStatement	CWE416_Use_After_Free__malloc_free_struct_06_bad ( )	215:4:6358:6408	29626	5	True				
+ANR	29670	CallExpression	CWE416_Use_After_Free__malloc_free_struct_06_bad ( )		29626	0					
+ANR	29671	Callee	CWE416_Use_After_Free__malloc_free_struct_06_bad		29626	0					
+ANR	29672	Identifier	CWE416_Use_After_Free__malloc_free_struct_06_bad		29626	0					
+ANR	29673	ArgumentList			29626	1					
+ANR	29674	ExpressionStatement	"printLine ( ""Finished bad()"" )"	216:4:6415:6442	29626	6	True				
+ANR	29675	CallExpression	"printLine ( ""Finished bad()"" )"		29626	0					
+ANR	29676	Callee	printLine		29626	0					
+ANR	29677	Identifier	printLine		29626	0					
+ANR	29678	ArgumentList	"""Finished bad()"""		29626	1					
+ANR	29679	Argument	"""Finished bad()"""		29626	0					
+ANR	29680	PrimaryExpression	"""Finished bad()"""		29626	0					
+ANR	29681	ReturnStatement	return 0 ;	218:4:6471:6479	29626	7	True				
+ANR	29682	PrimaryExpression	0		29626	0					
+ANR	29683	ReturnType	int		29626	1					
+ANR	29684	Identifier	main		29626	2					
+ANR	29685	ParameterList	"int argc , char * argv [ ]"		29626	3					
+ANR	29686	Parameter	int argc	204:9:6038:6045	29626	0	True				
+ANR	29687	ParameterType	int		29626	0					
+ANR	29688	Identifier	argc		29626	1					
+ANR	29689	Parameter	char * argv [ ]	204:19:6048:6060	29626	1	True				
+ANR	29690	ParameterType	char * [ ]		29626	0					
+ANR	29691	Identifier	argv		29626	1					
+ANR	29692	CFGEntryNode	ENTRY		29626		True				
+ANR	29693	CFGExitNode	EXIT		29626		True				
+ANR	29694	Symbol	argc		29626						
+ANR	29695	Symbol	NULL		29626						
+ANR	29696	Symbol	time		29626						
+ANR	29697	Symbol	argv		29626						

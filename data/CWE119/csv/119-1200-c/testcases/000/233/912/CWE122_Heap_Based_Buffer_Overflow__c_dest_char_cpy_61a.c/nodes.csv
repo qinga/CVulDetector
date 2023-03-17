@@ -1,0 +1,251 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	181055	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-1200-c/testcases/000/233/912/CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61a.c								
+ANR	181056	DeclStmt									
+ANR	181057	Decl							char	char * ( char * data )	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource
+ANR	181058	Function	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad	26:0:814:1318							
+ANR	181059	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad ()		181058	0					
+ANR	181060	CompoundStatement		27:0:880:1318	181058	0					
+ANR	181061	IdentifierDeclStatement	char * data ;	28:4:887:898	181058	0	True				
+ANR	181062	IdentifierDecl	* data		181058	0					
+ANR	181063	IdentifierDeclType	char *		181058	0					
+ANR	181064	Identifier	data		181058	1					
+ANR	181065	ExpressionStatement	data = NULL	29:4:905:916	181058	1	True				
+ANR	181066	AssignmentExpression	data = NULL		181058	0		=			
+ANR	181067	Identifier	data		181058	0					
+ANR	181068	Identifier	NULL		181058	1					
+ANR	181069	ExpressionStatement	data = CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource ( data )	30:4:923:1000	181058	2	True				
+ANR	181070	AssignmentExpression	data = CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource ( data )		181058	0		=			
+ANR	181071	Identifier	data		181058	0					
+ANR	181072	CallExpression	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource ( data )		181058	1					
+ANR	181073	Callee	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource		181058	0					
+ANR	181074	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource		181058	0					
+ANR	181075	ArgumentList	data		181058	1					
+ANR	181076	Argument	data		181058	0					
+ANR	181077	Identifier	data		181058	0					
+ANR	181078	CompoundStatement		6:8:137:153	181058	3					
+ANR	181079	IdentifierDeclStatement	char source [ 100 ] ;	32:8:1018:1034	181058	0	True				
+ANR	181080	IdentifierDecl	source [ 100 ]		181058	0					
+ANR	181081	IdentifierDeclType	char [ 100 ]		181058	0					
+ANR	181082	Identifier	source		181058	1					
+ANR	181083	PrimaryExpression	100		181058	2					
+ANR	181084	ExpressionStatement	"memset ( source , 'C' , 100 - 1 )"	33:8:1045:1071	181058	1	True				
+ANR	181085	CallExpression	"memset ( source , 'C' , 100 - 1 )"		181058	0					
+ANR	181086	Callee	memset		181058	0					
+ANR	181087	Identifier	memset		181058	0					
+ANR	181088	ArgumentList	source		181058	1					
+ANR	181089	Argument	source		181058	0					
+ANR	181090	Identifier	source		181058	0					
+ANR	181091	Argument	'C'		181058	1					
+ANR	181092	PrimaryExpression	'C'		181058	0					
+ANR	181093	Argument	100 - 1		181058	2					
+ANR	181094	AdditiveExpression	100 - 1		181058	0		-			
+ANR	181095	PrimaryExpression	100		181058	0					
+ANR	181096	PrimaryExpression	1		181058	1					
+ANR	181097	ExpressionStatement	source [ 100 - 1 ] = '\\0'	34:8:1103:1123	181058	2	True				
+ANR	181098	AssignmentExpression	source [ 100 - 1 ] = '\\0'		181058	0		=			
+ANR	181099	ArrayIndexing	source [ 100 - 1 ]		181058	0					
+ANR	181100	Identifier	source		181058	0					
+ANR	181101	AdditiveExpression	100 - 1		181058	1		-			
+ANR	181102	PrimaryExpression	100		181058	0					
+ANR	181103	PrimaryExpression	1		181058	1					
+ANR	181104	PrimaryExpression	'\\0'		181058	1					
+ANR	181105	ExpressionStatement	"strcpy ( data , source )"	36:8:1241:1261	181058	3	True				
+ANR	181106	CallExpression	"strcpy ( data , source )"		181058	0					
+ANR	181107	Callee	strcpy		181058	0					
+ANR	181108	Identifier	strcpy		181058	0					
+ANR	181109	ArgumentList	data		181058	1					
+ANR	181110	Argument	data		181058	0					
+ANR	181111	Identifier	data		181058	0					
+ANR	181112	Argument	source		181058	1					
+ANR	181113	Identifier	source		181058	0					
+ANR	181114	ExpressionStatement	printLine ( data )	37:8:1272:1287	181058	4	True				
+ANR	181115	CallExpression	printLine ( data )		181058	0					
+ANR	181116	Callee	printLine		181058	0					
+ANR	181117	Identifier	printLine		181058	0					
+ANR	181118	ArgumentList	data		181058	1					
+ANR	181119	Argument	data		181058	0					
+ANR	181120	Identifier	data		181058	0					
+ANR	181121	ExpressionStatement	free ( data )	38:8:1298:1308	181058	5	True				
+ANR	181122	CallExpression	free ( data )		181058	0					
+ANR	181123	Callee	free		181058	0					
+ANR	181124	Identifier	free		181058	0					
+ANR	181125	ArgumentList	data		181058	1					
+ANR	181126	Argument	data		181058	0					
+ANR	181127	Identifier	data		181058	0					
+ANR	181128	ReturnType	void		181058	1					
+ANR	181129	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad		181058	2					
+ANR	181130	ParameterList			181058	3					
+ANR	181131	CFGEntryNode	ENTRY		181058		True				
+ANR	181132	CFGExitNode	EXIT		181058		True				
+ANR	181133	Symbol	NULL		181058						
+ANR	181134	Symbol	data		181058						
+ANR	181135	Symbol	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_badSource		181058						
+ANR	181136	Symbol	* source		181058						
+ANR	181137	Symbol	source		181058						
+ANR	181138	DeclStmt									
+ANR	181139	Decl							char	char * ( char * data )	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource
+ANR	181140	Function	goodG2B	49:0:1512:1977							
+ANR	181141	FunctionDef	goodG2B ()		181140	0					
+ANR	181142	CompoundStatement		50:0:1535:1977	181140	0					
+ANR	181143	IdentifierDeclStatement	char * data ;	51:4:1542:1553	181140	0	True				
+ANR	181144	IdentifierDecl	* data		181140	0					
+ANR	181145	IdentifierDeclType	char *		181140	0					
+ANR	181146	Identifier	data		181140	1					
+ANR	181147	ExpressionStatement	data = NULL	52:4:1560:1571	181140	1	True				
+ANR	181148	AssignmentExpression	data = NULL		181140	0		=			
+ANR	181149	Identifier	data		181140	0					
+ANR	181150	Identifier	NULL		181140	1					
+ANR	181151	ExpressionStatement	data = CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource ( data )	53:4:1578:1659	181140	2	True				
+ANR	181152	AssignmentExpression	data = CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource ( data )		181140	0		=			
+ANR	181153	Identifier	data		181140	0					
+ANR	181154	CallExpression	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource ( data )		181140	1					
+ANR	181155	Callee	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource		181140	0					
+ANR	181156	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource		181140	0					
+ANR	181157	ArgumentList	data		181140	1					
+ANR	181158	Argument	data		181140	0					
+ANR	181159	Identifier	data		181140	0					
+ANR	181160	CompoundStatement		6:8:141:157	181140	3					
+ANR	181161	IdentifierDeclStatement	char source [ 100 ] ;	55:8:1677:1693	181140	0	True				
+ANR	181162	IdentifierDecl	source [ 100 ]		181140	0					
+ANR	181163	IdentifierDeclType	char [ 100 ]		181140	0					
+ANR	181164	Identifier	source		181140	1					
+ANR	181165	PrimaryExpression	100		181140	2					
+ANR	181166	ExpressionStatement	"memset ( source , 'C' , 100 - 1 )"	56:8:1704:1730	181140	1	True				
+ANR	181167	CallExpression	"memset ( source , 'C' , 100 - 1 )"		181140	0					
+ANR	181168	Callee	memset		181140	0					
+ANR	181169	Identifier	memset		181140	0					
+ANR	181170	ArgumentList	source		181140	1					
+ANR	181171	Argument	source		181140	0					
+ANR	181172	Identifier	source		181140	0					
+ANR	181173	Argument	'C'		181140	1					
+ANR	181174	PrimaryExpression	'C'		181140	0					
+ANR	181175	Argument	100 - 1		181140	2					
+ANR	181176	AdditiveExpression	100 - 1		181140	0		-			
+ANR	181177	PrimaryExpression	100		181140	0					
+ANR	181178	PrimaryExpression	1		181140	1					
+ANR	181179	ExpressionStatement	source [ 100 - 1 ] = '\\0'	57:8:1762:1782	181140	2	True				
+ANR	181180	AssignmentExpression	source [ 100 - 1 ] = '\\0'		181140	0		=			
+ANR	181181	ArrayIndexing	source [ 100 - 1 ]		181140	0					
+ANR	181182	Identifier	source		181140	0					
+ANR	181183	AdditiveExpression	100 - 1		181140	1		-			
+ANR	181184	PrimaryExpression	100		181140	0					
+ANR	181185	PrimaryExpression	1		181140	1					
+ANR	181186	PrimaryExpression	'\\0'		181140	1					
+ANR	181187	ExpressionStatement	"strcpy ( data , source )"	59:8:1900:1920	181140	3	True				
+ANR	181188	CallExpression	"strcpy ( data , source )"		181140	0					
+ANR	181189	Callee	strcpy		181140	0					
+ANR	181190	Identifier	strcpy		181140	0					
+ANR	181191	ArgumentList	data		181140	1					
+ANR	181192	Argument	data		181140	0					
+ANR	181193	Identifier	data		181140	0					
+ANR	181194	Argument	source		181140	1					
+ANR	181195	Identifier	source		181140	0					
+ANR	181196	ExpressionStatement	printLine ( data )	60:8:1931:1946	181140	4	True				
+ANR	181197	CallExpression	printLine ( data )		181140	0					
+ANR	181198	Callee	printLine		181140	0					
+ANR	181199	Identifier	printLine		181140	0					
+ANR	181200	ArgumentList	data		181140	1					
+ANR	181201	Argument	data		181140	0					
+ANR	181202	Identifier	data		181140	0					
+ANR	181203	ExpressionStatement	free ( data )	61:8:1957:1967	181140	5	True				
+ANR	181204	CallExpression	free ( data )		181140	0					
+ANR	181205	Callee	free		181140	0					
+ANR	181206	Identifier	free		181140	0					
+ANR	181207	ArgumentList	data		181140	1					
+ANR	181208	Argument	data		181140	0					
+ANR	181209	Identifier	data		181140	0					
+ANR	181210	ReturnType	static void		181140	1					
+ANR	181211	Identifier	goodG2B		181140	2					
+ANR	181212	ParameterList			181140	3					
+ANR	181213	CFGEntryNode	ENTRY		181140		True				
+ANR	181214	CFGExitNode	EXIT		181140		True				
+ANR	181215	Symbol	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61b_goodG2BSource		181140						
+ANR	181216	Symbol	NULL		181140						
+ANR	181217	Symbol	data		181140						
+ANR	181218	Symbol	* source		181140						
+ANR	181219	Symbol	source		181140						
+ANR	181220	Function	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good	65:0:1982:2068							
+ANR	181221	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good ()		181220	0					
+ANR	181222	CompoundStatement		66:0:2049:2068	181220	0					
+ANR	181223	ExpressionStatement	goodG2B ( )	67:4:2056:2065	181220	0	True				
+ANR	181224	CallExpression	goodG2B ( )		181220	0					
+ANR	181225	Callee	goodG2B		181220	0					
+ANR	181226	Identifier	goodG2B		181220	0					
+ANR	181227	ArgumentList			181220	1					
+ANR	181228	ReturnType	void		181220	1					
+ANR	181229	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good		181220	2					
+ANR	181230	ParameterList			181220	3					
+ANR	181231	CFGEntryNode	ENTRY		181220		True				
+ANR	181232	CFGExitNode	EXIT		181220		True				
+ANR	181233	Function	main	80:0:2417:2888							
+ANR	181234	FunctionDef	"main (int argc , char * argv [ ])"		181233	0					
+ANR	181235	CompoundStatement		81:0:2452:2888	181233	0					
+ANR	181236	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	83:4:2486:2515	181233	0	True				
+ANR	181237	CallExpression	srand ( ( unsigned ) time ( NULL ) )		181233	0					
+ANR	181238	Callee	srand		181233	0					
+ANR	181239	Identifier	srand		181233	0					
+ANR	181240	ArgumentList	( unsigned ) time ( NULL )		181233	1					
+ANR	181241	Argument	( unsigned ) time ( NULL )		181233	0					
+ANR	181242	CastExpression	( unsigned ) time ( NULL )		181233	0					
+ANR	181243	CastTarget	unsigned		181233	0					
+ANR	181244	CallExpression	time ( NULL )		181233	1					
+ANR	181245	Callee	time		181233	0					
+ANR	181246	Identifier	time		181233	0					
+ANR	181247	ArgumentList	NULL		181233	1					
+ANR	181248	Argument	NULL		181233	0					
+ANR	181249	Identifier	NULL		181233	0					
+ANR	181250	ExpressionStatement	"printLine ( ""Calling good()..."" )"	85:4:2540:2570	181233	1	True				
+ANR	181251	CallExpression	"printLine ( ""Calling good()..."" )"		181233	0					
+ANR	181252	Callee	printLine		181233	0					
+ANR	181253	Identifier	printLine		181233	0					
+ANR	181254	ArgumentList	"""Calling good()..."""		181233	1					
+ANR	181255	Argument	"""Calling good()..."""		181233	0					
+ANR	181256	PrimaryExpression	"""Calling good()..."""		181233	0					
+ANR	181257	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good ( )	86:4:2577:2637	181233	2	True				
+ANR	181258	CallExpression	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good ( )		181233	0					
+ANR	181259	Callee	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good		181233	0					
+ANR	181260	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_good		181233	0					
+ANR	181261	ArgumentList			181233	1					
+ANR	181262	ExpressionStatement	"printLine ( ""Finished good()"" )"	87:4:2644:2672	181233	3	True				
+ANR	181263	CallExpression	"printLine ( ""Finished good()"" )"		181233	0					
+ANR	181264	Callee	printLine		181233	0					
+ANR	181265	Identifier	printLine		181233	0					
+ANR	181266	ArgumentList	"""Finished good()"""		181233	1					
+ANR	181267	Argument	"""Finished good()"""		181233	0					
+ANR	181268	PrimaryExpression	"""Finished good()"""		181233	0					
+ANR	181269	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	90:4:2719:2748	181233	4	True				
+ANR	181270	CallExpression	"printLine ( ""Calling bad()..."" )"		181233	0					
+ANR	181271	Callee	printLine		181233	0					
+ANR	181272	Identifier	printLine		181233	0					
+ANR	181273	ArgumentList	"""Calling bad()..."""		181233	1					
+ANR	181274	Argument	"""Calling bad()..."""		181233	0					
+ANR	181275	PrimaryExpression	"""Calling bad()..."""		181233	0					
+ANR	181276	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad ( )	91:4:2755:2814	181233	5	True				
+ANR	181277	CallExpression	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad ( )		181233	0					
+ANR	181278	Callee	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad		181233	0					
+ANR	181279	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_61_bad		181233	0					
+ANR	181280	ArgumentList			181233	1					
+ANR	181281	ExpressionStatement	"printLine ( ""Finished bad()"" )"	92:4:2821:2848	181233	6	True				
+ANR	181282	CallExpression	"printLine ( ""Finished bad()"" )"		181233	0					
+ANR	181283	Callee	printLine		181233	0					
+ANR	181284	Identifier	printLine		181233	0					
+ANR	181285	ArgumentList	"""Finished bad()"""		181233	1					
+ANR	181286	Argument	"""Finished bad()"""		181233	0					
+ANR	181287	PrimaryExpression	"""Finished bad()"""		181233	0					
+ANR	181288	ReturnStatement	return 0 ;	94:4:2877:2885	181233	7	True				
+ANR	181289	PrimaryExpression	0		181233	0					
+ANR	181290	ReturnType	int		181233	1					
+ANR	181291	Identifier	main		181233	2					
+ANR	181292	ParameterList	"int argc , char * argv [ ]"		181233	3					
+ANR	181293	Parameter	int argc	80:9:2426:2433	181233	0	True				
+ANR	181294	ParameterType	int		181233	0					
+ANR	181295	Identifier	argc		181233	1					
+ANR	181296	Parameter	char * argv [ ]	80:19:2436:2448	181233	1	True				
+ANR	181297	ParameterType	char * [ ]		181233	0					
+ANR	181298	Identifier	argv		181233	1					
+ANR	181299	CFGEntryNode	ENTRY		181233		True				
+ANR	181300	CFGExitNode	EXIT		181233		True				
+ANR	181301	Symbol	argc		181233						
+ANR	181302	Symbol	NULL		181233						
+ANR	181303	Symbol	time		181233						
+ANR	181304	Symbol	argv		181233						

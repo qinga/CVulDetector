@@ -1,0 +1,386 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	522754	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-400-c/testcases/000/234/952/CWE127_Buffer_Underread__malloc_char_ncpy_22a.c								
+ANR	522755	DeclStmt									
+ANR	522756	Decl							int	int	CWE127_Buffer_Underread__malloc_char_ncpy_22_badGlobal
+ANR	522757	DeclStmt									
+ANR	522758	Decl							char	char * ( char * data )	CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource
+ANR	522759	Function	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad	28:0:908:1685							
+ANR	522760	FunctionDef	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad ()		522759	0					
+ANR	522761	CompoundStatement		29:0:965:1685	522759	0					
+ANR	522762	IdentifierDeclStatement	char * data ;	30:4:972:983	522759	0	True				
+ANR	522763	IdentifierDecl	* data		522759	0					
+ANR	522764	IdentifierDeclType	char *		522759	0					
+ANR	522765	Identifier	data		522759	1					
+ANR	522766	ExpressionStatement	data = NULL	31:4:990:1001	522759	1	True				
+ANR	522767	AssignmentExpression	data = NULL		522759	0		=			
+ANR	522768	Identifier	data		522759	0					
+ANR	522769	Identifier	NULL		522759	1					
+ANR	522770	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_ncpy_22_badGlobal = 1	32:4:1008:1066	522759	2	True				
+ANR	522771	AssignmentExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_badGlobal = 1		522759	0		=			
+ANR	522772	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_badGlobal		522759	0					
+ANR	522773	PrimaryExpression	1		522759	1					
+ANR	522774	ExpressionStatement	data = CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource ( data )	33:4:1084:1151	522759	3	True				
+ANR	522775	AssignmentExpression	data = CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource ( data )		522759	0		=			
+ANR	522776	Identifier	data		522759	0					
+ANR	522777	CallExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource ( data )		522759	1					
+ANR	522778	Callee	CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource		522759	0					
+ANR	522779	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource		522759	0					
+ANR	522780	ArgumentList	data		522759	1					
+ANR	522781	Argument	data		522759	0					
+ANR	522782	Identifier	data		522759	0					
+ANR	522783	CompoundStatement		7:8:203:217	522759	4					
+ANR	522784	IdentifierDeclStatement	char dest [ 100 ] ;	35:8:1169:1183	522759	0	True				
+ANR	522785	IdentifierDecl	dest [ 100 ]		522759	0					
+ANR	522786	IdentifierDeclType	char [ 100 ]		522759	0					
+ANR	522787	Identifier	dest		522759	1					
+ANR	522788	PrimaryExpression	100		522759	2					
+ANR	522789	ExpressionStatement	"memset ( dest , 'C' , 100 - 1 )"	36:8:1194:1218	522759	1	True				
+ANR	522790	CallExpression	"memset ( dest , 'C' , 100 - 1 )"		522759	0					
+ANR	522791	Callee	memset		522759	0					
+ANR	522792	Identifier	memset		522759	0					
+ANR	522793	ArgumentList	dest		522759	1					
+ANR	522794	Argument	dest		522759	0					
+ANR	522795	Identifier	dest		522759	0					
+ANR	522796	Argument	'C'		522759	1					
+ANR	522797	PrimaryExpression	'C'		522759	0					
+ANR	522798	Argument	100 - 1		522759	2					
+ANR	522799	AdditiveExpression	100 - 1		522759	0		-			
+ANR	522800	PrimaryExpression	100		522759	0					
+ANR	522801	PrimaryExpression	1		522759	1					
+ANR	522802	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	37:8:1250:1268	522759	2	True				
+ANR	522803	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		522759	0		=			
+ANR	522804	ArrayIndexing	dest [ 100 - 1 ]		522759	0					
+ANR	522805	Identifier	dest		522759	0					
+ANR	522806	AdditiveExpression	100 - 1		522759	1		-			
+ANR	522807	PrimaryExpression	100		522759	0					
+ANR	522808	PrimaryExpression	1		522759	1					
+ANR	522809	PrimaryExpression	'\\0'		522759	1					
+ANR	522810	ExpressionStatement	"strncpy ( dest , data , strlen ( dest ) )"	39:8:1401:1434	522759	3	True				
+ANR	522811	CallExpression	"strncpy ( dest , data , strlen ( dest ) )"		522759	0					
+ANR	522812	Callee	strncpy		522759	0					
+ANR	522813	Identifier	strncpy		522759	0					
+ANR	522814	ArgumentList	dest		522759	1					
+ANR	522815	Argument	dest		522759	0					
+ANR	522816	Identifier	dest		522759	0					
+ANR	522817	Argument	data		522759	1					
+ANR	522818	Identifier	data		522759	0					
+ANR	522819	Argument	strlen ( dest )		522759	2					
+ANR	522820	CallExpression	strlen ( dest )		522759	0					
+ANR	522821	Callee	strlen		522759	0					
+ANR	522822	Identifier	strlen		522759	0					
+ANR	522823	ArgumentList	dest		522759	1					
+ANR	522824	Argument	dest		522759	0					
+ANR	522825	Identifier	dest		522759	0					
+ANR	522826	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	41:8:1484:1502	522759	4	True				
+ANR	522827	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		522759	0		=			
+ANR	522828	ArrayIndexing	dest [ 100 - 1 ]		522759	0					
+ANR	522829	Identifier	dest		522759	0					
+ANR	522830	AdditiveExpression	100 - 1		522759	1		-			
+ANR	522831	PrimaryExpression	100		522759	0					
+ANR	522832	PrimaryExpression	1		522759	1					
+ANR	522833	PrimaryExpression	'\\0'		522759	1					
+ANR	522834	ExpressionStatement	printLine ( dest )	42:8:1513:1528	522759	5	True				
+ANR	522835	CallExpression	printLine ( dest )		522759	0					
+ANR	522836	Callee	printLine		522759	0					
+ANR	522837	Identifier	printLine		522759	0					
+ANR	522838	ArgumentList	dest		522759	1					
+ANR	522839	Argument	dest		522759	0					
+ANR	522840	Identifier	dest		522759	0					
+ANR	522841	ReturnType	void		522759	1					
+ANR	522842	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad		522759	2					
+ANR	522843	ParameterList			522759	3					
+ANR	522844	CFGEntryNode	ENTRY		522759		True				
+ANR	522845	CFGExitNode	EXIT		522759		True				
+ANR	522846	Symbol	strlen		522759						
+ANR	522847	Symbol	CWE127_Buffer_Underread__malloc_char_ncpy_22_badGlobal		522759						
+ANR	522848	Symbol	NULL		522759						
+ANR	522849	Symbol	CWE127_Buffer_Underread__malloc_char_ncpy_22_badSource		522759						
+ANR	522850	Symbol	data		522759						
+ANR	522851	Symbol	* dest		522759						
+ANR	522852	Symbol	dest		522759						
+ANR	522853	DeclStmt									
+ANR	522854	Decl							int	int	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Global
+ANR	522855	DeclStmt									
+ANR	522856	Decl							int	int	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Global
+ANR	522857	DeclStmt									
+ANR	522858	Decl							char	char * ( char * data )	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source
+ANR	522859	Function	goodG2B1	59:0:2153:2908							
+ANR	522860	FunctionDef	goodG2B1 ()		522859	0					
+ANR	522861	CompoundStatement		60:0:2177:2908	522859	0					
+ANR	522862	IdentifierDeclStatement	char * data ;	61:4:2184:2195	522859	0	True				
+ANR	522863	IdentifierDecl	* data		522859	0					
+ANR	522864	IdentifierDeclType	char *		522859	0					
+ANR	522865	Identifier	data		522859	1					
+ANR	522866	ExpressionStatement	data = NULL	62:4:2202:2213	522859	1	True				
+ANR	522867	AssignmentExpression	data = NULL		522859	0		=			
+ANR	522868	Identifier	data		522859	0					
+ANR	522869	Identifier	NULL		522859	1					
+ANR	522870	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Global = 0	63:4:2220:2283	522859	2	True				
+ANR	522871	AssignmentExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Global = 0		522859	0		=			
+ANR	522872	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Global		522859	0					
+ANR	522873	PrimaryExpression	0		522859	1					
+ANR	522874	ExpressionStatement	data = CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source ( data )	64:4:2302:2374	522859	3	True				
+ANR	522875	AssignmentExpression	data = CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source ( data )		522859	0		=			
+ANR	522876	Identifier	data		522859	0					
+ANR	522877	CallExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source ( data )		522859	1					
+ANR	522878	Callee	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source		522859	0					
+ANR	522879	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source		522859	0					
+ANR	522880	ArgumentList	data		522859	1					
+ANR	522881	Argument	data		522859	0					
+ANR	522882	Identifier	data		522859	0					
+ANR	522883	CompoundStatement		7:8:214:228	522859	4					
+ANR	522884	IdentifierDeclStatement	char dest [ 100 ] ;	66:8:2392:2406	522859	0	True				
+ANR	522885	IdentifierDecl	dest [ 100 ]		522859	0					
+ANR	522886	IdentifierDeclType	char [ 100 ]		522859	0					
+ANR	522887	Identifier	dest		522859	1					
+ANR	522888	PrimaryExpression	100		522859	2					
+ANR	522889	ExpressionStatement	"memset ( dest , 'C' , 100 - 1 )"	67:8:2417:2441	522859	1	True				
+ANR	522890	CallExpression	"memset ( dest , 'C' , 100 - 1 )"		522859	0					
+ANR	522891	Callee	memset		522859	0					
+ANR	522892	Identifier	memset		522859	0					
+ANR	522893	ArgumentList	dest		522859	1					
+ANR	522894	Argument	dest		522859	0					
+ANR	522895	Identifier	dest		522859	0					
+ANR	522896	Argument	'C'		522859	1					
+ANR	522897	PrimaryExpression	'C'		522859	0					
+ANR	522898	Argument	100 - 1		522859	2					
+ANR	522899	AdditiveExpression	100 - 1		522859	0		-			
+ANR	522900	PrimaryExpression	100		522859	0					
+ANR	522901	PrimaryExpression	1		522859	1					
+ANR	522902	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	68:8:2473:2491	522859	2	True				
+ANR	522903	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		522859	0		=			
+ANR	522904	ArrayIndexing	dest [ 100 - 1 ]		522859	0					
+ANR	522905	Identifier	dest		522859	0					
+ANR	522906	AdditiveExpression	100 - 1		522859	1		-			
+ANR	522907	PrimaryExpression	100		522859	0					
+ANR	522908	PrimaryExpression	1		522859	1					
+ANR	522909	PrimaryExpression	'\\0'		522859	1					
+ANR	522910	ExpressionStatement	"strncpy ( dest , data , strlen ( dest ) )"	70:8:2624:2657	522859	3	True				
+ANR	522911	CallExpression	"strncpy ( dest , data , strlen ( dest ) )"		522859	0					
+ANR	522912	Callee	strncpy		522859	0					
+ANR	522913	Identifier	strncpy		522859	0					
+ANR	522914	ArgumentList	dest		522859	1					
+ANR	522915	Argument	dest		522859	0					
+ANR	522916	Identifier	dest		522859	0					
+ANR	522917	Argument	data		522859	1					
+ANR	522918	Identifier	data		522859	0					
+ANR	522919	Argument	strlen ( dest )		522859	2					
+ANR	522920	CallExpression	strlen ( dest )		522859	0					
+ANR	522921	Callee	strlen		522859	0					
+ANR	522922	Identifier	strlen		522859	0					
+ANR	522923	ArgumentList	dest		522859	1					
+ANR	522924	Argument	dest		522859	0					
+ANR	522925	Identifier	dest		522859	0					
+ANR	522926	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	72:8:2707:2725	522859	4	True				
+ANR	522927	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		522859	0		=			
+ANR	522928	ArrayIndexing	dest [ 100 - 1 ]		522859	0					
+ANR	522929	Identifier	dest		522859	0					
+ANR	522930	AdditiveExpression	100 - 1		522859	1		-			
+ANR	522931	PrimaryExpression	100		522859	0					
+ANR	522932	PrimaryExpression	1		522859	1					
+ANR	522933	PrimaryExpression	'\\0'		522859	1					
+ANR	522934	ExpressionStatement	printLine ( dest )	73:8:2736:2751	522859	5	True				
+ANR	522935	CallExpression	printLine ( dest )		522859	0					
+ANR	522936	Callee	printLine		522859	0					
+ANR	522937	Identifier	printLine		522859	0					
+ANR	522938	ArgumentList	dest		522859	1					
+ANR	522939	Argument	dest		522859	0					
+ANR	522940	Identifier	dest		522859	0					
+ANR	522941	ReturnType	static void		522859	1					
+ANR	522942	Identifier	goodG2B1		522859	2					
+ANR	522943	ParameterList			522859	3					
+ANR	522944	CFGEntryNode	ENTRY		522859		True				
+ANR	522945	CFGExitNode	EXIT		522859		True				
+ANR	522946	Symbol	strlen		522859						
+ANR	522947	Symbol	NULL		522859						
+ANR	522948	Symbol	data		522859						
+ANR	522949	Symbol	* dest		522859						
+ANR	522950	Symbol	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Global		522859						
+ANR	522951	Symbol	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B1Source		522859						
+ANR	522952	Symbol	dest		522859						
+ANR	522953	DeclStmt									
+ANR	522954	Decl							char	char * ( char * data )	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source
+ANR	522955	Function	goodG2B2	82:0:3101:3855							
+ANR	522956	FunctionDef	goodG2B2 ()		522955	0					
+ANR	522957	CompoundStatement		83:0:3125:3855	522955	0					
+ANR	522958	IdentifierDeclStatement	char * data ;	84:4:3132:3143	522955	0	True				
+ANR	522959	IdentifierDecl	* data		522955	0					
+ANR	522960	IdentifierDeclType	char *		522955	0					
+ANR	522961	Identifier	data		522955	1					
+ANR	522962	ExpressionStatement	data = NULL	85:4:3150:3161	522955	1	True				
+ANR	522963	AssignmentExpression	data = NULL		522955	0		=			
+ANR	522964	Identifier	data		522955	0					
+ANR	522965	Identifier	NULL		522955	1					
+ANR	522966	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Global = 1	86:4:3168:3231	522955	2	True				
+ANR	522967	AssignmentExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Global = 1		522955	0		=			
+ANR	522968	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Global		522955	0					
+ANR	522969	PrimaryExpression	1		522955	1					
+ANR	522970	ExpressionStatement	data = CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source ( data )	87:4:3249:3321	522955	3	True				
+ANR	522971	AssignmentExpression	data = CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source ( data )		522955	0		=			
+ANR	522972	Identifier	data		522955	0					
+ANR	522973	CallExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source ( data )		522955	1					
+ANR	522974	Callee	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source		522955	0					
+ANR	522975	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source		522955	0					
+ANR	522976	ArgumentList	data		522955	1					
+ANR	522977	Argument	data		522955	0					
+ANR	522978	Identifier	data		522955	0					
+ANR	522979	CompoundStatement		7:8:213:227	522955	4					
+ANR	522980	IdentifierDeclStatement	char dest [ 100 ] ;	89:8:3339:3353	522955	0	True				
+ANR	522981	IdentifierDecl	dest [ 100 ]		522955	0					
+ANR	522982	IdentifierDeclType	char [ 100 ]		522955	0					
+ANR	522983	Identifier	dest		522955	1					
+ANR	522984	PrimaryExpression	100		522955	2					
+ANR	522985	ExpressionStatement	"memset ( dest , 'C' , 100 - 1 )"	90:8:3364:3388	522955	1	True				
+ANR	522986	CallExpression	"memset ( dest , 'C' , 100 - 1 )"		522955	0					
+ANR	522987	Callee	memset		522955	0					
+ANR	522988	Identifier	memset		522955	0					
+ANR	522989	ArgumentList	dest		522955	1					
+ANR	522990	Argument	dest		522955	0					
+ANR	522991	Identifier	dest		522955	0					
+ANR	522992	Argument	'C'		522955	1					
+ANR	522993	PrimaryExpression	'C'		522955	0					
+ANR	522994	Argument	100 - 1		522955	2					
+ANR	522995	AdditiveExpression	100 - 1		522955	0		-			
+ANR	522996	PrimaryExpression	100		522955	0					
+ANR	522997	PrimaryExpression	1		522955	1					
+ANR	522998	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	91:8:3420:3438	522955	2	True				
+ANR	522999	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		522955	0		=			
+ANR	523000	ArrayIndexing	dest [ 100 - 1 ]		522955	0					
+ANR	523001	Identifier	dest		522955	0					
+ANR	523002	AdditiveExpression	100 - 1		522955	1		-			
+ANR	523003	PrimaryExpression	100		522955	0					
+ANR	523004	PrimaryExpression	1		522955	1					
+ANR	523005	PrimaryExpression	'\\0'		522955	1					
+ANR	523006	ExpressionStatement	"strncpy ( dest , data , strlen ( dest ) )"	93:8:3571:3604	522955	3	True				
+ANR	523007	CallExpression	"strncpy ( dest , data , strlen ( dest ) )"		522955	0					
+ANR	523008	Callee	strncpy		522955	0					
+ANR	523009	Identifier	strncpy		522955	0					
+ANR	523010	ArgumentList	dest		522955	1					
+ANR	523011	Argument	dest		522955	0					
+ANR	523012	Identifier	dest		522955	0					
+ANR	523013	Argument	data		522955	1					
+ANR	523014	Identifier	data		522955	0					
+ANR	523015	Argument	strlen ( dest )		522955	2					
+ANR	523016	CallExpression	strlen ( dest )		522955	0					
+ANR	523017	Callee	strlen		522955	0					
+ANR	523018	Identifier	strlen		522955	0					
+ANR	523019	ArgumentList	dest		522955	1					
+ANR	523020	Argument	dest		522955	0					
+ANR	523021	Identifier	dest		522955	0					
+ANR	523022	ExpressionStatement	dest [ 100 - 1 ] = '\\0'	95:8:3654:3672	522955	4	True				
+ANR	523023	AssignmentExpression	dest [ 100 - 1 ] = '\\0'		522955	0		=			
+ANR	523024	ArrayIndexing	dest [ 100 - 1 ]		522955	0					
+ANR	523025	Identifier	dest		522955	0					
+ANR	523026	AdditiveExpression	100 - 1		522955	1		-			
+ANR	523027	PrimaryExpression	100		522955	0					
+ANR	523028	PrimaryExpression	1		522955	1					
+ANR	523029	PrimaryExpression	'\\0'		522955	1					
+ANR	523030	ExpressionStatement	printLine ( dest )	96:8:3683:3698	522955	5	True				
+ANR	523031	CallExpression	printLine ( dest )		522955	0					
+ANR	523032	Callee	printLine		522955	0					
+ANR	523033	Identifier	printLine		522955	0					
+ANR	523034	ArgumentList	dest		522955	1					
+ANR	523035	Argument	dest		522955	0					
+ANR	523036	Identifier	dest		522955	0					
+ANR	523037	ReturnType	static void		522955	1					
+ANR	523038	Identifier	goodG2B2		522955	2					
+ANR	523039	ParameterList			522955	3					
+ANR	523040	CFGEntryNode	ENTRY		522955		True				
+ANR	523041	CFGExitNode	EXIT		522955		True				
+ANR	523042	Symbol	strlen		522955						
+ANR	523043	Symbol	NULL		522955						
+ANR	523044	Symbol	data		522955						
+ANR	523045	Symbol	* dest		522955						
+ANR	523046	Symbol	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Source		522955						
+ANR	523047	Symbol	CWE127_Buffer_Underread__malloc_char_ncpy_22_goodG2B2Global		522955						
+ANR	523048	Symbol	dest		522955						
+ANR	523049	Function	CWE127_Buffer_Underread__malloc_char_ncpy_22_good	102:0:3860:3955							
+ANR	523050	FunctionDef	CWE127_Buffer_Underread__malloc_char_ncpy_22_good ()		523049	0					
+ANR	523051	CompoundStatement		103:0:3918:3955	523049	0					
+ANR	523052	ExpressionStatement	goodG2B1 ( )	104:4:3925:3935	523049	0	True				
+ANR	523053	CallExpression	goodG2B1 ( )		523049	0					
+ANR	523054	Callee	goodG2B1		523049	0					
+ANR	523055	Identifier	goodG2B1		523049	0					
+ANR	523056	ArgumentList			523049	1					
+ANR	523057	ExpressionStatement	goodG2B2 ( )	105:4:3942:3952	523049	1	True				
+ANR	523058	CallExpression	goodG2B2 ( )		523049	0					
+ANR	523059	Callee	goodG2B2		523049	0					
+ANR	523060	Identifier	goodG2B2		523049	0					
+ANR	523061	ArgumentList			523049	1					
+ANR	523062	ReturnType	void		523049	1					
+ANR	523063	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_good		523049	2					
+ANR	523064	ParameterList			523049	3					
+ANR	523065	CFGEntryNode	ENTRY		523049		True				
+ANR	523066	CFGExitNode	EXIT		523049		True				
+ANR	523067	Function	main	118:0:4304:4757							
+ANR	523068	FunctionDef	"main (int argc , char * argv [ ])"		523067	0					
+ANR	523069	CompoundStatement		119:0:4339:4757	523067	0					
+ANR	523070	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	121:4:4373:4402	523067	0	True				
+ANR	523071	CallExpression	srand ( ( unsigned ) time ( NULL ) )		523067	0					
+ANR	523072	Callee	srand		523067	0					
+ANR	523073	Identifier	srand		523067	0					
+ANR	523074	ArgumentList	( unsigned ) time ( NULL )		523067	1					
+ANR	523075	Argument	( unsigned ) time ( NULL )		523067	0					
+ANR	523076	CastExpression	( unsigned ) time ( NULL )		523067	0					
+ANR	523077	CastTarget	unsigned		523067	0					
+ANR	523078	CallExpression	time ( NULL )		523067	1					
+ANR	523079	Callee	time		523067	0					
+ANR	523080	Identifier	time		523067	0					
+ANR	523081	ArgumentList	NULL		523067	1					
+ANR	523082	Argument	NULL		523067	0					
+ANR	523083	Identifier	NULL		523067	0					
+ANR	523084	ExpressionStatement	"printLine ( ""Calling good()..."" )"	123:4:4427:4457	523067	1	True				
+ANR	523085	CallExpression	"printLine ( ""Calling good()..."" )"		523067	0					
+ANR	523086	Callee	printLine		523067	0					
+ANR	523087	Identifier	printLine		523067	0					
+ANR	523088	ArgumentList	"""Calling good()..."""		523067	1					
+ANR	523089	Argument	"""Calling good()..."""		523067	0					
+ANR	523090	PrimaryExpression	"""Calling good()..."""		523067	0					
+ANR	523091	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_ncpy_22_good ( )	124:4:4464:4515	523067	2	True				
+ANR	523092	CallExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_good ( )		523067	0					
+ANR	523093	Callee	CWE127_Buffer_Underread__malloc_char_ncpy_22_good		523067	0					
+ANR	523094	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_good		523067	0					
+ANR	523095	ArgumentList			523067	1					
+ANR	523096	ExpressionStatement	"printLine ( ""Finished good()"" )"	125:4:4522:4550	523067	3	True				
+ANR	523097	CallExpression	"printLine ( ""Finished good()"" )"		523067	0					
+ANR	523098	Callee	printLine		523067	0					
+ANR	523099	Identifier	printLine		523067	0					
+ANR	523100	ArgumentList	"""Finished good()"""		523067	1					
+ANR	523101	Argument	"""Finished good()"""		523067	0					
+ANR	523102	PrimaryExpression	"""Finished good()"""		523067	0					
+ANR	523103	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	128:4:4597:4626	523067	4	True				
+ANR	523104	CallExpression	"printLine ( ""Calling bad()..."" )"		523067	0					
+ANR	523105	Callee	printLine		523067	0					
+ANR	523106	Identifier	printLine		523067	0					
+ANR	523107	ArgumentList	"""Calling bad()..."""		523067	1					
+ANR	523108	Argument	"""Calling bad()..."""		523067	0					
+ANR	523109	PrimaryExpression	"""Calling bad()..."""		523067	0					
+ANR	523110	ExpressionStatement	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad ( )	129:4:4633:4683	523067	5	True				
+ANR	523111	CallExpression	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad ( )		523067	0					
+ANR	523112	Callee	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad		523067	0					
+ANR	523113	Identifier	CWE127_Buffer_Underread__malloc_char_ncpy_22_bad		523067	0					
+ANR	523114	ArgumentList			523067	1					
+ANR	523115	ExpressionStatement	"printLine ( ""Finished bad()"" )"	130:4:4690:4717	523067	6	True				
+ANR	523116	CallExpression	"printLine ( ""Finished bad()"" )"		523067	0					
+ANR	523117	Callee	printLine		523067	0					
+ANR	523118	Identifier	printLine		523067	0					
+ANR	523119	ArgumentList	"""Finished bad()"""		523067	1					
+ANR	523120	Argument	"""Finished bad()"""		523067	0					
+ANR	523121	PrimaryExpression	"""Finished bad()"""		523067	0					
+ANR	523122	ReturnStatement	return 0 ;	132:4:4746:4754	523067	7	True				
+ANR	523123	PrimaryExpression	0		523067	0					
+ANR	523124	ReturnType	int		523067	1					
+ANR	523125	Identifier	main		523067	2					
+ANR	523126	ParameterList	"int argc , char * argv [ ]"		523067	3					
+ANR	523127	Parameter	int argc	118:9:4313:4320	523067	0	True				
+ANR	523128	ParameterType	int		523067	0					
+ANR	523129	Identifier	argc		523067	1					
+ANR	523130	Parameter	char * argv [ ]	118:19:4323:4335	523067	1	True				
+ANR	523131	ParameterType	char * [ ]		523067	0					
+ANR	523132	Identifier	argv		523067	1					
+ANR	523133	CFGEntryNode	ENTRY		523067		True				
+ANR	523134	CFGExitNode	EXIT		523067		True				
+ANR	523135	Symbol	argc		523067						
+ANR	523136	Symbol	NULL		523067						
+ANR	523137	Symbol	time		523067						
+ANR	523138	Symbol	argv		523067						

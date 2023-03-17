@@ -1,0 +1,358 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	95467	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-100-c/testcases/000/240/280/CWE416_Use_After_Free__malloc_free_char_18.c								
+ANR	95468	Function	CWE416_Use_After_Free__malloc_free_char_18_bad	24:0:631:1210							
+ANR	95469	FunctionDef	CWE416_Use_After_Free__malloc_free_char_18_bad ()		95468	0					
+ANR	95470	CompoundStatement		25:0:686:1210	95468	0					
+ANR	95471	IdentifierDeclStatement	char * data ;	26:4:693:704	95468	0	True				
+ANR	95472	IdentifierDecl	* data		95468	0					
+ANR	95473	IdentifierDeclType	char *		95468	0					
+ANR	95474	Identifier	data		95468	1					
+ANR	95475	ExpressionStatement	data = NULL	28:4:738:749	95468	1	True				
+ANR	95476	AssignmentExpression	data = NULL		95468	0		=			
+ANR	95477	Identifier	data		95468	0					
+ANR	95478	Identifier	NULL		95468	1					
+ANR	95479	GotoStatement	goto source ;	29:4:756:767	95468	2	True				
+ANR	95480	Identifier	source		95468	0					
+ANR	95481	Label	source :	30:0:770:776	95468	3	True				
+ANR	95482	Identifier	source		95468	0					
+ANR	95483	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	31:4:783:822	95468	4	True				
+ANR	95484	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		95468	0		=			
+ANR	95485	Identifier	data		95468	0					
+ANR	95486	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		95468	1					
+ANR	95487	CastTarget	char *		95468	0					
+ANR	95488	CallExpression	malloc ( 100 * sizeof ( char ) )		95468	1					
+ANR	95489	Callee	malloc		95468	0					
+ANR	95490	Identifier	malloc		95468	0					
+ANR	95491	ArgumentList	100 * sizeof ( char )		95468	1					
+ANR	95492	Argument	100 * sizeof ( char )		95468	0					
+ANR	95493	MultiplicativeExpression	100 * sizeof ( char )		95468	0		*			
+ANR	95494	PrimaryExpression	100		95468	0					
+ANR	95495	SizeofExpression	sizeof ( char )		95468	1					
+ANR	95496	Sizeof	sizeof		95468	0					
+ANR	95497	SizeofOperand	char		95468	1					
+ANR	95498	IfStatement	if ( data == NULL )		95468	5					
+ANR	95499	Condition	data == NULL	32:8:833:844	95468	0	True				
+ANR	95500	EqualityExpression	data == NULL		95468	0		==			
+ANR	95501	Identifier	data		95468	0					
+ANR	95502	Identifier	NULL		95468	1					
+ANR	95503	CompoundStatement		8:22:160:160	95468	1					
+ANR	95504	ExpressionStatement	exit ( - 1 )	32:23:848:856	95468	0	True				
+ANR	95505	CallExpression	exit ( - 1 )		95468	0					
+ANR	95506	Callee	exit		95468	0					
+ANR	95507	Identifier	exit		95468	0					
+ANR	95508	ArgumentList	- 1		95468	1					
+ANR	95509	Argument	- 1		95468	0					
+ANR	95510	UnaryOperationExpression	- 1		95468	0					
+ANR	95511	UnaryOperator	-		95468	0					
+ANR	95512	PrimaryExpression	1		95468	1					
+ANR	95513	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	33:4:863:887	95468	6	True				
+ANR	95514	CallExpression	"memset ( data , 'A' , 100 - 1 )"		95468	0					
+ANR	95515	Callee	memset		95468	0					
+ANR	95516	Identifier	memset		95468	0					
+ANR	95517	ArgumentList	data		95468	1					
+ANR	95518	Argument	data		95468	0					
+ANR	95519	Identifier	data		95468	0					
+ANR	95520	Argument	'A'		95468	1					
+ANR	95521	PrimaryExpression	'A'		95468	0					
+ANR	95522	Argument	100 - 1		95468	2					
+ANR	95523	AdditiveExpression	100 - 1		95468	0		-			
+ANR	95524	PrimaryExpression	100		95468	0					
+ANR	95525	PrimaryExpression	1		95468	1					
+ANR	95526	ExpressionStatement	data [ 100 - 1 ] = '\\0'	34:4:894:912	95468	7	True				
+ANR	95527	AssignmentExpression	data [ 100 - 1 ] = '\\0'		95468	0		=			
+ANR	95528	ArrayIndexing	data [ 100 - 1 ]		95468	0					
+ANR	95529	Identifier	data		95468	0					
+ANR	95530	AdditiveExpression	100 - 1		95468	1		-			
+ANR	95531	PrimaryExpression	100		95468	0					
+ANR	95532	PrimaryExpression	1		95468	1					
+ANR	95533	PrimaryExpression	'\\0'		95468	1					
+ANR	95534	ExpressionStatement	free ( data )	36:4:1006:1016	95468	8	True				
+ANR	95535	CallExpression	free ( data )		95468	0					
+ANR	95536	Callee	free		95468	0					
+ANR	95537	Identifier	free		95468	0					
+ANR	95538	ArgumentList	data		95468	1					
+ANR	95539	Argument	data		95468	0					
+ANR	95540	Identifier	data		95468	0					
+ANR	95541	GotoStatement	goto sink ;	37:4:1023:1032	95468	9	True				
+ANR	95542	Identifier	sink		95468	0					
+ANR	95543	Label	sink :	38:0:1035:1039	95468	10	True				
+ANR	95544	Identifier	sink		95468	0					
+ANR	95545	ExpressionStatement	printLine ( data )	40:4:1110:1125	95468	11	True				
+ANR	95546	CallExpression	printLine ( data )		95468	0					
+ANR	95547	Callee	printLine		95468	0					
+ANR	95548	Identifier	printLine		95468	0					
+ANR	95549	ArgumentList	data		95468	1					
+ANR	95550	Argument	data		95468	0					
+ANR	95551	Identifier	data		95468	0					
+ANR	95552	ReturnType	void		95468	1					
+ANR	95553	Identifier	CWE416_Use_After_Free__malloc_free_char_18_bad		95468	2					
+ANR	95554	ParameterList			95468	3					
+ANR	95555	CFGEntryNode	ENTRY		95468		True				
+ANR	95556	CFGExitNode	EXIT		95468		True				
+ANR	95557	Symbol	malloc		95468						
+ANR	95558	Symbol	NULL		95468						
+ANR	95559	Symbol	data		95468						
+ANR	95560	Symbol	* data		95468						
+ANR	95561	Function	goodB2G	49:0:1358:1964							
+ANR	95562	FunctionDef	goodB2G ()		95561	0					
+ANR	95563	CompoundStatement		50:0:1381:1964	95561	0					
+ANR	95564	IdentifierDeclStatement	char * data ;	51:4:1388:1399	95561	0	True				
+ANR	95565	IdentifierDecl	* data		95561	0					
+ANR	95566	IdentifierDeclType	char *		95561	0					
+ANR	95567	Identifier	data		95561	1					
+ANR	95568	ExpressionStatement	data = NULL	53:4:1433:1444	95561	1	True				
+ANR	95569	AssignmentExpression	data = NULL		95561	0		=			
+ANR	95570	Identifier	data		95561	0					
+ANR	95571	Identifier	NULL		95561	1					
+ANR	95572	GotoStatement	goto source ;	54:4:1451:1462	95561	2	True				
+ANR	95573	Identifier	source		95561	0					
+ANR	95574	Label	source :	55:0:1465:1471	95561	3	True				
+ANR	95575	Identifier	source		95561	0					
+ANR	95576	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	56:4:1478:1517	95561	4	True				
+ANR	95577	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		95561	0		=			
+ANR	95578	Identifier	data		95561	0					
+ANR	95579	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		95561	1					
+ANR	95580	CastTarget	char *		95561	0					
+ANR	95581	CallExpression	malloc ( 100 * sizeof ( char ) )		95561	1					
+ANR	95582	Callee	malloc		95561	0					
+ANR	95583	Identifier	malloc		95561	0					
+ANR	95584	ArgumentList	100 * sizeof ( char )		95561	1					
+ANR	95585	Argument	100 * sizeof ( char )		95561	0					
+ANR	95586	MultiplicativeExpression	100 * sizeof ( char )		95561	0		*			
+ANR	95587	PrimaryExpression	100		95561	0					
+ANR	95588	SizeofExpression	sizeof ( char )		95561	1					
+ANR	95589	Sizeof	sizeof		95561	0					
+ANR	95590	SizeofOperand	char		95561	1					
+ANR	95591	IfStatement	if ( data == NULL )		95561	5					
+ANR	95592	Condition	data == NULL	57:8:1528:1539	95561	0	True				
+ANR	95593	EqualityExpression	data == NULL		95561	0		==			
+ANR	95594	Identifier	data		95561	0					
+ANR	95595	Identifier	NULL		95561	1					
+ANR	95596	CompoundStatement		8:22:160:160	95561	1					
+ANR	95597	ExpressionStatement	exit ( - 1 )	57:23:1543:1551	95561	0	True				
+ANR	95598	CallExpression	exit ( - 1 )		95561	0					
+ANR	95599	Callee	exit		95561	0					
+ANR	95600	Identifier	exit		95561	0					
+ANR	95601	ArgumentList	- 1		95561	1					
+ANR	95602	Argument	- 1		95561	0					
+ANR	95603	UnaryOperationExpression	- 1		95561	0					
+ANR	95604	UnaryOperator	-		95561	0					
+ANR	95605	PrimaryExpression	1		95561	1					
+ANR	95606	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	58:4:1558:1582	95561	6	True				
+ANR	95607	CallExpression	"memset ( data , 'A' , 100 - 1 )"		95561	0					
+ANR	95608	Callee	memset		95561	0					
+ANR	95609	Identifier	memset		95561	0					
+ANR	95610	ArgumentList	data		95561	1					
+ANR	95611	Argument	data		95561	0					
+ANR	95612	Identifier	data		95561	0					
+ANR	95613	Argument	'A'		95561	1					
+ANR	95614	PrimaryExpression	'A'		95561	0					
+ANR	95615	Argument	100 - 1		95561	2					
+ANR	95616	AdditiveExpression	100 - 1		95561	0		-			
+ANR	95617	PrimaryExpression	100		95561	0					
+ANR	95618	PrimaryExpression	1		95561	1					
+ANR	95619	ExpressionStatement	data [ 100 - 1 ] = '\\0'	59:4:1589:1607	95561	7	True				
+ANR	95620	AssignmentExpression	data [ 100 - 1 ] = '\\0'		95561	0		=			
+ANR	95621	ArrayIndexing	data [ 100 - 1 ]		95561	0					
+ANR	95622	Identifier	data		95561	0					
+ANR	95623	AdditiveExpression	100 - 1		95561	1		-			
+ANR	95624	PrimaryExpression	100		95561	0					
+ANR	95625	PrimaryExpression	1		95561	1					
+ANR	95626	PrimaryExpression	'\\0'		95561	1					
+ANR	95627	ExpressionStatement	free ( data )	61:4:1701:1711	95561	8	True				
+ANR	95628	CallExpression	free ( data )		95561	0					
+ANR	95629	Callee	free		95561	0					
+ANR	95630	Identifier	free		95561	0					
+ANR	95631	ArgumentList	data		95561	1					
+ANR	95632	Argument	data		95561	0					
+ANR	95633	Identifier	data		95561	0					
+ANR	95634	GotoStatement	goto sink ;	62:4:1718:1727	95561	9	True				
+ANR	95635	Identifier	sink		95561	0					
+ANR	95636	Label	sink :	63:0:1730:1734	95561	10	True				
+ANR	95637	Identifier	sink		95561	0					
+ANR	95638	ExpressionStatement		67:4:1909:1909	95561	11	True				
+ANR	95639	ReturnType	static void		95561	1					
+ANR	95640	Identifier	goodB2G		95561	2					
+ANR	95641	ParameterList			95561	3					
+ANR	95642	CFGEntryNode	ENTRY		95561		True				
+ANR	95643	CFGExitNode	EXIT		95561		True				
+ANR	95644	Symbol	malloc		95561						
+ANR	95645	Symbol	NULL		95561						
+ANR	95646	Symbol	data		95561						
+ANR	95647	Symbol	* data		95561						
+ANR	95648	Function	goodG2B	71:0:2067:2557							
+ANR	95649	FunctionDef	goodG2B ()		95648	0					
+ANR	95650	CompoundStatement		72:0:2090:2557	95648	0					
+ANR	95651	IdentifierDeclStatement	char * data ;	73:4:2097:2108	95648	0	True				
+ANR	95652	IdentifierDecl	* data		95648	0					
+ANR	95653	IdentifierDeclType	char *		95648	0					
+ANR	95654	Identifier	data		95648	1					
+ANR	95655	ExpressionStatement	data = NULL	75:4:2142:2153	95648	1	True				
+ANR	95656	AssignmentExpression	data = NULL		95648	0		=			
+ANR	95657	Identifier	data		95648	0					
+ANR	95658	Identifier	NULL		95648	1					
+ANR	95659	GotoStatement	goto source ;	76:4:2160:2171	95648	2	True				
+ANR	95660	Identifier	source		95648	0					
+ANR	95661	Label	source :	77:0:2174:2180	95648	3	True				
+ANR	95662	Identifier	source		95648	0					
+ANR	95663	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	78:4:2187:2226	95648	4	True				
+ANR	95664	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		95648	0		=			
+ANR	95665	Identifier	data		95648	0					
+ANR	95666	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		95648	1					
+ANR	95667	CastTarget	char *		95648	0					
+ANR	95668	CallExpression	malloc ( 100 * sizeof ( char ) )		95648	1					
+ANR	95669	Callee	malloc		95648	0					
+ANR	95670	Identifier	malloc		95648	0					
+ANR	95671	ArgumentList	100 * sizeof ( char )		95648	1					
+ANR	95672	Argument	100 * sizeof ( char )		95648	0					
+ANR	95673	MultiplicativeExpression	100 * sizeof ( char )		95648	0		*			
+ANR	95674	PrimaryExpression	100		95648	0					
+ANR	95675	SizeofExpression	sizeof ( char )		95648	1					
+ANR	95676	Sizeof	sizeof		95648	0					
+ANR	95677	SizeofOperand	char		95648	1					
+ANR	95678	IfStatement	if ( data == NULL )		95648	5					
+ANR	95679	Condition	data == NULL	79:8:2237:2248	95648	0	True				
+ANR	95680	EqualityExpression	data == NULL		95648	0		==			
+ANR	95681	Identifier	data		95648	0					
+ANR	95682	Identifier	NULL		95648	1					
+ANR	95683	CompoundStatement		8:22:160:160	95648	1					
+ANR	95684	ExpressionStatement	exit ( - 1 )	79:23:2252:2260	95648	0	True				
+ANR	95685	CallExpression	exit ( - 1 )		95648	0					
+ANR	95686	Callee	exit		95648	0					
+ANR	95687	Identifier	exit		95648	0					
+ANR	95688	ArgumentList	- 1		95648	1					
+ANR	95689	Argument	- 1		95648	0					
+ANR	95690	UnaryOperationExpression	- 1		95648	0					
+ANR	95691	UnaryOperator	-		95648	0					
+ANR	95692	PrimaryExpression	1		95648	1					
+ANR	95693	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	80:4:2267:2291	95648	6	True				
+ANR	95694	CallExpression	"memset ( data , 'A' , 100 - 1 )"		95648	0					
+ANR	95695	Callee	memset		95648	0					
+ANR	95696	Identifier	memset		95648	0					
+ANR	95697	ArgumentList	data		95648	1					
+ANR	95698	Argument	data		95648	0					
+ANR	95699	Identifier	data		95648	0					
+ANR	95700	Argument	'A'		95648	1					
+ANR	95701	PrimaryExpression	'A'		95648	0					
+ANR	95702	Argument	100 - 1		95648	2					
+ANR	95703	AdditiveExpression	100 - 1		95648	0		-			
+ANR	95704	PrimaryExpression	100		95648	0					
+ANR	95705	PrimaryExpression	1		95648	1					
+ANR	95706	ExpressionStatement	data [ 100 - 1 ] = '\\0'	81:4:2298:2316	95648	7	True				
+ANR	95707	AssignmentExpression	data [ 100 - 1 ] = '\\0'		95648	0		=			
+ANR	95708	ArrayIndexing	data [ 100 - 1 ]		95648	0					
+ANR	95709	Identifier	data		95648	0					
+ANR	95710	AdditiveExpression	100 - 1		95648	1		-			
+ANR	95711	PrimaryExpression	100		95648	0					
+ANR	95712	PrimaryExpression	1		95648	1					
+ANR	95713	PrimaryExpression	'\\0'		95648	1					
+ANR	95714	GotoStatement	goto sink ;	83:4:2370:2379	95648	8	True				
+ANR	95715	Identifier	sink		95648	0					
+ANR	95716	Label	sink :	84:0:2382:2386	95648	9	True				
+ANR	95717	Identifier	sink		95648	0					
+ANR	95718	ExpressionStatement	printLine ( data )	86:4:2457:2472	95648	10	True				
+ANR	95719	CallExpression	printLine ( data )		95648	0					
+ANR	95720	Callee	printLine		95648	0					
+ANR	95721	Identifier	printLine		95648	0					
+ANR	95722	ArgumentList	data		95648	1					
+ANR	95723	Argument	data		95648	0					
+ANR	95724	Identifier	data		95648	0					
+ANR	95725	ReturnType	static void		95648	1					
+ANR	95726	Identifier	goodG2B		95648	2					
+ANR	95727	ParameterList			95648	3					
+ANR	95728	CFGEntryNode	ENTRY		95648		True				
+ANR	95729	CFGExitNode	EXIT		95648		True				
+ANR	95730	Symbol	malloc		95648						
+ANR	95731	Symbol	NULL		95648						
+ANR	95732	Symbol	data		95648						
+ANR	95733	Symbol	* data		95648						
+ANR	95734	Function	CWE416_Use_After_Free__malloc_free_char_18_good	90:0:2562:2653							
+ANR	95735	FunctionDef	CWE416_Use_After_Free__malloc_free_char_18_good ()		95734	0					
+ANR	95736	CompoundStatement		91:0:2618:2653	95734	0					
+ANR	95737	ExpressionStatement	goodB2G ( )	92:4:2625:2634	95734	0	True				
+ANR	95738	CallExpression	goodB2G ( )		95734	0					
+ANR	95739	Callee	goodB2G		95734	0					
+ANR	95740	Identifier	goodB2G		95734	0					
+ANR	95741	ArgumentList			95734	1					
+ANR	95742	ExpressionStatement	goodG2B ( )	93:4:2641:2650	95734	1	True				
+ANR	95743	CallExpression	goodG2B ( )		95734	0					
+ANR	95744	Callee	goodG2B		95734	0					
+ANR	95745	Identifier	goodG2B		95734	0					
+ANR	95746	ArgumentList			95734	1					
+ANR	95747	ReturnType	void		95734	1					
+ANR	95748	Identifier	CWE416_Use_After_Free__malloc_free_char_18_good		95734	2					
+ANR	95749	ParameterList			95734	3					
+ANR	95750	CFGEntryNode	ENTRY		95734		True				
+ANR	95751	CFGExitNode	EXIT		95734		True				
+ANR	95752	Function	main	105:0:3000:3449							
+ANR	95753	FunctionDef	"main (int argc , char * argv [ ])"		95752	0					
+ANR	95754	CompoundStatement		106:0:3035:3449	95752	0					
+ANR	95755	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	108:4:3069:3098	95752	0	True				
+ANR	95756	CallExpression	srand ( ( unsigned ) time ( NULL ) )		95752	0					
+ANR	95757	Callee	srand		95752	0					
+ANR	95758	Identifier	srand		95752	0					
+ANR	95759	ArgumentList	( unsigned ) time ( NULL )		95752	1					
+ANR	95760	Argument	( unsigned ) time ( NULL )		95752	0					
+ANR	95761	CastExpression	( unsigned ) time ( NULL )		95752	0					
+ANR	95762	CastTarget	unsigned		95752	0					
+ANR	95763	CallExpression	time ( NULL )		95752	1					
+ANR	95764	Callee	time		95752	0					
+ANR	95765	Identifier	time		95752	0					
+ANR	95766	ArgumentList	NULL		95752	1					
+ANR	95767	Argument	NULL		95752	0					
+ANR	95768	Identifier	NULL		95752	0					
+ANR	95769	ExpressionStatement	"printLine ( ""Calling good()..."" )"	110:4:3123:3153	95752	1	True				
+ANR	95770	CallExpression	"printLine ( ""Calling good()..."" )"		95752	0					
+ANR	95771	Callee	printLine		95752	0					
+ANR	95772	Identifier	printLine		95752	0					
+ANR	95773	ArgumentList	"""Calling good()..."""		95752	1					
+ANR	95774	Argument	"""Calling good()..."""		95752	0					
+ANR	95775	PrimaryExpression	"""Calling good()..."""		95752	0					
+ANR	95776	ExpressionStatement	CWE416_Use_After_Free__malloc_free_char_18_good ( )	111:4:3160:3209	95752	2	True				
+ANR	95777	CallExpression	CWE416_Use_After_Free__malloc_free_char_18_good ( )		95752	0					
+ANR	95778	Callee	CWE416_Use_After_Free__malloc_free_char_18_good		95752	0					
+ANR	95779	Identifier	CWE416_Use_After_Free__malloc_free_char_18_good		95752	0					
+ANR	95780	ArgumentList			95752	1					
+ANR	95781	ExpressionStatement	"printLine ( ""Finished good()"" )"	112:4:3216:3244	95752	3	True				
+ANR	95782	CallExpression	"printLine ( ""Finished good()"" )"		95752	0					
+ANR	95783	Callee	printLine		95752	0					
+ANR	95784	Identifier	printLine		95752	0					
+ANR	95785	ArgumentList	"""Finished good()"""		95752	1					
+ANR	95786	Argument	"""Finished good()"""		95752	0					
+ANR	95787	PrimaryExpression	"""Finished good()"""		95752	0					
+ANR	95788	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	115:4:3291:3320	95752	4	True				
+ANR	95789	CallExpression	"printLine ( ""Calling bad()..."" )"		95752	0					
+ANR	95790	Callee	printLine		95752	0					
+ANR	95791	Identifier	printLine		95752	0					
+ANR	95792	ArgumentList	"""Calling bad()..."""		95752	1					
+ANR	95793	Argument	"""Calling bad()..."""		95752	0					
+ANR	95794	PrimaryExpression	"""Calling bad()..."""		95752	0					
+ANR	95795	ExpressionStatement	CWE416_Use_After_Free__malloc_free_char_18_bad ( )	116:4:3327:3375	95752	5	True				
+ANR	95796	CallExpression	CWE416_Use_After_Free__malloc_free_char_18_bad ( )		95752	0					
+ANR	95797	Callee	CWE416_Use_After_Free__malloc_free_char_18_bad		95752	0					
+ANR	95798	Identifier	CWE416_Use_After_Free__malloc_free_char_18_bad		95752	0					
+ANR	95799	ArgumentList			95752	1					
+ANR	95800	ExpressionStatement	"printLine ( ""Finished bad()"" )"	117:4:3382:3409	95752	6	True				
+ANR	95801	CallExpression	"printLine ( ""Finished bad()"" )"		95752	0					
+ANR	95802	Callee	printLine		95752	0					
+ANR	95803	Identifier	printLine		95752	0					
+ANR	95804	ArgumentList	"""Finished bad()"""		95752	1					
+ANR	95805	Argument	"""Finished bad()"""		95752	0					
+ANR	95806	PrimaryExpression	"""Finished bad()"""		95752	0					
+ANR	95807	ReturnStatement	return 0 ;	119:4:3438:3446	95752	7	True				
+ANR	95808	PrimaryExpression	0		95752	0					
+ANR	95809	ReturnType	int		95752	1					
+ANR	95810	Identifier	main		95752	2					
+ANR	95811	ParameterList	"int argc , char * argv [ ]"		95752	3					
+ANR	95812	Parameter	int argc	105:9:3009:3016	95752	0	True				
+ANR	95813	ParameterType	int		95752	0					
+ANR	95814	Identifier	argc		95752	1					
+ANR	95815	Parameter	char * argv [ ]	105:19:3019:3031	95752	1	True				
+ANR	95816	ParameterType	char * [ ]		95752	0					
+ANR	95817	Identifier	argv		95752	1					
+ANR	95818	CFGEntryNode	ENTRY		95752		True				
+ANR	95819	CFGExitNode	EXIT		95752		True				
+ANR	95820	Symbol	argc		95752						
+ANR	95821	Symbol	NULL		95752						
+ANR	95822	Symbol	time		95752						
+ANR	95823	Symbol	argv		95752						

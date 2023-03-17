@@ -1,0 +1,518 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	132158	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-1000-c/testcases/000/234/267/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13.c								
+ANR	132159	ClassDef	_charVoid	24:8:745:851							
+ANR	132160	DeclStmt									
+ANR	132161	Decl							wchar_t	wchar_t [ 16 ]	charFirst
+ANR	132162	DeclStmt									
+ANR	132163	Decl							void	void *	voidSecond
+ANR	132164	DeclStmt									
+ANR	132165	Decl							void	void *	voidThird
+ANR	132166	DeclStmt									
+ANR	132167	Decl							_charVoid	_charVoid	charVoid
+ANR	132168	Function	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad	33:0:875:1798							
+ANR	132169	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad ()		132168	0					
+ANR	132170	CompoundStatement		34:0:954:1798	132168	0					
+ANR	132171	IfStatement	if ( GLOBAL_CONST_FIVE == 5 )		132168	0					
+ANR	132172	Condition	GLOBAL_CONST_FIVE == 5	35:7:964:983	132168	0	True				
+ANR	132173	EqualityExpression	GLOBAL_CONST_FIVE == 5		132168	0		==			
+ANR	132174	Identifier	GLOBAL_CONST_FIVE		132168	0					
+ANR	132175	PrimaryExpression	5		132168	1					
+ANR	132176	CompoundStatement		3:4:36:36	132168	1					
+ANR	132177	CompoundStatement		5:12:62:126	132168	0					
+ANR	132178	IdentifierDeclStatement	charVoid * structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) ) ;	38:12:1017:1081	132168	0	True				
+ANR	132179	IdentifierDecl	* structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) )		132168	0					
+ANR	132180	IdentifierDeclType	charVoid *		132168	0					
+ANR	132181	Identifier	structCharVoid		132168	1					
+ANR	132182	AssignmentExpression	* structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) )		132168	2		=			
+ANR	132183	Identifier	structCharVoid		132168	0					
+ANR	132184	CastExpression	( charVoid * ) malloc ( sizeof ( charVoid ) )		132168	1					
+ANR	132185	CastTarget	charVoid *		132168	0					
+ANR	132186	CallExpression	malloc ( sizeof ( charVoid ) )		132168	1					
+ANR	132187	Callee	malloc		132168	0					
+ANR	132188	Identifier	malloc		132168	0					
+ANR	132189	ArgumentList	sizeof ( charVoid )		132168	1					
+ANR	132190	Argument	sizeof ( charVoid )		132168	0					
+ANR	132191	SizeofExpression	sizeof ( charVoid )		132168	0					
+ANR	132192	Sizeof	sizeof		132168	0					
+ANR	132193	SizeofOperand	charVoid		132168	1					
+ANR	132194	IfStatement	if ( structCharVoid == NULL )		132168	1					
+ANR	132195	Condition	structCharVoid == NULL	39:16:1100:1121	132168	0	True				
+ANR	132196	EqualityExpression	structCharVoid == NULL		132168	0		==			
+ANR	132197	Identifier	structCharVoid		132168	0					
+ANR	132198	Identifier	NULL		132168	1					
+ANR	132199	CompoundStatement		6:40:169:169	132168	1					
+ANR	132200	ExpressionStatement	exit ( - 1 )	39:41:1125:1133	132168	0	True				
+ANR	132201	CallExpression	exit ( - 1 )		132168	0					
+ANR	132202	Callee	exit		132168	0					
+ANR	132203	Identifier	exit		132168	0					
+ANR	132204	ArgumentList	- 1		132168	1					
+ANR	132205	Argument	- 1		132168	0					
+ANR	132206	UnaryOperationExpression	- 1		132168	0					
+ANR	132207	UnaryOperator	-		132168	0					
+ANR	132208	PrimaryExpression	1		132168	1					
+ANR	132209	ExpressionStatement	structCharVoid -> voidSecond = ( void * ) SRC_STR	40:12:1148:1192	132168	2	True				
+ANR	132210	AssignmentExpression	structCharVoid -> voidSecond = ( void * ) SRC_STR		132168	0		=			
+ANR	132211	PtrMemberAccess	structCharVoid -> voidSecond		132168	0					
+ANR	132212	Identifier	structCharVoid		132168	0					
+ANR	132213	Identifier	voidSecond		132168	1					
+ANR	132214	CastExpression	( void * ) SRC_STR		132168	1					
+ANR	132215	CastTarget	void *		132168	0					
+ANR	132216	Identifier	SRC_STR		132168	1					
+ANR	132217	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )	42:12:1291:1340	132168	3	True				
+ANR	132218	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )		132168	0					
+ANR	132219	Callee	printWLine		132168	0					
+ANR	132220	Identifier	printWLine		132168	0					
+ANR	132221	ArgumentList	( wchar_t * ) structCharVoid -> voidSecond		132168	1					
+ANR	132222	Argument	( wchar_t * ) structCharVoid -> voidSecond		132168	0					
+ANR	132223	CastExpression	( wchar_t * ) structCharVoid -> voidSecond		132168	0					
+ANR	132224	CastTarget	wchar_t *		132168	0					
+ANR	132225	PtrMemberAccess	structCharVoid -> voidSecond		132168	1					
+ANR	132226	Identifier	structCharVoid		132168	0					
+ANR	132227	Identifier	voidSecond		132168	1					
+ANR	132228	ExpressionStatement	"memmove ( structCharVoid -> charFirst , SRC_STR , sizeof ( * structCharVoid ) )"	44:12:1447:1515	132168	4	True				
+ANR	132229	CallExpression	"memmove ( structCharVoid -> charFirst , SRC_STR , sizeof ( * structCharVoid ) )"		132168	0					
+ANR	132230	Callee	memmove		132168	0					
+ANR	132231	Identifier	memmove		132168	0					
+ANR	132232	ArgumentList	structCharVoid -> charFirst		132168	1					
+ANR	132233	Argument	structCharVoid -> charFirst		132168	0					
+ANR	132234	PtrMemberAccess	structCharVoid -> charFirst		132168	0					
+ANR	132235	Identifier	structCharVoid		132168	0					
+ANR	132236	Identifier	charFirst		132168	1					
+ANR	132237	Argument	SRC_STR		132168	1					
+ANR	132238	Identifier	SRC_STR		132168	0					
+ANR	132239	Argument	sizeof ( * structCharVoid )		132168	2					
+ANR	132240	SizeofExpression	sizeof ( * structCharVoid )		132168	0					
+ANR	132241	Sizeof	sizeof		132168	0					
+ANR	132242	UnaryOperationExpression	* structCharVoid		132168	1					
+ANR	132243	UnaryOperator	*		132168	0					
+ANR	132244	Identifier	structCharVoid		132168	1					
+ANR	132245	Statement	structCharVoid	45:12:1530:1543	132168	5	True				
+ANR	132246	Statement	->	45:26:1544:1545	132168	6	True				
+ANR	132247	Statement	charFirst	45:28:1546:1554	132168	7	True				
+ANR	132248	Statement	[	45:37:1555:1555	132168	8	True				
+ANR	132249	Statement	(	45:38:1556:1556	132168	9	True				
+ANR	132250	Statement	sizeof	45:39:1557:1562	132168	10	True				
+ANR	132251	Statement	(	45:45:1563:1563	132168	11	True				
+ANR	132252	Statement	structCharVoid	45:46:1564:1577	132168	12	True				
+ANR	132253	Statement	->	45:60:1578:1579	132168	13	True				
+ANR	132254	Statement	charFirst	45:62:1580:1588	132168	14	True				
+ANR	132255	Statement	)	45:71:1589:1589	132168	15	True				
+ANR	132256	Statement	/	45:72:1590:1590	132168	16	True				
+ANR	132257	Statement	sizeof	45:73:1591:1596	132168	17	True				
+ANR	132258	Statement	(	45:79:1597:1597	132168	18	True				
+ANR	132259	Statement	wchar_t	45:80:1598:1604	132168	19	True				
+ANR	132260	Statement	)	45:87:1605:1605	132168	20	True				
+ANR	132261	Statement	)	45:88:1606:1606	132168	21	True				
+ANR	132262	Statement	-	45:89:1607:1607	132168	22	True				
+ANR	132263	Statement	1	45:90:1608:1608	132168	23	True				
+ANR	132264	Statement	]	45:91:1609:1609	132168	24	True				
+ANR	132265	Statement	=	45:93:1611:1611	132168	25	True				
+ANR	132266	Statement	L	45:95:1613:1613	132168	26	True				
+ANR	132267	ExpressionStatement	'\\0'	45:96:1614:1618	132168	27	True				
+ANR	132268	PrimaryExpression	'\\0'		132168	0					
+ANR	132269	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> charFirst )	46:12:1665:1713	132168	28	True				
+ANR	132270	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> charFirst )		132168	0					
+ANR	132271	Callee	printWLine		132168	0					
+ANR	132272	Identifier	printWLine		132168	0					
+ANR	132273	ArgumentList	( wchar_t * ) structCharVoid -> charFirst		132168	1					
+ANR	132274	Argument	( wchar_t * ) structCharVoid -> charFirst		132168	0					
+ANR	132275	CastExpression	( wchar_t * ) structCharVoid -> charFirst		132168	0					
+ANR	132276	CastTarget	wchar_t *		132168	0					
+ANR	132277	PtrMemberAccess	structCharVoid -> charFirst		132168	1					
+ANR	132278	Identifier	structCharVoid		132168	0					
+ANR	132279	Identifier	charFirst		132168	1					
+ANR	132280	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )	47:12:1728:1777	132168	29	True				
+ANR	132281	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )		132168	0					
+ANR	132282	Callee	printWLine		132168	0					
+ANR	132283	Identifier	printWLine		132168	0					
+ANR	132284	ArgumentList	( wchar_t * ) structCharVoid -> voidSecond		132168	1					
+ANR	132285	Argument	( wchar_t * ) structCharVoid -> voidSecond		132168	0					
+ANR	132286	CastExpression	( wchar_t * ) structCharVoid -> voidSecond		132168	0					
+ANR	132287	CastTarget	wchar_t *		132168	0					
+ANR	132288	PtrMemberAccess	structCharVoid -> voidSecond		132168	1					
+ANR	132289	Identifier	structCharVoid		132168	0					
+ANR	132290	Identifier	voidSecond		132168	1					
+ANR	132291	ReturnType	void		132168	1					
+ANR	132292	Identifier	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad		132168	2					
+ANR	132293	ParameterList			132168	3					
+ANR	132294	CFGEntryNode	ENTRY		132168		True				
+ANR	132295	CFGExitNode	EXIT		132168		True				
+ANR	132296	Symbol	structCharVoid -> voidSecond		132168						
+ANR	132297	Symbol	malloc		132168						
+ANR	132298	Symbol	GLOBAL_CONST_FIVE		132168						
+ANR	132299	Symbol	NULL		132168						
+ANR	132300	Symbol	* structCharVoid		132168						
+ANR	132301	Symbol	structCharVoid		132168						
+ANR	132302	Symbol	SRC_STR		132168						
+ANR	132303	Symbol	structCharVoid -> charFirst		132168						
+ANR	132304	Function	good1	57:0:1928:2956							
+ANR	132305	FunctionDef	good1 ()		132304	0					
+ANR	132306	CompoundStatement		58:0:1949:2956	132304	0					
+ANR	132307	IfStatement	if ( GLOBAL_CONST_FIVE != 5 )		132304	0					
+ANR	132308	Condition	GLOBAL_CONST_FIVE != 5	59:7:1959:1978	132304	0	True				
+ANR	132309	EqualityExpression	GLOBAL_CONST_FIVE != 5		132304	0		!=			
+ANR	132310	Identifier	GLOBAL_CONST_FIVE		132304	0					
+ANR	132311	PrimaryExpression	5		132304	1					
+ANR	132312	CompoundStatement		3:4:36:36	132304	1					
+ANR	132313	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	62:8:2073:2106	132304	0	True				
+ANR	132314	CallExpression	"printLine ( ""Benign, fixed string"" )"		132304	0					
+ANR	132315	Callee	printLine		132304	0					
+ANR	132316	Identifier	printLine		132304	0					
+ANR	132317	ArgumentList	"""Benign, fixed string"""		132304	1					
+ANR	132318	Argument	"""Benign, fixed string"""		132304	0					
+ANR	132319	PrimaryExpression	"""Benign, fixed string"""		132304	0					
+ANR	132320	ElseStatement	else		132304	0					
+ANR	132321	CompoundStatement		8:4:180:180	132304	0					
+ANR	132322	CompoundStatement		10:12:206:270	132304	0					
+ANR	132323	IdentifierDeclStatement	charVoid * structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) ) ;	67:12:2156:2220	132304	0	True				
+ANR	132324	IdentifierDecl	* structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) )		132304	0					
+ANR	132325	IdentifierDeclType	charVoid *		132304	0					
+ANR	132326	Identifier	structCharVoid		132304	1					
+ANR	132327	AssignmentExpression	* structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) )		132304	2		=			
+ANR	132328	Identifier	structCharVoid		132304	0					
+ANR	132329	CastExpression	( charVoid * ) malloc ( sizeof ( charVoid ) )		132304	1					
+ANR	132330	CastTarget	charVoid *		132304	0					
+ANR	132331	CallExpression	malloc ( sizeof ( charVoid ) )		132304	1					
+ANR	132332	Callee	malloc		132304	0					
+ANR	132333	Identifier	malloc		132304	0					
+ANR	132334	ArgumentList	sizeof ( charVoid )		132304	1					
+ANR	132335	Argument	sizeof ( charVoid )		132304	0					
+ANR	132336	SizeofExpression	sizeof ( charVoid )		132304	0					
+ANR	132337	Sizeof	sizeof		132304	0					
+ANR	132338	SizeofOperand	charVoid		132304	1					
+ANR	132339	IfStatement	if ( structCharVoid == NULL )		132304	1					
+ANR	132340	Condition	structCharVoid == NULL	68:16:2239:2260	132304	0	True				
+ANR	132341	EqualityExpression	structCharVoid == NULL		132304	0		==			
+ANR	132342	Identifier	structCharVoid		132304	0					
+ANR	132343	Identifier	NULL		132304	1					
+ANR	132344	CompoundStatement		11:40:313:313	132304	1					
+ANR	132345	ExpressionStatement	exit ( - 1 )	68:41:2264:2272	132304	0	True				
+ANR	132346	CallExpression	exit ( - 1 )		132304	0					
+ANR	132347	Callee	exit		132304	0					
+ANR	132348	Identifier	exit		132304	0					
+ANR	132349	ArgumentList	- 1		132304	1					
+ANR	132350	Argument	- 1		132304	0					
+ANR	132351	UnaryOperationExpression	- 1		132304	0					
+ANR	132352	UnaryOperator	-		132304	0					
+ANR	132353	PrimaryExpression	1		132304	1					
+ANR	132354	ExpressionStatement	structCharVoid -> voidSecond = ( void * ) SRC_STR	69:12:2287:2331	132304	2	True				
+ANR	132355	AssignmentExpression	structCharVoid -> voidSecond = ( void * ) SRC_STR		132304	0		=			
+ANR	132356	PtrMemberAccess	structCharVoid -> voidSecond		132304	0					
+ANR	132357	Identifier	structCharVoid		132304	0					
+ANR	132358	Identifier	voidSecond		132304	1					
+ANR	132359	CastExpression	( void * ) SRC_STR		132304	1					
+ANR	132360	CastTarget	void *		132304	0					
+ANR	132361	Identifier	SRC_STR		132304	1					
+ANR	132362	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )	71:12:2430:2479	132304	3	True				
+ANR	132363	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )		132304	0					
+ANR	132364	Callee	printWLine		132304	0					
+ANR	132365	Identifier	printWLine		132304	0					
+ANR	132366	ArgumentList	( wchar_t * ) structCharVoid -> voidSecond		132304	1					
+ANR	132367	Argument	( wchar_t * ) structCharVoid -> voidSecond		132304	0					
+ANR	132368	CastExpression	( wchar_t * ) structCharVoid -> voidSecond		132304	0					
+ANR	132369	CastTarget	wchar_t *		132304	0					
+ANR	132370	PtrMemberAccess	structCharVoid -> voidSecond		132304	1					
+ANR	132371	Identifier	structCharVoid		132304	0					
+ANR	132372	Identifier	voidSecond		132304	1					
+ANR	132373	ExpressionStatement	"memmove ( structCharVoid -> charFirst , SRC_STR , sizeof ( structCharVoid -> charFirst ) )"	73:12:2595:2673	132304	4	True				
+ANR	132374	CallExpression	"memmove ( structCharVoid -> charFirst , SRC_STR , sizeof ( structCharVoid -> charFirst ) )"		132304	0					
+ANR	132375	Callee	memmove		132304	0					
+ANR	132376	Identifier	memmove		132304	0					
+ANR	132377	ArgumentList	structCharVoid -> charFirst		132304	1					
+ANR	132378	Argument	structCharVoid -> charFirst		132304	0					
+ANR	132379	PtrMemberAccess	structCharVoid -> charFirst		132304	0					
+ANR	132380	Identifier	structCharVoid		132304	0					
+ANR	132381	Identifier	charFirst		132304	1					
+ANR	132382	Argument	SRC_STR		132304	1					
+ANR	132383	Identifier	SRC_STR		132304	0					
+ANR	132384	Argument	sizeof ( structCharVoid -> charFirst )		132304	2					
+ANR	132385	SizeofExpression	sizeof ( structCharVoid -> charFirst )		132304	0					
+ANR	132386	Sizeof	sizeof		132304	0					
+ANR	132387	PtrMemberAccess	structCharVoid -> charFirst		132304	1					
+ANR	132388	Identifier	structCharVoid		132304	0					
+ANR	132389	Identifier	charFirst		132304	1					
+ANR	132390	Statement	structCharVoid	74:12:2688:2701	132304	5	True				
+ANR	132391	Statement	->	74:26:2702:2703	132304	6	True				
+ANR	132392	Statement	charFirst	74:28:2704:2712	132304	7	True				
+ANR	132393	Statement	[	74:37:2713:2713	132304	8	True				
+ANR	132394	Statement	(	74:38:2714:2714	132304	9	True				
+ANR	132395	Statement	sizeof	74:39:2715:2720	132304	10	True				
+ANR	132396	Statement	(	74:45:2721:2721	132304	11	True				
+ANR	132397	Statement	structCharVoid	74:46:2722:2735	132304	12	True				
+ANR	132398	Statement	->	74:60:2736:2737	132304	13	True				
+ANR	132399	Statement	charFirst	74:62:2738:2746	132304	14	True				
+ANR	132400	Statement	)	74:71:2747:2747	132304	15	True				
+ANR	132401	Statement	/	74:72:2748:2748	132304	16	True				
+ANR	132402	Statement	sizeof	74:73:2749:2754	132304	17	True				
+ANR	132403	Statement	(	74:79:2755:2755	132304	18	True				
+ANR	132404	Statement	wchar_t	74:80:2756:2762	132304	19	True				
+ANR	132405	Statement	)	74:87:2763:2763	132304	20	True				
+ANR	132406	Statement	)	74:88:2764:2764	132304	21	True				
+ANR	132407	Statement	-	74:89:2765:2765	132304	22	True				
+ANR	132408	Statement	1	74:90:2766:2766	132304	23	True				
+ANR	132409	Statement	]	74:91:2767:2767	132304	24	True				
+ANR	132410	Statement	=	74:93:2769:2769	132304	25	True				
+ANR	132411	Statement	L	74:95:2771:2771	132304	26	True				
+ANR	132412	ExpressionStatement	'\\0'	74:96:2772:2776	132304	27	True				
+ANR	132413	PrimaryExpression	'\\0'		132304	0					
+ANR	132414	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> charFirst )	75:12:2823:2871	132304	28	True				
+ANR	132415	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> charFirst )		132304	0					
+ANR	132416	Callee	printWLine		132304	0					
+ANR	132417	Identifier	printWLine		132304	0					
+ANR	132418	ArgumentList	( wchar_t * ) structCharVoid -> charFirst		132304	1					
+ANR	132419	Argument	( wchar_t * ) structCharVoid -> charFirst		132304	0					
+ANR	132420	CastExpression	( wchar_t * ) structCharVoid -> charFirst		132304	0					
+ANR	132421	CastTarget	wchar_t *		132304	0					
+ANR	132422	PtrMemberAccess	structCharVoid -> charFirst		132304	1					
+ANR	132423	Identifier	structCharVoid		132304	0					
+ANR	132424	Identifier	charFirst		132304	1					
+ANR	132425	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )	76:12:2886:2935	132304	29	True				
+ANR	132426	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )		132304	0					
+ANR	132427	Callee	printWLine		132304	0					
+ANR	132428	Identifier	printWLine		132304	0					
+ANR	132429	ArgumentList	( wchar_t * ) structCharVoid -> voidSecond		132304	1					
+ANR	132430	Argument	( wchar_t * ) structCharVoid -> voidSecond		132304	0					
+ANR	132431	CastExpression	( wchar_t * ) structCharVoid -> voidSecond		132304	0					
+ANR	132432	CastTarget	wchar_t *		132304	0					
+ANR	132433	PtrMemberAccess	structCharVoid -> voidSecond		132304	1					
+ANR	132434	Identifier	structCharVoid		132304	0					
+ANR	132435	Identifier	voidSecond		132304	1					
+ANR	132436	ReturnType	static void		132304	1					
+ANR	132437	Identifier	good1		132304	2					
+ANR	132438	ParameterList			132304	3					
+ANR	132439	CFGEntryNode	ENTRY		132304		True				
+ANR	132440	CFGExitNode	EXIT		132304		True				
+ANR	132441	Symbol	structCharVoid -> voidSecond		132304						
+ANR	132442	Symbol	malloc		132304						
+ANR	132443	Symbol	GLOBAL_CONST_FIVE		132304						
+ANR	132444	Symbol	NULL		132304						
+ANR	132445	Symbol	* structCharVoid		132304						
+ANR	132446	Symbol	structCharVoid		132304						
+ANR	132447	Symbol	SRC_STR		132304						
+ANR	132448	Symbol	structCharVoid -> charFirst		132304						
+ANR	132449	Function	good2	82:0:3016:3900							
+ANR	132450	FunctionDef	good2 ()		132449	0					
+ANR	132451	CompoundStatement		83:0:3037:3900	132449	0					
+ANR	132452	IfStatement	if ( GLOBAL_CONST_FIVE == 5 )		132449	0					
+ANR	132453	Condition	GLOBAL_CONST_FIVE == 5	84:7:3047:3066	132449	0	True				
+ANR	132454	EqualityExpression	GLOBAL_CONST_FIVE == 5		132449	0		==			
+ANR	132455	Identifier	GLOBAL_CONST_FIVE		132449	0					
+ANR	132456	PrimaryExpression	5		132449	1					
+ANR	132457	CompoundStatement		3:4:36:36	132449	1					
+ANR	132458	CompoundStatement		5:12:62:126	132449	0					
+ANR	132459	IdentifierDeclStatement	charVoid * structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) ) ;	87:12:3100:3164	132449	0	True				
+ANR	132460	IdentifierDecl	* structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) )		132449	0					
+ANR	132461	IdentifierDeclType	charVoid *		132449	0					
+ANR	132462	Identifier	structCharVoid		132449	1					
+ANR	132463	AssignmentExpression	* structCharVoid = ( charVoid * ) malloc ( sizeof ( charVoid ) )		132449	2		=			
+ANR	132464	Identifier	structCharVoid		132449	0					
+ANR	132465	CastExpression	( charVoid * ) malloc ( sizeof ( charVoid ) )		132449	1					
+ANR	132466	CastTarget	charVoid *		132449	0					
+ANR	132467	CallExpression	malloc ( sizeof ( charVoid ) )		132449	1					
+ANR	132468	Callee	malloc		132449	0					
+ANR	132469	Identifier	malloc		132449	0					
+ANR	132470	ArgumentList	sizeof ( charVoid )		132449	1					
+ANR	132471	Argument	sizeof ( charVoid )		132449	0					
+ANR	132472	SizeofExpression	sizeof ( charVoid )		132449	0					
+ANR	132473	Sizeof	sizeof		132449	0					
+ANR	132474	SizeofOperand	charVoid		132449	1					
+ANR	132475	IfStatement	if ( structCharVoid == NULL )		132449	1					
+ANR	132476	Condition	structCharVoid == NULL	88:16:3183:3204	132449	0	True				
+ANR	132477	EqualityExpression	structCharVoid == NULL		132449	0		==			
+ANR	132478	Identifier	structCharVoid		132449	0					
+ANR	132479	Identifier	NULL		132449	1					
+ANR	132480	CompoundStatement		6:40:169:169	132449	1					
+ANR	132481	ExpressionStatement	exit ( - 1 )	88:41:3208:3216	132449	0	True				
+ANR	132482	CallExpression	exit ( - 1 )		132449	0					
+ANR	132483	Callee	exit		132449	0					
+ANR	132484	Identifier	exit		132449	0					
+ANR	132485	ArgumentList	- 1		132449	1					
+ANR	132486	Argument	- 1		132449	0					
+ANR	132487	UnaryOperationExpression	- 1		132449	0					
+ANR	132488	UnaryOperator	-		132449	0					
+ANR	132489	PrimaryExpression	1		132449	1					
+ANR	132490	ExpressionStatement	structCharVoid -> voidSecond = ( void * ) SRC_STR	89:12:3231:3275	132449	2	True				
+ANR	132491	AssignmentExpression	structCharVoid -> voidSecond = ( void * ) SRC_STR		132449	0		=			
+ANR	132492	PtrMemberAccess	structCharVoid -> voidSecond		132449	0					
+ANR	132493	Identifier	structCharVoid		132449	0					
+ANR	132494	Identifier	voidSecond		132449	1					
+ANR	132495	CastExpression	( void * ) SRC_STR		132449	1					
+ANR	132496	CastTarget	void *		132449	0					
+ANR	132497	Identifier	SRC_STR		132449	1					
+ANR	132498	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )	91:12:3374:3423	132449	3	True				
+ANR	132499	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )		132449	0					
+ANR	132500	Callee	printWLine		132449	0					
+ANR	132501	Identifier	printWLine		132449	0					
+ANR	132502	ArgumentList	( wchar_t * ) structCharVoid -> voidSecond		132449	1					
+ANR	132503	Argument	( wchar_t * ) structCharVoid -> voidSecond		132449	0					
+ANR	132504	CastExpression	( wchar_t * ) structCharVoid -> voidSecond		132449	0					
+ANR	132505	CastTarget	wchar_t *		132449	0					
+ANR	132506	PtrMemberAccess	structCharVoid -> voidSecond		132449	1					
+ANR	132507	Identifier	structCharVoid		132449	0					
+ANR	132508	Identifier	voidSecond		132449	1					
+ANR	132509	ExpressionStatement	"memmove ( structCharVoid -> charFirst , SRC_STR , sizeof ( structCharVoid -> charFirst ) )"	93:12:3539:3617	132449	4	True				
+ANR	132510	CallExpression	"memmove ( structCharVoid -> charFirst , SRC_STR , sizeof ( structCharVoid -> charFirst ) )"		132449	0					
+ANR	132511	Callee	memmove		132449	0					
+ANR	132512	Identifier	memmove		132449	0					
+ANR	132513	ArgumentList	structCharVoid -> charFirst		132449	1					
+ANR	132514	Argument	structCharVoid -> charFirst		132449	0					
+ANR	132515	PtrMemberAccess	structCharVoid -> charFirst		132449	0					
+ANR	132516	Identifier	structCharVoid		132449	0					
+ANR	132517	Identifier	charFirst		132449	1					
+ANR	132518	Argument	SRC_STR		132449	1					
+ANR	132519	Identifier	SRC_STR		132449	0					
+ANR	132520	Argument	sizeof ( structCharVoid -> charFirst )		132449	2					
+ANR	132521	SizeofExpression	sizeof ( structCharVoid -> charFirst )		132449	0					
+ANR	132522	Sizeof	sizeof		132449	0					
+ANR	132523	PtrMemberAccess	structCharVoid -> charFirst		132449	1					
+ANR	132524	Identifier	structCharVoid		132449	0					
+ANR	132525	Identifier	charFirst		132449	1					
+ANR	132526	Statement	structCharVoid	94:12:3632:3645	132449	5	True				
+ANR	132527	Statement	->	94:26:3646:3647	132449	6	True				
+ANR	132528	Statement	charFirst	94:28:3648:3656	132449	7	True				
+ANR	132529	Statement	[	94:37:3657:3657	132449	8	True				
+ANR	132530	Statement	(	94:38:3658:3658	132449	9	True				
+ANR	132531	Statement	sizeof	94:39:3659:3664	132449	10	True				
+ANR	132532	Statement	(	94:45:3665:3665	132449	11	True				
+ANR	132533	Statement	structCharVoid	94:46:3666:3679	132449	12	True				
+ANR	132534	Statement	->	94:60:3680:3681	132449	13	True				
+ANR	132535	Statement	charFirst	94:62:3682:3690	132449	14	True				
+ANR	132536	Statement	)	94:71:3691:3691	132449	15	True				
+ANR	132537	Statement	/	94:72:3692:3692	132449	16	True				
+ANR	132538	Statement	sizeof	94:73:3693:3698	132449	17	True				
+ANR	132539	Statement	(	94:79:3699:3699	132449	18	True				
+ANR	132540	Statement	wchar_t	94:80:3700:3706	132449	19	True				
+ANR	132541	Statement	)	94:87:3707:3707	132449	20	True				
+ANR	132542	Statement	)	94:88:3708:3708	132449	21	True				
+ANR	132543	Statement	-	94:89:3709:3709	132449	22	True				
+ANR	132544	Statement	1	94:90:3710:3710	132449	23	True				
+ANR	132545	Statement	]	94:91:3711:3711	132449	24	True				
+ANR	132546	Statement	=	94:93:3713:3713	132449	25	True				
+ANR	132547	Statement	L	94:95:3715:3715	132449	26	True				
+ANR	132548	ExpressionStatement	'\\0'	94:96:3716:3720	132449	27	True				
+ANR	132549	PrimaryExpression	'\\0'		132449	0					
+ANR	132550	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> charFirst )	95:12:3767:3815	132449	28	True				
+ANR	132551	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> charFirst )		132449	0					
+ANR	132552	Callee	printWLine		132449	0					
+ANR	132553	Identifier	printWLine		132449	0					
+ANR	132554	ArgumentList	( wchar_t * ) structCharVoid -> charFirst		132449	1					
+ANR	132555	Argument	( wchar_t * ) structCharVoid -> charFirst		132449	0					
+ANR	132556	CastExpression	( wchar_t * ) structCharVoid -> charFirst		132449	0					
+ANR	132557	CastTarget	wchar_t *		132449	0					
+ANR	132558	PtrMemberAccess	structCharVoid -> charFirst		132449	1					
+ANR	132559	Identifier	structCharVoid		132449	0					
+ANR	132560	Identifier	charFirst		132449	1					
+ANR	132561	ExpressionStatement	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )	96:12:3830:3879	132449	29	True				
+ANR	132562	CallExpression	printWLine ( ( wchar_t * ) structCharVoid -> voidSecond )		132449	0					
+ANR	132563	Callee	printWLine		132449	0					
+ANR	132564	Identifier	printWLine		132449	0					
+ANR	132565	ArgumentList	( wchar_t * ) structCharVoid -> voidSecond		132449	1					
+ANR	132566	Argument	( wchar_t * ) structCharVoid -> voidSecond		132449	0					
+ANR	132567	CastExpression	( wchar_t * ) structCharVoid -> voidSecond		132449	0					
+ANR	132568	CastTarget	wchar_t *		132449	0					
+ANR	132569	PtrMemberAccess	structCharVoid -> voidSecond		132449	1					
+ANR	132570	Identifier	structCharVoid		132449	0					
+ANR	132571	Identifier	voidSecond		132449	1					
+ANR	132572	ReturnType	static void		132449	1					
+ANR	132573	Identifier	good2		132449	2					
+ANR	132574	ParameterList			132449	3					
+ANR	132575	CFGEntryNode	ENTRY		132449		True				
+ANR	132576	CFGExitNode	EXIT		132449		True				
+ANR	132577	Symbol	structCharVoid -> voidSecond		132449						
+ANR	132578	Symbol	malloc		132449						
+ANR	132579	Symbol	GLOBAL_CONST_FIVE		132449						
+ANR	132580	Symbol	NULL		132449						
+ANR	132581	Symbol	* structCharVoid		132449						
+ANR	132582	Symbol	structCharVoid		132449						
+ANR	132583	Symbol	SRC_STR		132449						
+ANR	132584	Symbol	structCharVoid -> charFirst		132449						
+ANR	132585	Function	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good	101:0:3905:4016							
+ANR	132586	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good ()		132585	0					
+ANR	132587	CompoundStatement		102:0:3985:4016	132585	0					
+ANR	132588	ExpressionStatement	good1 ( )	103:4:3992:3999	132585	0	True				
+ANR	132589	CallExpression	good1 ( )		132585	0					
+ANR	132590	Callee	good1		132585	0					
+ANR	132591	Identifier	good1		132585	0					
+ANR	132592	ArgumentList			132585	1					
+ANR	132593	ExpressionStatement	good2 ( )	104:4:4006:4013	132585	1	True				
+ANR	132594	CallExpression	good2 ( )		132585	0					
+ANR	132595	Callee	good2		132585	0					
+ANR	132596	Identifier	good2		132585	0					
+ANR	132597	ArgumentList			132585	1					
+ANR	132598	ReturnType	void		132585	1					
+ANR	132599	Identifier	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good		132585	2					
+ANR	132600	ParameterList			132585	3					
+ANR	132601	CFGEntryNode	ENTRY		132585		True				
+ANR	132602	CFGExitNode	EXIT		132585		True				
+ANR	132603	Function	main	116:0:4363:4860							
+ANR	132604	FunctionDef	"main (int argc , char * argv [ ])"		132603	0					
+ANR	132605	CompoundStatement		117:0:4398:4860	132603	0					
+ANR	132606	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	119:4:4432:4461	132603	0	True				
+ANR	132607	CallExpression	srand ( ( unsigned ) time ( NULL ) )		132603	0					
+ANR	132608	Callee	srand		132603	0					
+ANR	132609	Identifier	srand		132603	0					
+ANR	132610	ArgumentList	( unsigned ) time ( NULL )		132603	1					
+ANR	132611	Argument	( unsigned ) time ( NULL )		132603	0					
+ANR	132612	CastExpression	( unsigned ) time ( NULL )		132603	0					
+ANR	132613	CastTarget	unsigned		132603	0					
+ANR	132614	CallExpression	time ( NULL )		132603	1					
+ANR	132615	Callee	time		132603	0					
+ANR	132616	Identifier	time		132603	0					
+ANR	132617	ArgumentList	NULL		132603	1					
+ANR	132618	Argument	NULL		132603	0					
+ANR	132619	Identifier	NULL		132603	0					
+ANR	132620	ExpressionStatement	"printLine ( ""Calling good()..."" )"	121:4:4486:4516	132603	1	True				
+ANR	132621	CallExpression	"printLine ( ""Calling good()..."" )"		132603	0					
+ANR	132622	Callee	printLine		132603	0					
+ANR	132623	Identifier	printLine		132603	0					
+ANR	132624	ArgumentList	"""Calling good()..."""		132603	1					
+ANR	132625	Argument	"""Calling good()..."""		132603	0					
+ANR	132626	PrimaryExpression	"""Calling good()..."""		132603	0					
+ANR	132627	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good ( )	122:4:4523:4596	132603	2	True				
+ANR	132628	CallExpression	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good ( )		132603	0					
+ANR	132629	Callee	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good		132603	0					
+ANR	132630	Identifier	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_good		132603	0					
+ANR	132631	ArgumentList			132603	1					
+ANR	132632	ExpressionStatement	"printLine ( ""Finished good()"" )"	123:4:4603:4631	132603	3	True				
+ANR	132633	CallExpression	"printLine ( ""Finished good()"" )"		132603	0					
+ANR	132634	Callee	printLine		132603	0					
+ANR	132635	Identifier	printLine		132603	0					
+ANR	132636	ArgumentList	"""Finished good()"""		132603	1					
+ANR	132637	Argument	"""Finished good()"""		132603	0					
+ANR	132638	PrimaryExpression	"""Finished good()"""		132603	0					
+ANR	132639	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	126:4:4678:4707	132603	4	True				
+ANR	132640	CallExpression	"printLine ( ""Calling bad()..."" )"		132603	0					
+ANR	132641	Callee	printLine		132603	0					
+ANR	132642	Identifier	printLine		132603	0					
+ANR	132643	ArgumentList	"""Calling bad()..."""		132603	1					
+ANR	132644	Argument	"""Calling bad()..."""		132603	0					
+ANR	132645	PrimaryExpression	"""Calling bad()..."""		132603	0					
+ANR	132646	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad ( )	127:4:4714:4786	132603	5	True				
+ANR	132647	CallExpression	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad ( )		132603	0					
+ANR	132648	Callee	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad		132603	0					
+ANR	132649	Identifier	CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad		132603	0					
+ANR	132650	ArgumentList			132603	1					
+ANR	132651	ExpressionStatement	"printLine ( ""Finished bad()"" )"	128:4:4793:4820	132603	6	True				
+ANR	132652	CallExpression	"printLine ( ""Finished bad()"" )"		132603	0					
+ANR	132653	Callee	printLine		132603	0					
+ANR	132654	Identifier	printLine		132603	0					
+ANR	132655	ArgumentList	"""Finished bad()"""		132603	1					
+ANR	132656	Argument	"""Finished bad()"""		132603	0					
+ANR	132657	PrimaryExpression	"""Finished bad()"""		132603	0					
+ANR	132658	ReturnStatement	return 0 ;	130:4:4849:4857	132603	7	True				
+ANR	132659	PrimaryExpression	0		132603	0					
+ANR	132660	ReturnType	int		132603	1					
+ANR	132661	Identifier	main		132603	2					
+ANR	132662	ParameterList	"int argc , char * argv [ ]"		132603	3					
+ANR	132663	Parameter	int argc	116:9:4372:4379	132603	0	True				
+ANR	132664	ParameterType	int		132603	0					
+ANR	132665	Identifier	argc		132603	1					
+ANR	132666	Parameter	char * argv [ ]	116:19:4382:4394	132603	1	True				
+ANR	132667	ParameterType	char * [ ]		132603	0					
+ANR	132668	Identifier	argv		132603	1					
+ANR	132669	CFGEntryNode	ENTRY		132603		True				
+ANR	132670	CFGExitNode	EXIT		132603		True				
+ANR	132671	Symbol	argc		132603						
+ANR	132672	Symbol	NULL		132603						
+ANR	132673	Symbol	time		132603						
+ANR	132674	Symbol	argv		132603						

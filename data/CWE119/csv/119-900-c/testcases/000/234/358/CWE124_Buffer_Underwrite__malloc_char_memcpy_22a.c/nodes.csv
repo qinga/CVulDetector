@@ -1,0 +1,383 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	818494	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-900-c/testcases/000/234/358/CWE124_Buffer_Underwrite__malloc_char_memcpy_22a.c								
+ANR	818495	DeclStmt									
+ANR	818496	Decl							int	int	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badGlobal
+ANR	818497	DeclStmt									
+ANR	818498	Decl							char	char * ( char * data )	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource
+ANR	818499	Function	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad	28:0:919:1733							
+ANR	818500	FunctionDef	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad ()		818499	0					
+ANR	818501	CompoundStatement		29:0:979:1733	818499	0					
+ANR	818502	IdentifierDeclStatement	char * data ;	30:4:986:997	818499	0	True				
+ANR	818503	IdentifierDecl	* data		818499	0					
+ANR	818504	IdentifierDeclType	char *		818499	0					
+ANR	818505	Identifier	data		818499	1					
+ANR	818506	ExpressionStatement	data = NULL	31:4:1004:1015	818499	1	True				
+ANR	818507	AssignmentExpression	data = NULL		818499	0		=			
+ANR	818508	Identifier	data		818499	0					
+ANR	818509	Identifier	NULL		818499	1					
+ANR	818510	ExpressionStatement	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badGlobal = 1	32:4:1022:1083	818499	2	True				
+ANR	818511	AssignmentExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badGlobal = 1		818499	0		=			
+ANR	818512	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badGlobal		818499	0					
+ANR	818513	PrimaryExpression	1		818499	1					
+ANR	818514	ExpressionStatement	data = CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource ( data )	33:4:1101:1171	818499	3	True				
+ANR	818515	AssignmentExpression	data = CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource ( data )		818499	0		=			
+ANR	818516	Identifier	data		818499	0					
+ANR	818517	CallExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource ( data )		818499	1					
+ANR	818518	Callee	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource		818499	0					
+ANR	818519	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource		818499	0					
+ANR	818520	ArgumentList	data		818499	1					
+ANR	818521	Argument	data		818499	0					
+ANR	818522	Identifier	data		818499	0					
+ANR	818523	CompoundStatement		7:8:209:225	818499	4					
+ANR	818524	IdentifierDeclStatement	char source [ 100 ] ;	35:8:1189:1205	818499	0	True				
+ANR	818525	IdentifierDecl	source [ 100 ]		818499	0					
+ANR	818526	IdentifierDeclType	char [ 100 ]		818499	0					
+ANR	818527	Identifier	source		818499	1					
+ANR	818528	PrimaryExpression	100		818499	2					
+ANR	818529	ExpressionStatement	"memset ( source , 'C' , 100 - 1 )"	36:8:1216:1242	818499	1	True				
+ANR	818530	CallExpression	"memset ( source , 'C' , 100 - 1 )"		818499	0					
+ANR	818531	Callee	memset		818499	0					
+ANR	818532	Identifier	memset		818499	0					
+ANR	818533	ArgumentList	source		818499	1					
+ANR	818534	Argument	source		818499	0					
+ANR	818535	Identifier	source		818499	0					
+ANR	818536	Argument	'C'		818499	1					
+ANR	818537	PrimaryExpression	'C'		818499	0					
+ANR	818538	Argument	100 - 1		818499	2					
+ANR	818539	AdditiveExpression	100 - 1		818499	0		-			
+ANR	818540	PrimaryExpression	100		818499	0					
+ANR	818541	PrimaryExpression	1		818499	1					
+ANR	818542	ExpressionStatement	source [ 100 - 1 ] = '\\0'	37:8:1274:1294	818499	2	True				
+ANR	818543	AssignmentExpression	source [ 100 - 1 ] = '\\0'		818499	0		=			
+ANR	818544	ArrayIndexing	source [ 100 - 1 ]		818499	0					
+ANR	818545	Identifier	source		818499	0					
+ANR	818546	AdditiveExpression	100 - 1		818499	1		-			
+ANR	818547	PrimaryExpression	100		818499	0					
+ANR	818548	PrimaryExpression	1		818499	1					
+ANR	818549	PrimaryExpression	'\\0'		818499	1					
+ANR	818550	ExpressionStatement	"memcpy ( data , source , 100 * sizeof ( char ) )"	39:8:1419:1457	818499	3	True				
+ANR	818551	CallExpression	"memcpy ( data , source , 100 * sizeof ( char ) )"		818499	0					
+ANR	818552	Callee	memcpy		818499	0					
+ANR	818553	Identifier	memcpy		818499	0					
+ANR	818554	ArgumentList	data		818499	1					
+ANR	818555	Argument	data		818499	0					
+ANR	818556	Identifier	data		818499	0					
+ANR	818557	Argument	source		818499	1					
+ANR	818558	Identifier	source		818499	0					
+ANR	818559	Argument	100 * sizeof ( char )		818499	2					
+ANR	818560	MultiplicativeExpression	100 * sizeof ( char )		818499	0		*			
+ANR	818561	PrimaryExpression	100		818499	0					
+ANR	818562	SizeofExpression	sizeof ( char )		818499	1					
+ANR	818563	Sizeof	sizeof		818499	0					
+ANR	818564	SizeofOperand	char		818499	1					
+ANR	818565	ExpressionStatement	data [ 100 - 1 ] = '\\0'	41:8:1532:1550	818499	4	True				
+ANR	818566	AssignmentExpression	data [ 100 - 1 ] = '\\0'		818499	0		=			
+ANR	818567	ArrayIndexing	data [ 100 - 1 ]		818499	0					
+ANR	818568	Identifier	data		818499	0					
+ANR	818569	AdditiveExpression	100 - 1		818499	1		-			
+ANR	818570	PrimaryExpression	100		818499	0					
+ANR	818571	PrimaryExpression	1		818499	1					
+ANR	818572	PrimaryExpression	'\\0'		818499	1					
+ANR	818573	ExpressionStatement	printLine ( data )	42:8:1561:1576	818499	5	True				
+ANR	818574	CallExpression	printLine ( data )		818499	0					
+ANR	818575	Callee	printLine		818499	0					
+ANR	818576	Identifier	printLine		818499	0					
+ANR	818577	ArgumentList	data		818499	1					
+ANR	818578	Argument	data		818499	0					
+ANR	818579	Identifier	data		818499	0					
+ANR	818580	ReturnType	void		818499	1					
+ANR	818581	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad		818499	2					
+ANR	818582	ParameterList			818499	3					
+ANR	818583	CFGEntryNode	ENTRY		818499		True				
+ANR	818584	CFGExitNode	EXIT		818499		True				
+ANR	818585	Symbol	NULL		818499						
+ANR	818586	Symbol	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badGlobal		818499						
+ANR	818587	Symbol	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_badSource		818499						
+ANR	818588	Symbol	data		818499						
+ANR	818589	Symbol	* source		818499						
+ANR	818590	Symbol	source		818499						
+ANR	818591	Symbol	* data		818499						
+ANR	818592	DeclStmt									
+ANR	818593	Decl							int	int	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Global
+ANR	818594	DeclStmt									
+ANR	818595	Decl							int	int	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Global
+ANR	818596	DeclStmt									
+ANR	818597	Decl							char	char * ( char * data )	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source
+ANR	818598	Function	goodG2B1	59:0:2210:2999							
+ANR	818599	FunctionDef	goodG2B1 ()		818598	0					
+ANR	818600	CompoundStatement		60:0:2234:2999	818598	0					
+ANR	818601	IdentifierDeclStatement	char * data ;	61:4:2241:2252	818598	0	True				
+ANR	818602	IdentifierDecl	* data		818598	0					
+ANR	818603	IdentifierDeclType	char *		818598	0					
+ANR	818604	Identifier	data		818598	1					
+ANR	818605	ExpressionStatement	data = NULL	62:4:2259:2270	818598	1	True				
+ANR	818606	AssignmentExpression	data = NULL		818598	0		=			
+ANR	818607	Identifier	data		818598	0					
+ANR	818608	Identifier	NULL		818598	1					
+ANR	818609	ExpressionStatement	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Global = 0	63:4:2277:2343	818598	2	True				
+ANR	818610	AssignmentExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Global = 0		818598	0		=			
+ANR	818611	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Global		818598	0					
+ANR	818612	PrimaryExpression	0		818598	1					
+ANR	818613	ExpressionStatement	data = CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source ( data )	64:4:2362:2437	818598	3	True				
+ANR	818614	AssignmentExpression	data = CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source ( data )		818598	0		=			
+ANR	818615	Identifier	data		818598	0					
+ANR	818616	CallExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source ( data )		818598	1					
+ANR	818617	Callee	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source		818598	0					
+ANR	818618	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source		818598	0					
+ANR	818619	ArgumentList	data		818598	1					
+ANR	818620	Argument	data		818598	0					
+ANR	818621	Identifier	data		818598	0					
+ANR	818622	CompoundStatement		7:8:220:236	818598	4					
+ANR	818623	IdentifierDeclStatement	char source [ 100 ] ;	66:8:2455:2471	818598	0	True				
+ANR	818624	IdentifierDecl	source [ 100 ]		818598	0					
+ANR	818625	IdentifierDeclType	char [ 100 ]		818598	0					
+ANR	818626	Identifier	source		818598	1					
+ANR	818627	PrimaryExpression	100		818598	2					
+ANR	818628	ExpressionStatement	"memset ( source , 'C' , 100 - 1 )"	67:8:2482:2508	818598	1	True				
+ANR	818629	CallExpression	"memset ( source , 'C' , 100 - 1 )"		818598	0					
+ANR	818630	Callee	memset		818598	0					
+ANR	818631	Identifier	memset		818598	0					
+ANR	818632	ArgumentList	source		818598	1					
+ANR	818633	Argument	source		818598	0					
+ANR	818634	Identifier	source		818598	0					
+ANR	818635	Argument	'C'		818598	1					
+ANR	818636	PrimaryExpression	'C'		818598	0					
+ANR	818637	Argument	100 - 1		818598	2					
+ANR	818638	AdditiveExpression	100 - 1		818598	0		-			
+ANR	818639	PrimaryExpression	100		818598	0					
+ANR	818640	PrimaryExpression	1		818598	1					
+ANR	818641	ExpressionStatement	source [ 100 - 1 ] = '\\0'	68:8:2540:2560	818598	2	True				
+ANR	818642	AssignmentExpression	source [ 100 - 1 ] = '\\0'		818598	0		=			
+ANR	818643	ArrayIndexing	source [ 100 - 1 ]		818598	0					
+ANR	818644	Identifier	source		818598	0					
+ANR	818645	AdditiveExpression	100 - 1		818598	1		-			
+ANR	818646	PrimaryExpression	100		818598	0					
+ANR	818647	PrimaryExpression	1		818598	1					
+ANR	818648	PrimaryExpression	'\\0'		818598	1					
+ANR	818649	ExpressionStatement	"memcpy ( data , source , 100 * sizeof ( char ) )"	70:8:2685:2723	818598	3	True				
+ANR	818650	CallExpression	"memcpy ( data , source , 100 * sizeof ( char ) )"		818598	0					
+ANR	818651	Callee	memcpy		818598	0					
+ANR	818652	Identifier	memcpy		818598	0					
+ANR	818653	ArgumentList	data		818598	1					
+ANR	818654	Argument	data		818598	0					
+ANR	818655	Identifier	data		818598	0					
+ANR	818656	Argument	source		818598	1					
+ANR	818657	Identifier	source		818598	0					
+ANR	818658	Argument	100 * sizeof ( char )		818598	2					
+ANR	818659	MultiplicativeExpression	100 * sizeof ( char )		818598	0		*			
+ANR	818660	PrimaryExpression	100		818598	0					
+ANR	818661	SizeofExpression	sizeof ( char )		818598	1					
+ANR	818662	Sizeof	sizeof		818598	0					
+ANR	818663	SizeofOperand	char		818598	1					
+ANR	818664	ExpressionStatement	data [ 100 - 1 ] = '\\0'	72:8:2798:2816	818598	4	True				
+ANR	818665	AssignmentExpression	data [ 100 - 1 ] = '\\0'		818598	0		=			
+ANR	818666	ArrayIndexing	data [ 100 - 1 ]		818598	0					
+ANR	818667	Identifier	data		818598	0					
+ANR	818668	AdditiveExpression	100 - 1		818598	1		-			
+ANR	818669	PrimaryExpression	100		818598	0					
+ANR	818670	PrimaryExpression	1		818598	1					
+ANR	818671	PrimaryExpression	'\\0'		818598	1					
+ANR	818672	ExpressionStatement	printLine ( data )	73:8:2827:2842	818598	5	True				
+ANR	818673	CallExpression	printLine ( data )		818598	0					
+ANR	818674	Callee	printLine		818598	0					
+ANR	818675	Identifier	printLine		818598	0					
+ANR	818676	ArgumentList	data		818598	1					
+ANR	818677	Argument	data		818598	0					
+ANR	818678	Identifier	data		818598	0					
+ANR	818679	ReturnType	static void		818598	1					
+ANR	818680	Identifier	goodG2B1		818598	2					
+ANR	818681	ParameterList			818598	3					
+ANR	818682	CFGEntryNode	ENTRY		818598		True				
+ANR	818683	CFGExitNode	EXIT		818598		True				
+ANR	818684	Symbol	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Global		818598						
+ANR	818685	Symbol	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B1Source		818598						
+ANR	818686	Symbol	NULL		818598						
+ANR	818687	Symbol	data		818598						
+ANR	818688	Symbol	* source		818598						
+ANR	818689	Symbol	source		818598						
+ANR	818690	Symbol	* data		818598						
+ANR	818691	DeclStmt									
+ANR	818692	Decl							char	char * ( char * data )	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source
+ANR	818693	Function	goodG2B2	82:0:3195:3983							
+ANR	818694	FunctionDef	goodG2B2 ()		818693	0					
+ANR	818695	CompoundStatement		83:0:3219:3983	818693	0					
+ANR	818696	IdentifierDeclStatement	char * data ;	84:4:3226:3237	818693	0	True				
+ANR	818697	IdentifierDecl	* data		818693	0					
+ANR	818698	IdentifierDeclType	char *		818693	0					
+ANR	818699	Identifier	data		818693	1					
+ANR	818700	ExpressionStatement	data = NULL	85:4:3244:3255	818693	1	True				
+ANR	818701	AssignmentExpression	data = NULL		818693	0		=			
+ANR	818702	Identifier	data		818693	0					
+ANR	818703	Identifier	NULL		818693	1					
+ANR	818704	ExpressionStatement	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Global = 1	86:4:3262:3328	818693	2	True				
+ANR	818705	AssignmentExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Global = 1		818693	0		=			
+ANR	818706	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Global		818693	0					
+ANR	818707	PrimaryExpression	1		818693	1					
+ANR	818708	ExpressionStatement	data = CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source ( data )	87:4:3346:3421	818693	3	True				
+ANR	818709	AssignmentExpression	data = CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source ( data )		818693	0		=			
+ANR	818710	Identifier	data		818693	0					
+ANR	818711	CallExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source ( data )		818693	1					
+ANR	818712	Callee	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source		818693	0					
+ANR	818713	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source		818693	0					
+ANR	818714	ArgumentList	data		818693	1					
+ANR	818715	Argument	data		818693	0					
+ANR	818716	Identifier	data		818693	0					
+ANR	818717	CompoundStatement		7:8:219:235	818693	4					
+ANR	818718	IdentifierDeclStatement	char source [ 100 ] ;	89:8:3439:3455	818693	0	True				
+ANR	818719	IdentifierDecl	source [ 100 ]		818693	0					
+ANR	818720	IdentifierDeclType	char [ 100 ]		818693	0					
+ANR	818721	Identifier	source		818693	1					
+ANR	818722	PrimaryExpression	100		818693	2					
+ANR	818723	ExpressionStatement	"memset ( source , 'C' , 100 - 1 )"	90:8:3466:3492	818693	1	True				
+ANR	818724	CallExpression	"memset ( source , 'C' , 100 - 1 )"		818693	0					
+ANR	818725	Callee	memset		818693	0					
+ANR	818726	Identifier	memset		818693	0					
+ANR	818727	ArgumentList	source		818693	1					
+ANR	818728	Argument	source		818693	0					
+ANR	818729	Identifier	source		818693	0					
+ANR	818730	Argument	'C'		818693	1					
+ANR	818731	PrimaryExpression	'C'		818693	0					
+ANR	818732	Argument	100 - 1		818693	2					
+ANR	818733	AdditiveExpression	100 - 1		818693	0		-			
+ANR	818734	PrimaryExpression	100		818693	0					
+ANR	818735	PrimaryExpression	1		818693	1					
+ANR	818736	ExpressionStatement	source [ 100 - 1 ] = '\\0'	91:8:3524:3544	818693	2	True				
+ANR	818737	AssignmentExpression	source [ 100 - 1 ] = '\\0'		818693	0		=			
+ANR	818738	ArrayIndexing	source [ 100 - 1 ]		818693	0					
+ANR	818739	Identifier	source		818693	0					
+ANR	818740	AdditiveExpression	100 - 1		818693	1		-			
+ANR	818741	PrimaryExpression	100		818693	0					
+ANR	818742	PrimaryExpression	1		818693	1					
+ANR	818743	PrimaryExpression	'\\0'		818693	1					
+ANR	818744	ExpressionStatement	"memcpy ( data , source , 100 * sizeof ( char ) )"	93:8:3669:3707	818693	3	True				
+ANR	818745	CallExpression	"memcpy ( data , source , 100 * sizeof ( char ) )"		818693	0					
+ANR	818746	Callee	memcpy		818693	0					
+ANR	818747	Identifier	memcpy		818693	0					
+ANR	818748	ArgumentList	data		818693	1					
+ANR	818749	Argument	data		818693	0					
+ANR	818750	Identifier	data		818693	0					
+ANR	818751	Argument	source		818693	1					
+ANR	818752	Identifier	source		818693	0					
+ANR	818753	Argument	100 * sizeof ( char )		818693	2					
+ANR	818754	MultiplicativeExpression	100 * sizeof ( char )		818693	0		*			
+ANR	818755	PrimaryExpression	100		818693	0					
+ANR	818756	SizeofExpression	sizeof ( char )		818693	1					
+ANR	818757	Sizeof	sizeof		818693	0					
+ANR	818758	SizeofOperand	char		818693	1					
+ANR	818759	ExpressionStatement	data [ 100 - 1 ] = '\\0'	95:8:3782:3800	818693	4	True				
+ANR	818760	AssignmentExpression	data [ 100 - 1 ] = '\\0'		818693	0		=			
+ANR	818761	ArrayIndexing	data [ 100 - 1 ]		818693	0					
+ANR	818762	Identifier	data		818693	0					
+ANR	818763	AdditiveExpression	100 - 1		818693	1		-			
+ANR	818764	PrimaryExpression	100		818693	0					
+ANR	818765	PrimaryExpression	1		818693	1					
+ANR	818766	PrimaryExpression	'\\0'		818693	1					
+ANR	818767	ExpressionStatement	printLine ( data )	96:8:3811:3826	818693	5	True				
+ANR	818768	CallExpression	printLine ( data )		818693	0					
+ANR	818769	Callee	printLine		818693	0					
+ANR	818770	Identifier	printLine		818693	0					
+ANR	818771	ArgumentList	data		818693	1					
+ANR	818772	Argument	data		818693	0					
+ANR	818773	Identifier	data		818693	0					
+ANR	818774	ReturnType	static void		818693	1					
+ANR	818775	Identifier	goodG2B2		818693	2					
+ANR	818776	ParameterList			818693	3					
+ANR	818777	CFGEntryNode	ENTRY		818693		True				
+ANR	818778	CFGExitNode	EXIT		818693		True				
+ANR	818779	Symbol	NULL		818693						
+ANR	818780	Symbol	data		818693						
+ANR	818781	Symbol	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Global		818693						
+ANR	818782	Symbol	* source		818693						
+ANR	818783	Symbol	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_goodG2B2Source		818693						
+ANR	818784	Symbol	source		818693						
+ANR	818785	Symbol	* data		818693						
+ANR	818786	Function	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good	102:0:3988:4086							
+ANR	818787	FunctionDef	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good ()		818786	0					
+ANR	818788	CompoundStatement		103:0:4049:4086	818786	0					
+ANR	818789	ExpressionStatement	goodG2B1 ( )	104:4:4056:4066	818786	0	True				
+ANR	818790	CallExpression	goodG2B1 ( )		818786	0					
+ANR	818791	Callee	goodG2B1		818786	0					
+ANR	818792	Identifier	goodG2B1		818786	0					
+ANR	818793	ArgumentList			818786	1					
+ANR	818794	ExpressionStatement	goodG2B2 ( )	105:4:4073:4083	818786	1	True				
+ANR	818795	CallExpression	goodG2B2 ( )		818786	0					
+ANR	818796	Callee	goodG2B2		818786	0					
+ANR	818797	Identifier	goodG2B2		818786	0					
+ANR	818798	ArgumentList			818786	1					
+ANR	818799	ReturnType	void		818786	1					
+ANR	818800	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good		818786	2					
+ANR	818801	ParameterList			818786	3					
+ANR	818802	CFGEntryNode	ENTRY		818786		True				
+ANR	818803	CFGExitNode	EXIT		818786		True				
+ANR	818804	Function	main	118:0:4435:4894							
+ANR	818805	FunctionDef	"main (int argc , char * argv [ ])"		818804	0					
+ANR	818806	CompoundStatement		119:0:4470:4894	818804	0					
+ANR	818807	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	121:4:4504:4533	818804	0	True				
+ANR	818808	CallExpression	srand ( ( unsigned ) time ( NULL ) )		818804	0					
+ANR	818809	Callee	srand		818804	0					
+ANR	818810	Identifier	srand		818804	0					
+ANR	818811	ArgumentList	( unsigned ) time ( NULL )		818804	1					
+ANR	818812	Argument	( unsigned ) time ( NULL )		818804	0					
+ANR	818813	CastExpression	( unsigned ) time ( NULL )		818804	0					
+ANR	818814	CastTarget	unsigned		818804	0					
+ANR	818815	CallExpression	time ( NULL )		818804	1					
+ANR	818816	Callee	time		818804	0					
+ANR	818817	Identifier	time		818804	0					
+ANR	818818	ArgumentList	NULL		818804	1					
+ANR	818819	Argument	NULL		818804	0					
+ANR	818820	Identifier	NULL		818804	0					
+ANR	818821	ExpressionStatement	"printLine ( ""Calling good()..."" )"	123:4:4558:4588	818804	1	True				
+ANR	818822	CallExpression	"printLine ( ""Calling good()..."" )"		818804	0					
+ANR	818823	Callee	printLine		818804	0					
+ANR	818824	Identifier	printLine		818804	0					
+ANR	818825	ArgumentList	"""Calling good()..."""		818804	1					
+ANR	818826	Argument	"""Calling good()..."""		818804	0					
+ANR	818827	PrimaryExpression	"""Calling good()..."""		818804	0					
+ANR	818828	ExpressionStatement	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good ( )	124:4:4595:4649	818804	2	True				
+ANR	818829	CallExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good ( )		818804	0					
+ANR	818830	Callee	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good		818804	0					
+ANR	818831	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_good		818804	0					
+ANR	818832	ArgumentList			818804	1					
+ANR	818833	ExpressionStatement	"printLine ( ""Finished good()"" )"	125:4:4656:4684	818804	3	True				
+ANR	818834	CallExpression	"printLine ( ""Finished good()"" )"		818804	0					
+ANR	818835	Callee	printLine		818804	0					
+ANR	818836	Identifier	printLine		818804	0					
+ANR	818837	ArgumentList	"""Finished good()"""		818804	1					
+ANR	818838	Argument	"""Finished good()"""		818804	0					
+ANR	818839	PrimaryExpression	"""Finished good()"""		818804	0					
+ANR	818840	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	128:4:4731:4760	818804	4	True				
+ANR	818841	CallExpression	"printLine ( ""Calling bad()..."" )"		818804	0					
+ANR	818842	Callee	printLine		818804	0					
+ANR	818843	Identifier	printLine		818804	0					
+ANR	818844	ArgumentList	"""Calling bad()..."""		818804	1					
+ANR	818845	Argument	"""Calling bad()..."""		818804	0					
+ANR	818846	PrimaryExpression	"""Calling bad()..."""		818804	0					
+ANR	818847	ExpressionStatement	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad ( )	129:4:4767:4820	818804	5	True				
+ANR	818848	CallExpression	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad ( )		818804	0					
+ANR	818849	Callee	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad		818804	0					
+ANR	818850	Identifier	CWE124_Buffer_Underwrite__malloc_char_memcpy_22_bad		818804	0					
+ANR	818851	ArgumentList			818804	1					
+ANR	818852	ExpressionStatement	"printLine ( ""Finished bad()"" )"	130:4:4827:4854	818804	6	True				
+ANR	818853	CallExpression	"printLine ( ""Finished bad()"" )"		818804	0					
+ANR	818854	Callee	printLine		818804	0					
+ANR	818855	Identifier	printLine		818804	0					
+ANR	818856	ArgumentList	"""Finished bad()"""		818804	1					
+ANR	818857	Argument	"""Finished bad()"""		818804	0					
+ANR	818858	PrimaryExpression	"""Finished bad()"""		818804	0					
+ANR	818859	ReturnStatement	return 0 ;	132:4:4883:4891	818804	7	True				
+ANR	818860	PrimaryExpression	0		818804	0					
+ANR	818861	ReturnType	int		818804	1					
+ANR	818862	Identifier	main		818804	2					
+ANR	818863	ParameterList	"int argc , char * argv [ ]"		818804	3					
+ANR	818864	Parameter	int argc	118:9:4444:4451	818804	0	True				
+ANR	818865	ParameterType	int		818804	0					
+ANR	818866	Identifier	argc		818804	1					
+ANR	818867	Parameter	char * argv [ ]	118:19:4454:4466	818804	1	True				
+ANR	818868	ParameterType	char * [ ]		818804	0					
+ANR	818869	Identifier	argv		818804	1					
+ANR	818870	CFGEntryNode	ENTRY		818804		True				
+ANR	818871	CFGExitNode	EXIT		818804		True				
+ANR	818872	Symbol	argc		818804						
+ANR	818873	Symbol	NULL		818804						
+ANR	818874	Symbol	time		818804						
+ANR	818875	Symbol	argv		818804						

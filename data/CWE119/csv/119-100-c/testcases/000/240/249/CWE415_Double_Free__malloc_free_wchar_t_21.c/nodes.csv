@@ -1,0 +1,463 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	82884	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-100-c/testcases/000/240/249/CWE415_Double_Free__malloc_free_wchar_t_21.c								
+ANR	82885	DeclStmt									
+ANR	82886	Decl							int	int	badStatic
+ANR	82887	Function	badSink	27:0:779:934							
+ANR	82888	FunctionDef	badSink (wchar_t * data)		82887	0					
+ANR	82889	CompoundStatement		28:0:816:934	82887	0					
+ANR	82890	IfStatement	if ( badStatic )		82887	0					
+ANR	82891	Condition	badStatic	29:7:826:834	82887	0	True				
+ANR	82892	Identifier	badStatic		82887	0					
+ANR	82893	CompoundStatement		3:4:25:25	82887	1					
+ANR	82894	ExpressionStatement	free ( data )	32:8:914:924	82887	0	True				
+ANR	82895	CallExpression	free ( data )		82887	0					
+ANR	82896	Callee	free		82887	0					
+ANR	82897	Identifier	free		82887	0					
+ANR	82898	ArgumentList	data		82887	1					
+ANR	82899	Argument	data		82887	0					
+ANR	82900	Identifier	data		82887	0					
+ANR	82901	ReturnType	static void		82887	1					
+ANR	82902	Identifier	badSink		82887	2					
+ANR	82903	ParameterList	wchar_t * data		82887	3					
+ANR	82904	Parameter	wchar_t * data	27:20:799:812	82887	0	True				
+ANR	82905	ParameterType	wchar_t *		82887	0					
+ANR	82906	Identifier	data		82887	1					
+ANR	82907	CFGEntryNode	ENTRY		82887		True				
+ANR	82908	CFGExitNode	EXIT		82887		True				
+ANR	82909	Symbol	data		82887						
+ANR	82910	Symbol	badStatic		82887						
+ANR	82911	Function	CWE415_Double_Free__malloc_free_wchar_t_21_bad	36:0:939:1302							
+ANR	82912	FunctionDef	CWE415_Double_Free__malloc_free_wchar_t_21_bad ()		82911	0					
+ANR	82913	CompoundStatement		37:0:994:1302	82911	0					
+ANR	82914	IdentifierDeclStatement	wchar_t * data ;	38:4:1001:1015	82911	0	True				
+ANR	82915	IdentifierDecl	* data		82911	0					
+ANR	82916	IdentifierDeclType	wchar_t *		82911	0					
+ANR	82917	Identifier	data		82911	1					
+ANR	82918	ExpressionStatement	data = NULL	40:4:1049:1060	82911	1	True				
+ANR	82919	AssignmentExpression	data = NULL		82911	0		=			
+ANR	82920	Identifier	data		82911	0					
+ANR	82921	Identifier	NULL		82911	1					
+ANR	82922	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	41:4:1067:1112	82911	2	True				
+ANR	82923	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		82911	0		=			
+ANR	82924	Identifier	data		82911	0					
+ANR	82925	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		82911	1					
+ANR	82926	CastTarget	wchar_t *		82911	0					
+ANR	82927	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		82911	1					
+ANR	82928	Callee	malloc		82911	0					
+ANR	82929	Identifier	malloc		82911	0					
+ANR	82930	ArgumentList	100 * sizeof ( wchar_t )		82911	1					
+ANR	82931	Argument	100 * sizeof ( wchar_t )		82911	0					
+ANR	82932	MultiplicativeExpression	100 * sizeof ( wchar_t )		82911	0		*			
+ANR	82933	PrimaryExpression	100		82911	0					
+ANR	82934	SizeofExpression	sizeof ( wchar_t )		82911	1					
+ANR	82935	Sizeof	sizeof		82911	0					
+ANR	82936	SizeofOperand	wchar_t		82911	1					
+ANR	82937	IfStatement	if ( data == NULL )		82911	3					
+ANR	82938	Condition	data == NULL	42:8:1123:1134	82911	0	True				
+ANR	82939	EqualityExpression	data == NULL		82911	0		==			
+ANR	82940	Identifier	data		82911	0					
+ANR	82941	Identifier	NULL		82911	1					
+ANR	82942	CompoundStatement		6:22:142:142	82911	1					
+ANR	82943	ExpressionStatement	exit ( - 1 )	42:23:1138:1146	82911	0	True				
+ANR	82944	CallExpression	exit ( - 1 )		82911	0					
+ANR	82945	Callee	exit		82911	0					
+ANR	82946	Identifier	exit		82911	0					
+ANR	82947	ArgumentList	- 1		82911	1					
+ANR	82948	Argument	- 1		82911	0					
+ANR	82949	UnaryOperationExpression	- 1		82911	0					
+ANR	82950	UnaryOperator	-		82911	0					
+ANR	82951	PrimaryExpression	1		82911	1					
+ANR	82952	ExpressionStatement	free ( data )	44:4:1238:1248	82911	4	True				
+ANR	82953	CallExpression	free ( data )		82911	0					
+ANR	82954	Callee	free		82911	0					
+ANR	82955	Identifier	free		82911	0					
+ANR	82956	ArgumentList	data		82911	1					
+ANR	82957	Argument	data		82911	0					
+ANR	82958	Identifier	data		82911	0					
+ANR	82959	ExpressionStatement	badStatic = 1	45:4:1255:1268	82911	5	True				
+ANR	82960	AssignmentExpression	badStatic = 1		82911	0		=			
+ANR	82961	Identifier	badStatic		82911	0					
+ANR	82962	PrimaryExpression	1		82911	1					
+ANR	82963	ExpressionStatement	badSink ( data )	46:4:1286:1299	82911	6	True				
+ANR	82964	CallExpression	badSink ( data )		82911	0					
+ANR	82965	Callee	badSink		82911	0					
+ANR	82966	Identifier	badSink		82911	0					
+ANR	82967	ArgumentList	data		82911	1					
+ANR	82968	Argument	data		82911	0					
+ANR	82969	Identifier	data		82911	0					
+ANR	82970	ReturnType	void		82911	1					
+ANR	82971	Identifier	CWE415_Double_Free__malloc_free_wchar_t_21_bad		82911	2					
+ANR	82972	ParameterList			82911	3					
+ANR	82973	CFGEntryNode	ENTRY		82911		True				
+ANR	82974	CFGExitNode	EXIT		82911		True				
+ANR	82975	Symbol	malloc		82911						
+ANR	82976	Symbol	NULL		82911						
+ANR	82977	Symbol	data		82911						
+ANR	82978	Symbol	badStatic		82911						
+ANR	82979	DeclStmt									
+ANR	82980	Decl							int	int	goodB2G1Static
+ANR	82981	DeclStmt									
+ANR	82982	Decl							int	int	goodB2G2Static
+ANR	82983	DeclStmt									
+ANR	82984	Decl							int	int	goodG2BStatic
+ANR	82985	Function	goodB2G1Sink	59:0:1639:2008							
+ANR	82986	FunctionDef	goodB2G1Sink (wchar_t * data)		82985	0					
+ANR	82987	CompoundStatement		60:0:1681:2008	82985	0					
+ANR	82988	IfStatement	if ( goodB2G1Static )		82985	0					
+ANR	82989	Condition	goodB2G1Static	61:7:1691:1704	82985	0	True				
+ANR	82990	Identifier	goodB2G1Static		82985	0					
+ANR	82991	CompoundStatement		3:4:30:30	82985	1					
+ANR	82992	ExpressionStatement	"printLine ( ""Benign, fixed string"" )"	64:8:1799:1832	82985	0	True				
+ANR	82993	CallExpression	"printLine ( ""Benign, fixed string"" )"		82985	0					
+ANR	82994	Callee	printLine		82985	0					
+ANR	82995	Identifier	printLine		82985	0					
+ANR	82996	ArgumentList	"""Benign, fixed string"""		82985	1					
+ANR	82997	Argument	"""Benign, fixed string"""		82985	0					
+ANR	82998	PrimaryExpression	"""Benign, fixed string"""		82985	0					
+ANR	82999	ElseStatement	else		82985	0					
+ANR	83000	CompoundStatement		8:4:174:174	82985	0					
+ANR	83001	ExpressionStatement		70:8:1946:1946	82985	0	True				
+ANR	83002	ReturnType	static void		82985	1					
+ANR	83003	Identifier	goodB2G1Sink		82985	2					
+ANR	83004	ParameterList	wchar_t * data		82985	3					
+ANR	83005	Parameter	wchar_t * data	59:25:1664:1677	82985	0	True				
+ANR	83006	ParameterType	wchar_t *		82985	0					
+ANR	83007	Identifier	data		82985	1					
+ANR	83008	CFGEntryNode	ENTRY		82985		True				
+ANR	83009	CFGExitNode	EXIT		82985		True				
+ANR	83010	Symbol	data		82985						
+ANR	83011	Symbol	goodB2G1Static		82985						
+ANR	83012	Function	goodB2G1	74:0:2013:2356							
+ANR	83013	FunctionDef	goodB2G1 ()		83012	0					
+ANR	83014	CompoundStatement		75:0:2037:2356	83012	0					
+ANR	83015	IdentifierDeclStatement	wchar_t * data ;	76:4:2044:2058	83012	0	True				
+ANR	83016	IdentifierDecl	* data		83012	0					
+ANR	83017	IdentifierDeclType	wchar_t *		83012	0					
+ANR	83018	Identifier	data		83012	1					
+ANR	83019	ExpressionStatement	data = NULL	78:4:2092:2103	83012	1	True				
+ANR	83020	AssignmentExpression	data = NULL		83012	0		=			
+ANR	83021	Identifier	data		83012	0					
+ANR	83022	Identifier	NULL		83012	1					
+ANR	83023	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	79:4:2110:2155	83012	2	True				
+ANR	83024	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		83012	0		=			
+ANR	83025	Identifier	data		83012	0					
+ANR	83026	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		83012	1					
+ANR	83027	CastTarget	wchar_t *		83012	0					
+ANR	83028	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		83012	1					
+ANR	83029	Callee	malloc		83012	0					
+ANR	83030	Identifier	malloc		83012	0					
+ANR	83031	ArgumentList	100 * sizeof ( wchar_t )		83012	1					
+ANR	83032	Argument	100 * sizeof ( wchar_t )		83012	0					
+ANR	83033	MultiplicativeExpression	100 * sizeof ( wchar_t )		83012	0		*			
+ANR	83034	PrimaryExpression	100		83012	0					
+ANR	83035	SizeofExpression	sizeof ( wchar_t )		83012	1					
+ANR	83036	Sizeof	sizeof		83012	0					
+ANR	83037	SizeofOperand	wchar_t		83012	1					
+ANR	83038	IfStatement	if ( data == NULL )		83012	3					
+ANR	83039	Condition	data == NULL	80:8:2166:2177	83012	0	True				
+ANR	83040	EqualityExpression	data == NULL		83012	0		==			
+ANR	83041	Identifier	data		83012	0					
+ANR	83042	Identifier	NULL		83012	1					
+ANR	83043	CompoundStatement		6:22:142:142	83012	1					
+ANR	83044	ExpressionStatement	exit ( - 1 )	80:23:2181:2189	83012	0	True				
+ANR	83045	CallExpression	exit ( - 1 )		83012	0					
+ANR	83046	Callee	exit		83012	0					
+ANR	83047	Identifier	exit		83012	0					
+ANR	83048	ArgumentList	- 1		83012	1					
+ANR	83049	Argument	- 1		83012	0					
+ANR	83050	UnaryOperationExpression	- 1		83012	0					
+ANR	83051	UnaryOperator	-		83012	0					
+ANR	83052	PrimaryExpression	1		83012	1					
+ANR	83053	ExpressionStatement	free ( data )	82:4:2281:2291	83012	4	True				
+ANR	83054	CallExpression	free ( data )		83012	0					
+ANR	83055	Callee	free		83012	0					
+ANR	83056	Identifier	free		83012	0					
+ANR	83057	ArgumentList	data		83012	1					
+ANR	83058	Argument	data		83012	0					
+ANR	83059	Identifier	data		83012	0					
+ANR	83060	ExpressionStatement	goodB2G1Static = 0	83:4:2298:2316	83012	5	True				
+ANR	83061	AssignmentExpression	goodB2G1Static = 0		83012	0		=			
+ANR	83062	Identifier	goodB2G1Static		83012	0					
+ANR	83063	PrimaryExpression	0		83012	1					
+ANR	83064	ExpressionStatement	goodB2G1Sink ( data )	84:4:2335:2353	83012	6	True				
+ANR	83065	CallExpression	goodB2G1Sink ( data )		83012	0					
+ANR	83066	Callee	goodB2G1Sink		83012	0					
+ANR	83067	Identifier	goodB2G1Sink		83012	0					
+ANR	83068	ArgumentList	data		83012	1					
+ANR	83069	Argument	data		83012	0					
+ANR	83070	Identifier	data		83012	0					
+ANR	83071	ReturnType	static void		83012	1					
+ANR	83072	Identifier	goodB2G1		83012	2					
+ANR	83073	ParameterList			83012	3					
+ANR	83074	CFGEntryNode	ENTRY		83012		True				
+ANR	83075	CFGExitNode	EXIT		83012		True				
+ANR	83076	Symbol	malloc		83012						
+ANR	83077	Symbol	NULL		83012						
+ANR	83078	Symbol	data		83012						
+ANR	83079	Symbol	goodB2G1Static		83012						
+ANR	83080	Function	goodB2G2Sink	88:0:2463:2688							
+ANR	83081	FunctionDef	goodB2G2Sink (wchar_t * data)		83080	0					
+ANR	83082	CompoundStatement		89:0:2505:2688	83080	0					
+ANR	83083	IfStatement	if ( goodB2G2Static )		83080	0					
+ANR	83084	Condition	goodB2G2Static	90:7:2515:2528	83080	0	True				
+ANR	83085	Identifier	goodB2G2Static		83080	0					
+ANR	83086	CompoundStatement		3:4:30:30	83080	1					
+ANR	83087	ExpressionStatement		94:8:2626:2626	83080	0	True				
+ANR	83088	ReturnType	static void		83080	1					
+ANR	83089	Identifier	goodB2G2Sink		83080	2					
+ANR	83090	ParameterList	wchar_t * data		83080	3					
+ANR	83091	Parameter	wchar_t * data	88:25:2488:2501	83080	0	True				
+ANR	83092	ParameterType	wchar_t *		83080	0					
+ANR	83093	Identifier	data		83080	1					
+ANR	83094	CFGEntryNode	ENTRY		83080		True				
+ANR	83095	CFGExitNode	EXIT		83080		True				
+ANR	83096	Symbol	data		83080						
+ANR	83097	Symbol	goodB2G2Static		83080						
+ANR	83098	Function	goodB2G2	98:0:2693:3035							
+ANR	83099	FunctionDef	goodB2G2 ()		83098	0					
+ANR	83100	CompoundStatement		99:0:2717:3035	83098	0					
+ANR	83101	IdentifierDeclStatement	wchar_t * data ;	100:4:2724:2738	83098	0	True				
+ANR	83102	IdentifierDecl	* data		83098	0					
+ANR	83103	IdentifierDeclType	wchar_t *		83098	0					
+ANR	83104	Identifier	data		83098	1					
+ANR	83105	ExpressionStatement	data = NULL	102:4:2772:2783	83098	1	True				
+ANR	83106	AssignmentExpression	data = NULL		83098	0		=			
+ANR	83107	Identifier	data		83098	0					
+ANR	83108	Identifier	NULL		83098	1					
+ANR	83109	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	103:4:2790:2835	83098	2	True				
+ANR	83110	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		83098	0		=			
+ANR	83111	Identifier	data		83098	0					
+ANR	83112	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		83098	1					
+ANR	83113	CastTarget	wchar_t *		83098	0					
+ANR	83114	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		83098	1					
+ANR	83115	Callee	malloc		83098	0					
+ANR	83116	Identifier	malloc		83098	0					
+ANR	83117	ArgumentList	100 * sizeof ( wchar_t )		83098	1					
+ANR	83118	Argument	100 * sizeof ( wchar_t )		83098	0					
+ANR	83119	MultiplicativeExpression	100 * sizeof ( wchar_t )		83098	0		*			
+ANR	83120	PrimaryExpression	100		83098	0					
+ANR	83121	SizeofExpression	sizeof ( wchar_t )		83098	1					
+ANR	83122	Sizeof	sizeof		83098	0					
+ANR	83123	SizeofOperand	wchar_t		83098	1					
+ANR	83124	IfStatement	if ( data == NULL )		83098	3					
+ANR	83125	Condition	data == NULL	104:8:2846:2857	83098	0	True				
+ANR	83126	EqualityExpression	data == NULL		83098	0		==			
+ANR	83127	Identifier	data		83098	0					
+ANR	83128	Identifier	NULL		83098	1					
+ANR	83129	CompoundStatement		6:22:142:142	83098	1					
+ANR	83130	ExpressionStatement	exit ( - 1 )	104:23:2861:2869	83098	0	True				
+ANR	83131	CallExpression	exit ( - 1 )		83098	0					
+ANR	83132	Callee	exit		83098	0					
+ANR	83133	Identifier	exit		83098	0					
+ANR	83134	ArgumentList	- 1		83098	1					
+ANR	83135	Argument	- 1		83098	0					
+ANR	83136	UnaryOperationExpression	- 1		83098	0					
+ANR	83137	UnaryOperator	-		83098	0					
+ANR	83138	PrimaryExpression	1		83098	1					
+ANR	83139	ExpressionStatement	free ( data )	106:4:2961:2971	83098	4	True				
+ANR	83140	CallExpression	free ( data )		83098	0					
+ANR	83141	Callee	free		83098	0					
+ANR	83142	Identifier	free		83098	0					
+ANR	83143	ArgumentList	data		83098	1					
+ANR	83144	Argument	data		83098	0					
+ANR	83145	Identifier	data		83098	0					
+ANR	83146	ExpressionStatement	goodB2G2Static = 1	107:4:2978:2996	83098	5	True				
+ANR	83147	AssignmentExpression	goodB2G2Static = 1		83098	0		=			
+ANR	83148	Identifier	goodB2G2Static		83098	0					
+ANR	83149	PrimaryExpression	1		83098	1					
+ANR	83150	ExpressionStatement	goodB2G2Sink ( data )	108:4:3014:3032	83098	6	True				
+ANR	83151	CallExpression	goodB2G2Sink ( data )		83098	0					
+ANR	83152	Callee	goodB2G2Sink		83098	0					
+ANR	83153	Identifier	goodB2G2Sink		83098	0					
+ANR	83154	ArgumentList	data		83098	1					
+ANR	83155	Argument	data		83098	0					
+ANR	83156	Identifier	data		83098	0					
+ANR	83157	ReturnType	static void		83098	1					
+ANR	83158	Identifier	goodB2G2		83098	2					
+ANR	83159	ParameterList			83098	3					
+ANR	83160	CFGEntryNode	ENTRY		83098		True				
+ANR	83161	CFGExitNode	EXIT		83098		True				
+ANR	83162	Symbol	malloc		83098						
+ANR	83163	Symbol	NULL		83098						
+ANR	83164	Symbol	data		83098						
+ANR	83165	Symbol	goodB2G2Static		83098						
+ANR	83166	Function	goodG2BSink	112:0:3086:3249							
+ANR	83167	FunctionDef	goodG2BSink (wchar_t * data)		83166	0					
+ANR	83168	CompoundStatement		113:0:3127:3249	83166	0					
+ANR	83169	IfStatement	if ( goodG2BStatic )		83166	0					
+ANR	83170	Condition	goodG2BStatic	114:7:3137:3149	83166	0	True				
+ANR	83171	Identifier	goodG2BStatic		83166	0					
+ANR	83172	CompoundStatement		3:4:29:29	83166	1					
+ANR	83173	ExpressionStatement	free ( data )	117:8:3229:3239	83166	0	True				
+ANR	83174	CallExpression	free ( data )		83166	0					
+ANR	83175	Callee	free		83166	0					
+ANR	83176	Identifier	free		83166	0					
+ANR	83177	ArgumentList	data		83166	1					
+ANR	83178	Argument	data		83166	0					
+ANR	83179	Identifier	data		83166	0					
+ANR	83180	ReturnType	static void		83166	1					
+ANR	83181	Identifier	goodG2BSink		83166	2					
+ANR	83182	ParameterList	wchar_t * data		83166	3					
+ANR	83183	Parameter	wchar_t * data	112:24:3110:3123	83166	0	True				
+ANR	83184	ParameterType	wchar_t *		83166	0					
+ANR	83185	Identifier	data		83166	1					
+ANR	83186	CFGEntryNode	ENTRY		83166		True				
+ANR	83187	CFGExitNode	EXIT		83166		True				
+ANR	83188	Symbol	goodG2BStatic		83166						
+ANR	83189	Symbol	data		83166						
+ANR	83190	Function	goodG2B	121:0:3254:3564							
+ANR	83191	FunctionDef	goodG2B ()		83190	0					
+ANR	83192	CompoundStatement		122:0:3277:3564	83190	0					
+ANR	83193	IdentifierDeclStatement	wchar_t * data ;	123:4:3284:3298	83190	0	True				
+ANR	83194	IdentifierDecl	* data		83190	0					
+ANR	83195	IdentifierDeclType	wchar_t *		83190	0					
+ANR	83196	Identifier	data		83190	1					
+ANR	83197	ExpressionStatement	data = NULL	125:4:3332:3343	83190	1	True				
+ANR	83198	AssignmentExpression	data = NULL		83190	0		=			
+ANR	83199	Identifier	data		83190	0					
+ANR	83200	Identifier	NULL		83190	1					
+ANR	83201	ExpressionStatement	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )	126:4:3350:3395	83190	2	True				
+ANR	83202	AssignmentExpression	data = ( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		83190	0		=			
+ANR	83203	Identifier	data		83190	0					
+ANR	83204	CastExpression	( wchar_t * ) malloc ( 100 * sizeof ( wchar_t ) )		83190	1					
+ANR	83205	CastTarget	wchar_t *		83190	0					
+ANR	83206	CallExpression	malloc ( 100 * sizeof ( wchar_t ) )		83190	1					
+ANR	83207	Callee	malloc		83190	0					
+ANR	83208	Identifier	malloc		83190	0					
+ANR	83209	ArgumentList	100 * sizeof ( wchar_t )		83190	1					
+ANR	83210	Argument	100 * sizeof ( wchar_t )		83190	0					
+ANR	83211	MultiplicativeExpression	100 * sizeof ( wchar_t )		83190	0		*			
+ANR	83212	PrimaryExpression	100		83190	0					
+ANR	83213	SizeofExpression	sizeof ( wchar_t )		83190	1					
+ANR	83214	Sizeof	sizeof		83190	0					
+ANR	83215	SizeofOperand	wchar_t		83190	1					
+ANR	83216	IfStatement	if ( data == NULL )		83190	3					
+ANR	83217	Condition	data == NULL	127:8:3406:3417	83190	0	True				
+ANR	83218	EqualityExpression	data == NULL		83190	0		==			
+ANR	83219	Identifier	data		83190	0					
+ANR	83220	Identifier	NULL		83190	1					
+ANR	83221	CompoundStatement		6:22:142:142	83190	1					
+ANR	83222	ExpressionStatement	exit ( - 1 )	127:23:3421:3429	83190	0	True				
+ANR	83223	CallExpression	exit ( - 1 )		83190	0					
+ANR	83224	Callee	exit		83190	0					
+ANR	83225	Identifier	exit		83190	0					
+ANR	83226	ArgumentList	- 1		83190	1					
+ANR	83227	Argument	- 1		83190	0					
+ANR	83228	UnaryOperationExpression	- 1		83190	0					
+ANR	83229	UnaryOperator	-		83190	0					
+ANR	83230	PrimaryExpression	1		83190	1					
+ANR	83231	ExpressionStatement	goodG2BStatic = 1	129:4:3509:3526	83190	4	True				
+ANR	83232	AssignmentExpression	goodG2BStatic = 1		83190	0		=			
+ANR	83233	Identifier	goodG2BStatic		83190	0					
+ANR	83234	PrimaryExpression	1		83190	1					
+ANR	83235	ExpressionStatement	goodG2BSink ( data )	130:4:3544:3561	83190	5	True				
+ANR	83236	CallExpression	goodG2BSink ( data )		83190	0					
+ANR	83237	Callee	goodG2BSink		83190	0					
+ANR	83238	Identifier	goodG2BSink		83190	0					
+ANR	83239	ArgumentList	data		83190	1					
+ANR	83240	Argument	data		83190	0					
+ANR	83241	Identifier	data		83190	0					
+ANR	83242	ReturnType	static void		83190	1					
+ANR	83243	Identifier	goodG2B		83190	2					
+ANR	83244	ParameterList			83190	3					
+ANR	83245	CFGEntryNode	ENTRY		83190		True				
+ANR	83246	CFGExitNode	EXIT		83190		True				
+ANR	83247	Symbol	malloc		83190						
+ANR	83248	Symbol	NULL		83190						
+ANR	83249	Symbol	goodG2BStatic		83190						
+ANR	83250	Symbol	data		83190						
+ANR	83251	Function	CWE415_Double_Free__malloc_free_wchar_t_21_good	133:0:3569:3678							
+ANR	83252	FunctionDef	CWE415_Double_Free__malloc_free_wchar_t_21_good ()		83251	0					
+ANR	83253	CompoundStatement		134:0:3625:3678	83251	0					
+ANR	83254	ExpressionStatement	goodB2G1 ( )	135:4:3632:3642	83251	0	True				
+ANR	83255	CallExpression	goodB2G1 ( )		83251	0					
+ANR	83256	Callee	goodB2G1		83251	0					
+ANR	83257	Identifier	goodB2G1		83251	0					
+ANR	83258	ArgumentList			83251	1					
+ANR	83259	ExpressionStatement	goodB2G2 ( )	136:4:3649:3659	83251	1	True				
+ANR	83260	CallExpression	goodB2G2 ( )		83251	0					
+ANR	83261	Callee	goodB2G2		83251	0					
+ANR	83262	Identifier	goodB2G2		83251	0					
+ANR	83263	ArgumentList			83251	1					
+ANR	83264	ExpressionStatement	goodG2B ( )	137:4:3666:3675	83251	2	True				
+ANR	83265	CallExpression	goodG2B ( )		83251	0					
+ANR	83266	Callee	goodG2B		83251	0					
+ANR	83267	Identifier	goodG2B		83251	0					
+ANR	83268	ArgumentList			83251	1					
+ANR	83269	ReturnType	void		83251	1					
+ANR	83270	Identifier	CWE415_Double_Free__malloc_free_wchar_t_21_good		83251	2					
+ANR	83271	ParameterList			83251	3					
+ANR	83272	CFGEntryNode	ENTRY		83251		True				
+ANR	83273	CFGExitNode	EXIT		83251		True				
+ANR	83274	Function	main	149:0:4025:4474							
+ANR	83275	FunctionDef	"main (int argc , char * argv [ ])"		83274	0					
+ANR	83276	CompoundStatement		150:0:4060:4474	83274	0					
+ANR	83277	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	152:4:4094:4123	83274	0	True				
+ANR	83278	CallExpression	srand ( ( unsigned ) time ( NULL ) )		83274	0					
+ANR	83279	Callee	srand		83274	0					
+ANR	83280	Identifier	srand		83274	0					
+ANR	83281	ArgumentList	( unsigned ) time ( NULL )		83274	1					
+ANR	83282	Argument	( unsigned ) time ( NULL )		83274	0					
+ANR	83283	CastExpression	( unsigned ) time ( NULL )		83274	0					
+ANR	83284	CastTarget	unsigned		83274	0					
+ANR	83285	CallExpression	time ( NULL )		83274	1					
+ANR	83286	Callee	time		83274	0					
+ANR	83287	Identifier	time		83274	0					
+ANR	83288	ArgumentList	NULL		83274	1					
+ANR	83289	Argument	NULL		83274	0					
+ANR	83290	Identifier	NULL		83274	0					
+ANR	83291	ExpressionStatement	"printLine ( ""Calling good()..."" )"	154:4:4148:4178	83274	1	True				
+ANR	83292	CallExpression	"printLine ( ""Calling good()..."" )"		83274	0					
+ANR	83293	Callee	printLine		83274	0					
+ANR	83294	Identifier	printLine		83274	0					
+ANR	83295	ArgumentList	"""Calling good()..."""		83274	1					
+ANR	83296	Argument	"""Calling good()..."""		83274	0					
+ANR	83297	PrimaryExpression	"""Calling good()..."""		83274	0					
+ANR	83298	ExpressionStatement	CWE415_Double_Free__malloc_free_wchar_t_21_good ( )	155:4:4185:4234	83274	2	True				
+ANR	83299	CallExpression	CWE415_Double_Free__malloc_free_wchar_t_21_good ( )		83274	0					
+ANR	83300	Callee	CWE415_Double_Free__malloc_free_wchar_t_21_good		83274	0					
+ANR	83301	Identifier	CWE415_Double_Free__malloc_free_wchar_t_21_good		83274	0					
+ANR	83302	ArgumentList			83274	1					
+ANR	83303	ExpressionStatement	"printLine ( ""Finished good()"" )"	156:4:4241:4269	83274	3	True				
+ANR	83304	CallExpression	"printLine ( ""Finished good()"" )"		83274	0					
+ANR	83305	Callee	printLine		83274	0					
+ANR	83306	Identifier	printLine		83274	0					
+ANR	83307	ArgumentList	"""Finished good()"""		83274	1					
+ANR	83308	Argument	"""Finished good()"""		83274	0					
+ANR	83309	PrimaryExpression	"""Finished good()"""		83274	0					
+ANR	83310	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	159:4:4316:4345	83274	4	True				
+ANR	83311	CallExpression	"printLine ( ""Calling bad()..."" )"		83274	0					
+ANR	83312	Callee	printLine		83274	0					
+ANR	83313	Identifier	printLine		83274	0					
+ANR	83314	ArgumentList	"""Calling bad()..."""		83274	1					
+ANR	83315	Argument	"""Calling bad()..."""		83274	0					
+ANR	83316	PrimaryExpression	"""Calling bad()..."""		83274	0					
+ANR	83317	ExpressionStatement	CWE415_Double_Free__malloc_free_wchar_t_21_bad ( )	160:4:4352:4400	83274	5	True				
+ANR	83318	CallExpression	CWE415_Double_Free__malloc_free_wchar_t_21_bad ( )		83274	0					
+ANR	83319	Callee	CWE415_Double_Free__malloc_free_wchar_t_21_bad		83274	0					
+ANR	83320	Identifier	CWE415_Double_Free__malloc_free_wchar_t_21_bad		83274	0					
+ANR	83321	ArgumentList			83274	1					
+ANR	83322	ExpressionStatement	"printLine ( ""Finished bad()"" )"	161:4:4407:4434	83274	6	True				
+ANR	83323	CallExpression	"printLine ( ""Finished bad()"" )"		83274	0					
+ANR	83324	Callee	printLine		83274	0					
+ANR	83325	Identifier	printLine		83274	0					
+ANR	83326	ArgumentList	"""Finished bad()"""		83274	1					
+ANR	83327	Argument	"""Finished bad()"""		83274	0					
+ANR	83328	PrimaryExpression	"""Finished bad()"""		83274	0					
+ANR	83329	ReturnStatement	return 0 ;	163:4:4463:4471	83274	7	True				
+ANR	83330	PrimaryExpression	0		83274	0					
+ANR	83331	ReturnType	int		83274	1					
+ANR	83332	Identifier	main		83274	2					
+ANR	83333	ParameterList	"int argc , char * argv [ ]"		83274	3					
+ANR	83334	Parameter	int argc	149:9:4034:4041	83274	0	True				
+ANR	83335	ParameterType	int		83274	0					
+ANR	83336	Identifier	argc		83274	1					
+ANR	83337	Parameter	char * argv [ ]	149:19:4044:4056	83274	1	True				
+ANR	83338	ParameterType	char * [ ]		83274	0					
+ANR	83339	Identifier	argv		83274	1					
+ANR	83340	CFGEntryNode	ENTRY		83274		True				
+ANR	83341	CFGExitNode	EXIT		83274		True				
+ANR	83342	Symbol	argc		83274						
+ANR	83343	Symbol	NULL		83274						
+ANR	83344	Symbol	time		83274						
+ANR	83345	Symbol	argv		83274						

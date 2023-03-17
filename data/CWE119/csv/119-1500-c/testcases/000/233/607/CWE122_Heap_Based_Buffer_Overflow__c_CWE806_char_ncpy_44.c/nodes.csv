@@ -1,0 +1,377 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	330329	File	/develop/joernDwkProcess/joern-dev/./output/data/CWE119/source-code/119-1500-c/testcases/000/233/607/CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44.c								
+ANR	330330	Function	badSink	23:0:692:1030							
+ANR	330331	FunctionDef	badSink (char * data)		330330	0					
+ANR	330332	CompoundStatement		24:0:726:1030	330330	0					
+ANR	330333	CompoundStatement		3:8:17:35	330330	0					
+ANR	330334	IdentifierDeclStatement	"char dest [ 50 ] = """" ;"	26:8:744:762	330330	0	True				
+ANR	330335	IdentifierDecl	"dest [ 50 ] = """""		330330	0					
+ANR	330336	IdentifierDeclType	char [ 50 ]		330330	0					
+ANR	330337	Identifier	dest		330330	1					
+ANR	330338	PrimaryExpression	50		330330	2					
+ANR	330339	AssignmentExpression	"dest [ 50 ] = """""		330330	3		=			
+ANR	330340	Identifier	dest		330330	0					
+ANR	330341	PrimaryExpression	""""""		330330	1					
+ANR	330342	ExpressionStatement	"strncpy ( dest , data , strlen ( data ) )"	28:8:857:890	330330	1	True				
+ANR	330343	CallExpression	"strncpy ( dest , data , strlen ( data ) )"		330330	0					
+ANR	330344	Callee	strncpy		330330	0					
+ANR	330345	Identifier	strncpy		330330	0					
+ANR	330346	ArgumentList	dest		330330	1					
+ANR	330347	Argument	dest		330330	0					
+ANR	330348	Identifier	dest		330330	0					
+ANR	330349	Argument	data		330330	1					
+ANR	330350	Identifier	data		330330	0					
+ANR	330351	Argument	strlen ( data )		330330	2					
+ANR	330352	CallExpression	strlen ( data )		330330	0					
+ANR	330353	Callee	strlen		330330	0					
+ANR	330354	Identifier	strlen		330330	0					
+ANR	330355	ArgumentList	data		330330	1					
+ANR	330356	Argument	data		330330	0					
+ANR	330357	Identifier	data		330330	0					
+ANR	330358	ExpressionStatement	dest [ 50 - 1 ] = '\\0'	29:8:901:918	330330	2	True				
+ANR	330359	AssignmentExpression	dest [ 50 - 1 ] = '\\0'		330330	0		=			
+ANR	330360	ArrayIndexing	dest [ 50 - 1 ]		330330	0					
+ANR	330361	Identifier	dest		330330	0					
+ANR	330362	AdditiveExpression	50 - 1		330330	1		-			
+ANR	330363	PrimaryExpression	50		330330	0					
+ANR	330364	PrimaryExpression	1		330330	1					
+ANR	330365	PrimaryExpression	'\\0'		330330	1					
+ANR	330366	ExpressionStatement	printLine ( data )	30:8:984:999	330330	3	True				
+ANR	330367	CallExpression	printLine ( data )		330330	0					
+ANR	330368	Callee	printLine		330330	0					
+ANR	330369	Identifier	printLine		330330	0					
+ANR	330370	ArgumentList	data		330330	1					
+ANR	330371	Argument	data		330330	0					
+ANR	330372	Identifier	data		330330	0					
+ANR	330373	ExpressionStatement	free ( data )	31:8:1010:1020	330330	4	True				
+ANR	330374	CallExpression	free ( data )		330330	0					
+ANR	330375	Callee	free		330330	0					
+ANR	330376	Identifier	free		330330	0					
+ANR	330377	ArgumentList	data		330330	1					
+ANR	330378	Argument	data		330330	0					
+ANR	330379	Identifier	data		330330	0					
+ANR	330380	ReturnType	static void		330330	1					
+ANR	330381	Identifier	badSink		330330	2					
+ANR	330382	ParameterList	char * data		330330	3					
+ANR	330383	Parameter	char * data	23:20:712:722	330330	0	True				
+ANR	330384	ParameterType	char *		330330	0					
+ANR	330385	Identifier	data		330330	1					
+ANR	330386	CFGEntryNode	ENTRY		330330		True				
+ANR	330387	CFGExitNode	EXIT		330330		True				
+ANR	330388	Symbol	strlen		330330						
+ANR	330389	Symbol	data		330330						
+ANR	330390	Symbol	* dest		330330						
+ANR	330391	Symbol	dest		330330						
+ANR	330392	Function	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad	35:0:1035:1542							
+ANR	330393	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad ()		330392	0					
+ANR	330394	CompoundStatement		36:0:1104:1542	330392	0					
+ANR	330395	IdentifierDeclStatement	char * data ;	37:4:1111:1122	330392	0	True				
+ANR	330396	IdentifierDecl	* data		330392	0					
+ANR	330397	IdentifierDeclType	char *		330392	0					
+ANR	330398	Identifier	data		330392	1					
+ANR	330399	IdentifierDeclStatement	void ( * funcPtr ) ( char * ) = badSink ;	39:4:1166:1200	330392	1	True				
+ANR	330400	IdentifierDecl	( * funcPtr ) ( char * ) = badSink		330392	0					
+ANR	330401	IdentifierDeclType	void ( * ) ( char * )		330392	0					
+ANR	330402	Identifier	funcPtr		330392	1					
+ANR	330403	AssignmentExpression	( * funcPtr ) ( char * ) = badSink		330392	2		=			
+ANR	330404	Identifier	badSink		330392	0					
+ANR	330405	Identifier	badSink		330392	1					
+ANR	330406	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	40:4:1207:1246	330392	2	True				
+ANR	330407	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		330392	0		=			
+ANR	330408	Identifier	data		330392	0					
+ANR	330409	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		330392	1					
+ANR	330410	CastTarget	char *		330392	0					
+ANR	330411	CallExpression	malloc ( 100 * sizeof ( char ) )		330392	1					
+ANR	330412	Callee	malloc		330392	0					
+ANR	330413	Identifier	malloc		330392	0					
+ANR	330414	ArgumentList	100 * sizeof ( char )		330392	1					
+ANR	330415	Argument	100 * sizeof ( char )		330392	0					
+ANR	330416	MultiplicativeExpression	100 * sizeof ( char )		330392	0		*			
+ANR	330417	PrimaryExpression	100		330392	0					
+ANR	330418	SizeofExpression	sizeof ( char )		330392	1					
+ANR	330419	Sizeof	sizeof		330392	0					
+ANR	330420	SizeofOperand	char		330392	1					
+ANR	330421	IfStatement	if ( data == NULL )		330392	3					
+ANR	330422	Condition	data == NULL	41:8:1257:1268	330392	0	True				
+ANR	330423	EqualityExpression	data == NULL		330392	0		==			
+ANR	330424	Identifier	data		330392	0					
+ANR	330425	Identifier	NULL		330392	1					
+ANR	330426	CompoundStatement		6:22:166:166	330392	1					
+ANR	330427	ExpressionStatement	exit ( - 1 )	41:23:1272:1280	330392	0	True				
+ANR	330428	CallExpression	exit ( - 1 )		330392	0					
+ANR	330429	Callee	exit		330392	0					
+ANR	330430	Identifier	exit		330392	0					
+ANR	330431	ArgumentList	- 1		330392	1					
+ANR	330432	Argument	- 1		330392	0					
+ANR	330433	UnaryOperationExpression	- 1		330392	0					
+ANR	330434	UnaryOperator	-		330392	0					
+ANR	330435	PrimaryExpression	1		330392	1					
+ANR	330436	ExpressionStatement	"memset ( data , 'A' , 100 - 1 )"	43:4:1392:1416	330392	4	True				
+ANR	330437	CallExpression	"memset ( data , 'A' , 100 - 1 )"		330392	0					
+ANR	330438	Callee	memset		330392	0					
+ANR	330439	Identifier	memset		330392	0					
+ANR	330440	ArgumentList	data		330392	1					
+ANR	330441	Argument	data		330392	0					
+ANR	330442	Identifier	data		330392	0					
+ANR	330443	Argument	'A'		330392	1					
+ANR	330444	PrimaryExpression	'A'		330392	0					
+ANR	330445	Argument	100 - 1		330392	2					
+ANR	330446	AdditiveExpression	100 - 1		330392	0		-			
+ANR	330447	PrimaryExpression	100		330392	0					
+ANR	330448	PrimaryExpression	1		330392	1					
+ANR	330449	ExpressionStatement	data [ 100 - 1 ] = '\\0'	44:4:1444:1462	330392	5	True				
+ANR	330450	AssignmentExpression	data [ 100 - 1 ] = '\\0'		330392	0		=			
+ANR	330451	ArrayIndexing	data [ 100 - 1 ]		330392	0					
+ANR	330452	Identifier	data		330392	0					
+ANR	330453	AdditiveExpression	100 - 1		330392	1		-			
+ANR	330454	PrimaryExpression	100		330392	0					
+ANR	330455	PrimaryExpression	1		330392	1					
+ANR	330456	PrimaryExpression	'\\0'		330392	1					
+ANR	330457	ExpressionStatement	funcPtr ( data )	46:4:1526:1539	330392	6	True				
+ANR	330458	CallExpression	funcPtr ( data )		330392	0					
+ANR	330459	Callee	funcPtr		330392	0					
+ANR	330460	Identifier	funcPtr		330392	0					
+ANR	330461	ArgumentList	data		330392	1					
+ANR	330462	Argument	data		330392	0					
+ANR	330463	Identifier	data		330392	0					
+ANR	330464	ReturnType	void		330392	1					
+ANR	330465	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad		330392	2					
+ANR	330466	ParameterList			330392	3					
+ANR	330467	CFGEntryNode	ENTRY		330392		True				
+ANR	330468	CFGExitNode	EXIT		330392		True				
+ANR	330469	Symbol	malloc		330392						
+ANR	330470	Symbol	NULL		330392						
+ANR	330471	Symbol	data		330392						
+ANR	330472	Symbol	funcPtr		330392						
+ANR	330473	Symbol	badSink		330392						
+ANR	330474	Symbol	* data		330392						
+ANR	330475	Function	goodG2BSink	54:0:1645:1987							
+ANR	330476	FunctionDef	goodG2BSink (char * data)		330475	0					
+ANR	330477	CompoundStatement		55:0:1683:1987	330475	0					
+ANR	330478	CompoundStatement		3:8:17:35	330475	0					
+ANR	330479	IdentifierDeclStatement	"char dest [ 50 ] = """" ;"	57:8:1701:1719	330475	0	True				
+ANR	330480	IdentifierDecl	"dest [ 50 ] = """""		330475	0					
+ANR	330481	IdentifierDeclType	char [ 50 ]		330475	0					
+ANR	330482	Identifier	dest		330475	1					
+ANR	330483	PrimaryExpression	50		330475	2					
+ANR	330484	AssignmentExpression	"dest [ 50 ] = """""		330475	3		=			
+ANR	330485	Identifier	dest		330475	0					
+ANR	330486	PrimaryExpression	""""""		330475	1					
+ANR	330487	ExpressionStatement	"strncpy ( dest , data , strlen ( data ) )"	59:8:1814:1847	330475	1	True				
+ANR	330488	CallExpression	"strncpy ( dest , data , strlen ( data ) )"		330475	0					
+ANR	330489	Callee	strncpy		330475	0					
+ANR	330490	Identifier	strncpy		330475	0					
+ANR	330491	ArgumentList	dest		330475	1					
+ANR	330492	Argument	dest		330475	0					
+ANR	330493	Identifier	dest		330475	0					
+ANR	330494	Argument	data		330475	1					
+ANR	330495	Identifier	data		330475	0					
+ANR	330496	Argument	strlen ( data )		330475	2					
+ANR	330497	CallExpression	strlen ( data )		330475	0					
+ANR	330498	Callee	strlen		330475	0					
+ANR	330499	Identifier	strlen		330475	0					
+ANR	330500	ArgumentList	data		330475	1					
+ANR	330501	Argument	data		330475	0					
+ANR	330502	Identifier	data		330475	0					
+ANR	330503	ExpressionStatement	dest [ 50 - 1 ] = '\\0'	60:8:1858:1875	330475	2	True				
+ANR	330504	AssignmentExpression	dest [ 50 - 1 ] = '\\0'		330475	0		=			
+ANR	330505	ArrayIndexing	dest [ 50 - 1 ]		330475	0					
+ANR	330506	Identifier	dest		330475	0					
+ANR	330507	AdditiveExpression	50 - 1		330475	1		-			
+ANR	330508	PrimaryExpression	50		330475	0					
+ANR	330509	PrimaryExpression	1		330475	1					
+ANR	330510	PrimaryExpression	'\\0'		330475	1					
+ANR	330511	ExpressionStatement	printLine ( data )	61:8:1941:1956	330475	3	True				
+ANR	330512	CallExpression	printLine ( data )		330475	0					
+ANR	330513	Callee	printLine		330475	0					
+ANR	330514	Identifier	printLine		330475	0					
+ANR	330515	ArgumentList	data		330475	1					
+ANR	330516	Argument	data		330475	0					
+ANR	330517	Identifier	data		330475	0					
+ANR	330518	ExpressionStatement	free ( data )	62:8:1967:1977	330475	4	True				
+ANR	330519	CallExpression	free ( data )		330475	0					
+ANR	330520	Callee	free		330475	0					
+ANR	330521	Identifier	free		330475	0					
+ANR	330522	ArgumentList	data		330475	1					
+ANR	330523	Argument	data		330475	0					
+ANR	330524	Identifier	data		330475	0					
+ANR	330525	ReturnType	static void		330475	1					
+ANR	330526	Identifier	goodG2BSink		330475	2					
+ANR	330527	ParameterList	char * data		330475	3					
+ANR	330528	Parameter	char * data	54:24:1669:1679	330475	0	True				
+ANR	330529	ParameterType	char *		330475	0					
+ANR	330530	Identifier	data		330475	1					
+ANR	330531	CFGEntryNode	ENTRY		330475		True				
+ANR	330532	CFGExitNode	EXIT		330475		True				
+ANR	330533	Symbol	strlen		330475						
+ANR	330534	Symbol	data		330475						
+ANR	330535	Symbol	* dest		330475						
+ANR	330536	Symbol	dest		330475						
+ANR	330537	Function	goodG2B	66:0:1992:2391							
+ANR	330538	FunctionDef	goodG2B ()		330537	0					
+ANR	330539	CompoundStatement		67:0:2015:2391	330537	0					
+ANR	330540	IdentifierDeclStatement	char * data ;	68:4:2022:2033	330537	0	True				
+ANR	330541	IdentifierDecl	* data		330537	0					
+ANR	330542	IdentifierDeclType	char *		330537	0					
+ANR	330543	Identifier	data		330537	1					
+ANR	330544	IdentifierDeclStatement	void ( * funcPtr ) ( char * ) = goodG2BSink ;	69:4:2040:2078	330537	1	True				
+ANR	330545	IdentifierDecl	( * funcPtr ) ( char * ) = goodG2BSink		330537	0					
+ANR	330546	IdentifierDeclType	void ( * ) ( char * )		330537	0					
+ANR	330547	Identifier	funcPtr		330537	1					
+ANR	330548	AssignmentExpression	( * funcPtr ) ( char * ) = goodG2BSink		330537	2		=			
+ANR	330549	Identifier	goodG2BSink		330537	0					
+ANR	330550	Identifier	goodG2BSink		330537	1					
+ANR	330551	ExpressionStatement	data = ( char * ) malloc ( 100 * sizeof ( char ) )	70:4:2085:2124	330537	2	True				
+ANR	330552	AssignmentExpression	data = ( char * ) malloc ( 100 * sizeof ( char ) )		330537	0		=			
+ANR	330553	Identifier	data		330537	0					
+ANR	330554	CastExpression	( char * ) malloc ( 100 * sizeof ( char ) )		330537	1					
+ANR	330555	CastTarget	char *		330537	0					
+ANR	330556	CallExpression	malloc ( 100 * sizeof ( char ) )		330537	1					
+ANR	330557	Callee	malloc		330537	0					
+ANR	330558	Identifier	malloc		330537	0					
+ANR	330559	ArgumentList	100 * sizeof ( char )		330537	1					
+ANR	330560	Argument	100 * sizeof ( char )		330537	0					
+ANR	330561	MultiplicativeExpression	100 * sizeof ( char )		330537	0		*			
+ANR	330562	PrimaryExpression	100		330537	0					
+ANR	330563	SizeofExpression	sizeof ( char )		330537	1					
+ANR	330564	Sizeof	sizeof		330537	0					
+ANR	330565	SizeofOperand	char		330537	1					
+ANR	330566	IfStatement	if ( data == NULL )		330537	3					
+ANR	330567	Condition	data == NULL	71:8:2135:2146	330537	0	True				
+ANR	330568	EqualityExpression	data == NULL		330537	0		==			
+ANR	330569	Identifier	data		330537	0					
+ANR	330570	Identifier	NULL		330537	1					
+ANR	330571	CompoundStatement		5:22:133:133	330537	1					
+ANR	330572	ExpressionStatement	exit ( - 1 )	71:23:2150:2158	330537	0	True				
+ANR	330573	CallExpression	exit ( - 1 )		330537	0					
+ANR	330574	Callee	exit		330537	0					
+ANR	330575	Identifier	exit		330537	0					
+ANR	330576	ArgumentList	- 1		330537	1					
+ANR	330577	Argument	- 1		330537	0					
+ANR	330578	UnaryOperationExpression	- 1		330537	0					
+ANR	330579	UnaryOperator	-		330537	0					
+ANR	330580	PrimaryExpression	1		330537	1					
+ANR	330581	ExpressionStatement	"memset ( data , 'A' , 50 - 1 )"	73:4:2279:2302	330537	4	True				
+ANR	330582	CallExpression	"memset ( data , 'A' , 50 - 1 )"		330537	0					
+ANR	330583	Callee	memset		330537	0					
+ANR	330584	Identifier	memset		330537	0					
+ANR	330585	ArgumentList	data		330537	1					
+ANR	330586	Argument	data		330537	0					
+ANR	330587	Identifier	data		330537	0					
+ANR	330588	Argument	'A'		330537	1					
+ANR	330589	PrimaryExpression	'A'		330537	0					
+ANR	330590	Argument	50 - 1		330537	2					
+ANR	330591	AdditiveExpression	50 - 1		330537	0		-			
+ANR	330592	PrimaryExpression	50		330537	0					
+ANR	330593	PrimaryExpression	1		330537	1					
+ANR	330594	ExpressionStatement	data [ 50 - 1 ] = '\\0'	74:4:2330:2347	330537	5	True				
+ANR	330595	AssignmentExpression	data [ 50 - 1 ] = '\\0'		330537	0		=			
+ANR	330596	ArrayIndexing	data [ 50 - 1 ]		330537	0					
+ANR	330597	Identifier	data		330537	0					
+ANR	330598	AdditiveExpression	50 - 1		330537	1		-			
+ANR	330599	PrimaryExpression	50		330537	0					
+ANR	330600	PrimaryExpression	1		330537	1					
+ANR	330601	PrimaryExpression	'\\0'		330537	1					
+ANR	330602	ExpressionStatement	funcPtr ( data )	75:4:2375:2388	330537	6	True				
+ANR	330603	CallExpression	funcPtr ( data )		330537	0					
+ANR	330604	Callee	funcPtr		330537	0					
+ANR	330605	Identifier	funcPtr		330537	0					
+ANR	330606	ArgumentList	data		330537	1					
+ANR	330607	Argument	data		330537	0					
+ANR	330608	Identifier	data		330537	0					
+ANR	330609	ReturnType	static void		330537	1					
+ANR	330610	Identifier	goodG2B		330537	2					
+ANR	330611	ParameterList			330537	3					
+ANR	330612	CFGEntryNode	ENTRY		330537		True				
+ANR	330613	CFGExitNode	EXIT		330537		True				
+ANR	330614	Symbol	malloc		330537						
+ANR	330615	Symbol	NULL		330537						
+ANR	330616	Symbol	data		330537						
+ANR	330617	Symbol	funcPtr		330537						
+ANR	330618	Symbol	* data		330537						
+ANR	330619	Symbol	goodG2BSink		330537						
+ANR	330620	Function	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good	78:0:2396:2485							
+ANR	330621	FunctionDef	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good ()		330620	0					
+ANR	330622	CompoundStatement		79:0:2466:2485	330620	0					
+ANR	330623	ExpressionStatement	goodG2B ( )	80:4:2473:2482	330620	0	True				
+ANR	330624	CallExpression	goodG2B ( )		330620	0					
+ANR	330625	Callee	goodG2B		330620	0					
+ANR	330626	Identifier	goodG2B		330620	0					
+ANR	330627	ArgumentList			330620	1					
+ANR	330628	ReturnType	void		330620	1					
+ANR	330629	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good		330620	2					
+ANR	330630	ParameterList			330620	3					
+ANR	330631	CFGEntryNode	ENTRY		330620		True				
+ANR	330632	CFGExitNode	EXIT		330620		True				
+ANR	330633	Function	main	92:0:2832:3309							
+ANR	330634	FunctionDef	"main (int argc , char * argv [ ])"		330633	0					
+ANR	330635	CompoundStatement		93:0:2867:3309	330633	0					
+ANR	330636	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	95:4:2901:2930	330633	0	True				
+ANR	330637	CallExpression	srand ( ( unsigned ) time ( NULL ) )		330633	0					
+ANR	330638	Callee	srand		330633	0					
+ANR	330639	Identifier	srand		330633	0					
+ANR	330640	ArgumentList	( unsigned ) time ( NULL )		330633	1					
+ANR	330641	Argument	( unsigned ) time ( NULL )		330633	0					
+ANR	330642	CastExpression	( unsigned ) time ( NULL )		330633	0					
+ANR	330643	CastTarget	unsigned		330633	0					
+ANR	330644	CallExpression	time ( NULL )		330633	1					
+ANR	330645	Callee	time		330633	0					
+ANR	330646	Identifier	time		330633	0					
+ANR	330647	ArgumentList	NULL		330633	1					
+ANR	330648	Argument	NULL		330633	0					
+ANR	330649	Identifier	NULL		330633	0					
+ANR	330650	ExpressionStatement	"printLine ( ""Calling good()..."" )"	97:4:2955:2985	330633	1	True				
+ANR	330651	CallExpression	"printLine ( ""Calling good()..."" )"		330633	0					
+ANR	330652	Callee	printLine		330633	0					
+ANR	330653	Identifier	printLine		330633	0					
+ANR	330654	ArgumentList	"""Calling good()..."""		330633	1					
+ANR	330655	Argument	"""Calling good()..."""		330633	0					
+ANR	330656	PrimaryExpression	"""Calling good()..."""		330633	0					
+ANR	330657	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good ( )	98:4:2992:3055	330633	2	True				
+ANR	330658	CallExpression	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good ( )		330633	0					
+ANR	330659	Callee	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good		330633	0					
+ANR	330660	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_good		330633	0					
+ANR	330661	ArgumentList			330633	1					
+ANR	330662	ExpressionStatement	"printLine ( ""Finished good()"" )"	99:4:3062:3090	330633	3	True				
+ANR	330663	CallExpression	"printLine ( ""Finished good()"" )"		330633	0					
+ANR	330664	Callee	printLine		330633	0					
+ANR	330665	Identifier	printLine		330633	0					
+ANR	330666	ArgumentList	"""Finished good()"""		330633	1					
+ANR	330667	Argument	"""Finished good()"""		330633	0					
+ANR	330668	PrimaryExpression	"""Finished good()"""		330633	0					
+ANR	330669	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	102:4:3137:3166	330633	4	True				
+ANR	330670	CallExpression	"printLine ( ""Calling bad()..."" )"		330633	0					
+ANR	330671	Callee	printLine		330633	0					
+ANR	330672	Identifier	printLine		330633	0					
+ANR	330673	ArgumentList	"""Calling bad()..."""		330633	1					
+ANR	330674	Argument	"""Calling bad()..."""		330633	0					
+ANR	330675	PrimaryExpression	"""Calling bad()..."""		330633	0					
+ANR	330676	ExpressionStatement	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad ( )	103:4:3173:3235	330633	5	True				
+ANR	330677	CallExpression	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad ( )		330633	0					
+ANR	330678	Callee	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad		330633	0					
+ANR	330679	Identifier	CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_ncpy_44_bad		330633	0					
+ANR	330680	ArgumentList			330633	1					
+ANR	330681	ExpressionStatement	"printLine ( ""Finished bad()"" )"	104:4:3242:3269	330633	6	True				
+ANR	330682	CallExpression	"printLine ( ""Finished bad()"" )"		330633	0					
+ANR	330683	Callee	printLine		330633	0					
+ANR	330684	Identifier	printLine		330633	0					
+ANR	330685	ArgumentList	"""Finished bad()"""		330633	1					
+ANR	330686	Argument	"""Finished bad()"""		330633	0					
+ANR	330687	PrimaryExpression	"""Finished bad()"""		330633	0					
+ANR	330688	ReturnStatement	return 0 ;	106:4:3298:3306	330633	7	True				
+ANR	330689	PrimaryExpression	0		330633	0					
+ANR	330690	ReturnType	int		330633	1					
+ANR	330691	Identifier	main		330633	2					
+ANR	330692	ParameterList	"int argc , char * argv [ ]"		330633	3					
+ANR	330693	Parameter	int argc	92:9:2841:2848	330633	0	True				
+ANR	330694	ParameterType	int		330633	0					
+ANR	330695	Identifier	argc		330633	1					
+ANR	330696	Parameter	char * argv [ ]	92:19:2851:2863	330633	1	True				
+ANR	330697	ParameterType	char * [ ]		330633	0					
+ANR	330698	Identifier	argv		330633	1					
+ANR	330699	CFGEntryNode	ENTRY		330633		True				
+ANR	330700	CFGExitNode	EXIT		330633		True				
+ANR	330701	Symbol	argc		330633						
+ANR	330702	Symbol	NULL		330633						
+ANR	330703	Symbol	time		330633						
+ANR	330704	Symbol	argv		330633						
