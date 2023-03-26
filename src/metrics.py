@@ -18,6 +18,7 @@ class Statistic:
         self.true_negative += other_statistic.true_negative
 
     def calculate_metrics(self, group: Optional[str] = None) -> Dict[str, int]:
+
         precision, recall, f1, fpr, acc = 0, 0, 0, 0, 0
         acc = (self.true_negative + self.true_positive) / (
                 self.true_positive + self.true_negative + self.false_positive +
@@ -33,6 +34,7 @@ class Statistic:
                                            self.false_negative)
         if precision + recall > 0:
             f1 = 2 * precision * recall / (precision + recall)
+
         metrics_dict = {
             "fpr":
                 fpr.item() if type(fpr) == torch.Tensor else fpr,
@@ -45,9 +47,11 @@ class Statistic:
             "f1":
                 f1.item() if type(f1) == torch.Tensor else f1
         }
+
         if group is not None:
             for key in list(metrics_dict.keys()):
                 metrics_dict[f"{group}_{key}"] = metrics_dict.pop(key)
+
         return metrics_dict
 
     @staticmethod

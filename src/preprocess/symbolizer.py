@@ -191,3 +191,8 @@ def tokenize_code_line(line: str, subtoken: bool):
     else:
         res = tmp
     return res
+
+
+# if __name__ == "__main__":
+#     l = ["typedef", "union", "{", "char", "*", "unionFirst", ";", "}", "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cat_34_unionType", ";"]
+#     print(clean_gadget(l))
