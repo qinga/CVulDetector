@@ -1,0 +1,155 @@
+command	key	type	code	location	functionId	childNum	isCFGNode	operator	baseType	completeType	identifier
+ANR	1	File	./output/data/CWE119/source-code/CWE124_Buffer_Underwrite__new_char_cpy_01.cpp								
+ANR	2	Function	bqad	1:0:0:743							
+ANR	3	FunctionDef	bqad ()		2	0					
+ANR	4	CompoundStatement		2:0:13:743	2	0					
+ANR	5	IdentifierDeclStatement	char * data ;	3:4:20:31	2	0	True				
+ANR	6	IdentifierDecl	* data		2	0					
+ANR	7	IdentifierDeclType	char *		2	0					
+ANR	8	Identifier	data		2	1					
+ANR	9	ExpressionStatement	data = NULL	4:4:38:49	2	1	True				
+ANR	10	AssignmentExpression	data = NULL		2	0		=			
+ANR	11	Identifier	data		2	0					
+ANR	12	Identifier	NULL		2	1					
+ANR	13	CompoundStatement		5:8:53:86	2	2					
+ANR	14	IdentifierDeclStatement	char * dataBuffer = new char [ 100 ] ;	6:8:67:100	2	0	True				
+ANR	15	IdentifierDecl	* dataBuffer = new char [ 100 ]		2	0					
+ANR	16	IdentifierDeclType	char *		2	0					
+ANR	17	Identifier	dataBuffer		2	1					
+ANR	18	AssignmentExpression	* dataBuffer = new char [ 100 ]		2	2		=			
+ANR	19	Identifier	dataBuffer		2	0					
+ANR	20	PrimaryExpression	100		2	1					
+ANR	21	ExpressionStatement	"memset ( dataBuffer , 'A' , 100 - 1 )"	7:8:111:141	2	1	True				
+ANR	22	CallExpression	"memset ( dataBuffer , 'A' , 100 - 1 )"		2	0					
+ANR	23	Callee	memset		2	0					
+ANR	24	Identifier	memset		2	0					
+ANR	25	ArgumentList	dataBuffer		2	1					
+ANR	26	Argument	dataBuffer		2	0					
+ANR	27	Identifier	dataBuffer		2	0					
+ANR	28	Argument	'A'		2	1					
+ANR	29	PrimaryExpression	'A'		2	0					
+ANR	30	Argument	100 - 1		2	2					
+ANR	31	AdditiveExpression	100 - 1		2	0		-			
+ANR	32	PrimaryExpression	100		2	0					
+ANR	33	PrimaryExpression	1		2	1					
+ANR	34	ExpressionStatement	dataBuffer [ 100 - 1 ] = '\\0'	8:8:152:176	2	2	True				
+ANR	35	AssignmentExpression	dataBuffer [ 100 - 1 ] = '\\0'		2	0		=			
+ANR	36	ArrayIndexing	dataBuffer [ 100 - 1 ]		2	0					
+ANR	37	Identifier	dataBuffer		2	0					
+ANR	38	AdditiveExpression	100 - 1		2	1		-			
+ANR	39	PrimaryExpression	100		2	0					
+ANR	40	PrimaryExpression	1		2	1					
+ANR	41	PrimaryExpression	'\\0'		2	1					
+ANR	42	ExpressionStatement	data = dataBuffer - 8	10:8:263:284	2	3	True				
+ANR	43	AssignmentExpression	data = dataBuffer - 8		2	0		=			
+ANR	44	Identifier	data		2	0					
+ANR	45	AdditiveExpression	dataBuffer - 8		2	1		-			
+ANR	46	Identifier	dataBuffer		2	0					
+ANR	47	PrimaryExpression	8		2	1					
+ANR	48	CompoundStatement		12:8:295:311	2	3					
+ANR	49	IdentifierDeclStatement	char source [ 100 ] ;	13:8:309:325	2	0	True				
+ANR	50	IdentifierDecl	source [ 100 ]		2	0					
+ANR	51	IdentifierDeclType	char [ 100 ]		2	0					
+ANR	52	Identifier	source		2	1					
+ANR	53	PrimaryExpression	100		2	2					
+ANR	54	ExpressionStatement	"memset ( source , 'C' , 100 - 1 )"	14:8:336:362	2	1	True				
+ANR	55	CallExpression	"memset ( source , 'C' , 100 - 1 )"		2	0					
+ANR	56	Callee	memset		2	0					
+ANR	57	Identifier	memset		2	0					
+ANR	58	ArgumentList	source		2	1					
+ANR	59	Argument	source		2	0					
+ANR	60	Identifier	source		2	0					
+ANR	61	Argument	'C'		2	1					
+ANR	62	PrimaryExpression	'C'		2	0					
+ANR	63	Argument	100 - 1		2	2					
+ANR	64	AdditiveExpression	100 - 1		2	0		-			
+ANR	65	PrimaryExpression	100		2	0					
+ANR	66	PrimaryExpression	1		2	1					
+ANR	67	ExpressionStatement	source [ 100 - 1 ] = '\\0'	15:8:394:414	2	2	True				
+ANR	68	AssignmentExpression	source [ 100 - 1 ] = '\\0'		2	0		=			
+ANR	69	ArrayIndexing	source [ 100 - 1 ]		2	0					
+ANR	70	Identifier	source		2	0					
+ANR	71	AdditiveExpression	100 - 1		2	1		-			
+ANR	72	PrimaryExpression	100		2	0					
+ANR	73	PrimaryExpression	1		2	1					
+ANR	74	PrimaryExpression	'\\0'		2	1					
+ANR	75	ExpressionStatement	"strcpy ( data , source )"	17:8:539:559	2	3	True				
+ANR	76	CallExpression	"strcpy ( data , source )"		2	0					
+ANR	77	Callee	strcpy		2	0					
+ANR	78	Identifier	strcpy		2	0					
+ANR	79	ArgumentList	data		2	1					
+ANR	80	Argument	data		2	0					
+ANR	81	Identifier	data		2	0					
+ANR	82	Argument	source		2	1					
+ANR	83	Identifier	source		2	0					
+ANR	84	ExpressionStatement	printLine ( data )	18:8:570:585	2	4	True				
+ANR	85	CallExpression	printLine ( data )		2	0					
+ANR	86	Callee	printLine		2	0					
+ANR	87	Identifier	printLine		2	0					
+ANR	88	ArgumentList	data		2	1					
+ANR	89	Argument	data		2	0					
+ANR	90	Identifier	data		2	0					
+ANR	91	ReturnType	void		2	1					
+ANR	92	Identifier	bqad		2	2					
+ANR	93	ParameterList			2	3					
+ANR	94	CFGEntryNode	ENTRY		2		True				
+ANR	95	CFGExitNode	EXIT		2		True				
+ANR	96	Symbol	NULL		2						
+ANR	97	Symbol	data		2						
+ANR	98	Symbol	* source		2						
+ANR	99	Symbol	dataBuffer		2						
+ANR	100	Symbol	source		2						
+ANR	101	Symbol	* dataBuffer		2						
+ANR	102	Function	main	23:0:746:918							
+ANR	103	FunctionDef	"main (int argc , char * argv [ ])"		102	0					
+ANR	104	CompoundStatement		24:0:781:918	102	0					
+ANR	105	ExpressionStatement	srand ( ( unsigned ) time ( NULL ) )	25:4:788:817	102	0	True				
+ANR	106	CallExpression	srand ( ( unsigned ) time ( NULL ) )		102	0					
+ANR	107	Callee	srand		102	0					
+ANR	108	Identifier	srand		102	0					
+ANR	109	ArgumentList	( unsigned ) time ( NULL )		102	1					
+ANR	110	Argument	( unsigned ) time ( NULL )		102	0					
+ANR	111	CastExpression	( unsigned ) time ( NULL )		102	0					
+ANR	112	CastTarget	unsigned		102	0					
+ANR	113	CallExpression	time ( NULL )		102	1					
+ANR	114	Callee	time		102	0					
+ANR	115	Identifier	time		102	0					
+ANR	116	ArgumentList	NULL		102	1					
+ANR	117	Argument	NULL		102	0					
+ANR	118	Identifier	NULL		102	0					
+ANR	119	ExpressionStatement	"printLine ( ""Calling bad()..."" )"	26:4:824:853	102	1	True				
+ANR	120	CallExpression	"printLine ( ""Calling bad()..."" )"		102	0					
+ANR	121	Callee	printLine		102	0					
+ANR	122	Identifier	printLine		102	0					
+ANR	123	ArgumentList	"""Calling bad()..."""		102	1					
+ANR	124	Argument	"""Calling bad()..."""		102	0					
+ANR	125	PrimaryExpression	"""Calling bad()..."""		102	0					
+ANR	126	ExpressionStatement	bqad ( )	27:4:860:866	102	2	True				
+ANR	127	CallExpression	bqad ( )		102	0					
+ANR	128	Callee	bqad		102	0					
+ANR	129	Identifier	bqad		102	0					
+ANR	130	ArgumentList			102	1					
+ANR	131	ExpressionStatement	"printLine ( ""Finished bad()"" )"	28:4:873:900	102	3	True				
+ANR	132	CallExpression	"printLine ( ""Finished bad()"" )"		102	0					
+ANR	133	Callee	printLine		102	0					
+ANR	134	Identifier	printLine		102	0					
+ANR	135	ArgumentList	"""Finished bad()"""		102	1					
+ANR	136	Argument	"""Finished bad()"""		102	0					
+ANR	137	PrimaryExpression	"""Finished bad()"""		102	0					
+ANR	138	ReturnStatement	return 0 ;	29:4:907:915	102	4	True				
+ANR	139	PrimaryExpression	0		102	0					
+ANR	140	ReturnType	int		102	1					
+ANR	141	Identifier	main		102	2					
+ANR	142	ParameterList	"int argc , char * argv [ ]"		102	3					
+ANR	143	Parameter	int argc	23:9:755:762	102	0	True				
+ANR	144	ParameterType	int		102	0					
+ANR	145	Identifier	argc		102	1					
+ANR	146	Parameter	char * argv [ ]	23:19:765:777	102	1	True				
+ANR	147	ParameterType	char * [ ]		102	0					
+ANR	148	Identifier	argv		102	1					
+ANR	149	CFGEntryNode	ENTRY		102		True				
+ANR	150	CFGExitNode	EXIT		102		True				
+ANR	151	Symbol	argc		102						
+ANR	152	Symbol	NULL		102						
+ANR	153	Symbol	time		102						
+ANR	154	Symbol	argv		102						

@@ -77,7 +77,7 @@ def handle_queue_message(queue: Queue):
         if message.to_remove:
             # os.system(f"rm {message.xfg_path}")
             os.system(f"del {message.xfg_path}")
-            print(f"删除了 {message.xfg_path}")
+            # print(f"删除了 {message.xfg_path}")
         else:
             if message.XFG is not None:
                 nx.write_gpickle(message.XFG, message.xfg_path)
@@ -132,7 +132,6 @@ def add_symlines(cweid: str, root: str, split_token: bool):
         root:
     Returns:
     """
-
     XFG_root_path = join(root, cweid, "XFG")
     testcaseids = os.listdir(XFG_root_path)
     testcase_len = len(testcaseids)

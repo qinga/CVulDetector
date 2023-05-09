@@ -4,6 +4,8 @@ import torch
 from src.datas.samples import XFGBatch
 from typing import Dict, Union
 from pytorch_lightning import LightningModule
+
+from src.models.modules.blstm import BiLSTMEncoder
 from src.models.modules.gnns import GraphConvEncoder, GatedGraphConvEncoder
 from torch.optim import Adam, SGD, Adamax, RMSprop
 from pytorch_lightning.utilities.types import EPOCH_OUTPUT
@@ -40,10 +42,11 @@ class DeepWuKong(LightningModule):
         self.save_hyperparameters()
         self.__config = config
         hidden_size = config.classifier.hidden_size
-        self.__graph_encoder = self._encoders[config.gnn.name](config.gnn, vocab, vocabulary_size,
-                                                               pad_idx)
-        # self.__graph_encoder = GraphConvEncoder(config.gnn, vocab, vocabulary_size,
-        #                                         pad_idx)
+        # self.__graph_encoder = self._encoders[config.gnn.name](config.gnn, vocab, vocabulary_size,
+        #                                                        pad_idx)
+        self.__graph_encoder = GraphConvEncoder(config.gnn, vocab, vocabulary_size, pad_idx)
+
+        # self.__biLSTM_encoder = BiLSTMEncoder(config.biLSTM, vocab, vocabulary_size, pad_idx)
         # hidden layers
         layers = [
             nn.Linear(config.gnn.hidden_size, hidden_size),
@@ -60,6 +63,7 @@ class DeepWuKong(LightningModule):
                 nn.Dropout(config.classifier.drop_out)
             ]
         self.__hidden_layers = nn.Sequential(*layers)
+
         self.__classifier = nn.Linear(hidden_size, config.classifier.n_classes)
 
     def forward(self, batch: Batch) -> torch.Tensor:
@@ -72,7 +76,10 @@ class DeepWuKong(LightningModule):
         """
         # [n_XFG, hidden size]
         graph_hid = self.__graph_encoder(batch)
+
         hiddens = self.__hidden_layers(graph_hid)
+
+
         # [n_XFG; n_classes]
         return self.__classifier(hiddens)
 
@@ -119,6 +126,7 @@ class DeepWuKong(LightningModule):
                      logger=False)
 
         return {"loss": loss, "statistic": statistic}
+
 
     def validation_step(self, batch: XFGBatch,
                         batch_idx: int) -> Dict[str, Union[Tensor, Statistic]]:  # type: ignore
@@ -176,7 +184,6 @@ class DeepWuKong(LightningModule):
         self.log_dict(log, on_step=False, on_epoch=True)
 
     def training_epoch_end(self, training_step_output: EPOCH_OUTPUT):
-        print(training_step_output)
         self._shared_epoch_end(training_step_output, "train")
 
     def validation_epoch_end(self, validation_step_output: EPOCH_OUTPUT):

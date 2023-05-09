@@ -59,7 +59,7 @@ if __name__ == '__main__':
     vocab_size = vocab.get_vocab_size()
     pad_idx = vocab.get_pad_id()
     # preprocess for the code to detect
-    PDG, key_line_map = build_PDG(__args.target, f"{config.data_folder}/sensiAPI.txt",
+    PDG, key_line_map = build_PDG(__args.target, f"G:/Grade2Master/VulProjects/DeepWukong-master/data/sensiAPI.txt",
                                   __args.source)
     xfg_dict = build_XFG(PDG, key_line_map)
     Datas, meta_datas = list(), list()
@@ -78,5 +78,6 @@ if __name__ == '__main__':
     _, preds = logits.max(dim=1)
     batched_res = zip(meta_datas, preds.tolist())
     for res in batched_res:
+        print(res[0])
         if res[1] == 1:
             print(res[0])

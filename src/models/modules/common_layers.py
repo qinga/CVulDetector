@@ -68,25 +68,30 @@ class RNNLayer(torch.nn.Module):
 
         """
         with torch.no_grad():
-            is_contain_pad_id, first_pad_pos = torch.max(
-                node_ids == self.__pad_idx, dim=1)
-            first_pad_pos[~is_contain_pad_id] = node_ids.shape[
-                1]  # if no pad token use len+1 position
-            sorted_path_lengths, sort_indices = torch.sort(first_pad_pos,
-                                                           descending=True)
+            is_contain_pad_id, first_pad_pos = \
+                torch.max(node_ids == self.__pad_idx, dim=1)
+
+            first_pad_pos[~is_contain_pad_id] = \
+                node_ids.shape[1]  # if no pad token use len+1 position
+
+            sorted_path_lengths, sort_indices = \
+                torch.sort(first_pad_pos, descending=True)
+
             _, reverse_sort_indices = torch.sort(sort_indices)
+
             sorted_path_lengths = sorted_path_lengths.to(torch.device("cpu"))
+
         subtokens_embed = subtokens_embed[sort_indices]
         packed_embeddings = nn.utils.rnn.pack_padded_sequence(
             subtokens_embed, sorted_path_lengths, batch_first=True)
+
         # [2; N; rnn hidden]
         _, (node_embedding, _) = self.__rnn(packed_embeddings)
         # [N; rnn hidden]
         node_embedding = node_embedding.sum(dim=0)
 
         # [n nodes; max parts; rnn hidden]
-        node_embedding = self.__dropout_rnn(
-            node_embedding)[reverse_sort_indices]
+        node_embedding = self.__dropout_rnn(node_embedding)[reverse_sort_indices]
 
         return node_embedding
 

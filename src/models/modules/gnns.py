@@ -1,7 +1,7 @@
 from omegaconf import DictConfig
 import torch
 from torch_geometric.data import Batch
-from torch_geometric.nn import TopKPooling, GCNConv, GINEConv, GATv2Conv, GatedGraphConv, GlobalAttention
+from torch_geometric.nn import TopKPooling, GCNConv, GatedGraphConv, GlobalAttention
 import torch.nn.functional as F
 from src.vocabulary import Vocabulary
 from src.models.modules.common_layers import STEncoder
@@ -33,8 +33,7 @@ class GraphConvEncoder(torch.nn.Module):
                     GCNConv(config.hidden_size, config.hidden_size))
             setattr(
                 self, f"hidden_GPL{i}",
-                TopKPooling(config.hidden_size,
-                            ratio=config.pooling_ratio))
+                TopKPooling(config.hidden_size, ratio=config.pooling_ratio))
 
         self.attpool = GlobalAttention(torch.nn.Linear(config.hidden_size, 1))
 
@@ -50,9 +49,12 @@ class GraphConvEncoder(torch.nn.Module):
         out = self.attpool(node_embedding, batch)
         for i in range(self.__config.n_hidden_layers - 1):
             node_embedding = F.relu(getattr(self, f"hidden_GCL{i}")(node_embedding, edge_index))
-            node_embedding, edge_index, _, batch, _, _ = getattr(self, f"hidden_GPL{i}")(
-                node_embedding, edge_index, None, batch)
+
+            node_embedding, edge_index, _, batch, _, _ = \
+                getattr(self, f"hidden_GPL{i}")(node_embedding, edge_index, None, batch)
+
             out += self.attpool(node_embedding, batch)
+
         # [n_XFG; XFG hidden dim]
         return out
 
