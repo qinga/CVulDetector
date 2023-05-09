@@ -50,7 +50,6 @@ def train_word_embedding(config_path: str):
     tokens_list = list()
     with Manager():
         pool = Pool(USE_CPU)
-
         process_func = functools.partial(process_parallel,
                                          split_token=config.split_token)
         tokens: List = [
@@ -98,5 +97,5 @@ if __name__ == '__main__':
                               default="configs/dwk.yaml",
                               type=str)
     __args = __arg_parser.parse_args()
-    #train_word_embedding(__args.config)
+    train_word_embedding(__args.config)
     load_wv(__args.config)
